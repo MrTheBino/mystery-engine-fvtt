@@ -119,8 +119,14 @@
   min-width: 0;
 }
 
+.mystery-engine .title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 .mystery-engine .labels-display {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 0.35rem 0.6rem;
 }

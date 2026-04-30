@@ -4,7 +4,13 @@
     {{#if isEditMode}}
     <input class="title-input" type="text" name="name" value="{{document.name}}" placeholder="{{localize 'ME.Actor.NamePlaceholder'}}" />
     {{else}}
-    <h1 class="title">{{document.name}}</h1>
+    <div class="title-row">
+      <h1 class="title">{{document.name}}</h1>
+                <button type="button" class="conditions-add-btn" data-action="addCondition" title="{{localize 'ME.Actor.AddCondition'}}">
+            <i class="fas fa-plus"></i> {{localize "ME.Actor.AddCondition"}}
+          </button>
+    </div>
+    
 
     <div class="header-splitter">
       <!-- left side -->
@@ -14,8 +20,9 @@
           {{#each labels as |label index|}}
           <div class="label-entry">
             <span class="label-name">{{label.name}}</span>
+            <span class="label-value">{{label.value}}</span>
             <input type="hidden" class="label-value-input" name="system.labels.{{index}}.name" value="{{label.name}}" />
-            <input type="text" class="label-value-input" name="system.labels.{{index}}.value" value="{{label.value}}"
+            <input type="hidden" class="label-value-input" name="system.labels.{{index}}.value" value="{{label.value}}"
               placeholder="{{localize 'ME.Actor.LabelValuePlaceholder'}}" />
           </div>
           {{/each}}
@@ -35,9 +42,6 @@
             </li>
             {{/each}}
           </ul>
-          <button type="button" class="conditions-add-btn" data-action="addCondition" title="{{localize 'ME.Actor.AddCondition'}}">
-            <i class="fas fa-plus"></i> {{localize "ME.Actor.AddCondition"}}
-          </button>
 
         </div>
       </div>

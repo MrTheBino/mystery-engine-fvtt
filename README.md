@@ -60,3 +60,7 @@ The checklist item supports bbCode styling
     npm run build # generates CSS from the sass files
     npm run unpack-compendium # generate json files from the compendiums
     npm run pack-compendium # generates compendiums fron the json files
+
+
+## Foundry VTT Preview Screenshot
+![Current State Screenshot](./example_screenshot.webp)

@@ -1,0 +1,288 @@
+.notebook-app {
+  .na-threat-gm-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: linear-gradient(135deg, var(--me-surface-alt), var(--me-surface));
+    border-bottom: 1px solid var(--me-border);
+  }
+
+  .na-threat-title-input {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    color: var(--me-text-heading);
+    padding: 0.15rem 0.3rem;
+
+    &:focus {
+      outline: none;
+      background: var(--me-surface);
+      border-radius: var(--me-radius-sm);
+      box-shadow: 0 0 0 2px var(--me-focus-ring);
+    }
+  }
+
+  .na-threat-intro-row {
+    padding: 0.4rem 0.75rem;
+    border-bottom: 1px solid var(--me-border);
+
+    prose-mirror {
+      font-size: 0.85rem;
+      color: var(--me-text-muted);
+      background: transparent;
+    }
+  }
+
+  .na-threat-section {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--me-border);
+
+    &:last-child { border-bottom: none; }
+  }
+
+  .na-threat-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .na-threat-section-label {
+    flex: 1;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--me-text-muted);
+  }
+
+  .na-section-controls {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  // Countdown track
+  .countdown-track {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+
+    &.readonly .countdown-box {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  .countdown-box {
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 2px solid var(--me-border-mid);
+    border-radius: var(--me-radius-sm);
+    background: var(--me-surface);
+    cursor: pointer;
+    transition: background var(--me-transition), border-color var(--me-transition);
+    padding: 0;
+
+    &.filled {
+      background: var(--me-accent);
+      border-color: var(--me-accent-hover);
+    }
+
+    &:hover { border-color: var(--me-accent); }
+  }
+
+  // Generic threat row (question / clue / other)
+  .na-threat-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.2rem 0;
+
+    & + .na-threat-row { border-top: 1px solid var(--me-border); }
+
+    &.readonly {
+      padding: 0.25rem 0;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+    }
+  }
+
+  .na-threat-row-question-fields {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.2rem;
+  }
+
+  // Toggle / check button
+  .na-toggle-btn {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.15rem;
+    color: var(--me-inactive);
+    font-size: 0.95rem;
+    line-height: 1;
+    transition: color var(--me-transition);
+
+    &.checked { color: var(--me-accent); }
+    &:hover { color: var(--me-accent-hover); }
+  }
+
+  // Explained lightbulb button
+  .na-explained-btn {
+    color: var(--me-inactive);
+
+    &.active { color: #F59E0B; }
+  }
+
+  // Inline text input
+  .na-inline-input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    font-size: 0.85rem;
+    color: var(--me-text);
+    padding: 0.15rem 0.3rem;
+    border-radius: var(--me-radius-sm);
+
+    &:focus {
+      outline: none;
+      background: var(--me-surface);
+      box-shadow: 0 0 0 2px var(--me-focus-ring);
+    }
+  }
+
+  // Other row: two stacked inputs
+  .na-other-row { align-items: flex-start; }
+
+  .na-other-fields {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .na-other-desc-input {
+    font-size: 0.78rem;
+    color: var(--me-text-muted);
+    font-style: italic;
+  }
+
+  // Player read view
+  .na-threat-read-header {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--me-border);
+  }
+
+  .na-threat-read-title {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--me-text-heading);
+  }
+
+  .na-threat-intro-text {
+    padding: 0.4rem 0.75rem;
+    font-style: italic;
+    color: var(--me-text-muted);
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--me-border);
+    margin: 0;
+  }
+
+  .na-read-icon {
+    color: var(--me-inactive);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .na-explained-icon {
+    color: #F59E0B;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .na-other-read-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.25rem 0;
+    border-top: 1px solid var(--me-border);
+
+    &:first-child { border-top: none; }
+  }
+
+  .na-other-read-title {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--me-text);
+  }
+
+  .na-other-read-details {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--me-text-muted);
+  }
+
+  .na-other-read-desc { color: var(--me-text-muted); }
+
+  .na-empty-inline {
+    font-size: 0.8rem;
+    color: var(--me-inactive);
+    font-style: italic;
+  }
+
+  .na-complexity-input {
+    flex: 0 0 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--me-text-muted);
+  }
+
+  .na-complexity-badge {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--me-accent-hover);
+    background: var(--me-accent-light);
+    border: 1px solid #FCD34D;
+    border-radius: 999px;
+    padding: 0.05rem 0.5rem;
+  }
+
+  // Labels within actor card (notebook actors tab)
+  .na-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .na-label-entry {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .na-label-name {
+    font-weight: 600;
+    color: var(--me-text-muted);
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .na-label-value {
+    color: var(--me-text);
+  }
+}

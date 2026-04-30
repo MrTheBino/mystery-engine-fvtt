@@ -1,0 +1,8 @@
+<section class="tab {{tabs.main.id}} {{tabs.main.cssClass}} scrollable" id="main"
+    data-tab="{{tabs.main.id}}" data-group="{{tabs.main.group}}">
+  {{#if isEditMode}}
+  {{> "systems/mystery-engine-fvtt/templates/actor/parts/edit-mode.hbs"}}
+  {{else}}
+  {{> "systems/mystery-engine-fvtt/templates/actor/parts/non-edit-mode.hbs"}}
+  {{/if}}
+</section>

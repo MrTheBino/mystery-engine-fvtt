@@ -1,0 +1,10 @@
+<header class="sheet-header">
+  <img class="profile-img" src="{{document.img}}" data-edit="img" title="{{document.name}}" />
+  <div class="header-fields">
+    {{#if isEditMode}}
+      <input class="title-input" type="text" name="name" value="{{document.name}}" placeholder="{{localize 'ME.Actor.ThreatNamePlaceholder'}}" />
+    {{else}}
+      <h1 class="title">{{document.name}}</h1>
+    {{/if}}
+  </div>
+</header>

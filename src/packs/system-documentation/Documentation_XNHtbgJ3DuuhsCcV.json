@@ -1,0 +1,65 @@
+{
+  "name": "Documentation",
+  "_id": "XNHtbgJ3DuuhsCcV",
+  "pages": [
+    {
+      "sort": 100000,
+      "name": "Notebook",
+      "type": "text",
+      "_id": "vzI7lDD02z0t7Afw",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>There must be an active scene to use the notebook app.</p><ul><li><p>Create  notebook item</p></li><li><p>You don't need to edit the notebook item directly. Use the notebook app. </p></li><li><p>You can find it on the left side under \"Journal Notes\". Then have a look at the second row at the bottom. There you find the notebook icon.</p></li><li><p>Drag'N'Drop a notebook item on the notebook app</p></li><li><p>Drag'N'Drop actors directly on this notebook app</p></li></ul><p>The notebook stores it's data scene based. So, if you switch the scene, it could display another notebook item if the other scene got already configured.</p><p>Play a little bit around with the notebook app. It's easy and intuitive.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.1.0",
+        "createdTime": 1777534652274,
+        "modifiedTime": 1777534898884,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!journal.pages!XNHtbgJ3DuuhsCcV.vzI7lDD02z0t7Afw"
+    }
+  ],
+  "folder": null,
+  "categories": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.1.0",
+    "createdTime": 1777534646365,
+    "modifiedTime": 1777534646365,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!journal!XNHtbgJ3DuuhsCcV"
+}

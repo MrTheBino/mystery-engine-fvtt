@@ -1,0 +1,23 @@
+{
+  "name": "mystery-engine-fvtt",
+  "version": "2.0.0",
+  "description": "CSS compiler for the MysteryEngine system",
+  "scripts": {
+    "build": "sass scss/mystery-engine-fvtt.scss css/mystery-engine-fvtt.css --style=expanded --no-source-map",
+    "watch": "sass scss/mystery-engine-fvtt.scss css/mystery-engine-fvtt.css --style=expanded --source-map --watch",
+    "unpack-compendium": "node  src/commands/unpack.mjs",
+    "pack-compendium": "node  src/commands/pack.mjs" 
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "author": "Asacolips",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.3"
+  },
+  "devDependencies": {
+    "sass": "^1.53.0"
+  }
+}

@@ -1,0 +1,148 @@
+<div class="na-panel{{#if activeActors}} active{{/if}}" data-na-panel="actors">
+  <div class="na-scroll-area">
+    {{#if actors.length}}
+    <div class="na-actors-grid">
+      {{#each actors}}
+      <div class="na-actor-card">
+
+        <div class="na-actor-header">
+          <img class="na-actor-img" src="{{img}}" alt="{{name}}" />
+          <h3 class="na-actor-name" data-action="openActorSheet" data-actor-uuid="{{uuid}}">{{name}}</h3>
+          {{#if ../isGM}}
+          <button type="button" class="icon-btn delete-btn"
+            data-action="removeActor"
+            data-actor-uuid="{{uuid}}"
+            title="{{localize 'ME.Notebook.Actors.RemoveActor'}}">
+            <i class="fas fa-times"></i>
+          </button>
+          {{/if}}
+        </div>
+
+        {{#if abilities.length}}
+        <div class="na-actor-section">
+          <div class="abilities-display">
+            {{#each abilities}}
+            <span class="ability-pip">
+              <span class="ability-name">{{name}}</span>
+              <span class="ability-value">{{value}}</span>
+            </span>
+            {{/each}}
+          </div>
+        </div>
+        {{/if}}
+
+        {{#if conditions.length}}
+        <div class="na-actor-section">
+          <div class="na-conditions">
+            {{#each conditions}}
+            <span class="na-condition-tag">{{this}}</span>
+            {{/each}}
+          </div>
+        </div>
+        {{/if}}
+
+        {{#if labels.length}}
+        <div class="na-actor-section">
+          <div class="na-labels">
+            {{#each labels}}
+            <div class="na-label-entry">
+              <span class="na-label-name">{{name}}</span>
+              <span class="na-label-value">{{value}}</span>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        {{/if}}
+
+        {{#if activeMoves.length}}
+        <div class="na-actor-section na-actor-moves">
+          <p class="moves-heading">{{localize "ME.Notebook.ActiveMoves"}}</p>
+          {{#each activeMoves}}
+          <div class="item-card item-card-move">
+            <div class="item-card-header"><h2>{{name}}</h2></div>
+            <div class="item-card-body">
+              {{#if description}}<div class="item-description">{{{description}}}</div>{{/if}}
+              {{#if moveDescription}}<div class="item-description">{{{moveDescription}}}</div>{{/if}}
+              {{#if checkboxes.length}}
+              <div class="checkboxes-row">
+                {{#each checkboxes}}
+                <label>
+                  <input type="checkbox" {{checked this.checked}} disabled />
+                  {{this.description}}
+                </label>
+                {{/each}}
+              </div>
+              {{/if}}
+            </div>
+          </div>
+          {{/each}}
+        </div>
+        {{/if}}
+
+        {{#if hasItems}}
+        <div class="na-actor-section na-actor-items">
+
+          {{#each checklists}}
+          <div class="item-card item-card-checklist">
+            <div class="item-card-header"><h2>{{name}}</h2></div>
+            <div class="item-card-body">
+              {{#if description}}<div class="item-description">{{{description}}}</div>{{/if}}
+              {{#if entries.length}}
+              <ul class="checklist-entries">
+                {{#each entries}}
+                <li class="checklist-entry{{#if selected}} selected{{/if}}">
+                  <input type="checkbox" {{checked selected}} disabled />
+                  <span>{{text}}</span>
+                </li>
+                {{/each}}
+              </ul>
+              {{/if}}
+            </div>
+          </div>
+          {{/each}}
+
+          {{#each questions}}
+          <div class="item-card item-card-question">
+            <div class="item-card-header"><h2>{{name}}</h2></div>
+            <div class="item-card-body">
+              {{#if description}}<div class="item-description">{{{description}}}</div>{{/if}}
+              {{#if questionEntries.length}}
+              <ul class="question-entries">
+                {{#each questionEntries}}
+                <li class="question-entry{{#if resolved}} resolved{{/if}}">
+                  <span class="question-text">{{text}}</span>
+                  {{#if opportunities}}<span class="question-opportunities">{{opportunities}}</span>{{/if}}
+                  {{#if complexity}}<span class="question-complexity">{{complexity}}</span>{{/if}}
+                </li>
+                {{/each}}
+              </ul>
+              {{/if}}
+            </div>
+          </div>
+          {{/each}}
+
+          {{#each texts}}
+          <div class="item-card item-card-text">
+            <div class="item-card-header"><h2>{{name}}</h2></div>
+            <div class="item-card-body">
+              {{#if description}}<div class="item-description">{{{description}}}</div>{{/if}}
+              {{#if checkboxes.length}}
+              <div class="checkboxes-row">
+                {{#each checkboxes}}<input type="checkbox" {{checked this}} disabled />{{/each}}
+              </div>
+              {{/if}}
+            </div>
+          </div>
+          {{/each}}
+
+        </div>
+        {{/if}}
+
+      </div>
+      {{/each}}
+    </div>
+    {{else}}
+    <p class="empty-list">{{localize "ME.Notebook.NoActors"}}</p>
+    {{/if}}
+  </div>
+</div>

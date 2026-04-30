@@ -1,0 +1,55 @@
+<div class="item-body question-body">
+
+  <div class="form-group description-group">
+    <label>{{localize "ME.Item.Description"}}</label>
+    {{#if editable}}
+    <prose-mirror name="system.description" button="true" editable="true" toggled="false"
+        value="{{system.description}}">
+      {{{descriptionHTML}}}
+    </prose-mirror>
+    {{else}}
+    <div class="prose-display">{{{descriptionHTML}}}</div>
+    {{/if}}
+  </div>
+
+  <div class="questions-edit-section">
+    <div class="section-header">
+      <h3>{{localize "ME.Item.Question.Questions"}}</h3>
+      <button type="button" data-action="addQuestion" title="{{localize 'ME.Item.Question.AddTitle'}}">
+        <i class="fas fa-plus"></i> {{localize "ME.Item.Question.Add"}}
+      </button>
+    </div>
+
+    <ul class="questions-edit-list">
+      {{#each system.questions as |question index|}}
+      <li class="question-edit-row" data-index="{{index}}">
+        <div class="question-edit-fields">
+          <input type="text" name="system.questions.{{index}}.text"
+            value="{{question.text}}" placeholder="{{localize 'ME.Item.Question.QuestionPlaceholder'}}" />
+          <input type="text" name="system.questions.{{index}}.opportunities"
+            value="{{question.opportunities}}" placeholder="{{localize 'ME.Item.Question.OpportunitiesPlaceholder'}}" />
+          <div class="question-edit-meta">
+            <label class="question-complexity-label">
+              <span>{{localize "ME.Item.Question.Complexity"}}</span>
+              <input type="number" name="system.questions.{{index}}.complexity"
+                value="{{question.complexity}}" min="0" />
+            </label>
+            <label class="question-resolved-label">
+              <input type="checkbox" name="system.questions.{{index}}.resolved"
+                {{checked question.resolved}} />
+              <span>{{localize "ME.Item.Question.Resolved"}}</span>
+            </label>
+          </div>
+        </div>
+        <button type="button" class="icon-btn delete-btn" data-action="removeQuestion"
+          data-index="{{index}}" title="{{localize 'ME.Item.Question.RemoveQuestion'}}">
+          <i class="fas fa-times"></i>
+        </button>
+      </li>
+      {{else}}
+      <li class="empty-list">{{localize "ME.Item.Question.NoQuestions"}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+</div>

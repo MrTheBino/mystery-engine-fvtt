@@ -1,0 +1,10 @@
+<section class="tab actor-tab actor-notes {{tab.cssClass}}" data-group="sheet" data-tab="notes">
+  {{#if editable}}
+  <prose-mirror name="system.notes" button="true" editable="true" toggled="false"
+      value="{{system.notes}}">
+    {{{notesHTML}}}
+  </prose-mirror>
+  {{else}}
+  <div class="prose-display">{{{notesHTML}}}</div>
+  {{/if}}
+</section>

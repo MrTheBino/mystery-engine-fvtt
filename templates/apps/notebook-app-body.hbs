@@ -1,0 +1,32 @@
+<form class="na-form">
+<div class="na-container">
+
+{{#if notebook}}
+
+  <nav class="na-main-tabs">
+    <button type="button" class="na-tab-btn{{#if activeActors}} active{{/if}}" data-na-tab="actors">
+      <i class="fas fa-user-friends"></i> {{localize "ME.Tabs.Actors"}}
+    </button>
+    <button type="button" class="na-tab-btn{{#if activeThreats}} active{{/if}}" data-na-tab="threats">
+      <i class="fas fa-skull-crossbones"></i> {{localize "ME.Tabs.Threats"}}
+    </button>
+    <button type="button" class="na-tab-btn{{#if activePages}} active{{/if}}" data-na-tab="pages">
+      <i class="fas fa-file-alt"></i> {{localize "ME.Tabs.Pages"}}
+    </button>
+  </nav>
+
+  {{> "systems/mystery-engine-fvtt/templates/apps/parts/notebook-actors-tab.hbs"}}
+  {{> "systems/mystery-engine-fvtt/templates/apps/parts/notebook-threats-tab.hbs"}}
+  {{> "systems/mystery-engine-fvtt/templates/apps/parts/notebook-pages-tab.hbs"}}
+
+{{else}}
+
+  <div class="na-empty-state">
+    <i class="fas fa-book-open fa-2x"></i>
+    <p>{{localize "ME.Notebook.NoNotebook"}}</p>
+  </div>
+
+{{/if}}
+
+</div>
+</form>

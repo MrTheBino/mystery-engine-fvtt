@@ -1,0 +1,675 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.mystery-engine {
+  --me-bg:           #F4F4F2;
+  --me-surface:      #FFFFFF;
+  --me-surface-alt:  #E8E8E8;
+  --me-border:       #1A1A1A;
+  --me-border-mid:   #000000;
+  --me-focus:        #000000;
+  --me-focus-ring:   rgba(0, 0, 0, 0.4);
+  --me-text:         #0D0D0D;
+  --me-text-muted:   #555555;
+  --me-text-heading: #000000;
+  --me-accent:       #000000;
+  --me-accent-hover: #333333;
+  --me-accent-light: #E0E0E0;
+  --me-error:        #CC0000;
+  --me-inactive:     #999999;
+  --me-shadow-sm:    2px 2px 0 #1A1A1A;
+  --me-shadow:       3px 3px 0 #1A1A1A;
+  --me-shadow-md:    4px 4px 0 #1A1A1A;
+  --me-radius-sm:    0px;
+  --me-radius:       0px;
+  --me-radius-lg:    0px;
+  --me-transition:   0.1s ease;
+
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--me-bg);
+}
+
+/* ── Press Start 2P — global size reduction (×0.667) ── */
+
+.mystery-engine h1,
+.mystery-engine h2,
+.mystery-engine h3,
+.mystery-engine h4,
+.mystery-engine .section-header h2,
+.mystery-engine .section-header h3,
+.mystery-engine .moves-heading,
+.mystery-engine .window-title,
+.mystery-engine .title,
+.mystery-engine .title-input,
+.mystery-engine .label-name,
+.mystery-engine .ability-name,
+.mystery-engine .conditions-add-btn,
+.mystery-engine .tabs .item,
+.notebook-app .na-tab-btn,
+.notebook-app .na-sub-tab-btn,
+.notebook-app .na-actor-name,
+.notebook-app .na-condition-tag,
+.notebook-app .na-threat-title-input,
+.notebook-app .na-threat-section-label,
+.notebook-app .na-page-title-input,
+.notebook-app .na-note-title-input,
+.notebook-app .na-add-note-btn,
+.notebook-app .na-add-page-btn,
+.notebook-app .na-threat-read-title,
+.notebook-app .na-other-read-title,
+.roll-dialog.mystery-engine .roll-dialog-ability-name,
+.roll-dialog.mystery-engine .advantage-btn,
+.roll-dialog.mystery-engine .disadvantage-btn {
+  font-size: 0.667em;
+}
+
+
+
+.mystery-engine h1,
+.mystery-engine h2,
+.mystery-engine h3,
+.mystery-engine h4 {
+  font-family: 'Press Start 2P', monospace;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--me-text-heading);
+}
+
+.mystery-engine .section-header h2,
+.mystery-engine .section-header h3,
+.mystery-engine .moves-heading {
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #000000;
+  border-bottom: 2px solid #000000;
+}
+
+
+.mystery-engine .window-header {
+  background: #000000;
+  border-bottom: 3px solid #000000;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+.mystery-engine .window-title {
+  color: #FFFFFF;
+  font-family: 'Press Start 2P', monospace;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.mystery-engine .window-header .header-control,
+.mystery-engine .window-header button {
+  color: #CCCCCC;
+}
+
+.mystery-engine .window-header .header-control:hover,
+.mystery-engine .window-header button:hover {
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+
+
+.mystery-engine .sheet-header {
+  background: #FFFFFF;
+  border-bottom: 3px solid #000000;
+  box-shadow: none;
+}
+
+.mystery-engine .profile-img {
+  border: 2px solid #000000;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 #000000;
+}
+
+.mystery-engine .profile-img:hover {
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.25), 3px 3px 0 #000000;
+}
+
+.mystery-engine .title,
+.mystery-engine .title-input {
+  font-family: 'Press Start 2P', monospace;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #000000;
+}
+
+
+
+.mystery-engine .label-name {
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.mystery-engine .label-value-input {
+  border-bottom-color: #1A1A1A;
+  color: var(--me-text);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.mystery-engine .label-value-input:focus {
+  border-bottom-color: #000000;
+}
+
+
+
+.mystery-engine .ability-pip {
+  background: #000000;
+  border: 2px solid #000000;
+  border-radius: 0;
+  box-shadow: 2px 2px 0 #555555;
+  color: #FFFFFF;
+}
+
+.mystery-engine .ability-pip:hover {
+  background: #333333;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.3), 2px 2px 0 #555555;
+}
+
+.mystery-engine .ability-pip:active {
+  background: #555555;
+  box-shadow: 1px 1px 0 #555555;
+}
+
+.mystery-engine .ability-name {
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  font-variant: normal;
+  font-size: 0.5rem;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+.mystery-engine .ability-value {
+  color: #DDDDDD;
+}
+
+
+
+.mystery-engine .condition-row input[type="text"] {
+  border-bottom-color: #1A1A1A;
+  color: var(--me-text);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.mystery-engine .condition-row input[type="text"]:focus {
+  border-bottom-color: #000000;
+}
+
+.mystery-engine .conditions-add-btn {
+  border: 2px solid #1A1A1A;
+  background: #FFFFFF;
+  color: #000000;
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 0;
+}
+
+.mystery-engine .conditions-add-btn:hover {
+  background: #000000;
+  border-color: #000000;
+  color: #FFFFFF;
+}
+
+
+.mystery-engine .tabs {
+  background: #000000;
+  border-bottom: 3px solid #000000;
+}
+
+.mystery-engine .tabs .item {
+  color: #999999;
+  font-family: 'Press Start 2P', monospace;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 3px solid transparent;
+  transition: color 0.1s ease, border-color 0.1s ease;
+}
+
+.mystery-engine .tabs .item:hover {
+  color: #FFFFFF;
+}
+
+.mystery-engine .tabs .item.active {
+  color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+}
+
+
+.mystery-engine .item-card {
+  background: var(--me-surface);
+  border: 2px solid #000000;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 #1A1A1A;
+}
+
+.mystery-engine .item-card:hover {
+  box-shadow: 4px 4px 0 #000000;
+  border-color: #000000;
+}
+
+.mystery-engine .item-card-header {
+  background: #000000;
+  border-bottom: 2px solid #000000;
+}
+
+.mystery-engine .item-card-header h2 {
+  color: #FFFFFF;
+  font-family: 'Press Start 2P', monospace;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.mystery-engine .item-card--inactive {
+  opacity: 0.45;
+  filter: grayscale(100%);
+}
+
+
+.mystery-engine .icon-btn {
+  color: #555555;
+  border-radius: 0;
+}
+
+.mystery-engine .icon-btn:hover {
+  color: #FFFFFF;
+  background: #000000;
+}
+
+.mystery-engine .icon-btn.delete-btn:hover {
+  background: #CC0000;
+  color: #FFFFFF;
+}
+
+
+.mystery-engine input[type="text"],
+.mystery-engine input[type="number"],
+.mystery-engine textarea,
+.mystery-engine select {
+  background: #FFFFFF;
+  border-color: #1A1A1A;
+  color: var(--me-text);
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 0;
+}
+
+.mystery-engine input[type="text"]:focus,
+.mystery-engine input[type="number"]:focus,
+.mystery-engine textarea:focus {
+  border-color: #000000;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.25);
+}
+
+
+.mystery-engine .empty-list {
+  color: #888888;
+  font-style: italic;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+.mystery-engine .section-header {
+  position: relative;
+}
+
+.mystery-engine .section-header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #000000;
+}
+
+
+/* Main tab bar */
+.notebook-app .na-main-tabs {
+  background: #000000;
+  border-bottom: 3px solid #000000;
+}
+
+.notebook-app .na-tab-btn {
+  color: #999999;
+  font-family: 'Press Start 2P', monospace;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom-color: transparent;
+}
+
+.notebook-app .na-tab-btn:hover {
+  color: #FFFFFF;
+}
+
+.notebook-app .na-tab-btn.active {
+  color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+  background: rgba(255,255,255,0.06);
+}
+
+.notebook-app .na-tab-btn i {
+  color: #AAAAAA;
+}
+
+.notebook-app .na-tab-btn.active i {
+  color: #FFFFFF;
+}
+
+/* Sub-tab bar */
+.notebook-app .na-sub-tabs {
+  background: #1A1A1A;
+  border-bottom: 2px solid #000000;
+}
+
+.notebook-app .na-sub-tab-btn {
+  color: #AAAAAA;
+  background: transparent;
+  border-color: transparent;
+  font-family: 'Press Start 2P', monospace;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 0;
+}
+
+.notebook-app .na-sub-tab-btn:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.25);
+  color: #FFFFFF;
+}
+
+.notebook-app .na-sub-tab-btn.active {
+  background: var(--me-bg);
+  border-color: #1A1A1A;
+  border-bottom-color: var(--me-bg);
+  color: #000000;
+}
+
+.notebook-app .na-sub-tab-add-btn {
+  color: #AAAAAA;
+  border: 1px dashed #666666;
+}
+
+.notebook-app .na-sub-tab-add-btn:hover {
+  color: #FFFFFF;
+  background: rgba(255,255,255,0.15);
+  border-color: #FFFFFF;
+}
+
+/* Actor cards */
+.notebook-app .na-actor-card {
+  border: 2px solid #000000;
+  border-radius: 0;
+  background: var(--me-surface);
+  box-shadow: 3px 3px 0 #1A1A1A;
+}
+
+.notebook-app .na-actor-header {
+  background: #000000;
+  border-bottom: 2px solid #000000;
+}
+
+.notebook-app .na-actor-name {
+  color: #FFFFFF;
+  font-family: 'Press Start 2P', monospace;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.notebook-app .na-condition-tag {
+  background: #E8E8E8;
+  border: 1px solid #1A1A1A;
+  border-radius: 0;
+  color: #000000;
+  font-size: 0.5rem;
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Threat sections */
+.notebook-app .na-threat-gm-header {
+  background: #000000;
+  border-bottom: 2px solid #000000;
+}
+
+.notebook-app .na-threat-title-input {
+  color: #FFFFFF;
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.notebook-app .na-threat-title-input::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+.notebook-app .na-threat-title-input:focus {
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.3);
+}
+
+.notebook-app .na-threat-section {
+  border-bottom-color: rgba(0,0,0,0.35);
+}
+
+.notebook-app .na-threat-section-label {
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #333333;
+}
+
+/* Countdown — solid black when filled */
+.notebook-app .countdown-box {
+  border-color: #1A1A1A;
+  background: #FFFFFF;
+  border-radius: 0;
+  box-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+
+.notebook-app .countdown-box.filled {
+  background: #000000;
+  border-color: #000000;
+  box-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+
+.notebook-app .countdown-box:hover {
+  border-color: #000000;
+  box-shadow: 2px 2px 0 #000000;
+}
+
+/* Toggle buttons */
+.notebook-app .na-toggle-btn {
+  color: #999999;
+}
+
+.notebook-app .na-toggle-btn.checked {
+  color: #000000;
+}
+
+.notebook-app .na-toggle-btn:hover {
+  color: #000000;
+}
+
+.notebook-app .na-explained-btn.active {
+  color: #333333;
+}
+
+/* Inline inputs */
+.notebook-app .na-inline-input {
+  color: var(--me-text);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.notebook-app .na-inline-input:focus {
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.25);
+}
+
+/* Page headers */
+.notebook-app .na-page-header {
+  background: #000000;
+  border-bottom: 2px solid #000000;
+}
+
+.notebook-app .na-page-title-input {
+  color: #FFFFFF;
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.notebook-app .na-page-title-input::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+.notebook-app .na-note-entry {
+  border-color: #1A1A1A;
+}
+
+.notebook-app .na-note-header {
+  background: #E8E8E8;
+  border-bottom: 2px solid #1A1A1A;
+}
+
+.notebook-app .na-note-title-input {
+  color: #000000;
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Add-page / add-note dashed buttons */
+.notebook-app .na-add-note-btn,
+.notebook-app .na-add-page-btn {
+  border-color: #1A1A1A;
+  color: #333333;
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 0;
+}
+
+.notebook-app .na-add-note-btn:hover,
+.notebook-app .na-add-page-btn:hover {
+  background: #000000;
+  border-color: #000000;
+  border-style: solid;
+  color: #FFFFFF;
+}
+
+/* Complexity badge */
+.notebook-app .na-complexity-badge {
+  background: #E8E8E8;
+  border-color: #1A1A1A;
+  color: #000000;
+  border-radius: 0;
+}
+
+/* Read-only view */
+.notebook-app .na-threat-read-title {
+  font-family: 'Press Start 2P', monospace;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #000000;
+}
+
+.notebook-app .na-threat-intro-text {
+  border-bottom-color: rgba(0,0,0,0.35);
+  color: #333333;
+}
+
+.notebook-app .na-read-icon {
+  color: #555555;
+}
+
+.notebook-app .na-explained-icon {
+  color: #333333;
+}
+
+.notebook-app .na-other-read-title {
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+
+.notebook-app .na-other-read-desc {
+  color: #444444;
+}
+
+.roll-dialog.mystery-engine .roll-dialog-ability {
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 0;
+  box-shadow: 2px 2px 0 #1A1A1A;
+}
+
+.roll-dialog.mystery-engine .roll-dialog-ability-name {
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #000000;
+}
+
+.roll-dialog.mystery-engine .roll-dialog-ability-modifier {
+  color: #333333;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.roll-dialog.mystery-engine .advantage-btn {
+  background: #000000;
+  border: 2px solid #000000;
+  border-radius: 0;
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 3px 3px 0 #555555;
+}
+
+.roll-dialog.mystery-engine .advantage-btn:hover {
+  background: #333333;
+  box-shadow: 4px 4px 0 #555555;
+}
+
+.roll-dialog.mystery-engine .disadvantage-btn {
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  color: #000000;
+  border-radius: 0;
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 3px 3px 0 #1A1A1A;
+}
+
+.roll-dialog.mystery-engine .disadvantage-btn:hover {
+  background: #E8E8E8;
+  border-color: #000000;
+}
+
+nav.tabs [data-tab] {
+  color: white;
+  font-weight: bold;
+
+  .active {
+    color: white;
+  }
+}

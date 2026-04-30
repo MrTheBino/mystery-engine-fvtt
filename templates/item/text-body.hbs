@@ -1,0 +1,37 @@
+<div class="item-body text-body">
+
+  <div class="form-group description-group">
+    <label>{{localize "ME.Item.Description"}}</label>
+    {{#if editable}}
+    <prose-mirror name="system.description" button="true" editable="true" toggled="false"
+        value="{{system.description}}">
+      {{{descriptionHTML}}}
+    </prose-mirror>
+    {{else}}
+    <div class="prose-display">{{{descriptionHTML}}}</div>
+    {{/if}}
+  </div>
+
+  <div class="checkboxes-section">
+    <div class="section-header">
+      <h3>{{localize "ME.Item.Checkboxes"}}</h3>
+      <button type="button" data-action="addCheckbox" title="{{localize 'ME.Item.AddCheckboxTitle'}}">
+        <i class="fas fa-plus"></i> {{localize "ME.Item.AddCheckbox"}}
+      </button>
+    </div>
+
+    <ul class="checkboxes-list">
+      {{#each system.checkboxes as |checked index|}}
+      <li class="checkbox-row" data-index="{{index}}">
+        <input type="checkbox" name="system.checkboxes.{{index}}" {{checked checked}} />
+        <button type="button" class="icon-btn delete-btn" data-action="removeCheckbox" title="{{localize 'ME.Item.RemoveCheckbox'}}">
+          <i class="fas fa-times"></i>
+        </button>
+      </li>
+      {{else}}
+      <li class="empty-list">{{localize "ME.Item.NoCheckboxes"}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+</div>

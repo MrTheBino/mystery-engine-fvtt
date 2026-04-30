@@ -1,0 +1,43 @@
+<div class="item-body checklist-body">
+
+  <div class="form-group description-group">
+    <label>{{localize "ME.Item.Description"}}</label>
+    {{#if editable}}
+    <prose-mirror name="system.description" button="true" editable="true" toggled="false"
+        value="{{system.description}}">
+      {{{descriptionHTML}}}
+    </prose-mirror>
+    {{else}}
+    <div class="prose-display">{{{descriptionHTML}}}</div>
+    {{/if}}
+  </div>
+
+  <div class="form-group form-group-checkbox">
+    <label>{{localize "ME.Item.Checklist.Container"}}</label>
+    <input type="checkbox" name="system.isContainer" {{checked system.isContainer}} />
+  </div>
+
+  <div class="entries-section">
+    <div class="section-header">
+      <h3>{{localize "ME.Item.Checklist.Entries"}}</h3>
+      <button type="button" data-action="addEntry" title="{{localize 'ME.Item.Checklist.AddEntry'}}">
+        <i class="fas fa-plus"></i> {{localize "ME.Item.Checklist.AddEntry"}}
+      </button>
+    </div>
+
+    <ul class="entries-list">
+      {{#each system.entries as |entry index|}}
+      <li class="entry-row" data-index="{{index}}">
+        <input type="checkbox" name="system.entries.{{index}}.selected" {{checked entry.selected}} />
+        <input type="text" name="system.entries.{{index}}.text" value="{{entry.text}}" placeholder="{{localize 'ME.Item.Checklist.EntryPlaceholder'}}" />
+        <button type="button" class="icon-btn delete-btn" data-action="removeEntry" title="{{localize 'ME.Item.Checklist.RemoveEntry'}}">
+          <i class="fas fa-times"></i>
+        </button>
+      </li>
+      {{else}}
+      <li class="empty-list">{{localize "ME.Item.Checklist.NoEntries"}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+</div>

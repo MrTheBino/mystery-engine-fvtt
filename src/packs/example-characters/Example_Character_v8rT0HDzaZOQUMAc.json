@@ -1,0 +1,339 @@
+{
+  "name": "Example Character",
+  "type": "mystery-actor",
+  "_id": "v8rT0HDzaZOQUMAc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "editMode": false,
+    "biography": "",
+    "notes": "",
+    "labels": [
+      {
+        "name": "Style",
+        "value": ""
+      }
+    ],
+    "conditions": [],
+    "abilities": [
+      {
+        "name": "VITALITY",
+        "value": 0
+      },
+      {
+        "name": "COMPOSURE",
+        "value": 0
+      },
+      {
+        "name": "REASON",
+        "value": 0
+      },
+      {
+        "name": "PRESENCE",
+        "value": 0
+      },
+      {
+        "name": "SENSITIVITY",
+        "value": 0
+      }
+    ],
+    "xpTrack": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "prototypeToken": {
+    "name": "Example Character",
+    "displayName": 0,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "depth": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "items": [
+    {
+      "name": "Takes You Back",
+      "type": "checklist",
+      "_id": "hqv1Z1x0mklicKbd",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "isContainer": true,
+        "entries": [
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.1.0",
+        "createdTime": 1777534348626,
+        "modifiedTime": 1777534402182,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!v8rT0HDzaZOQUMAc.hqv1Z1x0mklicKbd"
+    },
+    {
+      "name": "Your Corner Of The House",
+      "type": "checklist",
+      "_id": "5yBRrjLHtUo0Uv1D",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "isContainer": true,
+        "entries": [
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.1.0",
+        "createdTime": 1777534376697,
+        "modifiedTime": 1777534405406,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!v8rT0HDzaZOQUMAc.5yBRrjLHtUo0Uv1D"
+    },
+    {
+      "name": "A Move",
+      "type": "move",
+      "_id": "JUQ7h6jmDi35tRuC",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>You are awesome!</p><p></p><ul><li><p>On a Hit you gain the condition: \"You Are Awesome!</p></li></ul>",
+        "checkboxes": [
+          {
+            "checked": false,
+            "description": "Awesome!"
+          },
+          {
+            "checked": false,
+            "description": "Impossible Awesome!"
+          },
+          {
+            "checked": false,
+            "description": "Mega Awesome!"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.1.0",
+        "createdTime": 1777534446847,
+        "modifiedTime": 1777534512189,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!v8rT0HDzaZOQUMAc.JUQ7h6jmDi35tRuC"
+    },
+    {
+      "name": "Advancements",
+      "type": "checklist",
+      "_id": "SetSgO50mM7scQRd",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "You gain something"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.1.0",
+        "createdTime": 1777534589608,
+        "modifiedTime": 1777534605874,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!v8rT0HDzaZOQUMAc.SetSgO50mM7scQRd"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.1.0",
+    "createdTime": 1777534277195,
+    "modifiedTime": 1777534608412,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!v8rT0HDzaZOQUMAc"
+}

@@ -1,0 +1,145 @@
+{{!-- Move items --}}
+{{#if moveItems.length}}
+<div class="moves-section">
+  <h2 class="moves-heading">{{localize "ME.Actor.PlaybookMoves"}}</h2>
+  <div class="items-grid">
+    {{#each moveItems as |item|}}
+    <div class="item-card item-card-move{{#unless item.system.active}} item-card--inactive{{/unless}}" data-item-id="{{item.id}}">
+      <div class="item-card-header">
+        <h2>{{item.name}}</h2>
+        <div class="move-header-controls">
+          <button type="button" class="icon-btn hide-move-btn" data-action="hideMoveItem" data-item-id="{{item.id}}" title="{{localize 'ME.Actor.HideMove'}}">
+            <i class="fas fa-eye-slash"></i>
+          </button>
+          <input type="checkbox" class="move-active-toggle" data-action="toggleMoveActive" data-item-id="{{item.id}}" {{checked item.system.active}} title="{{localize 'ME.Actor.ToggleActive'}}" />
+        </div>
+      </div>
+      <div class="item-card-body">
+        {{#if item.descriptionHTML}}
+        <div class="item-description">{{{item.descriptionHTML}}}</div>
+        {{/if}}
+        {{#if item.moveDescriptionHTML}}
+        <div class="move-description">{{{item.moveDescriptionHTML}}}</div>
+        {{/if}}
+        {{#if item.system.checkboxes.length}}
+        <div class="checkboxes-row">
+          {{#each item.system.checkboxes as |cb cbIndex|}}
+          <label>
+            <input type="checkbox" data-action="toggleCheckbox" data-item-id="{{item.id}}" data-index="{{cbIndex}}" {{checked cb.checked}} />
+            {{cb.description}}
+          </label>
+          {{/each}}
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+{{/if}}
+
+{{!-- Checklist items --}}
+{{#if checklistItems.length}}
+<div class="items-section items-grid">
+  {{#each checklistItems as |item|}}
+  <div class="item-card item-card-checklist" data-item-id="{{item.id}}">
+    <div class="item-card-header">
+      <h2>{{item.name}}</h2>
+    </div>
+    <div class="item-card-body">
+      {{#if item.descriptionHTML}}
+      <div class="item-description">{{{item.descriptionHTML}}}</div>
+      {{/if}}
+      <ul class="entries-list{{#if item.system.isContainer}} entries-grid{{/if}}">
+        {{#each item.system.entries as |entry entryIndex|}}
+        <li class="entry-row">
+          <input type="checkbox" data-action="toggleEntry" data-item-id="{{item.id}}" data-index="{{entryIndex}}" {{checked entry.selected}} />
+          {{#if item.system.isContainer}}
+          <input type="text" class="entry-text-input" data-item-id="{{item.id}}" data-index="{{entryIndex}}" value="{{entry.text}}" placeholder="{{localize 'ME.Item.Checklist.EntryPlaceholder'}}" />
+          {{else}}
+          <span class="entry-text">{{{bbcodeText entry.text}}}</span>
+          {{/if}}
+        </li>
+        {{else}}
+        <li class="empty-list">{{localize "ME.Actor.NoEntries"}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{/if}}
+
+{{!-- Text items --}}
+{{#if textItems.length}}
+<div class="text-items-section">
+  <div class="items-grid">
+    {{#each textItems as |item|}}
+    <div class="item-card item-card-text" data-item-id="{{item.id}}">
+      <div class="item-card-header">
+        <h2>{{item.name}}</h2>
+      </div>
+      <div class="item-card-body">
+        {{#if item.descriptionHTML}}
+        <div class="item-description">{{{item.descriptionHTML}}}</div>
+        {{/if}}
+        {{#if item.system.checkboxes.length}}
+        <div class="checkboxes-row">
+          {{#each item.system.checkboxes as |isChecked cbIndex|}}
+          <input type="checkbox" data-action="toggleCheckbox" data-item-id="{{item.id}}" data-index="{{cbIndex}}" {{checked isChecked}} />
+          {{/each}}
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+{{/if}}
+
+{{#unless items.length}}
+<p class="empty-list">{{localize "ME.Actor.NoItems"}}</p>
+{{/unless}}
+
+{{!-- Question items --}}
+{{#if questionItems.length}}
+<div class="question-items-section">
+  <h2 class="moves-heading">{{localize "ME.Actor.Questions"}}</h2>
+  {{#each questionItems as |item|}}
+  <div class="question-item-card item-card" data-item-id="{{item.id}}">
+    <div class="item-card-header">
+      <h2>{{item.name}}</h2>
+    </div>
+    <div class="item-card-body">
+      {{#if item.descriptionHTML}}
+      <div class="item-description">{{{item.descriptionHTML}}}</div>
+      {{/if}}
+      <ul class="question-entries-list">
+        {{#each item.system.questions as |question qIndex|}}
+        <li class="question-entry-row{{#if question.resolved}} question-entry--resolved{{/if}}"
+            data-item-id="{{item.id}}" data-index="{{qIndex}}">
+          <input type="checkbox" class="question-resolved-toggle"
+            data-action="toggleQuestionResolved"
+            data-item-id="{{item.id}}" data-index="{{qIndex}}"
+            {{checked question.resolved}} title="{{localize 'ME.Actor.MarkResolved'}}" />
+          <div class="question-entry-content">
+            <span class="question-text">{{question.text}}</span>
+            {{#if question.opportunities}}
+            <span class="question-opportunities">{{question.opportunities}}</span>
+            {{/if}}
+          </div>
+          {{#if question.complexity}}
+          <span class="question-complexity-badge">
+            <i class="fas fa-layer-group"></i> {{question.complexity}}
+          </span>
+          {{/if}}
+        </li>
+        {{else}}
+        <li class="empty-list">{{localize "ME.Actor.NoQuestions"}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{/if}}

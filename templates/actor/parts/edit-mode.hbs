@@ -1,0 +1,91 @@
+<div class="labels-section">
+  <div class="section-header">
+    <h2>{{localize "ME.Actor.Labels"}}</h2>
+    <button type="button" data-action="addLabel" title="{{localize 'ME.Actor.AddLabel'}}">
+      <i class="fas fa-plus"></i> {{localize "ME.Actor.AddLabel"}}
+    </button>
+  </div>
+  <ul class="labels-list">
+    {{#each labels as |label index|}}
+    <li class="label-row" data-index="{{index}}">
+      <input type="text" name="system.labels.{{index}}.name" value="{{label.name}}" placeholder="{{localize 'ME.Actor.LabelNamePlaceholder'}}" />
+      <input type="text" name="system.labels.{{index}}.value" value="{{label.value}}" placeholder="{{localize 'ME.Actor.LabelValuePlaceholder'}}" />
+      <button type="button" class="icon-btn delete-btn" data-action="removeLabel" data-index="{{index}}" title="{{localize 'ME.Actor.RemoveLabel'}}">
+        <i class="fas fa-times"></i>
+      </button>
+    </li>
+    {{else}}
+    <li class="empty-list">{{localize "ME.Actor.NoLabels"}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="abilities-section">
+  <div class="section-header">
+    <h2>{{localize "ME.Actor.Abilities"}}</h2>
+    <button type="button" data-action="addAbility" title="{{localize 'ME.Actor.AddAbility'}}">
+      <i class="fas fa-plus"></i> {{localize "ME.Actor.AddAbility"}}
+    </button>
+  </div>
+  <ul class="abilities-list">
+    {{#each abilities as |ability index|}}
+    <li class="ability-row" data-index="{{index}}">
+      <input type="text" name="system.abilities.{{index}}.name" value="{{ability.name}}" placeholder="{{localize 'ME.Actor.AbilityNamePlaceholder'}}" />
+      <input type="number" name="system.abilities.{{index}}.value" value="{{ability.value}}" />
+      <button type="button" class="icon-btn delete-btn" data-action="removeAbility" data-index="{{index}}" title="{{localize 'ME.Actor.RemoveAbility'}}">
+        <i class="fas fa-times"></i>
+      </button>
+    </li>
+    {{else}}
+    <li class="empty-list">{{localize "ME.Actor.NoAbilities"}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="items-section">
+    <div class="section-header">
+      <h2>{{localize "ME.Actor.Items"}}</h2>
+      <div class="create-controls">
+        <button type="button" data-action="createItem" data-type="checklist" title="{{localize 'ME.Actor.AddChecklist'}}">
+          <i class="fas fa-list-check"></i> {{localize "ME.Actor.ItemTypeChecklist"}}
+        </button>
+        <button type="button" data-action="createItem" data-type="move" title="{{localize 'ME.Actor.AddMove'}}">
+          <i class="fas fa-person-running"></i> {{localize "ME.Actor.ItemTypeMove"}}
+        </button>
+      </div>
+    </div>
+
+    <ul class="items-list">
+      {{#each items as |item|}}
+      <li class="item-row" data-item-id="{{item.id}}">
+        <div class="sort-controls">
+          <button type="button" class="icon-btn" data-action="moveItemUp" {{#if @first}}disabled{{/if}} title="{{localize 'ME.Actor.MoveUp'}}">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+          <button type="button" class="icon-btn" data-action="moveItemDown" {{#if @last}}disabled{{/if}} title="{{localize 'ME.Actor.MoveDown'}}">
+            <i class="fas fa-arrow-down"></i>
+          </button>
+        </div>
+        <img class="item-img" src="{{item.img}}" title="{{item.type}}" />
+        <span class="item-name{{#if (eq item.type "move")}}{{#unless item.system.active}} item-name--inactive{{/unless}}{{/if}}">{{item.name}}</span>
+        <span class="item-type tag">{{item.type}}</span>
+        {{#if (eq item.type "move")}}
+        <label class="active-toggle" title="{{localize 'ME.Actor.Active'}}">
+          <input type="checkbox" data-action="toggleMoveActive" data-item-id="{{item.id}}" {{checked item.system.active}} />
+          <span>{{localize "ME.Actor.Active"}}</span>
+        </label>
+        <label class="hidden-toggle" title="{{localize 'ME.Actor.Hidden'}}">
+          <input type="checkbox" data-action="toggleMoveHidden" data-item-id="{{item.id}}" {{checked item.system.hidden}} />
+          <span>{{localize "ME.Actor.Hidden"}}</span>
+        </label>
+        {{/if}}
+        <div class="item-controls">
+          <a class="icon-btn" data-action="editItem" title="{{localize 'ME.Actor.EditItem'}}"><i class="fas fa-edit"></i></a>
+          <a class="icon-btn delete-btn" data-action="deleteItem" title="{{localize 'ME.Actor.DeleteItem'}}"><i class="fas fa-trash"></i></a>
+        </div>
+      </li>
+      {{else}}
+      <li class="empty-list">{{localize "ME.Actor.NoItemsActor"}}</li>
+      {{/each}}
+    </ul>
+  </div>

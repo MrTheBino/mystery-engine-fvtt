@@ -1,0 +1,230 @@
+{
+  "TYPES":{
+    "Actor":{
+      "mystery-actor": "Mystery Actor",
+      "mystery-threat": "Mystery Threat"
+    },
+    "Item": {
+      "checklist": "Checklist",
+      "move": "Move",
+      "notebook": "Notebook",
+      "text": "Text",
+      "question": "Question"
+    }
+  },
+  "ME": {
+    "Sheets": {
+      "Actor": "MysteryActor Sheet",
+      "Threat": "MysteryThreat Sheet",
+      "Checklist": "Checklist Sheet",
+      "Move": "Move Sheet",
+      "Notebook": "Notebook Sheet",
+      "Text": "Text Sheet",
+      "Question": "Question Sheet",
+      "NotebookScene": "NotebookSceneItem Sheet"
+    },
+    "Settings": {
+      "Theme": {
+        "Label": "Theme",
+        "Hint": "Select the visual theme for the system. Changes take effect immediately.",
+        "Standard": "Standard",
+        "Victorian": "Victorian",
+        "90s": "90s"
+      }
+    },
+    "Tabs": {
+      "Main": "Main",
+      "Biography": "Biography",
+      "Notes": "Notes",
+      "Actors": "Actors",
+      "Threats": "Threats",
+      "Pages": "Pages"
+    },
+    "Actor": {
+      "XpTrack": "XP",
+      "NamePlaceholder": "Actor Name",
+      "ThreatNamePlaceholder": "Threat Name",
+      "ToggleEditMode": "Toggle Edit Mode",
+      "SwitchToEditMode": "Switch to Edit Mode",
+      "SwitchToGameMode": "Switch to Game Mode",
+      "AddCondition": "Add Condition",
+      "RemoveCondition": "Remove Condition",
+      "ConditionPlaceholder": "Condition...",
+      "Labels": "Labels",
+      "AddLabel": "Add Label",
+      "LabelNamePlaceholder": "Label name...",
+      "LabelValuePlaceholder": "Value...",
+      "RemoveLabel": "Remove Label",
+      "RemoveLabelConfirm": "Remove label \"{name}\"?",
+      "NoLabels": "No labels yet.",
+      "Abilities": "Abilities",
+      "AddAbility": "Add Ability",
+      "AbilityNamePlaceholder": "Ability name...",
+      "RemoveAbility": "Remove Ability",
+      "RemoveAbilityConfirm": "Remove ability \"{name}\"?",
+      "NoAbilities": "No abilities yet.",
+      "Items": "Items",
+      "AddChecklist": "Add Checklist",
+      "ItemTypeChecklist": "Checklist",
+      "AddMove": "Add Move",
+      "ItemTypeMove": "Move",
+      "AddText": "Add Text",
+      "ItemTypeText": "Text",
+      "AddQuestion": "Add Question",
+      "ItemTypeQuestion": "Question",
+      "MoveUp": "Move Up",
+      "MoveDown": "Move Down",
+      "Active": "Active",
+      "Hidden": "Hidden",
+      "HideMove": "Hide Move",
+      "HideMoveConfirm": "Hide \"{name}\" so it no longer appears in play mode?",
+      "EditItem": "Edit Item",
+      "DeleteItem": "Delete Item",
+      "DeleteItemConfirm": "Delete \"{name}\"? This cannot be undone.",
+      "NoItemsActor": "No items yet. Add a Checklist or Move above.",
+      "NoItemsThreat": "No items yet. Add a Checklist, Move, Text, or Question above.",
+      "PlaybookMoves": "Playbook Moves",
+      "ToggleActive": "Toggle active",
+      "Questions": "Questions",
+      "MarkResolved": "Mark resolved",
+      "NoEntries": "No entries.",
+      "NoItems": "No items.",
+      "NoQuestions": "No questions."
+    },
+    "Item": {
+      "NewItem": "New Item",
+      "Header": {
+        "NamePlaceholder": "Item Name",
+        "Position": "Position"
+      },
+      "Description": "Description",
+      "Checkboxes": "Checkboxes",
+      "AddCheckbox": "Add",
+      "AddCheckboxTitle": "Add Checkbox",
+      "CheckboxDescriptionPlaceholder": "Description...",
+      "RemoveCheckbox": "Remove Checkbox",
+      "NoCheckboxes": "No checkboxes yet.",
+      "Checklist": {
+        "Container": "Container",
+        "Entries": "Entries",
+        "AddEntry": "Add Entry",
+        "EntryPlaceholder": "Entry text...",
+        "RemoveEntry": "Remove Entry",
+        "NoEntries": "No entries yet. Click \"Add Entry\" to begin."
+      },
+      "Move": {
+        "MoveDescription": "Move Description"
+      },
+      "Question": {
+        "Questions": "Questions",
+        "Add": "Add",
+        "AddTitle": "Add Question",
+        "QuestionPlaceholder": "Question text...",
+        "OpportunitiesPlaceholder": "Opportunities...",
+        "Complexity": "Complexity",
+        "Resolved": "Resolved",
+        "RemoveQuestion": "Remove Question",
+        "NoQuestions": "No questions yet."
+      },
+      "Notebook": {
+        "Pages": "Pages",
+        "AddPage": "Add Page",
+        "AddPageTitle": "Add Page",
+        "PageTitlePlaceholder": "Page title...",
+        "DeletePage": "Delete Page",
+        "AddNote": "Add Note",
+        "AddNoteTitle": "Add Note",
+        "NoteTitlePlaceholder": "Note title...",
+        "DeleteNote": "Delete Note",
+        "NoNotes": "No notes yet.",
+        "NoPages": "No pages yet.",
+        "Actors": "Actors",
+        "Remove": "Remove",
+        "NoActors": "No actors linked yet.",
+        "DropActor": "Drop a Mystery Actor here",
+        "Threats": "Threats",
+        "NoThreats": "No threats linked yet.",
+        "DropThreat": "Drop a Mystery Threat here"
+      },
+      "NotebookScene": {
+        "Scene": "Scene",
+        "DropScene": "Drop a Scene here",
+        "Notebook": "Notebook",
+        "DropNotebook": "Drop a Notebook item here",
+        "Remove": "Remove"
+      }
+    },
+    "Notebook": {
+      "Title": "Notebook",
+      "TitleFormat": "Notebook: {name}",
+      "UnnamedNotebook": "Unnamed Notebook",
+      "SceneDataName": "Scene Data: {name}",
+      "NoNotebook": "No notebook is linked to this scene.",
+      "NoActors": "No actors linked to this notebook.",
+      "ActiveMoves": "Active Moves",
+      "Actors": {
+        "RemoveActor": "Remove actor",
+        "RemoveConfirm": "Remove this actor from the notebook?"
+      },
+      "Pages": {
+        "AddPage": "Add page",
+        "AddPageTitle": "Add page",
+        "PageTitlePlaceholder": "Page title...",
+        "DeletePage": "Delete this page",
+        "DeletePageConfirm": "Delete this page and all its notes?",
+        "NoteTitlePlaceholder": "Note title...",
+        "EditContent": "Edit content",
+        "DeleteNote": "Delete this note",
+        "DeleteNoteConfirm": "Delete this note?",
+        "NoNotesGM": "No notes yet. Add the first one below.",
+        "NoNotesPlayer": "No notes on this page.",
+        "AddNote": "Add Note",
+        "NoPagesGM": "No pages yet.",
+        "AddFirstPage": "Add First Page",
+        "NoPagesPlayer": "No pages in this notebook.",
+        "PageFallback": "Page {number}"
+      },
+      "Threats": {
+        "ThreatFallback": "Threat {index}",
+        "AddThreat": "Add threat",
+        "AddThreatTitle": "Add threat",
+        "ThreatNamePlaceholder": "Threat name...",
+        "DeleteThreat": "Delete threat",
+        "Countdown": "Countdown",
+        "AddBox": "Add box",
+        "RemoveBox": "Remove box",
+        "NoBoxes": "No boxes yet.",
+        "Questions": "Questions",
+        "AddQuestion": "Add question",
+        "QuestionPlaceholder": "Question...",
+        "ComplexityPlaceholder": "#",
+        "Delete": "Delete",
+        "NoQuestions": "No questions yet.",
+        "Clues": "Clues",
+        "CluesCount": "Clues: {count}",
+        "AddClue": "Add clue",
+        "CluePlaceholder": "Clue...",
+        "MarkExplained": "Mark explained",
+        "Explained": "Explained",
+        "NoClues": "No clues yet.",
+        "Other": "Other",
+        "AddItem": "Add item",
+        "TitlePlaceholder": "Title...",
+        "ShortDescPlaceholder": "Short description...",
+        "Toggle": "Toggle",
+        "NoOther": "No other items yet.",
+        "NoThreatsGM": "No threats yet.",
+        "AddFirstThreat": "Add First Threat",
+        "NoThreatsPlayer": "No threats in this notebook.",
+        "OpportunityPlaceholder": "Opportunity"
+      }
+    },
+    "RollDialog": {
+      "Title": "Roll Dialog",
+      "Advantage": "Advantage",
+      "Disadvantage": "Disadvantage",
+      "RollAdvantage": "Roll with Advantage",
+      "RollDisadvantage": "Roll with Disadvantage"
+    }
+  }
+}

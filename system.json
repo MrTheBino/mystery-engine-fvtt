@@ -1,0 +1,64 @@
+{
+  "id": "mystery-engine-fvtt",
+  "title": "MysteryEngine",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14"
+  },
+  "esmodules": ["module/mystery-engine.mjs"],
+  "styles": ["css/mystery-engine-fvtt.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "authors": [
+    {
+      "name": "MrTheBino"
+    }
+  ],
+  "flags": {},
+  "documentTypes": {
+    "Actor": {
+      "mystery-actor": {},
+      "mystery-threat": {}
+    },
+    "Item": {
+      "move": {},
+      "checklist": {},
+      "notebook": {},
+      "text": {},
+      "question": {},
+      "notebook-scene-item": {}
+    }
+  },
+  "packs": [
+    {
+      "name": "system-documentation",
+      "label": "System Documentation",
+      "path": "packs/system-documentation",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "mystery-engine-fvtt",
+      "flags": {}
+    },
+    {
+      "name": "example-characters",
+      "label": "Example Characters",
+      "path": "packs/example-characters",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "mist-engine-fvtt",
+      "flags": {}
+    }
+  ]
+}

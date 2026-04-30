@@ -1,0 +1,91 @@
+.mystery-engine {
+  // Buttons
+  button[type="button"],
+  .conditions-add-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.65rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border-radius: var(--me-radius-sm);
+    border: 1px solid var(--me-border);
+    background: var(--me-surface);
+    color: var(--me-text-muted);
+    cursor: pointer;
+    line-height: 1.4;
+    white-space: nowrap;
+    transition: background var(--me-transition), border-color var(--me-transition),
+                color var(--me-transition), box-shadow var(--me-transition);
+
+    &:hover {
+      background: var(--me-surface-alt);
+      border-color: var(--me-accent);
+      color: var(--me-accent-hover);
+    }
+
+    &:active {
+      background: var(--me-accent-light);
+    }
+  }
+
+  .icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.25rem 0.3rem;
+    border-radius: var(--me-radius-sm);
+    color: var(--me-text-muted);
+    line-height: 1;
+    border: none;
+    background: transparent;
+    transition: color var(--me-transition), background var(--me-transition);
+
+    &:hover {
+      color: var(--me-accent);
+      background: var(--me-accent-light);
+    }
+
+    &.delete-btn:hover {
+      color: var(--me-error);
+      background: #FEE2E2;
+    }
+  }
+
+  .sort-controls .icon-btn {
+    padding: 0.1rem 0.25rem;
+    font-size: 0.65rem;
+  }
+
+  // Inputs
+  input[type="text"],
+  input[type="number"] {
+    border: 1px solid var(--me-border);
+    border-radius: var(--me-radius-sm);
+    background: var(--me-surface);
+    color: var(--me-text);
+    padding: 0.25rem 0.45rem;
+    font-size: 0.875rem;
+    font-family: inherit;
+    transition: border-color var(--me-transition), box-shadow var(--me-transition);
+
+    &:focus {
+      outline: none;
+      border-color: var(--me-focus);
+      box-shadow: 0 0 0 3px var(--me-focus-ring);
+    }
+  }
+
+  // Empty states
+  .empty-list {
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--me-inactive);
+    padding: 0.6rem;
+    text-align: center;
+    border: 1px dashed var(--me-border);
+    border-radius: var(--me-radius-sm);
+    background: var(--me-surface);
+  }
+}

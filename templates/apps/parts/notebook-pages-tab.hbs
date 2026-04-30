@@ -1,0 +1,99 @@
+<div class="na-panel{{#if activePages}} active{{/if}}" data-na-panel="pages">
+  {{#if pages.length}}
+  <nav class="na-sub-tabs">
+    {{#each pages}}
+    <button type="button" class="na-sub-tab-btn{{#if isActive}} active{{/if}}" data-na-subtab="page-{{index}}">
+      {{title}}
+    </button>
+    {{/each}}
+    {{#if isGM}}
+    <button type="button" class="na-sub-tab-add-btn" data-action="addPage" title="{{localize 'ME.Notebook.Pages.AddPageTitle'}}">
+      <i class="fas fa-plus"></i>
+    </button>
+    {{/if}}
+  </nav>
+  <div class="na-scroll-area">
+    {{#each pages}}
+    <div class="na-sub-panel{{#if isActive}} active{{/if}}" data-na-subpanel="page-{{index}}">
+
+      {{#if ../isGM}}
+      <div class="na-page-header">
+        <input type="text"
+          name="system.pages.{{index}}.title"
+          value="{{title}}"
+          class="na-page-title-input"
+          placeholder="{{localize 'ME.Notebook.Pages.PageTitlePlaceholder'}}" />
+        <button type="button" class="icon-btn delete-btn"
+          data-action="deletePage"
+          data-index="{{index}}"
+          title="{{localize 'ME.Notebook.Pages.DeletePage'}}">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      {{/if}}
+
+      <div class="na-notes-list">
+        {{#each notes}}
+        <div class="na-note-entry">
+          {{#if ../../isGM}}
+          <div class="na-note-header">
+            <input type="text"
+              name="system.pages.{{pageIndex}}.notes.{{noteIndex}}.title"
+              value="{{title}}"
+              class="na-note-title-input"
+              placeholder="{{localize 'ME.Notebook.Pages.NoteTitlePlaceholder'}}" />
+            <button type="button" class="icon-btn delete-btn"
+              data-action="deleteNote"
+              data-page-index="{{pageIndex}}"
+              data-note-index="{{noteIndex}}"
+              title="{{localize 'ME.Notebook.Pages.DeleteNote'}}">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="editor-container">
+          <prose-mirror
+            name="system.pages.{{pageIndex}}.notes.{{noteIndex}}.description"
+            editable
+            toggler="[data-prose-toggler='{{pageIndex}}-{{noteIndex}}']"
+            button="true"
+            toggled="false"
+            value="{{description}}">
+            {{{description}}}
+          </prose-mirror>
+          </div>
+          {{else}}
+          <div class="na-note-content">
+            {{#if title}}<h4 class="na-note-title">{{title}}</h4>{{/if}}
+            <div class="item-description">{{{descriptionHTML}}}</div>
+          </div>
+          {{/if}}
+        </div>
+        {{else}}
+        <p class="empty-list">{{#if ../isGM}}{{localize "ME.Notebook.Pages.NoNotesGM"}}{{else}}{{localize "ME.Notebook.Pages.NoNotesPlayer"}}{{/if}}</p>
+        {{/each}}
+      </div>
+
+      {{#if ../isGM}}
+      <button type="button" class="na-add-note-btn" data-action="addNote" data-page-index="{{index}}">
+        <i class="fas fa-plus"></i> {{localize "ME.Notebook.Pages.AddNote"}}
+      </button>
+      {{/if}}
+
+    </div>
+    {{/each}}
+  </div>
+  {{else}}
+  <div class="na-scroll-area">
+    {{#if isGM}}
+    <div class="na-pages-empty-gm">
+      <p class="empty-list">{{localize "ME.Notebook.Pages.NoPagesGM"}}</p>
+      <button type="button" class="na-add-page-btn" data-action="addPage">
+        <i class="fas fa-plus"></i> {{localize "ME.Notebook.Pages.AddFirstPage"}}
+      </button>
+    </div>
+    {{else}}
+    <p class="empty-list">{{localize "ME.Notebook.Pages.NoPagesPlayer"}}</p>
+    {{/if}}
+  </div>
+  {{/if}}
+</div>

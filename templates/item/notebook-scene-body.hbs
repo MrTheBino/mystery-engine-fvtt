@@ -1,0 +1,45 @@
+<div class="item-body notebook-scene-body">
+
+  <div class="nsi-slot-section">
+    <div class="section-header">
+      <h3>{{localize "ME.Item.NotebookScene.Scene"}}</h3>
+    </div>
+
+    {{#if resolvedScene}}
+    <div class="nsi-linked-row">
+      <img class="item-img" src="{{resolvedScene.thumb}}" alt="{{resolvedScene.name}}" />
+      <span class="item-name">{{resolvedScene.name}}</span>
+      <button type="button" class="icon-btn delete-btn" data-action="removeScene" title="{{localize 'ME.Item.NotebookScene.Remove'}}">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    {{else}}
+    <div class="nsi-drop-zone" data-drop-type="scene">
+      <i class="fas fa-map"></i>
+      <span>{{localize "ME.Item.NotebookScene.DropScene"}}</span>
+    </div>
+    {{/if}}
+  </div>
+
+  <div class="nsi-slot-section">
+    <div class="section-header">
+      <h3>{{localize "ME.Item.NotebookScene.Notebook"}}</h3>
+    </div>
+
+    {{#if resolvedNotebook}}
+    <div class="nsi-linked-row">
+      <img class="item-img" src="{{resolvedNotebook.img}}" alt="{{resolvedNotebook.name}}" />
+      <span class="item-name">{{resolvedNotebook.name}}</span>
+      <button type="button" class="icon-btn delete-btn" data-action="removeNotebook" title="{{localize 'ME.Item.NotebookScene.Remove'}}">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    {{else}}
+    <div class="nsi-drop-zone" data-drop-type="notebook">
+      <i class="fas fa-book"></i>
+      <span>{{localize "ME.Item.NotebookScene.DropNotebook"}}</span>
+    </div>
+    {{/if}}
+  </div>
+
+</div>

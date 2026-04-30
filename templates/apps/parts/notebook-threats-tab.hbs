@@ -1,0 +1,313 @@
+<div class="na-panel{{#if activeThreats}} active{{/if}}" data-na-panel="threats">
+
+  {{#if threats.length}}
+  <nav class="na-sub-tabs">
+    {{#each threats}}
+    <button type="button" class="na-sub-tab-btn{{#if isActive}} active{{/if}}" data-na-subtab="threat-{{index}}">
+      {{#if title}}{{title}}{{else}}{{localize "ME.Notebook.Threats.ThreatFallback" index=index}}{{/if}}
+    </button>
+    {{/each}}
+    {{#if isGM}}
+    <button type="button" class="na-sub-tab-add-btn" data-action="addThreat" title="{{localize 'ME.Notebook.Threats.AddThreatTitle'}}">
+      <i class="fas fa-plus"></i>
+    </button>
+    {{/if}}
+  </nav>
+
+  <div class="na-scroll-area">
+    {{#each threats}}
+    <div class="na-sub-panel{{#if isActive}} active{{/if}}" data-na-subpanel="threat-{{index}}">
+
+      {{#if ../isGM}}
+
+      <div class="na-threat-gm-header">
+        <input type="text"
+          name="system.threats.{{index}}.title"
+          value="{{title}}"
+          class="na-threat-title-input"
+          placeholder="{{localize 'ME.Notebook.Threats.ThreatNamePlaceholder'}}" />
+        <button type="button" class="icon-btn delete-btn"
+          data-action="deleteThreat"
+          data-threat-index="{{index}}"
+          title="{{localize 'ME.Notebook.Threats.DeleteThreat'}}">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="na-threat-intro-row">
+        <prose-mirror
+          name="system.threats.{{index}}.introduction"
+          editable
+          button="true"
+          toggled="false"
+          value="{{introduction}}">
+          {{{introductionHTML}}}
+        </prose-mirror>
+      </div>
+
+      {{!-- Countdown --}}
+      <div class="na-threat-section">
+        <div class="na-threat-section-header">
+          <span class="na-threat-section-label">{{localize "ME.Notebook.Threats.Countdown"}}</span>
+          <div class="na-section-controls">
+            <button type="button" class="icon-btn"
+              data-action="addThreatCountdown"
+              data-threat-index="{{index}}"
+              title="{{localize 'ME.Notebook.Threats.AddBox'}}">
+              <i class="fas fa-plus"></i>
+            </button>
+            <button type="button" class="icon-btn"
+              data-action="removeThreatCountdown"
+              data-threat-index="{{index}}"
+              title="{{localize 'ME.Notebook.Threats.RemoveBox'}}">
+              <i class="fas fa-minus"></i>
+            </button>
+          </div>
+        </div>
+        <div class="countdown-track">
+          {{#each countdown}}
+          <button type="button"
+            class="countdown-box{{#if this}} filled{{/if}}"
+            data-action="toggleThreatCountdown"
+            data-threat-index="{{../index}}"
+            data-countdown-index="{{@index}}">
+          </button>
+          {{else}}
+          <span class="na-empty-inline">{{localize "ME.Notebook.Threats.NoBoxes"}}</span>
+          {{/each}}
+        </div>
+      </div>
+
+      {{!-- Questions --}}
+      <div class="na-threat-section">
+        <div class="na-threat-section-header">
+          <span class="na-threat-section-label">{{localize "ME.Notebook.Threats.Questions"}}</span>
+          <button type="button" class="icon-btn"
+            data-action="addThreatQuestion"
+            data-threat-index="{{index}}"
+            title="{{localize 'ME.Notebook.Threats.AddQuestion'}}">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        {{#each questions}}
+        <div class="na-threat-row">
+          <button type="button"
+            class="na-toggle-btn{{#if checkbox}} checked{{/if}}"
+            data-action="toggleThreatQuestion"
+            data-threat-index="{{../index}}"
+            data-question-index="{{index}}"
+            title="{{localize 'ME.Notebook.Threats.Toggle'}}">
+            <i class="fas {{#if checkbox}}fa-check-square{{else}}fa-square{{/if}}"></i>
+          </button>
+          <div class="na-threat-row-question-fields">
+            <input type="text"
+            name="system.threats.{{../index}}.questions.{{index}}.title"
+            value="{{title}}"
+            class="na-inline-input"
+            placeholder="{{localize 'ME.Notebook.Threats.QuestionPlaceholder'}}" />
+            <input type="text"
+            name="system.threats.{{../index}}.questions.{{index}}.opportunity"
+            value="{{opportunity}}"
+            class="na-inline-input na-opportunity-input"
+            placeholder="{{localize 'ME.Notebook.Threats.OpportunityPlaceholder'}}" />
+          </div>
+          
+          <input type="number"
+            name="system.threats.{{../index}}.questions.{{index}}.complexity"
+            value="{{complexity}}"
+            class="na-inline-input na-complexity-input"
+            placeholder="{{localize 'ME.Notebook.Threats.ComplexityPlaceholder'}}"
+            min="0" />
+          <button type="button" class="icon-btn delete-btn"
+            data-action="deleteThreatQuestion"
+            data-threat-index="{{../index}}"
+            data-question-index="{{index}}"
+            title="{{localize 'ME.Notebook.Threats.Delete'}}">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        {{else}}
+        <p class="empty-list">{{localize "ME.Notebook.Threats.NoQuestions"}}</p>
+        {{/each}}
+      </div>
+
+      {{!-- Clues --}}
+      <div class="na-threat-section">
+        <div class="na-threat-section-header">
+          <span class="na-threat-section-label">{{localize "ME.Notebook.Threats.Clues"}}</span>
+          <button type="button" class="icon-btn"
+            data-action="addThreatClue"
+            data-threat-index="{{index}}"
+            title="{{localize 'ME.Notebook.Threats.AddClue'}}">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        {{#each clues}}
+        <div class="na-threat-row">
+          <button type="button"
+            class="na-toggle-btn{{#if checkbox}} checked{{/if}}"
+            data-action="toggleThreatClue"
+            data-threat-index="{{../index}}"
+            data-clue-index="{{index}}"
+            title="{{localize 'ME.Notebook.Threats.Toggle'}}">
+            <i class="fas {{#if checkbox}}fa-check-square{{else}}fa-square{{/if}}"></i>
+          </button>
+          <button type="button"
+            class="na-toggle-btn na-explained-btn{{#if explained}} active{{/if}}"
+            data-action="toggleThreatClueExplained"
+            data-threat-index="{{../index}}"
+            data-clue-index="{{index}}"
+            title="{{localize 'ME.Notebook.Threats.MarkExplained'}}">
+            <i class="fas fa-lightbulb"></i>
+          </button>
+          <input type="text"
+            name="system.threats.{{../index}}.clues.{{index}}.text"
+            value="{{text}}"
+            class="na-inline-input"
+            placeholder="{{localize 'ME.Notebook.Threats.CluePlaceholder'}}" />
+          <button type="button" class="icon-btn delete-btn"
+            data-action="deleteThreatClue"
+            data-threat-index="{{../index}}"
+            data-clue-index="{{index}}"
+            title="{{localize 'ME.Notebook.Threats.Delete'}}">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        {{else}}
+        <p class="empty-list">{{localize "ME.Notebook.Threats.NoClues"}}</p>
+        {{/each}}
+      </div>
+
+      {{!-- Other --}}
+      <div class="na-threat-section">
+        <div class="na-threat-section-header">
+          <span class="na-threat-section-label">{{localize "ME.Notebook.Threats.Other"}}</span>
+          <button type="button" class="icon-btn"
+            data-action="addThreatOther"
+            data-threat-index="{{index}}"
+            title="{{localize 'ME.Notebook.Threats.AddItem'}}">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        {{#each other}}
+        <div class="na-threat-row na-other-row">
+          <button type="button"
+            class="na-toggle-btn{{#if checkbox}} checked{{/if}}"
+            data-action="toggleThreatOther"
+            data-threat-index="{{../index}}"
+            data-other-index="{{index}}"
+            title="{{localize 'ME.Notebook.Threats.Toggle'}}">
+            <i class="fas {{#if checkbox}}fa-check-square{{else}}fa-square{{/if}}"></i>
+          </button>
+          <div class="na-other-fields">
+            <input type="text"
+              name="system.threats.{{../index}}.other.{{index}}.title"
+              value="{{title}}"
+              class="na-inline-input"
+              placeholder="{{localize 'ME.Notebook.Threats.TitlePlaceholder'}}" />
+            <input type="text"
+              name="system.threats.{{../index}}.other.{{index}}.shortDescription"
+              value="{{shortDescription}}"
+              class="na-inline-input na-other-desc-input"
+              placeholder="{{localize 'ME.Notebook.Threats.ShortDescPlaceholder'}}" />
+          </div>
+          <button type="button" class="icon-btn delete-btn"
+            data-action="deleteThreatOther"
+            data-threat-index="{{../index}}"
+            data-other-index="{{index}}"
+            title="{{localize 'ME.Notebook.Threats.Delete'}}">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        {{else}}
+        <p class="empty-list">{{localize "ME.Notebook.Threats.NoOther"}}</p>
+        {{/each}}
+      </div>
+
+      {{else}}
+
+      {{!-- Player read view --}}
+      <div class="na-threat-read-header">
+        <h3 class="na-threat-read-title">{{title}}</h3>
+      </div>
+
+      {{#if introductionHTML}}
+      <div class="na-threat-intro-text">{{{introductionHTML}}}</div>
+      {{/if}}
+
+      {{#if countdown.length}}
+      <div class="na-threat-section">
+        <div class="countdown-track readonly">
+          {{#each countdown}}
+          <div class="countdown-box{{#if this}} filled{{/if}}"></div>
+          {{/each}}
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if questions.length}}
+      <div class="na-threat-section">
+        <h4 class="na-threat-section-label">{{localize "ME.Notebook.Threats.Questions"}}</h4>
+        {{#each questions}}
+        <div class="na-threat-row readonly">
+          <i class="fas {{#if checkbox}}fa-check-square{{else}}fa-square{{/if}} na-read-icon"></i>
+          <div class="na-threat-row-question-fields">
+            <span>{{title}}</span>
+            <div><em>{{opportunity}}</em></div>
+          </div>
+          {{#if complexity}}<span class="na-complexity-badge">{{complexity}}</span>{{/if}}
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+
+      {{#if clues.length}}
+      <div class="na-threat-section">
+        <h4 class="na-threat-section-label">{{localize "ME.Notebook.Threats.CluesCount" count=clues.length}}</h4>
+        {{#each clues}}
+        {{#if checkbox}}
+        <div class="na-threat-row readonly">
+          {{#if explained}}<i class="fas fa-lightbulb na-explained-icon" title="{{localize 'ME.Notebook.Threats.Explained'}}"></i>{{/if}}
+          <span>{{text}}</span>
+        </div>
+        {{/if}}
+        {{/each}}
+      </div>
+      {{/if}}
+
+      {{#if other.length}}
+      <div class="na-threat-section">
+        {{#each other}}
+        <div class="na-other-read-entry">
+          <div class="na-other-read-title">{{title}}</div>
+          <div class="na-other-read-details">
+            <i class="fas {{#if checkbox}}fa-check-square{{else}}fa-square{{/if}} na-read-icon"></i>
+            {{#if shortDescription}}<span class="na-other-read-desc">{{shortDescription}}</span>{{/if}}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+
+      {{/if}}
+    </div>
+    {{/each}}
+  </div>
+
+  {{else}}
+
+  <div class="na-scroll-area">
+    {{#if isGM}}
+    <div class="na-pages-empty-gm">
+      <p class="empty-list">{{localize "ME.Notebook.Threats.NoThreatsGM"}}</p>
+      <button type="button" class="na-add-page-btn" data-action="addThreat">
+        <i class="fas fa-plus"></i> {{localize "ME.Notebook.Threats.AddFirstThreat"}}
+      </button>
+    </div>
+    {{else}}
+    <p class="empty-list">{{localize "ME.Notebook.Threats.NoThreatsPlayer"}}</p>
+    {{/if}}
+  </div>
+
+  {{/if}}
+</div>

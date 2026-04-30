@@ -1,0 +1,73 @@
+<header class="sheet-header">
+  <img class="profile-img" src="{{document.img}}" data-edit="img" data-action="editImage" title="{{document.name}}" />
+  <div class="header-fields">
+    {{#if isEditMode}}
+    <input class="title-input" type="text" name="name" value="{{document.name}}" placeholder="{{localize 'ME.Actor.NamePlaceholder'}}" />
+    {{else}}
+    <h1 class="title">{{document.name}}</h1>
+
+    <div class="header-splitter">
+      <!-- left side -->
+      <div class="left-side">
+
+        <div class="labels-display">
+          {{#each labels as |label index|}}
+          <div class="label-entry">
+            <span class="label-name">{{label.name}}</span>
+            <input type="hidden" class="label-value-input" name="system.labels.{{index}}.name" value="{{label.name}}" />
+            <input type="text" class="label-value-input" name="system.labels.{{index}}.value" value="{{label.value}}"
+              placeholder="{{localize 'ME.Actor.LabelValuePlaceholder'}}" />
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <!-- right side -->
+      <div class="right-side">
+        <div class="conditions-section">
+          <ul class="conditions-list">
+            {{#each conditions as |condition index|}}
+            <li class="condition-row" data-index="{{index}}">
+              <input type="text" name="system.conditions.{{index}}" value="{{condition}}" placeholder="{{localize 'ME.Actor.ConditionPlaceholder'}}" />
+              <button type="button" class="icon-btn delete-btn" data-action="removeCondition" data-index="{{index}}"
+                title="{{localize 'ME.Actor.RemoveCondition'}}">
+                <i class="fas fa-times"></i>
+              </button>
+            </li>
+            {{/each}}
+          </ul>
+          <button type="button" class="conditions-add-btn" data-action="addCondition" title="{{localize 'ME.Actor.AddCondition'}}">
+            <i class="fas fa-plus"></i> {{localize "ME.Actor.AddCondition"}}
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+    {{/if}}
+    <div class="flexrow">
+    <div class="abilities-container">
+      {{#if abilities.length}}
+        <div class="abilities-display">
+          {{#each abilities as |ability|}}
+          <div class="ability-pip" role="button" tabindex="0"
+            data-action="rollAbility"
+            data-ability-name="{{ability.name}}"
+            data-ability-value="{{ability.value}}">
+            <span class="ability-name">{{ability.name}}</span>
+            <span class="ability-value">{{ability.value}}</span>
+          </div>
+          {{/each}}
+        </div>
+        {{/if}}
+    </div>
+    <div class="xp-track">
+      <span class="xp-track-label">{{localize "ME.Actor.XpTrack"}}</span>
+      {{#each xpTrack as |checked index|}}
+      <input type="checkbox" class="xp-track-checkbox" data-action="toggleXpTrack" data-index="{{index}}"
+        {{#if checked}}checked{{/if}} />
+      {{/each}}
+    </div>
+    </div>
+    
+  </div>
+</header>

@@ -1,0 +1,442 @@
+.notebook-app {
+  // Window & form wiring
+  .window-content {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .na-form {
+    display: contents;
+  }
+
+  .na-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    background: var(--me-bg);
+    color: var(--me-text);
+    font-size: 14px;
+  }
+
+  // Main tab bar
+  .na-main-tabs {
+    display: flex;
+    padding: 0 1rem;
+    background: var(--me-surface);
+    border-bottom: 1px solid var(--me-border);
+    flex: 0 0 auto;
+    box-shadow: var(--me-shadow-sm);
+  }
+
+  .na-tab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    background: transparent;
+    color: var(--me-text-muted);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    margin-bottom: -1px;
+    transition: color var(--me-transition), border-color var(--me-transition);
+
+    &:hover { color: var(--me-text); }
+
+    &.active {
+      color: var(--me-text);
+      border-bottom-color: var(--me-accent);
+      font-weight: 600;
+    }
+
+    i {
+      font-size: 0.75rem;
+      opacity: 0.6;
+    }
+
+    &.active i {
+      opacity: 1;
+      color: var(--me-accent);
+    }
+  }
+
+  // Panels
+  .na-panel {
+    display: none;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+
+    &.active { display: flex; }
+  }
+
+  .na-scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+  }
+
+  // Sub-tab bar (threats & pages)
+  .na-sub-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.55rem 1rem;
+    background: var(--me-surface);
+    border-bottom: 1px solid var(--me-border);
+    flex: 0 0 auto;
+  }
+
+  .na-sub-tab-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.22rem 0.7rem;
+    border: 1px solid var(--me-border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--me-text-muted);
+    font-size: 0.78rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background var(--me-transition), border-color var(--me-transition),
+                color var(--me-transition), box-shadow var(--me-transition);
+
+    &:hover {
+      background: var(--me-surface-alt);
+      border-color: var(--me-border-mid);
+      color: var(--me-text);
+    }
+
+    &.active {
+      background: var(--me-accent-light);
+      border-color: var(--me-accent);
+      color: var(--me-accent-hover);
+      font-weight: 600;
+      box-shadow: 0 0 0 2px var(--me-focus-ring);
+    }
+  }
+
+  .na-sub-tab-add-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border: 1.5px dashed var(--me-border-mid);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--me-text-muted);
+    cursor: pointer;
+    font-size: 0.72rem;
+    margin-left: 0.1rem;
+    flex-shrink: 0;
+    transition: background var(--me-transition), border-color var(--me-transition), color var(--me-transition);
+
+    &:hover {
+      background: var(--me-accent-light);
+      border-color: var(--me-accent);
+      border-style: solid;
+      color: var(--me-accent);
+    }
+  }
+
+  // Sub-panels
+  .na-sub-panel {
+    display: none;
+
+    &.active { display: block; }
+  }
+
+  // Actors grid
+  .na-actors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    align-items: start;
+  }
+
+  // Actor card
+  .na-actor-card {
+    background: var(--me-surface);
+    border: 1px solid var(--me-border);
+    border-radius: var(--me-radius-lg);
+    box-shadow: var(--me-shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow var(--me-transition), border-color var(--me-transition);
+
+    &:hover {
+      box-shadow: var(--me-shadow);
+      border-color: var(--me-border-mid);
+    }
+  }
+
+  .na-actor-header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.75rem;
+    background: linear-gradient(160deg, var(--me-surface-alt) 0%, var(--me-surface) 100%);
+    border-bottom: 1px solid var(--me-border);
+
+    .delete-btn { margin-left: auto; }
+  }
+
+  .na-actor-img {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--me-radius);
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.8);
+    outline: 1px solid var(--me-border);
+    flex: 0 0 auto;
+    box-shadow: var(--me-shadow-sm);
+  }
+
+  .na-actor-name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--me-text-heading);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+  }
+
+  .na-actor-section {
+    padding: 0.55rem 0.75rem;
+    border-bottom: 1px solid var(--me-border);
+
+    &:last-child { border-bottom: none; }
+  }
+
+  // Conditions inside actor card
+  .na-conditions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .na-condition-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.15rem 0.55rem;
+    background: var(--me-surface-alt);
+    border: 1px solid var(--me-border-mid);
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--me-text-muted);
+    letter-spacing: 0.01em;
+  }
+
+  // Active moves within actor card
+  .na-actor-moves {
+    .moves-heading {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--me-text-muted);
+      margin: 0 0 0.45rem;
+    }
+
+    .item-card {
+      margin-bottom: 0.4rem;
+
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+
+  .na-actor-items{
+    .item-card {
+      margin-bottom: 0.4rem;
+
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+
+  // Threat content
+  .na-threat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  // Active page header
+  .na-page-header {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--me-border);
+    background: var(--me-surface-alt);
+    flex: 0 0 auto;
+  }
+
+  .na-page-title-input {
+    flex: 1;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--me-text-heading);
+    letter-spacing: -0.015em;
+    border: 1px solid transparent;
+    background: transparent;
+    padding: 0.2rem 0.35rem;
+    border-radius: var(--me-radius-sm);
+    transition: border-color var(--me-transition), background var(--me-transition), box-shadow var(--me-transition);
+
+    &:focus {
+      outline: none;
+      border-color: var(--me-focus);
+      background: var(--me-surface);
+      box-shadow: 0 0 0 3px var(--me-focus-ring);
+    }
+  }
+
+  // Notes list within a page
+  .na-notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.75rem;
+  }
+
+  .na-note-entry {
+    background: var(--me-surface);
+    border: 1px solid var(--me-border);
+    border-radius: var(--me-radius);
+    overflow: hidden;
+  }
+
+  .na-note-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.6rem;
+    background: linear-gradient(to right, var(--me-surface-alt), var(--me-surface));
+    border-bottom: 1px solid var(--me-border);
+  }
+
+  .na-note-title-input {
+    flex: 1;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--me-text-heading);
+    border: 1px solid transparent;
+    background: transparent;
+    padding: 0.15rem 0.3rem;
+    border-radius: var(--me-radius-sm);
+    transition: border-color var(--me-transition), background var(--me-transition), box-shadow var(--me-transition);
+
+    &:focus {
+      outline: none;
+      border-color: var(--me-focus);
+      background: var(--me-surface);
+      box-shadow: 0 0 0 3px var(--me-focus-ring);
+    }
+  }
+
+  .na-note-entry prose-mirror {
+    // reserved for future prose-mirror overrides
+  }
+
+  .na-note-entry prose-mirror.editing,
+  .na-note-entry prose-mirror:focus-within {
+    background: var(--me-surface);
+    box-shadow: inset 0 0 0 2px var(--me-focus-ring);
+  }
+
+  .na-note-content {
+    padding: 0.5rem 0.65rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--me-text);
+  }
+
+  .na-note-title {
+    margin: 0 0 0.35rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--me-text-heading);
+  }
+
+  .na-add-note-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin: 0 0.75rem 0.75rem;
+    padding: 0.35rem 0.9rem;
+    border: 1.5px dashed var(--me-border-mid);
+    border-radius: var(--me-radius-sm);
+    background: transparent;
+    color: var(--me-text-muted);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: background var(--me-transition), border-color var(--me-transition), color var(--me-transition);
+
+    &:hover {
+      background: var(--me-accent-light);
+      border-color: var(--me-accent);
+      border-style: solid;
+      color: var(--me-accent-hover);
+    }
+  }
+
+  // Empty states
+  .na-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    height: 100%;
+    min-height: 200px;
+    color: var(--me-inactive);
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  .na-pages-empty-gm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 2rem;
+    color: var(--me-text-muted);
+  }
+
+  .na-add-page-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 1.1rem;
+    border: 1.5px dashed var(--me-border-mid);
+    border-radius: var(--me-radius-sm);
+    background: transparent;
+    color: var(--me-text-muted);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.82rem;
+    transition: background var(--me-transition), border-color var(--me-transition), color var(--me-transition);
+
+    &:hover {
+      background: var(--me-accent-light);
+      border-color: var(--me-accent);
+      border-style: solid;
+      color: var(--me-accent-hover);
+    }
+  }
+}

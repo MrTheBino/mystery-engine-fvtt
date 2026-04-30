@@ -1,0 +1,123 @@
+<div class="item-body notebook-body">
+
+  <div class="form-group description-group">
+    <label>{{localize "ME.Item.Description"}}</label>
+    {{#if editable}}
+    <prose-mirror name="system.description" button="true" editable="true" toggled="false"
+        value="{{system.description}}">
+      {{{descriptionHTML}}}
+    </prose-mirror>
+    {{else}}
+    <div class="prose-display">{{{descriptionHTML}}}</div>
+    {{/if}}
+  </div>
+
+  <div class="notebook-page-section">
+    <div class="section-header">
+      <h3>{{localize "ME.Item.Notebook.Pages"}}</h3>
+      <button type="button" data-action="addPage" title="{{localize 'ME.Item.Notebook.AddPageTitle'}}">
+        <i class="fas fa-plus"></i> {{localize "ME.Item.Notebook.AddPage"}}
+      </button>
+    </div>
+
+    {{#each pages as |page|}}
+    <div class="page-block" data-index="{{page.index}}">
+      <div class="page-block-header">
+        <input type="text" name="system.pages.{{page.index}}.title"
+          value="{{page.title}}" placeholder="{{localize 'ME.Item.Notebook.PageTitlePlaceholder'}}" />
+        <button type="button" class="icon-btn delete-btn" data-action="deletePage"
+            data-index="{{page.index}}" title="{{localize 'ME.Item.Notebook.DeletePage'}}">
+          <i class="fas fa-times"></i>
+        </button>
+        <button type="button" data-action="addNote" data-page-index="{{page.index}}"
+            title="{{localize 'ME.Item.Notebook.AddNoteTitle'}}">
+          <i class="fas fa-plus"></i> {{localize "ME.Item.Notebook.AddNote"}}
+        </button>
+      </div>
+      <ul class="page-entries-list">
+        {{#each page.notes as |note|}}
+        <li class="page-entry-row">
+          <div class="page-entry-header">
+            <input type="text" name="system.pages.{{note.pageIndex}}.notes.{{note.noteIndex}}.title"
+              value="{{note.title}}" placeholder="{{localize 'ME.Item.Notebook.NoteTitlePlaceholder'}}" />
+            <button type="button" class="icon-btn delete-btn" data-action="deleteNote"
+                data-page-index="{{note.pageIndex}}" data-note-index="{{note.noteIndex}}"
+                title="{{localize 'ME.Item.Notebook.DeleteNote'}}">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="page-entry-description">
+            {{#if ../../editable}}
+            <prose-mirror name="system.pages.{{note.pageIndex}}.notes.{{note.noteIndex}}.description"
+                button="true" editable="true" toggled="false"
+                value="{{note.description}}">
+              {{{note.descriptionHTML}}}
+            </prose-mirror>
+            {{else}}
+            <div class="prose-display">{{{note.descriptionHTML}}}</div>
+            {{/if}}
+          </div>
+        </li>
+        {{else}}
+        <li class="empty-list">{{localize "ME.Item.Notebook.NoNotes"}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    {{else}}
+    <p class="empty-list">{{localize "ME.Item.Notebook.NoPages"}}</p>
+    {{/each}}
+  </div>
+
+  <div class="notebook-actors-section">
+    <div class="section-header">
+      <h3>{{localize "ME.Item.Notebook.Actors"}}</h3>
+    </div>
+
+    <ul class="notebook-actors-list">
+      {{#each resolvedActors as |entry|}}
+      <li class="item-row" data-index="{{entry.index}}">
+        <img class="item-img" src="{{entry.img}}" alt="{{entry.name}}" />
+        <span class="item-name">{{entry.name}}</span>
+        <button type="button" class="icon-btn delete-btn" data-action="removeActor"
+            data-index="{{entry.index}}" title="{{localize 'ME.Item.Notebook.Remove'}}">
+          <i class="fas fa-times"></i>
+        </button>
+      </li>
+      {{else}}
+      <li class="empty-list">{{localize "ME.Item.Notebook.NoActors"}}</li>
+      {{/each}}
+    </ul>
+
+    <div class="notebook-drop-zone" data-drop-type="actor">
+      <i class="fas fa-user-plus"></i>
+      <span>{{localize "ME.Item.Notebook.DropActor"}}</span>
+    </div>
+  </div>
+
+  <div class="notebook-threats-section">
+    <div class="section-header">
+      <h3>{{localize "ME.Item.Notebook.Threats"}}</h3>
+    </div>
+
+    <ul class="notebook-threats-list">
+      {{#each resolvedThreats as |entry|}}
+      <li class="item-row" data-index="{{entry.index}}">
+        <img class="item-img" src="{{entry.img}}" alt="{{entry.name}}" />
+        <span class="item-name">{{entry.name}}</span>
+        <button type="button" class="icon-btn delete-btn" data-action="removeThreat"
+            data-index="{{entry.index}}" title="{{localize 'ME.Item.Notebook.Remove'}}">
+          <i class="fas fa-times"></i>
+        </button>
+      </li>
+      {{else}}
+      <li class="empty-list">{{localize "ME.Item.Notebook.NoThreats"}}</li>
+      {{/each}}
+    </ul>
+
+    <div class="notebook-drop-zone" data-drop-type="threat">
+      <i class="fas fa-skull"></i>
+      <span>{{localize "ME.Item.Notebook.DropThreat"}}</span>
+    </div>
+  </div>
+
+</div>

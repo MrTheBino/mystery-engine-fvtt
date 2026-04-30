@@ -1,0 +1,17 @@
+.mystery-engine {
+  font-family: var(--font-primary, 'Inter', system-ui, sans-serif);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--me-bg);
+  color: var(--me-text);
+
+  form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+}

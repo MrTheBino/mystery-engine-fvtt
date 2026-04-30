@@ -173,7 +173,10 @@ export default class MysteryActorSheet extends HandlebarsApplicationMixin(ActorS
 
   static async #createItem(event, target) {
     const type = target.dataset.type;
-    await Item.create({ name: game.i18n.localize("ME.Item.NewItem"), type }, { parent: this.actor });
+    const sameType = this.actor.items.filter(i => i.type === type);
+    const maxPosition = sameType.reduce((max, i) => Math.max(max, i.system.position ?? 0), -1);
+    const name = game.i18n.format("ME.Item.NewItem", { type: game.i18n.localize(`TYPES.Item.${type}`) });
+    await Item.create({ name, type, system: { position: maxPosition + 1 } }, { parent: this.actor });
   }
 
   static async #editItem(event, target) {

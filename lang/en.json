@@ -92,7 +92,7 @@
       "NoQuestions": "No questions."
     },
     "Item": {
-      "NewItem": "New Item",
+      "NewItem": "New {type}",
       "Header": {
         "NamePlaceholder": "Item Name",
         "Position": "Position"

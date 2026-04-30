@@ -22,6 +22,7 @@
   ],
   "flags": {},
   "manifest": "https://github.com/MrTheBino/mystery-engine-fvtt/releases/latest/download/system.json",
+  "download": "https://github.com/MrTheBino/mystery-engine-fvtt/releases/latest/download/system.zip",
   "documentTypes": {
     "Actor": {
       "mystery-actor": {},

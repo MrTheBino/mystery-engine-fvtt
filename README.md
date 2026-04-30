@@ -26,6 +26,15 @@ only stuff they should see like clues for threats etc.
  - Character & Threats sheets
  - different CSS styles like standard, 90ies, victorian etc.
   
+
+# PreBuild Character Sheets
+
+We got the permission from The Gauntlet to publish pre-build character sheets with the system.
+
+Available sheets:
+
+- Public Access
+  
 ## Supported games are
 
 - The Between

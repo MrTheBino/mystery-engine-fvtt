@@ -1,0 +1,1149 @@
+{
+  "name": "Public Access Character",
+  "type": "mystery-actor",
+  "_id": "YOzjVEi8k9MULxcx",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "editMode": false,
+    "biography": "",
+    "notes": "",
+    "labels": [
+      {
+        "name": "Style",
+        "value": ""
+      }
+    ],
+    "conditions": [],
+    "abilities": [
+      {
+        "name": "VITALITY",
+        "value": 0
+      },
+      {
+        "name": "COMPOSURE",
+        "value": 1
+      },
+      {
+        "name": "REASON",
+        "value": 1
+      },
+      {
+        "name": "PRESENCE",
+        "value": 0
+      },
+      {
+        "name": "SENSITIVITY",
+        "value": -1
+      }
+    ],
+    "xpTrack": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "prototypeToken": {
+    "name": "Public Access Character",
+    "displayName": 0,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "depth": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "items": [
+    {
+      "name": "YOUR CORNER OF THE HOUSE",
+      "type": "checklist",
+      "_id": "Y9q1XQSkROBRFgWp",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "isContainer": true,
+        "entries": [
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.Y9q1XQSkROBRFgWp"
+    },
+    {
+      "name": "DAWN QUESTIONS",
+      "type": "checklist",
+      "_id": "iTLI7sW9Edc6NPsx",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 3,
+        "description": "<p>The first one is always marked. The second is always marked after it is unlocked. Mark two more.</p>",
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Did the Latchkeys resolve a mystery?"
+          },
+          {
+            "selected": false,
+            "text": "Did you receive a Signal from the Other Side? (Locked until you mark [b]The Sandstone Arch[/b])"
+          },
+          {
+            "selected": false,
+            "text": "Did you share a good memory from your childhood?"
+          },
+          {
+            "selected": false,
+            "text": "Were you vulnerable with someone?"
+          },
+          {
+            "selected": false,
+            "text": "Did you go out of your way to reconnect with Deep Lake?"
+          },
+          {
+            "selected": false,
+            "text": "Did you deliver a chilling monologue about something that happened to you in the past?"
+          },
+          {
+            "selected": false,
+            "text": "Did you cut loose for once?"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.iTLI7sW9Edc6NPsx"
+    },
+    {
+      "name": "ADVANCEMENTS",
+      "type": "checklist",
+      "_id": "RnmHoPDbrL0NKuIK",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 2,
+        "description": "",
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Increase an ability by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional Latchkey move."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional Latchkey move."
+          },
+          {
+            "selected": false,
+            "text": "Write a custom Latchkey move for your character."
+          },
+          {
+            "selected": false,
+            "text": "Unmark all the items in Your Corner of the House."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.RnmHoPDbrL0NKuIK"
+    },
+    {
+      "name": "THE KEY OF THE CHILD",
+      "type": "checklist",
+      "_id": "LFruMWfkXraaZlY5",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 4,
+        "description": "<p>When you turn this Key, mark and narrate any you wish.</p>",
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "A flashback showing your latchkey kid routine whenever you got home from school."
+          },
+          {
+            "selected": false,
+            "text": "A flashback showing how you were an outsider among your school peers."
+          },
+          {
+            "selected": false,
+            "text": "A flashback to the moment when you realized your parents were imperfect."
+          },
+          {
+            "selected": false,
+            "text": "A flashback to when you felt genuine happiness as a child."
+          },
+          {
+            "selected": false,
+            "text": "A flashback to when you experienced childhood trauma."
+          },
+          {
+            "selected": false,
+            "text": "A flashback to the moment when you realized childhood wasn't forever."
+          },
+          {
+            "selected": false,
+            "text": "A flashback to when you first discovered TV Odyssey."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.LFruMWfkXraaZlY5"
+    },
+    {
+      "name": "THE KEY OF DESOLATION",
+      "type": "checklist",
+      "_id": "VZtpUlSxij5aUEbh",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 5,
+        "description": "<p>When you turn this Key, mark the first empty box.</p>",
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "[b]The Sandstone Arch[/b]. Unlock the End of Session question: \"Did you receive a Signal from the Other Side?\""
+          },
+          {
+            "selected": false,
+            "text": "[b]The Fathomless Well.[/b] Your Reason modifier is reduced by 1 and your Sensitivity modifier is increased by 1."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Wandering Monolith.[/b] You can now seek out the Big Man. How do you make contact with him? The Big Man can be consulted like any other Side Character. When you do so, roll with Sensitivity. On a 7-9, you gain 1 Clue; he will reveal it in a way that reflects his current disposition. On a 10+, as above, but you gain 2 Clues. On a miss, you must mark the next box on The Key of Desolation."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Chromatic Desert.[/b] You can no longer be perceived by other characters and all memory of you is erased-it's like you never existed. You can continue to conduct investigations, but the Clues you find are only available if you narrate them into an Odyssey tape scene."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Pure-White Signal.[/b] You lose contact with this world altogether. Tell the Keeper to play a white Odyssey tape and then retire this character."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.VZtpUlSxij5aUEbh"
+    },
+    {
+      "name": "TAKES YOU BACK",
+      "type": "checklist",
+      "_id": "r2CnO43Vn4AgxcPs",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 1,
+        "description": "",
+        "isContainer": true,
+        "entries": [
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.r2CnO43Vn4AgxcPs"
+    },
+    {
+      "name": "Where's the Beef?",
+      "type": "move",
+      "_id": "1TSMr0Q2XnchZBdx",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 6,
+        "description": "",
+        "active": true,
+        "moveDescription": "<p>You are a little bigger and a little stronger than most. Increase your Vitality by 1 (max 3). You always use Vitality on rolls associated with actions connected to the Big Man.</p>",
+        "checkboxes": [],
+        "hidden": false
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.1TSMr0Q2XnchZBdx"
+    },
+    {
+      "name": "Sight Beyond Sight",
+      "type": "move",
+      "_id": "t69bypW0CS3DOHiq",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 7,
+        "description": "",
+        "active": true,
+        "moveDescription": "<p>Whether you call it premonitions, understanding omens, or just plain old having a hunch, you are able to glimpse a little into the future. The first time you enter a Location, you can ask the Keeper, “What is about to happen?” They will answer truthfully, though not necessarily completely. If you have marked <strong>The Sandstone Arch</strong>, you can also ask, “Why is it about to happen?” The Keeper will answer truthfully, though not necessarily completely.</p>",
+        "checkboxes": [],
+        "hidden": false
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.t69bypW0CS3DOHiq"
+    },
+    {
+      "name": "This is Your Brain",
+      "type": "move",
+      "_id": "6VwN1EH1ZywAYkNs",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 8,
+        "description": "",
+        "active": true,
+        "moveDescription": "<p>You are a little smarter than most, and when you look into the dark, unfathomable places, your logical edge stays sharp. Increase your Reason by 1 (max 3). When you mark <strong>The Fathomless Well</strong>, do not decrease your Reason.</p>",
+        "checkboxes": [],
+        "hidden": false
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.6VwN1EH1ZywAYkNs"
+    },
+    {
+      "name": "Come With Me If You Want to Live",
+      "type": "move",
+      "_id": "NFraAFR8XIxFxIKe",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 9,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>You’re the kind of person who identifies all the exits when you arrive somewhere new. Once per session, when you and any other number of characters are facing grave harm, you can avoid that harm by narrating how you lead everyone to safety.</p>",
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.NFraAFR8XIxFxIKe"
+    },
+    {
+      "name": "Knowing is Half the Battle",
+      "type": "move",
+      "system": {
+        "position": 10,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>You’re a deep repository of knowledge, some of it even useful. Once per session, you can introduce a real-world fact about something in the scene. That fact is a Clue.</p>",
+        "checkboxes": []
+      },
+      "_id": "x49MGGUZNIw7TJ6l",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.x49MGGUZNIw7TJ6l"
+    },
+    {
+      "name": "Say Hello to My Little Friend",
+      "type": "move",
+      "system": {
+        "position": 11,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>You have an exceptionally smart dog with whom you share a strong bond. It can understand basic commands and perform simple tasks. What type of dog is it? Give the dog a name and add it to Your Corner of the House. When you use the dog to get advantage on a roll, leave it unmarked.</p>",
+        "checkboxes": []
+      },
+      "_id": "IqivFkFKVUILPOUr",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.IqivFkFKVUILPOUr"
+    },
+    {
+      "name": "Who Ya Gonna Call?",
+      "type": "move",
+      "system": {
+        "position": 12,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>You are active on the online forums for <em>The Ghost Bro Mystery Show</em>, a TV program about a group of young men and women, the Ghost Bros, who investigate haunted places in North America. When you post a question about a Deep Lake mystery on the forums, roll with Presence. </p><ul><li><p>On a 10+, a commenter has a good answer or a Clue (Keeper’s choice), and they’ll share it freely. </p></li><li><p>On a 7-9, as above, but they want you to do something for them before they’ll share it.</p></li></ul>",
+        "checkboxes": []
+      },
+      "_id": "eRdtBS3XiHt9qgE1",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.eRdtBS3XiHt9qgE1"
+    },
+    {
+      "name": "Robot in Disguise",
+      "type": "move",
+      "system": {
+        "position": 13,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>You came to Deep Lake with an array of electronic gadgets. Add the following to Your Corner of the House: Laptop, Walkie Talkies, GPS, Camcorder, Voice-Activated Audio Recorder.</p>",
+        "checkboxes": []
+      },
+      "_id": "l8VuFSCa7MAKDEZX",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.l8VuFSCa7MAKDEZX"
+    },
+    {
+      "name": "They Think He’s a Righteous Dude",
+      "type": "move",
+      "system": {
+        "position": 14,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>Something about you causes the motorheads, dweebs, and wastoids of Deep Lake to trust you. What is it? Once per session, when you do the Meddling Move in a place occupied by losers and social outcasts, you find an additional Clue, even on a miss.</p>",
+        "checkboxes": []
+      },
+      "_id": "jMGwT1Y15WyUKJrl",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.jMGwT1Y15WyUKJrl"
+    },
+    {
+      "name": "A Winner is You",
+      "type": "move",
+      "system": {
+        "position": 15,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>You were a loser back then, but not anymore! People respect you now. Why? Increase your Presence by 1 (max 3).</p>",
+        "checkboxes": []
+      },
+      "_id": "6tj7VDkdrHYcQCo4",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.6tj7VDkdrHYcQCo4"
+    },
+    {
+      "name": "I Am Error",
+      "type": "move",
+      "system": {
+        "position": 16,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>You can mark <strong>The Chromatic Desert</strong> whenever you want. The other Latchkeys don’t forget who you are when you have it marked, and you can continue interacting with them so long as there is a television nearby: you appear on whatever program is being watched and can hear people when they speak to you through the TV. When the Latchkeys watch an Odyssey tape, your Latchkey scenes can take place inside the Odyssey tape scenes.</p>",
+        "checkboxes": []
+      },
+      "_id": "i4cSpINDi6VBu3yG",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.i4cSpINDi6VBu3yG"
+    },
+    {
+      "name": "Thank You for Being a Friend",
+      "type": "move",
+      "system": {
+        "position": 17,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>You’re easy to open up to. When you do the Nostalgic Move, the other Latchkey can clear a second Condition OR they can take the Condition: Feeling Good. They can clear Feeling Good at any time to get advantage on a die roll.</p>",
+        "checkboxes": []
+      },
+      "_id": "lHsIQs1InpvdEmT0",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.lHsIQs1InpvdEmT0"
+    },
+    {
+      "name": "The Truth is Out There",
+      "type": "move",
+      "system": {
+        "position": 18,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>Someone who knows what happened to TV Odyssey is helping you behind the scenes. The Latchkeys immediately gain an Odyssey tape when you take this move—a gift from your mysterious benefactor. At the beginning of each session, this mysterious person leaves something for you where you can find it. Say what it is or ask the Keeper to say what it is. It functions as a Clue, but isn’t attached to any particular mystery—you can use it for an active mystery or save it for the future. The Keeper can reveal the identity of this mysterious helper during the Odyssey Mystery.</p>",
+        "checkboxes": []
+      },
+      "_id": "Xh0s9LYZTnhVAlUf",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.Xh0s9LYZTnhVAlUf"
+    },
+    {
+      "name": "And They’re Always Glad You Came",
+      "type": "move",
+      "system": {
+        "position": 19,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>You have a family member that still lives in Deep Lake. Who are they? Any rolls associated with actions they help you with are made at advantage. Additionally, if you’re in immediate danger and can make it to their house, you’re safe until at least the next morning.</p>",
+        "checkboxes": []
+      },
+      "_id": "YBsAyfm4LcVgAGpI",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.YBsAyfm4LcVgAGpI"
+    },
+    {
+      "name": "You Never Know What You’re Going to Get",
+      "type": "move",
+      "system": {
+        "position": 20,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>You have a background doing research. What is it? Once per session, when you do the Meddling Move by looking through books, microfiche, old records, or online archives, you find an additional Clue, even on a miss.</p>",
+        "checkboxes": []
+      },
+      "_id": "8NsGMFLAjTtNKAm3",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.8NsGMFLAjTtNKAm3"
+    },
+    {
+      "name": "Have You Ever Danced with the Devil",
+      "type": "move",
+      "system": {
+        "position": 21,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>You came to Deep Lake with a collection of tools for working black magic. Add the following to Your Corner of the House: Candles, Grimoire, Small Brazier, Athame, Poppet.</p>",
+        "checkboxes": []
+      },
+      "_id": "50YUNwoFwkPxOocX",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.50YUNwoFwkPxOocX"
+    },
+    {
+      "name": "Strange Things are Afoot at the Circle K",
+      "type": "move",
+      "system": {
+        "position": 22,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>You believe in the fundamental goodness and power of convenience stores. If something that can typically be found at a convenience store would be helpful in a situation and you take the time to go get it, say what it is and then add it to Your Corner of the House.</p>",
+        "checkboxes": []
+      },
+      "_id": "jrThhjYdG1yaSK7N",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.jrThhjYdG1yaSK7N"
+    },
+    {
+      "name": "Just Say No",
+      "type": "move",
+      "system": {
+        "position": 23,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>Something about your past makes you especially good at dealing with cops and their bullshit. What is it? Whenever you’re being harassed by the police or otherwise have to get out of a sticky situation involving law enforcement, all your associated die rolls are taken with advantage.</p>",
+        "checkboxes": []
+      },
+      "_id": "Nfzm8msz0UtPGJ52",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.Nfzm8msz0UtPGJ52"
+    },
+    {
+      "name": "What Nintendon’t",
+      "type": "move",
+      "system": {
+        "position": 24,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>Once per session, you can take a 12+ on a single roll related to an action so long as you do it with cockiness or style.</p>",
+        "checkboxes": []
+      },
+      "_id": "gdJMUcRVFt37iOSh",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.gdJMUcRVFt37iOSh"
+    },
+    {
+      "name": "Next Sunday A.D.",
+      "type": "move",
+      "system": {
+        "position": 25,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>Once per Day phase, you and at least one other player can do an out-of-character narration of an upcoming scene, as if you were doing running commentary during a movie. At least one thing from your shared narration will be true about the upcoming scene; tell the Keeper what it is. The Keeper can decide that other elements from your narration are also true.</p>",
+        "checkboxes": []
+      },
+      "_id": "JaXbT9FaewFDZMzP",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.1",
+        "createdTime": 1777556838635,
+        "modifiedTime": 1777556838635,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.JaXbT9FaewFDZMzP"
+    }
+  ],
+  "effects": [],
+  "folder": "27lpGtinRuwcHUM5",
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.1",
+    "createdTime": 1777556838635,
+    "modifiedTime": 1777556838635,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "_key": "!actors!YOzjVEi8k9MULxcx"
+}

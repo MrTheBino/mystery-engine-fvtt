@@ -38,6 +38,10 @@ only stuff they should see like clues for threats etc.
 - provide a victorian style for the user interface
 - improved css styling
 - finding all bugs ;)
+  
+## Manifest-URL for manual installation of the system
+
+    https://github.com/MrTheBino/mystery-engine-fvtt/releases/latest/download/system.json
 
 
 ## Developer Commands

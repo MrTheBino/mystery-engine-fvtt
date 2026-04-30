@@ -33,7 +33,7 @@ only stuff they should see like clues for threats etc.
 - Brindlewood Bay
 - any other game of the type of Brindlewood Bay
 
-# Text styling of checklists
+## Text styling of checklists
 
 The checklist item supports bbCode styling
 

@@ -33,6 +33,17 @@ only stuff they should see like clues for threats etc.
 - Brindlewood Bay
 - any other game of the type of Brindlewood Bay
 
+# Text styling of checklists
+
+The checklist item supports bbCode styling
+
+* [b] bold[/b]
+ * [i] italic[/i]
+ * [u] underline[/u]
+ * [s] strikethough[/s]
+ * [br] line break[/br]
+ * [list] list item 1 [br] list item 2 [br] list item 3 [/list]
+
 ## Roadmap
 
 - provide a victorian style for the user interface

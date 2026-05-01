@@ -1,0 +1,53 @@
+{
+  "name": "THE KEY OF DESOLATION",
+  "type": "checklist",
+  "_id": "VZtpUlSxij5aUEbh",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 5,
+    "description": "<p>When you turn this Key, mark the first empty box.</p>",
+    "isContainer": false,
+    "entries": [
+      {
+        "selected": false,
+        "text": "[b]The Sandstone Arch[/b]. Unlock the End of Session question: \"Did you receive a Signal from the Other Side?\""
+      },
+      {
+        "selected": false,
+        "text": "[b]The Fathomless Well.[/b] Your Reason modifier is reduced by 1 and your Sensitivity modifier is increased by 1."
+      },
+      {
+        "selected": false,
+        "text": "[b]The Wandering Monolith.[/b] You can now seek out the Big Man. How do you make contact with him? The Big Man can be consulted like any other Side Character. When you do so, roll with Sensitivity. On a 7-9, you gain 1 Clue; he will reveal it in a way that reflects his current disposition. On a 10+, as above, but you gain 2 Clues. On a miss, you must mark the next box on The Key of Desolation."
+      },
+      {
+        "selected": false,
+        "text": "[b]The Chromatic Desert.[/b] You can no longer be perceived by other characters and all memory of you is erased-it's like you never existed. You can continue to conduct investigations, but the Clues you find are only available if you narrate them into an Odyssey tape scene."
+      },
+      {
+        "selected": false,
+        "text": "[b]The Pure-White Signal.[/b] You lose contact with this world altogether. Tell the Keeper to play a white Odyssey tape and then retire this character."
+      }
+    ]
+  },
+  "effects": [],
+  "folder": "3JNAFOPNvhokPIiP",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777613888738,
+    "modifiedTime": 1777613888738,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "sort": 0,
+  "_key": "!items!VZtpUlSxij5aUEbh"
+}

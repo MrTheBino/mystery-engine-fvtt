@@ -1,0 +1,61 @@
+{
+  "name": "THE KEY OF THE CHILD",
+  "type": "checklist",
+  "_id": "LFruMWfkXraaZlY5",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 4,
+    "description": "<p>When you turn this Key, mark and narrate any you wish.</p>",
+    "isContainer": false,
+    "entries": [
+      {
+        "selected": false,
+        "text": "A flashback showing your latchkey kid routine whenever you got home from school."
+      },
+      {
+        "selected": false,
+        "text": "A flashback showing how you were an outsider among your school peers."
+      },
+      {
+        "selected": false,
+        "text": "A flashback to the moment when you realized your parents were imperfect."
+      },
+      {
+        "selected": false,
+        "text": "A flashback to when you felt genuine happiness as a child."
+      },
+      {
+        "selected": false,
+        "text": "A flashback to when you experienced childhood trauma."
+      },
+      {
+        "selected": false,
+        "text": "A flashback to the moment when you realized childhood wasn't forever."
+      },
+      {
+        "selected": false,
+        "text": "A flashback to when you first discovered TV Odyssey."
+      }
+    ]
+  },
+  "effects": [],
+  "folder": "3JNAFOPNvhokPIiP",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777613886400,
+    "modifiedTime": 1777613886418,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "sort": 400000,
+  "_key": "!items!LFruMWfkXraaZlY5"
+}

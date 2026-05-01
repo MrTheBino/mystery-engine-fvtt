@@ -1,0 +1,61 @@
+{
+  "folder": "2Wy7Bd8tck7KbM1R",
+  "name": "End of Session",
+  "type": "checklist",
+  "_id": "vy6cSNxQ0HtNvw49",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 0,
+    "description": "<p>The first is always marked. At the beginning of a session, mark two more (three total marked)</p>",
+    "isContainer": false,
+    "entries": [
+      {
+        "selected": true,
+        "text": "Did the Murder Mavens solve a mystery?"
+      },
+      {
+        "selected": false,
+        "text": "Did you secretly undermine the authority of a local official?"
+      },
+      {
+        "selected": false,
+        "text": "Did you share your wisdom with a young person?"
+      },
+      {
+        "selected": false,
+        "text": "Did you share a memory of a late family member?"
+      },
+      {
+        "selected": false,
+        "text": "Did you behave like a woman half your age?"
+      },
+      {
+        "selected": false,
+        "text": "Did you dote on someone?"
+      },
+      {
+        "selected": false,
+        "text": "Did you show someone that you've \"still got it?\""
+      }
+    ]
+  },
+  "effects": [],
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777612753556,
+    "modifiedTime": 1777614202774,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!vy6cSNxQ0HtNvw49"
+}

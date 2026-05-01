@@ -1,0 +1,34 @@
+{
+  "folder": "YhQJjxX3mbSMODtE",
+  "name": "Frank Dowling",
+  "type": "move",
+  "_id": "bhltKDWIDdi6DbMn",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 0,
+    "description": "",
+    "active": true,
+    "hidden": false,
+    "moveDescription": "<p>You have a strong religious background. Describe it. When you use this move, describe how your faith is helping you resist the Void. Then, unmark every box on The Crown of the Void. You are still Obsessed with the Void if you unmark the Pomegranate Kernel. You may only use this move once.</p>",
+    "checkboxes": []
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777612254464,
+    "modifiedTime": 1777612259992,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!bhltKDWIDdi6DbMn"
+}

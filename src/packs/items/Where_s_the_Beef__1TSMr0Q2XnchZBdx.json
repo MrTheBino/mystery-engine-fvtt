@@ -1,0 +1,34 @@
+{
+  "name": "Where's the Beef?",
+  "type": "move",
+  "_id": "1TSMr0Q2XnchZBdx",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 6,
+    "description": "",
+    "active": true,
+    "moveDescription": "<p>You are a little bigger and a little stronger than most. Increase your Vitality by 1 (max 3). You always use Vitality on rolls associated with actions connected to the Big Man.</p>",
+    "checkboxes": [],
+    "hidden": false
+  },
+  "effects": [],
+  "folder": "gjeQm4IXgc6chhJ3",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777613771391,
+    "modifiedTime": 1777613824620,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "sort": 1400000,
+  "_key": "!items!1TSMr0Q2XnchZBdx"
+}

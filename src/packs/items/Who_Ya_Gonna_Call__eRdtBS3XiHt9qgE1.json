@@ -1,0 +1,34 @@
+{
+  "name": "Who Ya Gonna Call?",
+  "type": "move",
+  "system": {
+    "position": 12,
+    "description": "",
+    "active": true,
+    "hidden": false,
+    "moveDescription": "<p>You are active on the online forums for <em>The Ghost Bro Mystery Show</em>, a TV program about a group of young men and women, the Ghost Bros, who investigate haunted places in North America. When you post a question about a Deep Lake mystery on the forums, roll with Presence. </p><ul><li><p>On a 10+, a commenter has a good answer or a Clue (Keeper’s choice), and they’ll share it freely. </p></li><li><p>On a 7-9, as above, but they want you to do something for them before they’ll share it.</p></li></ul>",
+    "checkboxes": []
+  },
+  "_id": "eRdtBS3XiHt9qgE1",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "gjeQm4IXgc6chhJ3",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777613791573,
+    "modifiedTime": 1777613824619,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "sort": 500000,
+  "_key": "!items!eRdtBS3XiHt9qgE1"
+}

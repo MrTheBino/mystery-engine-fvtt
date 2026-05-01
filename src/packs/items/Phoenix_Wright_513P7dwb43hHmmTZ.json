@@ -1,0 +1,34 @@
+{
+  "folder": "OqVKkuhT3YgUKpWj",
+  "name": "Phoenix Wright",
+  "type": "move",
+  "_id": "513P7dwb43hHmmTZ",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 0,
+    "description": "",
+    "active": true,
+    "hidden": false,
+    "moveDescription": "<p>Whenever you find a Clue that is an object, you can phys ically manipulate the object to uncover a further secret about it—a hidden detail, a secret compartment, a scrawled message, etc. This extra detail is added to the Clue; it cannot cause the Clue to conclusively solve the mystery by itself.</p>",
+    "checkboxes": []
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777612609199,
+    "modifiedTime": 1777612614793,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!513P7dwb43hHmmTZ"
+}

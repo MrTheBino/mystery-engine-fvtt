@@ -1,0 +1,34 @@
+{
+  "folder": "2Wy7Bd8tck7KbM1R",
+  "name": "The Gold Crown Mysteries Move",
+  "type": "move",
+  "_id": "hcxSxUW1174J18w3",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 0,
+    "description": "",
+    "active": true,
+    "hidden": false,
+    "moveDescription": "<p>Once per mystery, when any Maven says <em>“This reminds me of something that happened to Amanda Delacourt!”,</em> work with the other players to describe how something that is happening in the situation reminds the Mavens of an event from one of the Gold Crown Mysteries. At a minimum, you must provide the following information:</p><ul><li><p>The name of the Gold Crown Mystery in question (no repeats, please!).</p></li><li><p>The problem or situation Amanda found herself in that is similar to what the Mavens are experi encing.</p></li><li><p>How Amanda eventually overcame the problem or resolved the situation.</p></li></ul><p>Then, take a 12+ to a single relevant roll OR state a fact about the current situation that the Keeper must incorporate. </p><p><strong>Note:</strong> <em>Generally-speaking, this move can only be used once per mystery, per group.</em></p>",
+    "checkboxes": []
+  },
+  "effects": [],
+  "sort": 500000,
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777613207548,
+    "modifiedTime": 1777614201538,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!hcxSxUW1174J18w3"
+}

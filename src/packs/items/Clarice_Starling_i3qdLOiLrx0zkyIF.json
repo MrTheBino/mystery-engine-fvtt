@@ -1,0 +1,34 @@
+{
+  "folder": "OqVKkuhT3YgUKpWj",
+  "name": "Clarice Starling",
+  "type": "move",
+  "_id": "i3qdLOiLrx0zkyIF",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 0,
+    "description": "",
+    "active": true,
+    "hidden": false,
+    "moveDescription": "<p>This move has no function until you solve a mystery and put a Suspect behind bars as a result. Thereafter, you can name an imprisoned Suspect your Consultant. Once per mystery, you can go to the prison the Consultant is being held in and ask them about that mystery. This triggers the Meddling Move as it would when questioning any other character, but the Consultant’s answers and behavior are af fected by your most recent mark on the Crown of the Void:</p><ul><li><p>No marks: The Consultant is mocking or insulting.</p></li><li><p>A Shadow in the Garden: The Consultant claims to see malevolent spirits all around you.</p></li><li><p>The Chariot: The Consultant reveals a Void Clue, even on a miss (but no extra effect on a 12+).</p></li><li><p>The Pallid Mask: The Consultant also reveals the name of a character who will be killed if you don’t do some thing to help them.</p></li><li><p>The Pomegranate Kernel: The Consultant will also profess their love for you. If you reciprocate their love, clear Obsessed with the Void and lose access to this move. If you reject their love, take the Condition: Marked by [Name of Consultant] and lose access to this move. The Consultant will eventually escape and come after you.</p></li></ul><p>No two Mavens can have this move at the same time. This move and the Robert Langdon move cannot be in the same game.</p>",
+    "checkboxes": []
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777612645148,
+    "modifiedTime": 1777612701981,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!i3qdLOiLrx0zkyIF"
+}

@@ -1,0 +1,57 @@
+{
+  "name": "YOUR CORNER OF THE HOUSE",
+  "type": "checklist",
+  "_id": "Y9q1XQSkROBRFgWp",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 0,
+    "description": "",
+    "isContainer": true,
+    "entries": [
+      {
+        "selected": false,
+        "text": ""
+      },
+      {
+        "selected": false,
+        "text": ""
+      },
+      {
+        "selected": false,
+        "text": ""
+      },
+      {
+        "selected": false,
+        "text": ""
+      },
+      {
+        "selected": false,
+        "text": ""
+      },
+      {
+        "selected": false,
+        "text": ""
+      }
+    ]
+  },
+  "effects": [],
+  "folder": "3JNAFOPNvhokPIiP",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777613876926,
+    "modifiedTime": 1777613886417,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "sort": 100000,
+  "_key": "!items!Y9q1XQSkROBRFgWp"
+}

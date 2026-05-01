@@ -1,0 +1,696 @@
+{
+  "folder": "KlOu6QDOHrciOyq4",
+  "name": "Brindlewood Bay Character",
+  "type": "mystery-actor",
+  "_id": "BHmwmqjL0otUZt4y",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "editMode": false,
+    "biography": "",
+    "notes": "",
+    "labels": [
+      {
+        "name": "Style",
+        "value": ""
+      },
+      {
+        "name": "Cozy Activity",
+        "value": ""
+      }
+    ],
+    "conditions": [],
+    "abilities": [
+      {
+        "name": "Vitality",
+        "value": 0
+      },
+      {
+        "name": "Composure",
+        "value": 1
+      },
+      {
+        "name": "Reason",
+        "value": 1
+      },
+      {
+        "name": "Presence",
+        "value": 0
+      },
+      {
+        "name": "Sensitivity",
+        "value": -1
+      }
+    ],
+    "xpTrack": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "prototypeToken": {
+    "name": "Brindlewood Bay Character",
+    "displayName": 0,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "depth": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "items": [
+    {
+      "name": "A Cozy Little Place",
+      "type": "checklist",
+      "system": {
+        "position": 0,
+        "description": "",
+        "isContainer": true,
+        "entries": [
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          }
+        ]
+      },
+      "_id": "iOD0miYv1KS5BMXZ",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.2",
+        "createdTime": 1777613579365,
+        "modifiedTime": 1777613595645,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.iOD0miYv1KS5BMXZ"
+    },
+    {
+      "name": "Advancements",
+      "type": "checklist",
+      "_id": "pcbt7mThalIADogc",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional Maven move."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional Maven move."
+          },
+          {
+            "selected": false,
+            "text": "Unmark all the items in your Cozy Little Place."
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.2",
+        "createdTime": 1777613605992,
+        "modifiedTime": 1777613605992,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.pcbt7mThalIADogc",
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.pcbt7mThalIADogc"
+    },
+    {
+      "name": "End of Session",
+      "type": "checklist",
+      "_id": "vy6cSNxQ0HtNvw49",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "<p>The first is always marked. At the beginning of a session, mark two more (three total marked)</p>",
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": true,
+            "text": "Did the Murder Mavens solve a mystery?"
+          },
+          {
+            "selected": false,
+            "text": "Did you secretly undermine the authority of a local official?"
+          },
+          {
+            "selected": false,
+            "text": "Did you share your wisdom with a young person?"
+          },
+          {
+            "selected": false,
+            "text": "Did you share a memory of a late family member?"
+          },
+          {
+            "selected": false,
+            "text": "Did you behave like a woman half your age?"
+          },
+          {
+            "selected": false,
+            "text": "Did you dote on someone?"
+          },
+          {
+            "selected": false,
+            "text": "Did you show someone that you've \"still got it?\""
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.2",
+        "createdTime": 1777613607229,
+        "modifiedTime": 1777613607229,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.vy6cSNxQ0HtNvw49",
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.vy6cSNxQ0HtNvw49"
+    },
+    {
+      "name": "The Crown of the Queen",
+      "type": "checklist",
+      "_id": "rVJq17Mkyx3kCCN8",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "<p>When you put on this Crown, mark and narrate any you</p><p>wish.</p>",
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "A flashback of your fondest memory of your late partner."
+          },
+          {
+            "selected": false,
+            "text": "A flashback showing how you were an imperfect sister or daughter."
+          },
+          {
+            "selected": false,
+            "text": "A flashback showing how you were an imperfect mother."
+          },
+          {
+            "selected": false,
+            "text": "A flashback of your fondest memory with one of your children."
+          },
+          {
+            "selected": false,
+            "text": "A scene in the present day showing a private side of you very few get to see."
+          },
+          {
+            "selected": false,
+            "text": "A scene in the present day showing a burgeoning romance."
+          },
+          {
+            "selected": false,
+            "text": "A scene in the present day showing how you satisfy your physical desires."
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.2",
+        "createdTime": 1777613612120,
+        "modifiedTime": 1777613612120,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.rVJq17Mkyx3kCCN8",
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.rVJq17Mkyx3kCCN8"
+    },
+    {
+      "name": "The Crown of the Void",
+      "type": "checklist",
+      "_id": "8MfcOOTLR8qcF777",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "<p>When you put on this Crown, mark the first empty box.</p>",
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "[b]A Shadow in the Garden.[/b] Hereafter, during cozy vignettes focused on you or Cozy Move scenes involving you, you must also narrate how dark entities subtly reveal themselves in the scene."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Chariot.[/b] Your Reason modifier is reduced by 1 and your Sensitivity modifier is increased by 1."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Pallid Mask.[/b] Hereafter, during any intimate conver- sation with another character, you must make a casual reference to death, dying, the afterlife, or the End of All Things-no matter the subject at-hand."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Pomegranate Kernel.[/b] You take the Condition: Obsessed with the Void. It can never be cleared."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Void. [/b]Retire your character in a way that shows how they are lost to the Void."
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.2",
+        "createdTime": 1777613651420,
+        "modifiedTime": 1777613651420,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.8MfcOOTLR8qcF777",
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.8MfcOOTLR8qcF777"
+    },
+    {
+      "name": "The Cozy Move",
+      "type": "move",
+      "_id": "1R8BD3meDTaKDA7B",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>When you have an <em>intimate moment with another Maven while one of you is engaged in your cozy activity</em>, you may each clear an appropriate Condition. If it’s your cozy activity, you can also stumble on a Clue relevant to the active mystery. Tell the Keeper what it is. The Clue cannot conclusively solve the mystery by itself.</p>",
+        "checkboxes": []
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.2",
+        "createdTime": 1777613702541,
+        "modifiedTime": 1777613702541,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.1R8BD3meDTaKDA7B",
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.1R8BD3meDTaKDA7B"
+    },
+    {
+      "name": "The Day Move",
+      "type": "move",
+      "_id": "GMqLfTGSVWNrgqUG",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>When you do something risky or face something you fear, name what you’re afraid will happen if you fail or lose your nerve, then roll with an appropriate ability.</p><p><strong>On a 10+</strong>, you do what you intended or you hold steady; describe what it looks like. </p><p><strong>On a 7-9,</strong> the Keeper will tell you how your actions would leave you vulnerable, and you can choose to back down or go through with it. If you go through with it, the Keeper describes what it looks like. </p><p><strong>On a 12+</strong>, you do what you intended or you hold steady, and the Keeper will tell you some extra benefit or advantage you receive. Describe what it looks like.</p>",
+        "checkboxes": []
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.2",
+        "createdTime": 1777613703869,
+        "modifiedTime": 1777613703869,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.GMqLfTGSVWNrgqUG",
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.GMqLfTGSVWNrgqUG"
+    },
+    {
+      "name": "The Gold Crown Mysteries Move",
+      "type": "move",
+      "_id": "hcxSxUW1174J18w3",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>Once per mystery, when any Maven says <em>“This reminds me of something that happened to Amanda Delacourt!”,</em> work with the other players to describe how something that is happening in the situation reminds the Mavens of an event from one of the Gold Crown Mysteries. At a minimum, you must provide the following information:</p><ul><li><p>The name of the Gold Crown Mystery in question (no repeats, please!).</p></li><li><p>The problem or situation Amanda found herself in that is similar to what the Mavens are experi encing.</p></li><li><p>How Amanda eventually overcame the problem or resolved the situation.</p></li></ul><p>Then, take a 12+ to a single relevant roll OR state a fact about the current situation that the Keeper must incorporate. </p><p><strong>Note:</strong> <em>Generally-speaking, this move can only be used once per mystery, per group.</em></p>",
+        "checkboxes": []
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.2",
+        "createdTime": 1777613705346,
+        "modifiedTime": 1777613705346,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.hcxSxUW1174J18w3",
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.hcxSxUW1174J18w3"
+    },
+    {
+      "name": "The Meddling Move",
+      "type": "move",
+      "_id": "dWbYTcGuPQ4Nvs9p",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>When you <em>search for a clue, conduct research, or otherwise gather information</em>, describe how you’re doing so and roll with an appropriate ability.</p><p><strong>On a hit</strong>, you find a Clue. The Keeper will tell you what it is. </p><p><strong>On a 7–9,</strong> there’s a complication—either with the Clue itself, or a complication you encounter while searching. The Keeper will tell you what the complication is. </p><p><strong>On a 12+</strong>, you also find a Void Clue OR you learn something about the Dark Conspiracy in Brindlewood Bay (Keeper’s choice).</p>",
+        "checkboxes": []
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.2",
+        "createdTime": 1777613706726,
+        "modifiedTime": 1777613706726,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.dWbYTcGuPQ4Nvs9p",
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.dWbYTcGuPQ4Nvs9p"
+    },
+    {
+      "name": "The Night Move",
+      "type": "move",
+      "_id": "IFy00X9m6sHQBcXR",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>When you do something <em>risky or face something</em> you fear, name what you’re afraid will happen if you fail or lose your nerve. The Keeper will tell you how it is worse than you fear. You can choose to back down or go through with it. If you go through with it, roll with an appropriate ability.</p><p><strong>On a 10+</strong>, you do what you intended or you hold steady; describe what it looks like. </p><p><strong>On a 7-9,</strong> you do what you intended or you hold steady, but there is a complication or cost; the Keeper describes what it looks like. </p><p><strong>On a 12+</strong>, you do what you intended or you hold steady, and the Keeper will tell you some extra benefit or advantage you receive. Describe what it looks like.</p>",
+        "checkboxes": []
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.2",
+        "createdTime": 1777613708250,
+        "modifiedTime": 1777613708250,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.IFy00X9m6sHQBcXR",
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.IFy00X9m6sHQBcXR"
+    },
+    {
+      "name": "The Occult Move",
+      "type": "move",
+      "_id": "tB6X4WNb71IAT5AP",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>When you <em>engage in an activity related to the su pernatural or the occult for the first time</em>, imagine what your actions would look like as a move. Say what triggers the move and roll with Sensitivity.</p><p><strong>On a hit</strong>, it works; work with the Keeper to write the move—it is now a move all Mavens can use for the rest of the game and your roll stands. </p><p><strong>On a 7–9</strong>, you must also mark the Crown of the Void. </p><p><strong>On a miss</strong>, it’s not something the Mavens can ever do and you also mark the Crown of the Void. </p><p><strong>Note:</strong> <em>The Keeper can require you to have a strong fictional justification for doing so before attempting to trigger this move.</em></p>",
+        "checkboxes": []
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.2",
+        "createdTime": 1777613709606,
+        "modifiedTime": 1777613709606,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.tB6X4WNb71IAT5AP",
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.tB6X4WNb71IAT5AP"
+    },
+    {
+      "name": "Theorize",
+      "type": "move",
+      "_id": "QCPbCWZnSeucldxt",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "active": true,
+        "hidden": false,
+        "moveDescription": "<p>When the <em>Mavens have an open, freewheeling discussion about the solution to a mystery once they have gathered a number of Clues equal to at least half the mystery’s Complexity (rounded up</em>)—and reach a consensus—roll plus the number of Clues incorporated into the theory or otherwise explained away, minus the mystery’s Complexity.</p><p><strong>On a 10+</strong>, it’s the correct solution. The Keeper will present an opportunity to take down the culprit or otherwise save the day. </p><p><strong>On a 7–9</strong>, it’s the correct solution, but the Keeper will either add an unwelcome complication to the solution itself, or present a complicated or dangerous opportu nity to take down the culprit or save the day. </p><p><strong>On a 6-</strong>, the solution is incorrect, and the Keeper reacts. </p><p><strong>On a 12+</strong>, a person involved in the Dark Conspiracy of Brindlewood Bay also reveals themself to the Mavens. </p><p><strong>Note:</strong> <em>It doesn’t matter who rolls Theorize when the time comes. Additionally, Theorize cannot be taken with advantage or disadvantage, nor is it subject to the effects of other moves. The success tier can be increased by putting on a Crown, but only if every Maven does so.</em></p>",
+        "checkboxes": []
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.2",
+        "createdTime": 1777613711070,
+        "modifiedTime": 1777613711070,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.QCPbCWZnSeucldxt",
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.QCPbCWZnSeucldxt"
+    }
+  ],
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777613505750,
+    "modifiedTime": 1777613667999,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!BHmwmqjL0otUZt4y"
+}

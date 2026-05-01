@@ -466,664 +466,174 @@
       "_key": "!actors.items!YOzjVEi8k9MULxcx.r2CnO43Vn4AgxcPs"
     },
     {
-      "name": "Where's the Beef?",
+      "name": "Answer a Question",
       "type": "move",
-      "_id": "1TSMr0Q2XnchZBdx",
+      "_id": "gCSzDGxVzMqxRjky",
       "img": "icons/svg/item-bag.svg",
       "system": {
-        "position": 6,
-        "description": "",
-        "active": true,
-        "moveDescription": "<p>You are a little bigger and a little stronger than most. Increase your Vitality by 1 (max 3). You always use Vitality on rolls associated with actions connected to the Big Man.</p>",
-        "checkboxes": [],
-        "hidden": false
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.1TSMr0Q2XnchZBdx"
-    },
-    {
-      "name": "Sight Beyond Sight",
-      "type": "move",
-      "_id": "t69bypW0CS3DOHiq",
-      "img": "icons/svg/item-bag.svg",
-      "system": {
-        "position": 7,
-        "description": "",
-        "active": true,
-        "moveDescription": "<p>Whether you call it premonitions, understanding omens, or just plain old having a hunch, you are able to glimpse a little into the future. The first time you enter a Location, you can ask the Keeper, “What is about to happen?” They will answer truthfully, though not necessarily completely. If you have marked <strong>The Sandstone Arch</strong>, you can also ask, “Why is it about to happen?” The Keeper will answer truthfully, though not necessarily completely.</p>",
-        "checkboxes": [],
-        "hidden": false
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.t69bypW0CS3DOHiq"
-    },
-    {
-      "name": "This is Your Brain",
-      "type": "move",
-      "_id": "6VwN1EH1ZywAYkNs",
-      "img": "icons/svg/item-bag.svg",
-      "system": {
-        "position": 8,
-        "description": "",
-        "active": true,
-        "moveDescription": "<p>You are a little smarter than most, and when you look into the dark, unfathomable places, your logical edge stays sharp. Increase your Reason by 1 (max 3). When you mark <strong>The Fathomless Well</strong>, do not decrease your Reason.</p>",
-        "checkboxes": [],
-        "hidden": false
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.6VwN1EH1ZywAYkNs"
-    },
-    {
-      "name": "Come With Me If You Want to Live",
-      "type": "move",
-      "_id": "NFraAFR8XIxFxIKe",
-      "img": "icons/svg/item-bag.svg",
-      "system": {
-        "position": 9,
+        "position": 0,
         "description": "",
         "active": true,
         "hidden": false,
-        "moveDescription": "<p>You’re the kind of person who identifies all the exits when you arrive somewhere new. Once per session, when you and any other number of characters are facing grave harm, you can avoid that harm by narrating how you lead everyone to safety.</p>",
+        "moveDescription": "<p>Answer a Question When the Latchkeys have an open, freewheeling discussion about the answer to a Question once they have gathered a number of Clues equal to at least half the Question’s Complexity—and reach a consensus—roll plus the number of Clues incorporated into the answer or otherwise explained away, minus the question’s Complexity.</p><p><strong>On a 10+</strong>, the answer is correct and an Opportunity can be pursued. </p><p><strong>On a 7-9</strong>, as above, but the Keeper will add an unwelcome complication to the answer and/or pursuing the Opportunity will be more dangerous. </p><p><strong>On a miss</strong>, the answer is incorrect and the Keeper reacts. </p><p><strong>On a 12+</strong>, the Big Man will appear while the Latchkeys are pursuing the Opportunity.</p>",
         "checkboxes": []
       },
       "effects": [],
-      "folder": null,
-      "sort": 0,
       "flags": {},
       "_stats": {
         "coreVersion": "14.360",
         "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
+        "systemVersion": "0.2.2",
+        "createdTime": 1777614131386,
+        "modifiedTime": 1777614131386,
         "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.gCSzDGxVzMqxRjky",
+        "duplicateSource": null,
+        "exportSource": null
       },
       "ownership": {
-        "default": 0
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
       },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.NFraAFR8XIxFxIKe"
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.gCSzDGxVzMqxRjky"
     },
     {
-      "name": "Knowing is Half the Battle",
+      "name": "The Day Move",
       "type": "move",
+      "_id": "DwDcjgURTm4CZD9m",
+      "img": "icons/svg/item-bag.svg",
       "system": {
-        "position": 10,
+        "position": 0,
         "description": "",
         "active": true,
         "hidden": false,
-        "moveDescription": "<p>You’re a deep repository of knowledge, some of it even useful. Once per session, you can introduce a real-world fact about something in the scene. That fact is a Clue.</p>",
+        "moveDescription": "<p>When you do something risky or face something you fear, name what you’re afraid will happen if you fail or lose your nerve, then roll with an appropriate ability.</p><p><strong>On a 10+</strong>, you do what you intended or you hold steady; describe what it looks like. </p><p><strong>On a 7-9</strong>, the Keeper will tell you how your actions would leave you vulnerable, and you can choose to back down or go through with it. If you go through with it, the Keeper describes what it looks like. </p><p><strong>On a 12+</strong>, you do what you intended or you hold steady, and the Keeper will tell you some extra benefit or advantage you receive. Describe what it looks like.</p>",
         "checkboxes": []
       },
-      "_id": "x49MGGUZNIw7TJ6l",
-      "img": "icons/svg/item-bag.svg",
       "effects": [],
-      "folder": null,
-      "sort": 0,
       "flags": {},
       "_stats": {
         "coreVersion": "14.360",
         "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
+        "systemVersion": "0.2.2",
+        "createdTime": 1777614135114,
+        "modifiedTime": 1777614135114,
         "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.DwDcjgURTm4CZD9m",
+        "duplicateSource": null,
+        "exportSource": null
       },
       "ownership": {
-        "default": 0
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
       },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.x49MGGUZNIw7TJ6l"
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.DwDcjgURTm4CZD9m"
     },
     {
-      "name": "Say Hello to My Little Friend",
+      "name": "The Meddling Move",
       "type": "move",
+      "_id": "lkySDvmuXXBWe0jJ",
+      "img": "icons/svg/item-bag.svg",
       "system": {
-        "position": 11,
+        "position": 0,
         "description": "",
         "active": true,
         "hidden": false,
-        "moveDescription": "<p>You have an exceptionally smart dog with whom you share a strong bond. It can understand basic commands and perform simple tasks. What type of dog is it? Give the dog a name and add it to Your Corner of the House. When you use the dog to get advantage on a roll, leave it unmarked.</p>",
+        "moveDescription": "<p>When you search for a clue, conduct research, or otherwise gather information, describe how you’re doing so and roll with an appropriate ability.</p><p><strong>On a hit</strong>, you find a Clue. The Keeper will tell you what it is. </p><p><strong>On a 7–9</strong>, there’s a complication—either with the Clue itself, or a complication you encounter while searching. The Keeper will tell you what the complication is. </p><p><strong>On a 12+</strong>, you also find an Odyssey Tape OR you learn some unusual history about Degoya County (Keeper’s choice).</p><p></p>",
         "checkboxes": []
       },
-      "_id": "IqivFkFKVUILPOUr",
-      "img": "icons/svg/item-bag.svg",
       "effects": [],
-      "folder": null,
-      "sort": 0,
       "flags": {},
       "_stats": {
         "coreVersion": "14.360",
         "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
+        "systemVersion": "0.2.2",
+        "createdTime": 1777614136452,
+        "modifiedTime": 1777614136452,
         "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.lkySDvmuXXBWe0jJ",
+        "duplicateSource": null,
+        "exportSource": null
       },
       "ownership": {
-        "default": 0
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
       },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.IqivFkFKVUILPOUr"
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.lkySDvmuXXBWe0jJ"
     },
     {
-      "name": "Who Ya Gonna Call?",
+      "name": "The Night Move",
       "type": "move",
+      "_id": "tpB8QKKPIQTfKXN5",
+      "img": "icons/svg/item-bag.svg",
       "system": {
-        "position": 12,
+        "position": 0,
         "description": "",
         "active": true,
         "hidden": false,
-        "moveDescription": "<p>You are active on the online forums for <em>The Ghost Bro Mystery Show</em>, a TV program about a group of young men and women, the Ghost Bros, who investigate haunted places in North America. When you post a question about a Deep Lake mystery on the forums, roll with Presence. </p><ul><li><p>On a 10+, a commenter has a good answer or a Clue (Keeper’s choice), and they’ll share it freely. </p></li><li><p>On a 7-9, as above, but they want you to do something for them before they’ll share it.</p></li></ul>",
+        "moveDescription": "<p>When you do something risky or face something you fear, name what you’re afraid will happen if you fail or lose your nerve. The Keeper will tell you how it is worse than you fear. You can choose to back down or go through with it. If you go through with it, roll with an appropriate ability.</p><p><strong>On a 10+</strong>, you do what you intended or you hold steady; describe what it looks like. </p><p><strong>On a 7-9</strong>, you do what you intended or you hold steady, but there is a complication or cost; the Keeper describes what it looks like. </p><p><strong>On a 12+</strong>, you do what you intended or you hold steady, and the Keeper will tell you some extra benefit or advantage you receive. Describe what it looks like.</p>",
         "checkboxes": []
       },
-      "_id": "eRdtBS3XiHt9qgE1",
-      "img": "icons/svg/item-bag.svg",
       "effects": [],
-      "folder": null,
-      "sort": 0,
       "flags": {},
       "_stats": {
         "coreVersion": "14.360",
         "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
+        "systemVersion": "0.2.2",
+        "createdTime": 1777614137409,
+        "modifiedTime": 1777614137409,
         "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.tpB8QKKPIQTfKXN5",
+        "duplicateSource": null,
+        "exportSource": null
       },
       "ownership": {
-        "default": 0
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
       },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.eRdtBS3XiHt9qgE1"
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.tpB8QKKPIQTfKXN5"
     },
     {
-      "name": "Robot in Disguise",
+      "name": "The Nostalgic Move",
       "type": "move",
+      "_id": "pXBpphJUFlNU56Hq",
+      "img": "icons/svg/item-bag.svg",
       "system": {
-        "position": 13,
+        "position": 0,
         "description": "",
         "active": true,
         "hidden": false,
-        "moveDescription": "<p>You came to Deep Lake with an array of electronic gadgets. Add the following to Your Corner of the House: Laptop, Walkie Talkies, GPS, Camcorder, Voice-Activated Audio Recorder.</p>",
+        "moveDescription": "<p>When you have an intimate moment with another Latchkey while one of you is waxing nostalgic about something that Takes You Back, you may each clear an appropriate Condition. If you’re not the Latchkey waxing nostalgic, you also stumble on a Clue relevant to an active mystery. Tell the Keeper what it is. The Clue cannot conclusively solve the mystery by itself.</p>",
         "checkboxes": []
       },
-      "_id": "l8VuFSCa7MAKDEZX",
-      "img": "icons/svg/item-bag.svg",
       "effects": [],
-      "folder": null,
-      "sort": 0,
       "flags": {},
       "_stats": {
         "coreVersion": "14.360",
         "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
+        "systemVersion": "0.2.2",
+        "createdTime": 1777614138595,
+        "modifiedTime": 1777614138595,
         "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.pXBpphJUFlNU56Hq",
+        "duplicateSource": null,
+        "exportSource": null
       },
       "ownership": {
-        "default": 0
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
       },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.l8VuFSCa7MAKDEZX"
-    },
-    {
-      "name": "They Think He’s a Righteous Dude",
-      "type": "move",
-      "system": {
-        "position": 14,
-        "description": "",
-        "active": true,
-        "hidden": false,
-        "moveDescription": "<p>Something about you causes the motorheads, dweebs, and wastoids of Deep Lake to trust you. What is it? Once per session, when you do the Meddling Move in a place occupied by losers and social outcasts, you find an additional Clue, even on a miss.</p>",
-        "checkboxes": []
-      },
-      "_id": "jMGwT1Y15WyUKJrl",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
       "folder": null,
       "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.jMGwT1Y15WyUKJrl"
-    },
-    {
-      "name": "A Winner is You",
-      "type": "move",
-      "system": {
-        "position": 15,
-        "description": "",
-        "active": true,
-        "hidden": false,
-        "moveDescription": "<p>You were a loser back then, but not anymore! People respect you now. Why? Increase your Presence by 1 (max 3).</p>",
-        "checkboxes": []
-      },
-      "_id": "6tj7VDkdrHYcQCo4",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.6tj7VDkdrHYcQCo4"
-    },
-    {
-      "name": "I Am Error",
-      "type": "move",
-      "system": {
-        "position": 16,
-        "description": "",
-        "active": true,
-        "hidden": false,
-        "moveDescription": "<p>You can mark <strong>The Chromatic Desert</strong> whenever you want. The other Latchkeys don’t forget who you are when you have it marked, and you can continue interacting with them so long as there is a television nearby: you appear on whatever program is being watched and can hear people when they speak to you through the TV. When the Latchkeys watch an Odyssey tape, your Latchkey scenes can take place inside the Odyssey tape scenes.</p>",
-        "checkboxes": []
-      },
-      "_id": "i4cSpINDi6VBu3yG",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.i4cSpINDi6VBu3yG"
-    },
-    {
-      "name": "Thank You for Being a Friend",
-      "type": "move",
-      "system": {
-        "position": 17,
-        "description": "",
-        "active": true,
-        "hidden": false,
-        "moveDescription": "<p>You’re easy to open up to. When you do the Nostalgic Move, the other Latchkey can clear a second Condition OR they can take the Condition: Feeling Good. They can clear Feeling Good at any time to get advantage on a die roll.</p>",
-        "checkboxes": []
-      },
-      "_id": "lHsIQs1InpvdEmT0",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.lHsIQs1InpvdEmT0"
-    },
-    {
-      "name": "The Truth is Out There",
-      "type": "move",
-      "system": {
-        "position": 18,
-        "description": "",
-        "active": true,
-        "hidden": false,
-        "moveDescription": "<p>Someone who knows what happened to TV Odyssey is helping you behind the scenes. The Latchkeys immediately gain an Odyssey tape when you take this move—a gift from your mysterious benefactor. At the beginning of each session, this mysterious person leaves something for you where you can find it. Say what it is or ask the Keeper to say what it is. It functions as a Clue, but isn’t attached to any particular mystery—you can use it for an active mystery or save it for the future. The Keeper can reveal the identity of this mysterious helper during the Odyssey Mystery.</p>",
-        "checkboxes": []
-      },
-      "_id": "Xh0s9LYZTnhVAlUf",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.Xh0s9LYZTnhVAlUf"
-    },
-    {
-      "name": "And They’re Always Glad You Came",
-      "type": "move",
-      "system": {
-        "position": 19,
-        "description": "",
-        "active": true,
-        "hidden": false,
-        "moveDescription": "<p>You have a family member that still lives in Deep Lake. Who are they? Any rolls associated with actions they help you with are made at advantage. Additionally, if you’re in immediate danger and can make it to their house, you’re safe until at least the next morning.</p>",
-        "checkboxes": []
-      },
-      "_id": "YBsAyfm4LcVgAGpI",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.YBsAyfm4LcVgAGpI"
-    },
-    {
-      "name": "You Never Know What You’re Going to Get",
-      "type": "move",
-      "system": {
-        "position": 20,
-        "description": "",
-        "active": true,
-        "hidden": false,
-        "moveDescription": "<p>You have a background doing research. What is it? Once per session, when you do the Meddling Move by looking through books, microfiche, old records, or online archives, you find an additional Clue, even on a miss.</p>",
-        "checkboxes": []
-      },
-      "_id": "8NsGMFLAjTtNKAm3",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.8NsGMFLAjTtNKAm3"
-    },
-    {
-      "name": "Have You Ever Danced with the Devil",
-      "type": "move",
-      "system": {
-        "position": 21,
-        "description": "",
-        "active": true,
-        "hidden": false,
-        "moveDescription": "<p>You came to Deep Lake with a collection of tools for working black magic. Add the following to Your Corner of the House: Candles, Grimoire, Small Brazier, Athame, Poppet.</p>",
-        "checkboxes": []
-      },
-      "_id": "50YUNwoFwkPxOocX",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.50YUNwoFwkPxOocX"
-    },
-    {
-      "name": "Strange Things are Afoot at the Circle K",
-      "type": "move",
-      "system": {
-        "position": 22,
-        "description": "",
-        "active": true,
-        "hidden": false,
-        "moveDescription": "<p>You believe in the fundamental goodness and power of convenience stores. If something that can typically be found at a convenience store would be helpful in a situation and you take the time to go get it, say what it is and then add it to Your Corner of the House.</p>",
-        "checkboxes": []
-      },
-      "_id": "jrThhjYdG1yaSK7N",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.jrThhjYdG1yaSK7N"
-    },
-    {
-      "name": "Just Say No",
-      "type": "move",
-      "system": {
-        "position": 23,
-        "description": "",
-        "active": true,
-        "hidden": false,
-        "moveDescription": "<p>Something about your past makes you especially good at dealing with cops and their bullshit. What is it? Whenever you’re being harassed by the police or otherwise have to get out of a sticky situation involving law enforcement, all your associated die rolls are taken with advantage.</p>",
-        "checkboxes": []
-      },
-      "_id": "Nfzm8msz0UtPGJ52",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.Nfzm8msz0UtPGJ52"
-    },
-    {
-      "name": "What Nintendon’t",
-      "type": "move",
-      "system": {
-        "position": 24,
-        "description": "",
-        "active": true,
-        "hidden": false,
-        "moveDescription": "<p>Once per session, you can take a 12+ on a single roll related to an action so long as you do it with cockiness or style.</p>",
-        "checkboxes": []
-      },
-      "_id": "gdJMUcRVFt37iOSh",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.gdJMUcRVFt37iOSh"
-    },
-    {
-      "name": "Next Sunday A.D.",
-      "type": "move",
-      "system": {
-        "position": 25,
-        "description": "",
-        "active": true,
-        "hidden": false,
-        "moveDescription": "<p>Once per Day phase, you and at least one other player can do an out-of-character narration of an upcoming scene, as if you were doing running commentary during a movie. At least one thing from your shared narration will be true about the upcoming scene; tell the Keeper what it is. The Keeper can decide that other elements from your narration are also true.</p>",
-        "checkboxes": []
-      },
-      "_id": "JaXbT9FaewFDZMzP",
-      "img": "icons/svg/item-bag.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.JaXbT9FaewFDZMzP"
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.pXBpphJUFlNU56Hq"
     }
   ],
   "effects": [],
@@ -1136,9 +646,9 @@
   "_stats": {
     "coreVersion": "14.360",
     "systemId": "mystery-engine-fvtt",
-    "systemVersion": "0.2.1",
+    "systemVersion": "0.2.2",
     "createdTime": 1777556838635,
-    "modifiedTime": 1777556838635,
+    "modifiedTime": 1777614139906,
     "lastModifiedBy": "KS4FZACDn7qVImBP",
     "exportSource": null,
     "compendiumSource": null,

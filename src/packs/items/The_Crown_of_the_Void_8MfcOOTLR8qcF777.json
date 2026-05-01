@@ -1,0 +1,53 @@
+{
+  "folder": "2Wy7Bd8tck7KbM1R",
+  "name": "The Crown of the Void",
+  "type": "checklist",
+  "_id": "8MfcOOTLR8qcF777",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 0,
+    "description": "<p>When you put on this Crown, mark the first empty box.</p>",
+    "isContainer": false,
+    "entries": [
+      {
+        "selected": false,
+        "text": "[b]A Shadow in the Garden.[/b] Hereafter, during cozy vignettes focused on you or Cozy Move scenes involving you, you must also narrate how dark entities subtly reveal themselves in the scene."
+      },
+      {
+        "selected": false,
+        "text": "[b]The Chariot.[/b] Your Reason modifier is reduced by 1 and your Sensitivity modifier is increased by 1."
+      },
+      {
+        "selected": false,
+        "text": "[b]The Pallid Mask.[/b] Hereafter, during any intimate conver- sation with another character, you must make a casual reference to death, dying, the afterlife, or the End of All Things-no matter the subject at-hand."
+      },
+      {
+        "selected": false,
+        "text": "[b]The Pomegranate Kernel.[/b] You take the Condition: Obsessed with the Void. It can never be cleared."
+      },
+      {
+        "selected": false,
+        "text": "[b]The Void. [/b]Retire your character in a way that shows how they are lost to the Void."
+      }
+    ]
+  },
+  "effects": [],
+  "sort": 900000,
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777612974822,
+    "modifiedTime": 1777614204626,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!8MfcOOTLR8qcF777"
+}

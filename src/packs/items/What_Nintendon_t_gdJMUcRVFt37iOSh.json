@@ -1,0 +1,34 @@
+{
+  "name": "What Nintendon’t",
+  "type": "move",
+  "system": {
+    "position": 24,
+    "description": "",
+    "active": true,
+    "hidden": false,
+    "moveDescription": "<p>Once per session, you can take a 12+ on a single roll related to an action so long as you do it with cockiness or style.</p>",
+    "checkboxes": []
+  },
+  "_id": "gdJMUcRVFt37iOSh",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "gjeQm4IXgc6chhJ3",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777613832825,
+    "modifiedTime": 1777613832825,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "sort": 0,
+  "_key": "!items!gdJMUcRVFt37iOSh"
+}

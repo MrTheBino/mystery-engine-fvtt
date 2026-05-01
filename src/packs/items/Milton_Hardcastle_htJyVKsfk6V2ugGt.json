@@ -1,0 +1,34 @@
+{
+  "folder": "YhQJjxX3mbSMODtE",
+  "name": "Milton Hardcastle",
+  "type": "move",
+  "_id": "htJyVKsfk6V2ugGt",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 0,
+    "description": "",
+    "active": true,
+    "hidden": false,
+    "moveDescription": "<p>You have an additional End of Session question that is always marked: “Did you inflict extrajudicial punishment on a wrongdoer?”</p>",
+    "checkboxes": []
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777612278780,
+    "modifiedTime": 1777612286243,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!htJyVKsfk6V2ugGt"
+}

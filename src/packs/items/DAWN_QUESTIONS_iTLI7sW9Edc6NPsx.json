@@ -1,0 +1,61 @@
+{
+  "name": "DAWN QUESTIONS",
+  "type": "checklist",
+  "_id": "iTLI7sW9Edc6NPsx",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 3,
+    "description": "<p>The first one is always marked. The second is always marked after it is unlocked. Mark two more.</p>",
+    "isContainer": false,
+    "entries": [
+      {
+        "selected": false,
+        "text": "Did the Latchkeys resolve a mystery?"
+      },
+      {
+        "selected": false,
+        "text": "Did you receive a Signal from the Other Side? (Locked until you mark [b]The Sandstone Arch[/b])"
+      },
+      {
+        "selected": false,
+        "text": "Did you share a good memory from your childhood?"
+      },
+      {
+        "selected": false,
+        "text": "Were you vulnerable with someone?"
+      },
+      {
+        "selected": false,
+        "text": "Did you go out of your way to reconnect with Deep Lake?"
+      },
+      {
+        "selected": false,
+        "text": "Did you deliver a chilling monologue about something that happened to you in the past?"
+      },
+      {
+        "selected": false,
+        "text": "Did you cut loose for once?"
+      }
+    ]
+  },
+  "effects": [],
+  "folder": "3JNAFOPNvhokPIiP",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777613884823,
+    "modifiedTime": 1777613886418,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "sort": 500000,
+  "_key": "!items!iTLI7sW9Edc6NPsx"
+}

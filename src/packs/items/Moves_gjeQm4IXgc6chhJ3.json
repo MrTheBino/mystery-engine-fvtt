@@ -1,0 +1,23 @@
+{
+  "type": "Item",
+  "folder": "5ZnoVVG2F4WOaR9m",
+  "name": "Moves",
+  "color": null,
+  "sorting": "a",
+  "_id": "gjeQm4IXgc6chhJ3",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777613760647,
+    "modifiedTime": 1777613760647,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!folders!gjeQm4IXgc6chhJ3"
+}

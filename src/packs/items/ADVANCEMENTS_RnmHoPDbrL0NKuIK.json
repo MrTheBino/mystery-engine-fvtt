@@ -1,0 +1,57 @@
+{
+  "name": "ADVANCEMENTS",
+  "type": "checklist",
+  "_id": "RnmHoPDbrL0NKuIK",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 2,
+    "description": "",
+    "isContainer": false,
+    "entries": [
+      {
+        "selected": false,
+        "text": "Increase an ability by 1 (max 3)."
+      },
+      {
+        "selected": false,
+        "text": "Increase an ability by 1 (max 3)."
+      },
+      {
+        "selected": false,
+        "text": "Choose an additional Latchkey move."
+      },
+      {
+        "selected": false,
+        "text": "Choose an additional Latchkey move."
+      },
+      {
+        "selected": false,
+        "text": "Write a custom Latchkey move for your character."
+      },
+      {
+        "selected": false,
+        "text": "Unmark all the items in Your Corner of the House."
+      }
+    ]
+  },
+  "effects": [],
+  "folder": "3JNAFOPNvhokPIiP",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777613882490,
+    "modifiedTime": 1777614198513,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "sort": 600000,
+  "_key": "!items!RnmHoPDbrL0NKuIK"
+}

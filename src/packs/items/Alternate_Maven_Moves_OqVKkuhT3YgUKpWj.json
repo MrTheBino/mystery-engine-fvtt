@@ -1,0 +1,23 @@
+{
+  "type": "Item",
+  "folder": "c36icFN3nD7vkIhL",
+  "name": "Alternate Maven Moves",
+  "color": null,
+  "sorting": "a",
+  "_id": "OqVKkuhT3YgUKpWj",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777612458629,
+    "modifiedTime": 1777612458629,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!folders!OqVKkuhT3YgUKpWj"
+}

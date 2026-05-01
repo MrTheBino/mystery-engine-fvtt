@@ -1,0 +1,34 @@
+{
+  "name": "Sight Beyond Sight",
+  "type": "move",
+  "_id": "t69bypW0CS3DOHiq",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 7,
+    "description": "",
+    "active": true,
+    "moveDescription": "<p>Whether you call it premonitions, understanding omens, or just plain old having a hunch, you are able to glimpse a little into the future. The first time you enter a Location, you can ask the Keeper, “What is about to happen?” They will answer truthfully, though not necessarily completely. If you have marked <strong>The Sandstone Arch</strong>, you can also ask, “Why is it about to happen?” The Keeper will answer truthfully, though not necessarily completely.</p>",
+    "checkboxes": [],
+    "hidden": false
+  },
+  "effects": [],
+  "folder": "gjeQm4IXgc6chhJ3",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777613774038,
+    "modifiedTime": 1777613824620,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "sort": 1600000,
+  "_key": "!items!t69bypW0CS3DOHiq"
+}

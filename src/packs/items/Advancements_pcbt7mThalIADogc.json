@@ -1,0 +1,53 @@
+{
+  "folder": "2Wy7Bd8tck7KbM1R",
+  "name": "Advancements",
+  "type": "checklist",
+  "_id": "pcbt7mThalIADogc",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 0,
+    "description": "",
+    "isContainer": false,
+    "entries": [
+      {
+        "selected": false,
+        "text": "Increase an ability modifier by 1 (max 3)."
+      },
+      {
+        "selected": false,
+        "text": "Increase an ability modifier by 1 (max 3)."
+      },
+      {
+        "selected": false,
+        "text": "Choose an additional Maven move."
+      },
+      {
+        "selected": false,
+        "text": "Choose an additional Maven move."
+      },
+      {
+        "selected": false,
+        "text": "Unmark all the items in your Cozy Little Place."
+      }
+    ]
+  },
+  "effects": [],
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777612838979,
+    "modifiedTime": 1777614201537,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!pcbt7mThalIADogc"
+}

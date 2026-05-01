@@ -1,0 +1,23 @@
+{
+  "type": "Item",
+  "folder": "c36icFN3nD7vkIhL",
+  "name": "Reference",
+  "color": null,
+  "sorting": "a",
+  "_id": "2Wy7Bd8tck7KbM1R",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777613094174,
+    "modifiedTime": 1777613094174,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!folders!2Wy7Bd8tck7KbM1R"
+}

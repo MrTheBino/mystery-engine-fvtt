@@ -1,0 +1,61 @@
+{
+  "folder": "2Wy7Bd8tck7KbM1R",
+  "name": "The Crown of the Queen",
+  "type": "checklist",
+  "_id": "rVJq17Mkyx3kCCN8",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "position": 0,
+    "description": "<p>When you put on this Crown, mark and narrate any you</p><p>wish.</p>",
+    "isContainer": false,
+    "entries": [
+      {
+        "selected": false,
+        "text": "A flashback of your fondest memory of your late partner."
+      },
+      {
+        "selected": false,
+        "text": "A flashback showing how you were an imperfect sister or daughter."
+      },
+      {
+        "selected": false,
+        "text": "A flashback showing how you were an imperfect mother."
+      },
+      {
+        "selected": false,
+        "text": "A flashback of your fondest memory with one of your children."
+      },
+      {
+        "selected": false,
+        "text": "A scene in the present day showing a private side of you very few get to see."
+      },
+      {
+        "selected": false,
+        "text": "A scene in the present day showing a burgeoning romance."
+      },
+      {
+        "selected": false,
+        "text": "A scene in the present day showing how you satisfy your physical desires."
+      }
+    ]
+  },
+  "effects": [],
+  "sort": 125000,
+  "ownership": {
+    "default": 0,
+    "KS4FZACDn7qVImBP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.360",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "0.2.2",
+    "createdTime": 1777612874472,
+    "modifiedTime": 1777614203742,
+    "lastModifiedBy": "KS4FZACDn7qVImBP",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!rVJq17Mkyx3kCCN8"
+}

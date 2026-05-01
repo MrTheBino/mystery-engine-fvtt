@@ -1,3 +1,8 @@
+# 0.2.3
+- added Brindlewood Bay pre-built character sheet and the corresponding items in the compendium
+- rebuild Public Access pre-built character sheet and the corresponding items in the compendium
+- items of an actor are now drag'n'dropable to the item folder of foundry
+  
 # 0.2.2
 - thanks fo "The Gauntlet" for letting us shipping pre-build characters, we start with a the sheet from Public Access
   

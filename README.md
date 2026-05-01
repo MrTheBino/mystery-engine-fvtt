@@ -27,13 +27,15 @@ only stuff they should see like clues for threats etc.
  - different CSS styles like standard, 90ies, victorian etc.
   
 
-# PreBuild Character Sheets
+## PreBuild Character Sheets
 
-We got the permission from The Gauntlet to publish pre-build character sheets with the system.
+We got the permission from The Gauntlet to publish pre-build character sheets with the system. The system ships with no threats / mysteries etc, only the character options
+are available as compendium entries.
 
-Available sheets:
+Available pre-built sheets:
 
 - Public Access
+- Brindlewood Bay
   
 ## Supported games are
 

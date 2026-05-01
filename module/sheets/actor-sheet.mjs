@@ -27,6 +27,7 @@ export default class MysteryActorSheet extends HandlebarsApplicationMixin(ActorS
       rollAbility: MysteryActorSheet.#rollAbility,
       toggleXpTrack: MysteryActorSheet.#toggleXpTrack
     },
+    dragDrop: [{ dragSelector: "[data-item-id]", dropSelector: null }],
     form: {
       submitOnChange: true
     },
@@ -129,8 +130,31 @@ export default class MysteryActorSheet extends HandlebarsApplicationMixin(ActorS
     return ctx;
   }
 
+  _canDragStart(selector) {
+    return true;
+  }
+
+  _onDragStart(event) {
+    const itemEl = event.currentTarget.closest("[data-item-id]");
+    if (!itemEl) return;
+    const item = this.actor.items.get(itemEl.dataset.itemId);
+    if (!item) return;
+    event.dataTransfer.setData("text/plain", JSON.stringify({ type: "Item", uuid: item.uuid }));
+  }
+
   async _onRender(context, options) {
     await super._onRender(context, options);
+
+    //make the items drag'n'dropable to item folders of foundry's sidebar
+    if (!this._dragDropHandlers) {
+      const { DragDrop } = foundry.applications.ux;
+      this._dragDropHandlers = this.options.dragDrop.map(d => new DragDrop({
+        ...d,
+        permissions: { dragstart: this._canDragStart.bind(this), drop: this._canDragDrop.bind(this) },
+        callbacks: { dragstart: this._onDragStart.bind(this), dragover: this._onDragOver.bind(this), drop: this._onDrop.bind(this) }
+      }));
+    }
+    for (const dd of this._dragDropHandlers) dd.bind(this.element);
 
     const header = this.element.querySelector(".window-header");
     let button = header.querySelector(".mode-toggle-button");

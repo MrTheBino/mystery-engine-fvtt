@@ -234,19 +234,19 @@
   gap: 0.3rem;
   padding: 0.2rem 0.55rem;
   background: var(--me-accent-light);
-  border: 1px solid #FCD34D;
+  border: 1px solid #fcd34d;
   border-radius: 999px;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   cursor: pointer;
   user-select: none;
   transition: background var(--me-transition), box-shadow var(--me-transition);
 }
 .mystery-engine .ability-pip:hover {
-  background: #FDE68A;
+  background: #fde68a;
   box-shadow: 0 0 0 2px var(--me-focus-ring);
 }
 .mystery-engine .ability-pip:active {
-  background: #FCD34D;
+  background: #fcd34d;
 }
 .mystery-engine .ability-name {
   font-weight: 600;
@@ -1124,6 +1124,11 @@ nav.tabs [data-tab] .active {
 }
 .notebook-app .na-actor-moves .item-card:last-child {
   margin-bottom: 0;
+}
+.notebook-app .na-actor-moves .checkboxes-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.25rem;
 }
 .notebook-app .na-actor-items .item-card {
   margin-bottom: 0.4rem;

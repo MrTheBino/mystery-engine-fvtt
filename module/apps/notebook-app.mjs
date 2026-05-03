@@ -1,5 +1,6 @@
 const { HandlebarsApplicationMixin, ApplicationV2 } = foundry.applications.api;
 const { TextEditor, DragDrop } = foundry.applications.ux
+import { RollDialog } from './roll-dialog.mjs';
 
 export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
     #dragDrop
@@ -148,6 +149,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
                 uuid: actor.uuid,
                 name: actor.name,
                 img: actor.img,
+                isOwn: actor.isOwner,
                 abilities: [...actor.system.abilities],
                 conditions: actor.system.conditions.filter(c => c.trim()),
                 labels: [...(actor.system.labels ?? [])],
@@ -167,7 +169,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             introduction: t.introduction,
             introductionHTML: await enrich(t.introduction, notebook),
             countdown: [...t.countdown],
-            questions: t.questions.map((q, qi) => ({ index: qi, checkbox: q.checkbox, title: q.title, opportunity: q.opportunity, complexity: q.complexity })),
+            questions: t.questions.map((q, qi) => ({ index: qi, checkbox: q.checkbox, hidden: q.hidden, title: q.title, opportunity: q.opportunity, complexity: q.complexity })),
             clues: t.clues.map((c, ci) => ({ index: ci, checkbox: c.checkbox, explained: c.explained, text: c.text })),
             other: t.other.map((o, oi) => ({ index: oi, title: o.title, shortDescription: o.shortDescription, checkbox: o.checkbox }))
         })));
@@ -290,6 +292,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             addThreatQuestion:        NotebookApp.#addThreatQuestion,
             deleteThreatQuestion:     NotebookApp.#deleteThreatQuestion,
             toggleThreatQuestion:     NotebookApp.#toggleThreatQuestion,
+            toggleThreatQuestionHidden: NotebookApp.#toggleThreatQuestionHidden,
             addThreatClue:            NotebookApp.#addThreatClue,
             deleteThreatClue:         NotebookApp.#deleteThreatClue,
             toggleThreatClue:         NotebookApp.#toggleThreatClue,
@@ -299,6 +302,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             toggleThreatOther:        NotebookApp.#toggleThreatOther,
             openActorSheet:           NotebookApp.#openActorSheet,
             removeActor:              NotebookApp.#removeActor,
+            rollAbility:              NotebookApp.#rollAbility,
         };
         for (const [action, handler] of Object.entries(actions)) {
             this.element.querySelectorAll(`[data-action="${action}"]`).forEach(btn => {
@@ -516,6 +520,12 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         await this.#mutateThreat(ti, t => { t.questions[qi].checkbox = !t.questions[qi].checkbox; });
     }
 
+    static async #toggleThreatQuestionHidden(event, btn) {
+        const ti = parseInt(btn.dataset.threatIndex);
+        const qi = parseInt(btn.dataset.questionIndex);
+        await this.#mutateThreat(ti, t => { t.questions[qi].hidden = !t.questions[qi].hidden; });
+    }
+
     static async #addThreatClue(event, btn) {
         const ti = parseInt(btn.dataset.threatIndex);
         await this.#mutateThreat(ti, t => t.clues.push({ checkbox: false, explained: false, text: "" }));
@@ -559,6 +569,13 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
     static async #openActorSheet(event, btn) {
         const actor = await fromUuid(btn.dataset.actorUuid).catch(() => null);
         if (actor) actor.sheet.render(true);
+    }
+
+    static async #rollAbility(event, btn) {
+        const abilityName = btn.dataset.abilityName ?? "";
+        const abilityValue = parseInt(btn.dataset.abilityValue ?? "0");
+        const actor = await fromUuid(btn.dataset.actorUuid).catch(() => null);
+        new RollDialog({ abilityName, abilityValue, actor }).render(true);
     }
 
     static async #removeActor(event, btn) {

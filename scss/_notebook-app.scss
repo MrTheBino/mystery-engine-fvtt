@@ -257,6 +257,12 @@
 
       &:last-child { margin-bottom: 0; }
     }
+
+    .checkboxes-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.25rem;
+    }
   }
 
   .na-actor-items{

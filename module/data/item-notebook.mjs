@@ -8,7 +8,7 @@ export default class NotebookData extends BaseItemData {
       ...super.defineSchema(),
       actors: new fields.ArrayField(
         new fields.StringField({ required: true, blank: false }),
-        { initial: [] }
+        { initial: [] },
       ),
       threats: new fields.ArrayField(
         new fields.SchemaField({
@@ -16,35 +16,44 @@ export default class NotebookData extends BaseItemData {
           introduction: new fields.HTMLField({ blank: true, initial: "" }),
           countdown: new fields.ArrayField(
             new fields.BooleanField({ initial: false }),
-            { initial: [] }
+            { initial: [] },
           ),
           questions: new fields.ArrayField(
             new fields.SchemaField({
-              checkbox: new fields.BooleanField({ initial: false }),
+              checkbox: new fields.BooleanField({ initial: false }), // if the question got answered
+              hidden: new fields.BooleanField({ initial: true }), // shown to the players or not
               title: new fields.StringField({ blank: true, initial: "" }),
               opportunity: new fields.StringField({ blank: true, initial: "" }),
-              complexity: new fields.NumberField({ required: false, nullable: true, integer: true, initial: null }),
+              complexity: new fields.NumberField({
+                required: false,
+                nullable: true,
+                integer: true,
+                initial: null,
+              }),
             }),
-            { initial: [] }
+            { initial: [] },
           ),
           clues: new fields.ArrayField(
             new fields.SchemaField({
               checkbox: new fields.BooleanField({ initial: false }),
               explained: new fields.BooleanField({ initial: false }),
-              text: new fields.StringField({ blank: true, initial: "" })
+              text: new fields.StringField({ blank: true, initial: "" }),
             }),
-            { initial: [] }
+            { initial: [] },
           ),
           other: new fields.ArrayField(
             new fields.SchemaField({
               title: new fields.StringField({ blank: true, initial: "" }),
-              shortDescription: new fields.StringField({ blank: true, initial: "" }),
-              checkbox: new fields.BooleanField({ initial: false })
+              shortDescription: new fields.StringField({
+                blank: true,
+                initial: "",
+              }),
+              checkbox: new fields.BooleanField({ initial: false }),
             }),
-            { initial: [] }
-          )
+            { initial: [] },
+          ),
         }),
-        { initial: [] }
+        { initial: [] },
       ),
       pages: new fields.ArrayField(
         new fields.SchemaField({
@@ -52,13 +61,13 @@ export default class NotebookData extends BaseItemData {
           notes: new fields.ArrayField(
             new fields.SchemaField({
               title: new fields.StringField({ blank: true, initial: "" }),
-              description: new fields.HTMLField({ blank: true, initial: "" })
+              description: new fields.HTMLField({ blank: true, initial: "" }),
             }),
-            { initial: [] }
-          )
+            { initial: [] },
+          ),
         }),
-        { initial: [] }
-      )
+        { initial: [] },
+      ),
     };
   }
 }

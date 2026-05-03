@@ -22,10 +22,21 @@
         <div class="na-actor-section">
           <div class="abilities-display">
             {{#each abilities}}
+            {{#if ../isOwn}}
+            <span class="ability-pip" role="button" tabindex="0"
+              data-action="rollAbility"
+              data-actor-uuid="{{../uuid}}"
+              data-ability-name="{{name}}"
+              data-ability-value="{{value}}">
+              <span class="ability-name">{{name}}</span>
+              <span class="ability-value">{{value}}</span>
+            </span>
+            {{else}}
             <span class="ability-pip">
               <span class="ability-name">{{name}}</span>
               <span class="ability-value">{{value}}</span>
             </span>
+            {{/if}}
             {{/each}}
           </div>
         </div>

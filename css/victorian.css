@@ -1,3 +1,99 @@
-/**
- TODO: This file is a work in progress and may contain incomplete or placeholder styles. Please refer to the 90ies.css file for the current complete styling of the system. 
-*/
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap");
+
+/*colors  */
+.mystery-engine {
+    --me-bg: #f9e09e;
+    --me-surface: #fdf7e3;
+    --me-surface-alt: #f0d898;
+    --me-border: #c4a560;
+    --me-border-mid: #7f6c34;
+    --me-focus: #ca7558;
+    --me-focus-ring: rgba(202, 117, 88, 0.35);
+    --me-text: #522602;
+    --me-text-muted: #7f6c34;
+    --me-text-heading: #3a1a01;
+    --me-accent: #ca7558;
+    --me-accent-hover: #a85f40;
+    --me-accent-light: #f9e09e;
+    --me-secondary: #53868b;
+    --me-error: #8b1a1a;
+    --me-inactive: #b8a878;
+    --me-shadow-sm:
+        0 1px 2px rgba(82, 38, 2, 0.1), 0 1px 3px rgba(82, 38, 2, 0.08);
+    --me-shadow:
+        0 2px 6px rgba(82, 38, 2, 0.12), 0 1px 3px rgba(82, 38, 2, 0.08);
+    --me-shadow-md:
+        0 4px 12px rgba(82, 38, 2, 0.15), 0 2px 4px rgba(82, 38, 2, 0.1);
+}
+
+.notebook-app .na-actor-name {
+    font-family: "Special Elite", "Courier New", monospace;
+}
+
+.mystery-engine {
+    font-family: "Special Elite", "Courier New", monospace;
+}
+
+.notebook-app .na-tab-btn,
+.notebook-app .na-sub-tab-btn,
+.notebook-app .na-threat-read-title {
+    font-family: "Special Elite", "Courier New", monospace;
+}
+
+.mystery-engine .sheet-header {
+    border-bottom: 3px solid #7f6c34;
+    background-color: #522602;
+    background-size: 60px 60px;
+    background-repeat: repeat;
+    box-shadow: 0 3px 10px rgba(82, 38, 2, 0.5);
+    color: #f9e09e;
+}
+
+.mystery-engine .title-input,
+.mystery-engine .title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.4rem;
+    color: #f9e09e;
+    letter-spacing: 0.02em;
+}
+
+.mystery-engine .title-input::placeholder {
+    color: rgba(249, 224, 158, 0.45);
+}
+
+.mystery-engine .title-input:focus {
+    background: rgba(249, 224, 158, 0.1);
+    box-shadow: 0 0 0 2px rgba(202, 117, 88, 0.5);
+}
+
+.mystery-engine .profile-img {
+    border: 2px solid #7f6c34;
+}
+
+.mystery-engine .profile-img:hover {
+    border-color: #ca7558;
+    box-shadow: 0 0 0 3px rgba(202, 117, 88, 0.4);
+}
+
+.mystery-engine .position-row {
+    color: rgba(249, 224, 158, 0.8);
+}
+
+.mystery-engine .position-row input[type="number"],
+.mystery-engine .position-row select {
+    color: #f9e09e;
+    background: rgba(249, 224, 158, 0.12);
+    border-color: rgba(127, 108, 52, 0.6);
+}
+
+.mystery-engine .position-row input[type="number"]:focus,
+.mystery-engine .position-row select:focus {
+    outline: none;
+    background: rgba(249, 224, 158, 0.2);
+    box-shadow: 0 0 0 2px rgba(202, 117, 88, 0.4);
+}
+
+.mystery-engine .position-row select option {
+    background: #522602;
+    color: #f9e09e;
+}

@@ -1,3 +1,8 @@
+# 0.2.4
+- victorial style theme, (I suck at theming...)
+- added hidden status for questions in the notebook
+- style fixes for better readability
+
 # 0.2.3
 - added Brindlewood Bay pre-built character sheet and the corresponding items in the compendium
 - rebuild Public Access pre-built character sheet and the corresponding items in the compendium

@@ -216,7 +216,8 @@
         "NoThreatsGM": "No threats yet.",
         "AddFirstThreat": "Add First Threat",
         "NoThreatsPlayer": "No threats in this notebook.",
-        "OpportunityPlaceholder": "Opportunity"
+        "OpportunityPlaceholder": "Opportunity",
+        "HideFromPlayers": "Hide from players"
       }
     },
     "RollDialog": {

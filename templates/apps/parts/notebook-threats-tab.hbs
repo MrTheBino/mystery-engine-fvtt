@@ -99,6 +99,14 @@
             title="{{localize 'ME.Notebook.Threats.Toggle'}}">
             <i class="fas {{#if checkbox}}fa-check-square{{else}}fa-square{{/if}}"></i>
           </button>
+          <button type="button"
+            class="na-toggle-btn na-hidden-btn{{#unless hidden}} active{{/unless}}"
+            data-action="toggleThreatQuestionHidden"
+            data-threat-index="{{../index}}"
+            data-question-index="{{index}}"
+            title="{{localize 'ME.Notebook.Threats.HideFromPlayers'}}">
+            <i class="fas {{#if hidden}}fa-eye-slash{{else}}fa-eye{{/if}}"></i>
+          </button>
           <div class="na-threat-row-question-fields">
             <input type="text"
             name="system.threats.{{../index}}.questions.{{index}}.title"
@@ -111,7 +119,7 @@
             class="na-inline-input na-opportunity-input"
             placeholder="{{localize 'ME.Notebook.Threats.OpportunityPlaceholder'}}" />
           </div>
-          
+
           <input type="number"
             name="system.threats.{{../index}}.questions.{{index}}.complexity"
             value="{{complexity}}"
@@ -247,8 +255,9 @@
 
       {{#if questions.length}}
       <div class="na-threat-section">
-        <h4 class="na-threat-section-label">{{localize "ME.Notebook.Threats.Questions"}}</h4>
+        <span class="na-threat-section-label">{{localize "ME.Notebook.Threats.Questions"}}</span>
         {{#each questions}}
+        {{#unless hidden}}
         <div class="na-threat-row readonly">
           <i class="fas {{#if checkbox}}fa-check-square{{else}}fa-square{{/if}} na-read-icon"></i>
           <div class="na-threat-row-question-fields">
@@ -257,13 +266,14 @@
           </div>
           {{#if complexity}}<span class="na-complexity-badge">{{complexity}}</span>{{/if}}
         </div>
+        {{/unless}}
         {{/each}}
       </div>
       {{/if}}
 
       {{#if clues.length}}
       <div class="na-threat-section">
-        <h4 class="na-threat-section-label">{{localize "ME.Notebook.Threats.CluesCount" count=clues.length}}</h4>
+        <span class="na-threat-section-label">{{localize "ME.Notebook.Threats.CluesCount" count=clues.length}}</span>
         {{#each clues}}
         {{#if checkbox}}
         <div class="na-threat-row readonly">

@@ -1,6 +1,24 @@
 export default class MysteryActor extends Actor {
+
   prepareDerivedData() {
     super.prepareDerivedData();
+  }
+
+  static async create(data, options = {}) {
+    //make default Friendly and Linked on Creation
+    data.prototypeToken = data.prototypeToken || {};
+
+    let defaults = {};
+      defaults = {
+        actorLink: true,
+        disposition: CONST.TOKEN_DISPOSITIONS.FRIENDLY,
+        sight: { enabled: true,range: 0,visionMode: "basic" },
+      };
+    
+    foundry.utils.mergeObject(data.prototypeToken, defaults, { overwrite: false });
+
+    const actor = await super.create(data, options);
+    return actor;
   }
 
   /** @override */

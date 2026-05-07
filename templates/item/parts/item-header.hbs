@@ -6,5 +6,12 @@
       <label>{{localize "ME.Item.Header.Position"}}</label>
       <input type="number" name="system.position" value="{{system.position}}" />
     </div>
+    <div class="position-row">
+      <label>{{localize "ME.Item.Header.GroupName"}}</label>
+      <input type="text" name="system.groupName" value="{{system.groupName}}" placeholder="{{localize 'ME.Item.Header.GroupNamePlaceholder'}}" />
+      <input type="checkbox" name="system.groupNameDisplayed" {{checked system.groupNameDisplayed}} title="{{localize 'ME.Item.Header.GroupNameDisplayed'}}"/>
+      <label>{{localize "ME.Item.Header.GroupPosition"}}</label>
+      <input type="number" name="system.groupPosition" value="{{system.groupPosition}}" style="width:56px" />
+    </div>
   </div>
 </header>

@@ -219,6 +219,10 @@
     border-bottom: 1px solid var(--me-border);
 
     &:last-child { border-bottom: none; }
+
+    .items-group{
+      margin-bottom: 0.5rem;
+    }
   }
 
   // Conditions inside actor card
@@ -244,6 +248,7 @@
   // Active moves within actor card
   .na-actor-moves {
     .moves-heading {
+      font-family: inherit;
       font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -262,10 +267,38 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 0.25rem;
+      font-size: 0.75rem;
+    }
+  }
+
+  .na-actor-moves,
+  .na-actor-items {
+    .item-description {
+      font-size: 0.75rem;
+    }
+  }
+
+  .na-actor-items {
+    .checklist-entry {
+      font-size: 0.75rem;
     }
   }
 
   .na-actor-items{
+    .group-name-header {
+      font-family: inherit;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--me-text-muted);
+      margin: 0 0 0.45rem;
+      padding-bottom: 0;
+      border-bottom: none;
+      padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--me-border);
+    }
+
     .item-card {
       margin-bottom: 0.4rem;
 

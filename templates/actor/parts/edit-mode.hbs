@@ -55,8 +55,10 @@
       </div>
     </div>
 
+    {{!-- Move items --}}
+    {{#if allMoveItems.length}}
     <ul class="items-list">
-      {{#each items as |item|}}
+      {{#each allMoveItems as |item|}}
       <li class="item-row" data-item-id="{{item.id}}">
         <div class="sort-controls">
           <button type="button" class="icon-btn" data-action="moveItemUp" {{#if @first}}disabled{{/if}} title="{{localize 'ME.Actor.MoveUp'}}">
@@ -67,9 +69,10 @@
           </button>
         </div>
         <img class="item-img" src="{{item.img}}" title="{{item.type}}" />
-        <span class="item-name{{#if (eq item.type "move")}}{{#unless item.system.active}} item-name--inactive{{/unless}}{{/if}}">{{item.name}}</span>
+        <div class="item-name-stack">
+          <span class="item-name{{#unless item.system.active}} item-name--inactive{{/unless}}">{{item.name}}</span>
+        </div>
         <span class="item-type tag">{{item.type}}</span>
-        {{#if (eq item.type "move")}}
         <label class="active-toggle" title="{{localize 'ME.Actor.Active'}}">
           <input type="checkbox" data-action="toggleMoveActive" data-item-id="{{item.id}}" {{checked item.system.active}} />
           <span>{{localize "ME.Actor.Active"}}</span>
@@ -78,14 +81,49 @@
           <input type="checkbox" data-action="toggleMoveHidden" data-item-id="{{item.id}}" {{checked item.system.hidden}} />
           <span>{{localize "ME.Actor.Hidden"}}</span>
         </label>
-        {{/if}}
         <div class="item-controls">
           <a class="icon-btn" data-action="editItem" title="{{localize 'ME.Actor.EditItem'}}"><i class="fas fa-edit"></i></a>
           <a class="icon-btn delete-btn" data-action="deleteItem" title="{{localize 'ME.Actor.DeleteItem'}}"><i class="fas fa-trash"></i></a>
         </div>
       </li>
-      {{else}}
-      <li class="empty-list">{{localize "ME.Actor.NoItemsActor"}}</li>
       {{/each}}
     </ul>
+    {{/if}}
+
+    {{!-- Grouped non-move items, ordered by maxGroupPosition --}}
+    {{#each groupedItems as |group|}}
+    {{#if group.groupName}}
+    <h2 class="group-name-header">{{group.groupName}}</h2>
+    {{/if}}
+    <ul class="items-list">
+      {{#each group.items as |item|}}
+      <li class="item-row" data-item-id="{{item.id}}">
+        <div class="sort-controls">
+          <button type="button" class="icon-btn" data-action="moveItemUp" {{#if @first}}disabled{{/if}} title="{{localize 'ME.Actor.MoveUp'}}">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+          <button type="button" class="icon-btn" data-action="moveItemDown" {{#if @last}}disabled{{/if}} title="{{localize 'ME.Actor.MoveDown'}}">
+            <i class="fas fa-arrow-down"></i>
+          </button>
+        </div>
+        <img class="item-img" src="{{item.img}}" title="{{item.type}}" />
+        <div class="item-name-stack">
+          <span class="item-name">{{item.name}}</span>
+          {{#if item.system.groupName}}<small class="item-group-name" style="display:block">{{item.system.groupName}} ({{item.system.groupPosition}})</small>{{/if}}
+        </div>
+        <span class="item-type tag">{{item.type}}</span>
+        <div class="item-controls">
+          <a class="icon-btn" data-action="editItem" title="{{localize 'ME.Actor.EditItem'}}"><i class="fas fa-edit"></i></a>
+          <a class="icon-btn delete-btn" data-action="deleteItem" title="{{localize 'ME.Actor.DeleteItem'}}"><i class="fas fa-trash"></i></a>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+    {{/each}}
+
+    {{#unless items.length}}
+    <ul class="items-list">
+      <li class="empty-list">{{localize "ME.Actor.NoItemsActor"}}</li>
+    </ul>
+    {{/unless}}
   </div>

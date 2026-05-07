@@ -47,6 +47,17 @@
     gap: 0.5rem;
   }
 
+  .group-name-header {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--me-text-muted);
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--me-border);
+    margin: 0;
+  }
+
   .moves-heading {
     font-size: 1.2rem;
     font-weight: 700;
@@ -262,6 +273,7 @@
   .item-controls {
     display: flex;
     gap: 0.2rem;
+    margin-left: auto;
   }
 
   .create-controls {

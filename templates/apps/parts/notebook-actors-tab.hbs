@@ -93,56 +93,61 @@
         {{#if hasItems}}
         <div class="na-actor-section na-actor-items">
 
-          {{#each checklists}}
-          <div class="item-card item-card-checklist">
-            <div class="item-card-header"><h2>{{name}}</h2></div>
-            <div class="item-card-body">
-              {{#if description}}<div class="item-description">{{{description}}}</div>{{/if}}
-              {{#if entries.length}}
-              <ul class="checklist-entries">
-                {{#each entries}}
-                <li class="checklist-entry{{#if selected}} selected{{/if}}">
-                  <input type="checkbox" {{checked selected}} disabled />
-                  <span>{{text}}</span>
-                </li>
-                {{/each}}
-              </ul>
-              {{/if}}
-            </div>
-          </div>
-          {{/each}}
-
-          {{#each questions}}
-          <div class="item-card item-card-question">
-            <div class="item-card-header"><h2>{{name}}</h2></div>
-            <div class="item-card-body">
-              {{#if description}}<div class="item-description">{{{description}}}</div>{{/if}}
-              {{#if questionEntries.length}}
-              <ul class="question-entries">
-                {{#each questionEntries}}
-                <li class="question-entry{{#if resolved}} resolved{{/if}}">
-                  <span class="question-text">{{text}}</span>
-                  {{#if opportunities}}<span class="question-opportunities">{{opportunities}}</span>{{/if}}
-                  {{#if complexity}}<span class="question-complexity">{{complexity}}</span>{{/if}}
-                </li>
-                {{/each}}
-              </ul>
-              {{/if}}
-            </div>
-          </div>
-          {{/each}}
-
-          {{#each texts}}
-          <div class="item-card item-card-text">
-            <div class="item-card-header"><h2>{{name}}</h2></div>
-            <div class="item-card-body">
-              {{#if description}}<div class="item-description">{{{description}}}</div>{{/if}}
-              {{#if checkboxes.length}}
-              <div class="checkboxes-row">
-                {{#each checkboxes}}<input type="checkbox" {{checked this}} disabled />{{/each}}
+          {{#each groupedItems as |group|}}
+          <div class="items-group">
+            {{#if group.showHeader}}
+            <h3 class="group-name-header">{{group.groupName}}</h3>
+            {{/if}}
+            {{#each group.items as |item|}}
+            {{#if item.isChecklist}}
+            <div class="item-card item-card-checklist">
+              <div class="item-card-header"><h2>{{item.name}}</h2></div>
+              <div class="item-card-body">
+                {{#if item.description}}<div class="item-description">{{{item.description}}}</div>{{/if}}
+                {{#if item.entries.length}}
+                <ul class="checklist-entries">
+                  {{#each item.entries}}
+                  <li class="checklist-entry{{#if selected}} selected{{/if}}">
+                    <input type="checkbox" {{checked selected}} disabled />
+                    <span>{{{bbcodeText text}}}</span>
+                  </li>
+                  {{/each}}
+                </ul>
+                {{/if}}
               </div>
-              {{/if}}
             </div>
+            {{else if item.isQuestion}}
+            <div class="item-card item-card-question">
+              <div class="item-card-header"><h2>{{item.name}}</h2></div>
+              <div class="item-card-body">
+                {{#if item.description}}<div class="item-description">{{{item.description}}}</div>{{/if}}
+                {{#if item.questionEntries.length}}
+                <ul class="question-entries">
+                  {{#each item.questionEntries}}
+                  <li class="question-entry{{#if resolved}} resolved{{/if}}">
+                    <span class="question-text">{{text}}</span>
+                    {{#if opportunities}}<span class="question-opportunities">{{opportunities}}</span>{{/if}}
+                    {{#if complexity}}<span class="question-complexity">{{complexity}}</span>{{/if}}
+                  </li>
+                  {{/each}}
+                </ul>
+                {{/if}}
+              </div>
+            </div>
+            {{else if item.isText}}
+            <div class="item-card item-card-text">
+              <div class="item-card-header"><h2>{{item.name}}</h2></div>
+              <div class="item-card-body">
+                {{#if item.description}}<div class="item-description">{{{item.description}}}</div>{{/if}}
+                {{#if item.checkboxes.length}}
+                <div class="checkboxes-row">
+                  {{#each item.checkboxes}}<input type="checkbox" {{checked this}} disabled />{{/each}}
+                </div>
+                {{/if}}
+              </div>
+            </div>
+            {{/if}}
+            {{/each}}
           </div>
           {{/each}}
 

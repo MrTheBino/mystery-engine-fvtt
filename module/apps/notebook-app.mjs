@@ -110,11 +110,10 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             if (!actor) continue;
 
             const activeMoves = [];
-            const checklists = [];
-            const questions = [];
-            const texts = [];
+            const sortedItems = [...actor.items].sort((a, b) => (a.system.position ?? 0) - (b.system.position ?? 0));
+            const groupMap = new Map();
 
-            for (const item of actor.items) {
+            for (const item of sortedItems) {
                 const description = await enrich(item.system.description, item);
                 if (item.type === "move" && item.system.active) {
                     activeMoves.push({
@@ -123,27 +122,24 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
                         moveDescription: await enrich(item.system.moveDescription, item),
                         checkboxes: [...item.system.checkboxes]
                     });
-                } else if (item.type === "checklist") {
-                    checklists.push({
-                        name: item.name,
-                        description,
-                        isContainer: item.system.isContainer,
-                        entries: [...item.system.entries]
-                    });
-                } else if (item.type === "question") {
-                    questions.push({
-                        name: item.name,
-                        description,
-                        questionEntries: [...item.system.questions]
-                    });
-                } else if (item.type === "text") {
-                    texts.push({
-                        name: item.name,
-                        description,
-                        checkboxes: [...item.system.checkboxes]
-                    });
+                } else if (item.type !== "move") {
+                    const key = item.system.groupName || "";
+                    if (!groupMap.has(key)) groupMap.set(key, { groupName: key, showHeader: false, maxGroupPosition: 0, items: [] });
+                    const group = groupMap.get(key);
+                    if (item.system.groupNameDisplayed) group.showHeader = true;
+                    const gp = item.system.groupPosition ?? 0;
+                    if (gp > group.maxGroupPosition) group.maxGroupPosition = gp;
+                    if (item.type === "checklist") {
+                        group.items.push({ name: item.name, isChecklist: true, description, entries: [...item.system.entries] });
+                    } else if (item.type === "question") {
+                        group.items.push({ name: item.name, isQuestion: true, description, questionEntries: [...item.system.questions] });
+                    } else if (item.type === "text") {
+                        group.items.push({ name: item.name, isText: true, description, checkboxes: [...item.system.checkboxes] });
+                    }
                 }
             }
+
+            const groupedItems = [...groupMap.values()].sort((a, b) => a.maxGroupPosition - b.maxGroupPosition);
 
             actors.push({
                 uuid: actor.uuid,
@@ -154,10 +150,8 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
                 conditions: actor.system.conditions.filter(c => c.trim()),
                 labels: [...(actor.system.labels ?? [])],
                 activeMoves,
-                checklists,
-                questions,
-                texts,
-                hasItems: checklists.length + questions.length + texts.length > 0
+                groupedItems,
+                hasItems: groupedItems.some(g => g.items.length > 0)
             });
         }
 

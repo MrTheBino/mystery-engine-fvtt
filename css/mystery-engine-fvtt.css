@@ -355,6 +355,16 @@ nav.tabs [data-tab] .active {
   flex-direction: column;
   gap: 0.5rem;
 }
+.mystery-engine .group-name-header {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--me-text-muted);
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--me-border);
+  margin: 0;
+}
 .mystery-engine .moves-heading {
   font-size: 1.2rem;
   font-weight: 700;
@@ -542,6 +552,7 @@ nav.tabs [data-tab] .active {
 .mystery-engine .item-controls {
   display: flex;
   gap: 0.2rem;
+  margin-left: auto;
 }
 .mystery-engine .create-controls {
   display: flex;
@@ -1094,6 +1105,9 @@ nav.tabs [data-tab] .active {
 .notebook-app .na-actor-section:last-child {
   border-bottom: none;
 }
+.notebook-app .na-actor-section .items-group {
+  margin-bottom: 0.5rem;
+}
 .notebook-app .na-conditions {
   display: flex;
   flex-wrap: wrap;
@@ -1112,6 +1126,7 @@ nav.tabs [data-tab] .active {
   letter-spacing: 0.01em;
 }
 .notebook-app .na-actor-moves .moves-heading {
+  font-family: inherit;
   font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1129,6 +1144,27 @@ nav.tabs [data-tab] .active {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.25rem;
+  font-size: 0.75rem;
+}
+.notebook-app .na-actor-moves .item-description,
+.notebook-app .na-actor-items .item-description {
+  font-size: 0.75rem;
+}
+.notebook-app .na-actor-items .checklist-entry {
+  font-size: 0.75rem;
+}
+.notebook-app .na-actor-items .group-name-header {
+  font-family: inherit;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--me-text-muted);
+  margin: 0 0 0.45rem;
+  padding-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--me-border);
 }
 .notebook-app .na-actor-items .item-card {
   margin-bottom: 0.4rem;

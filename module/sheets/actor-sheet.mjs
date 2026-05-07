@@ -93,9 +93,6 @@ export default class MysteryActorSheet extends HandlebarsApplicationMixin(ActorS
       descriptionHTML: await enrich(item.system.description, item)
     });
     context.items = await Promise.all([...items].sort(byPosition).map(makeView));
-    context.checklistItems = await Promise.all(
-      items.filter(i => i.type === "checklist").sort(byPosition).map(makeView)
-    );
     context.moveItems = await Promise.all(
       items.filter(i => i.type === "move" && !i.system.hidden).sort(byPosition).map(async item => {
         const view = await makeView(item);
@@ -103,12 +100,30 @@ export default class MysteryActorSheet extends HandlebarsApplicationMixin(ActorS
         return view;
       })
     );
-    context.textItems = await Promise.all(
-      items.filter(i => i.type === "text").sort(byPosition).map(makeView)
+    context.allMoveItems = await Promise.all(
+      items.filter(i => i.type === "move").sort(byPosition).map(async item => {
+        const view = await makeView(item);
+        view.moveDescriptionHTML = await enrich(item.system.moveDescription, item);
+        return view;
+      })
     );
-    context.questionItems = await Promise.all(
-      items.filter(i => i.type === "question").sort(byPosition).map(makeView)
-    );
+    const nonMoveViews = context.items.filter(i => i.type !== "move");
+    const groupMap = new Map();
+    for (const item of nonMoveViews) {
+      const key = item.system.groupName || "";
+      if (!groupMap.has(key)) groupMap.set(key, { groupName: key, showHeader: false, maxGroupPosition: 0, items: [] });
+      const group = groupMap.get(key);
+      if (item.system.groupNameDisplayed) group.showHeader = true;
+      const gp = item.system.groupPosition ?? 0;
+      if (gp > group.maxGroupPosition) group.maxGroupPosition = gp;
+      group.items.push({
+        ...item,
+        isChecklist: item.type === "checklist",
+        isText: item.type === "text",
+        isQuestion: item.type === "question"
+      });
+    }
+    context.groupedItems = [...groupMap.values()].sort((a, b) => a.maxGroupPosition - b.maxGroupPosition);
     return context;
   }
 

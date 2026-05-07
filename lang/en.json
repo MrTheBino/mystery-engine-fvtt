@@ -95,7 +95,11 @@
       "NewItem": "New {type}",
       "Header": {
         "NamePlaceholder": "Item Name",
-        "Position": "Position"
+        "Position": "Position",
+        "GroupName": "Group",
+        "GroupNamePlaceholder": "Group name...",
+        "GroupNameDisplayed": "Show Group Name",
+        "GroupPosition": "Group Position"
       },
       "Description": "Description",
       "Checkboxes": "Checkboxes",

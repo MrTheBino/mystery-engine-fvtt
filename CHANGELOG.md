@@ -1,3 +1,6 @@
+# 14.3.2
+- added option tab in the notebook, not it's possible to remove a notebook item from the a scene's notebook
+  
 # 14.3.1
 - fixes for the victorian.css
 - hidden moves are now getting no more displayed in the notebook

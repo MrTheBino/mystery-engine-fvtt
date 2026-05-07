@@ -198,6 +198,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             activeActors: this._activeMainTab === 'actors',
             activeThreats: this._activeMainTab === 'threats',
             activePages: this._activeMainTab === 'pages',
+            activeOptions: this._activeMainTab === 'options',
             actors,
             threats,
             pages
@@ -230,7 +231,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         // setr the title of the dialog
         let titleElement = this.element.querySelector(".window-title");
         if (titleElement) {
-            titleElement.textContent = game.i18n.format("ME.Notebook.TitleFormat", { name: this.currentSceneDataItem.name || game.i18n.localize("ME.Notebook.UnnamedNotebook") });
+            titleElement.textContent = game.i18n.format("ME.Notebook.TitleFormat", { scene_name: context.scene?.name || game.i18n.localize("ME.Notebook.UnnamedNotebook"), notebook: context.notebook.name || game.i18n.localize("ME.Notebook.UntitledNotebook") });
         }
         this.#bindTabListeners();
         this.#bindActionButtons();
@@ -306,6 +307,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             openActorSheet:           NotebookApp.#openActorSheet,
             removeActor:              NotebookApp.#removeActor,
             rollAbility:              NotebookApp.#rollAbility,
+            removeNotebook:           NotebookApp.#removeNotebook,
         };
         for (const [action, handler] of Object.entries(actions)) {
             this.element.querySelectorAll(`[data-action="${action}"]`).forEach(btn => {
@@ -618,6 +620,17 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         if (!notebook) return;
         const actors = notebook.toObject().system.actors.filter(u => u !== uuid);
         await notebook.update({ "system.actors": actors });
+    }
+
+    static async #removeNotebook(event, btn) {
+        const confirmed = await foundry.applications.api.DialogV2.confirm({
+            content: game.i18n.localize("ME.Notebook.Options.RemoveNotebookConfirm"),
+            rejectClose: false,
+            modal: true
+        });
+        if (!confirmed) return;
+        await this.currentSceneDataItem.update({ "system.notebookUuid": "" });
+        this.render();
     }
 
     async _onDrop(event) {

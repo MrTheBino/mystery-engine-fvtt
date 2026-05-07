@@ -245,6 +245,16 @@
     letter-spacing: 0.01em;
   }
 
+  .na-options-section{
+    h3{
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--me-text-muted);
+    }
+  }
   // Active moves within actor card
   .na-actor-moves {
     .moves-heading {

@@ -13,11 +13,19 @@
     <button type="button" class="na-tab-btn{{#if activePages}} active{{/if}}" data-na-tab="pages">
       <i class="fas fa-file-alt"></i> {{localize "ME.Tabs.Pages"}}
     </button>
+    {{#if isGM}}
+    <button type="button" class="na-tab-btn{{#if activeOptions}} active{{/if}}" data-na-tab="options">
+      <i class="fas fa-cog"></i> {{localize "ME.Tabs.Options"}}
+    </button>
+    {{/if}}
   </nav>
 
   {{> "systems/mystery-engine-fvtt/templates/apps/parts/notebook-actors-tab.hbs"}}
   {{> "systems/mystery-engine-fvtt/templates/apps/parts/notebook-threats-tab.hbs"}}
   {{> "systems/mystery-engine-fvtt/templates/apps/parts/notebook-pages-tab.hbs"}}
+  {{#if isGM}}
+  {{> "systems/mystery-engine-fvtt/templates/apps/parts/notebook-options-tab.hbs"}}
+  {{/if}}
 
 {{else}}
 

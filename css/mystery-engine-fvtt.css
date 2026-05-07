@@ -1125,6 +1125,14 @@ nav.tabs [data-tab] .active {
   color: var(--me-text-muted);
   letter-spacing: 0.01em;
 }
+.notebook-app .na-options-section h3 {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--me-text-muted);
+}
 .notebook-app .na-actor-moves .moves-heading {
   font-family: inherit;
   font-size: 0.68rem;
@@ -1637,3 +1645,5 @@ nav.tabs [data-tab] .active {
 .notebook-app .na-label-value {
   color: var(--me-text);
 }
+
+/*# sourceMappingURL=mystery-engine-fvtt.css.map */

@@ -13,6 +13,7 @@ export const preloadHandlebarsTemplates = async function () {
     "systems/mystery-engine-fvtt/templates/apps/parts/notebook-actors-tab.hbs",
     "systems/mystery-engine-fvtt/templates/apps/parts/notebook-threats-tab.hbs",
     "systems/mystery-engine-fvtt/templates/apps/parts/notebook-pages-tab.hbs",
+    "systems/mystery-engine-fvtt/templates/apps/parts/notebook-options-tab.hbs",
     // Dialog templates.
     "systems/mystery-engine-fvtt/templates/apps/roll-dialog-body.hbs"
   ]);

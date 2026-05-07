@@ -38,7 +38,8 @@
       "Notes": "Notes",
       "Actors": "Actors",
       "Threats": "Threats",
-      "Pages": "Pages"
+      "Pages": "Pages",
+      "Options": "Options"
     },
     "Actor": {
       "XpTrack": "XP",
@@ -160,7 +161,7 @@
     },
     "Notebook": {
       "Title": "Notebook",
-      "TitleFormat": "Notebook: {name}",
+      "TitleFormat": "Notebook: {notebook}",
       "UnnamedNotebook": "Unnamed Notebook",
       "SceneDataName": "Scene Data: {name}",
       "NoNotebook": "No notebook is linked to this scene.",
@@ -230,6 +231,12 @@
         "UnlockClues": "Unlock clues",
         "LockOther": "Lock other (GM view only)",
         "UnlockOther": "Unlock other"
+      },
+      "Options": {
+        "SceneHeading": "Scene",
+        "RemoveNotebookHint": "Unlink the notebook from this scene. The notebook item itself will not be deleted.",
+        "RemoveNotebook": "Remove Notebook from Scene",
+        "RemoveNotebookConfirm": "Remove the linked notebook from this scene? The notebook itself will not be deleted."
       }
     },
     "RollDialog": {

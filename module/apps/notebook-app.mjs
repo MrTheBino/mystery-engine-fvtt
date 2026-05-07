@@ -115,7 +115,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
 
             for (const item of sortedItems) {
                 const description = await enrich(item.system.description, item);
-                if (item.type === "move" && item.system.active) {
+                if (item.type === "move" && item.system.active && !item.system.hidden) {
                     activeMoves.push({
                         name: item.name,
                         description,

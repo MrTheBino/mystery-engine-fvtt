@@ -97,3 +97,7 @@
     background: #522602;
     color: #f9e09e;
 }
+
+.mystery-engine .condition-row input[type="text"] {
+    color: #f9e09e;
+}

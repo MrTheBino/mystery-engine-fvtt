@@ -1,3 +1,7 @@
+# 14.3.1
+- fixes for the victorian.css
+- hidden moves are now getting no more displayed in the notebook
+
 # 14.3.0
 - added grouping to the items, use the same name for a group and the items are getting grouped. You can enable the view of the group name if you want to.
 - lockable entries for the notebook app for the GM, they deserve a good looking interface too

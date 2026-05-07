@@ -28,17 +28,20 @@
         "selected": false,
         "text": "[b]The Pure-White Signal.[/b] You lose contact with this world altogether. Tell the Keeper to play a white Odyssey tape and then retire this character."
       }
-    ]
+    ],
+    "groupName": "KEYS",
+    "groupNameDisplayed": true,
+    "groupPosition": 1
   },
   "effects": [],
   "folder": "3JNAFOPNvhokPIiP",
   "flags": {},
   "_stats": {
-    "coreVersion": "14.360",
+    "coreVersion": "14.361",
     "systemId": "mystery-engine-fvtt",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.4",
     "createdTime": 1777613888738,
-    "modifiedTime": 1777613888738,
+    "modifiedTime": 1778141712964,
     "lastModifiedBy": "KS4FZACDn7qVImBP",
     "exportSource": null,
     "compendiumSource": null,

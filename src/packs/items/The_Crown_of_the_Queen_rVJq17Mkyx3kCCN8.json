@@ -37,7 +37,10 @@
         "selected": false,
         "text": "A scene in the present day showing how you satisfy your physical desires."
       }
-    ]
+    ],
+    "groupName": "Crowns",
+    "groupPosition": 1,
+    "groupNameDisplayed": true
   },
   "effects": [],
   "sort": 125000,
@@ -47,11 +50,11 @@
   },
   "flags": {},
   "_stats": {
-    "coreVersion": "14.360",
+    "coreVersion": "14.361",
     "systemId": "mystery-engine-fvtt",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.4",
     "createdTime": 1777612874472,
-    "modifiedTime": 1777614203742,
+    "modifiedTime": 1778141751894,
     "lastModifiedBy": "KS4FZACDn7qVImBP",
     "compendiumSource": null,
     "duplicateSource": null,

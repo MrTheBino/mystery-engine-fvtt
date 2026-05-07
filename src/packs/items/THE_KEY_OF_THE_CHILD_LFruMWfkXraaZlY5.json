@@ -36,17 +36,20 @@
         "selected": false,
         "text": "A flashback to when you first discovered TV Odyssey."
       }
-    ]
+    ],
+    "groupName": "KEYS",
+    "groupNameDisplayed": true,
+    "groupPosition": 1
   },
   "effects": [],
   "folder": "3JNAFOPNvhokPIiP",
   "flags": {},
   "_stats": {
-    "coreVersion": "14.360",
+    "coreVersion": "14.361",
     "systemId": "mystery-engine-fvtt",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.4",
     "createdTime": 1777613886400,
-    "modifiedTime": 1777613886418,
+    "modifiedTime": 1778141722998,
     "lastModifiedBy": "KS4FZACDn7qVImBP",
     "exportSource": null,
     "compendiumSource": null,

@@ -310,118 +310,6 @@
       "_key": "!actors.items!YOzjVEi8k9MULxcx.RnmHoPDbrL0NKuIK"
     },
     {
-      "name": "THE KEY OF THE CHILD",
-      "type": "checklist",
-      "_id": "LFruMWfkXraaZlY5",
-      "img": "icons/svg/item-bag.svg",
-      "system": {
-        "position": 4,
-        "description": "<p>When you turn this Key, mark and narrate any you wish.</p>",
-        "isContainer": false,
-        "entries": [
-          {
-            "selected": false,
-            "text": "A flashback showing your latchkey kid routine whenever you got home from school."
-          },
-          {
-            "selected": false,
-            "text": "A flashback showing how you were an outsider among your school peers."
-          },
-          {
-            "selected": false,
-            "text": "A flashback to the moment when you realized your parents were imperfect."
-          },
-          {
-            "selected": false,
-            "text": "A flashback to when you felt genuine happiness as a child."
-          },
-          {
-            "selected": false,
-            "text": "A flashback to when you experienced childhood trauma."
-          },
-          {
-            "selected": false,
-            "text": "A flashback to the moment when you realized childhood wasn't forever."
-          },
-          {
-            "selected": false,
-            "text": "A flashback to when you first discovered TV Odyssey."
-          }
-        ]
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.LFruMWfkXraaZlY5"
-    },
-    {
-      "name": "THE KEY OF DESOLATION",
-      "type": "checklist",
-      "_id": "VZtpUlSxij5aUEbh",
-      "img": "icons/svg/item-bag.svg",
-      "system": {
-        "position": 5,
-        "description": "<p>When you turn this Key, mark the first empty box.</p>",
-        "isContainer": false,
-        "entries": [
-          {
-            "selected": false,
-            "text": "[b]The Sandstone Arch[/b]. Unlock the End of Session question: \"Did you receive a Signal from the Other Side?\""
-          },
-          {
-            "selected": false,
-            "text": "[b]The Fathomless Well.[/b] Your Reason modifier is reduced by 1 and your Sensitivity modifier is increased by 1."
-          },
-          {
-            "selected": false,
-            "text": "[b]The Wandering Monolith.[/b] You can now seek out the Big Man. How do you make contact with him? The Big Man can be consulted like any other Side Character. When you do so, roll with Sensitivity. On a 7-9, you gain 1 Clue; he will reveal it in a way that reflects his current disposition. On a 10+, as above, but you gain 2 Clues. On a miss, you must mark the next box on The Key of Desolation."
-          },
-          {
-            "selected": false,
-            "text": "[b]The Chromatic Desert.[/b] You can no longer be perceived by other characters and all memory of you is erased-it's like you never existed. You can continue to conduct investigations, but the Clues you find are only available if you narrate them into an Odyssey tape scene."
-          },
-          {
-            "selected": false,
-            "text": "[b]The Pure-White Signal.[/b] You lose contact with this world altogether. Tell the Keeper to play a white Odyssey tape and then retire this character."
-          }
-        ]
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.1",
-        "createdTime": 1777556838635,
-        "modifiedTime": 1777556838635,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "exportSource": null,
-        "compendiumSource": null,
-        "duplicateSource": null
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!YOzjVEi8k9MULxcx.VZtpUlSxij5aUEbh"
-    },
-    {
       "name": "TAKES YOU BACK",
       "type": "checklist",
       "_id": "r2CnO43Vn4AgxcPs",
@@ -634,6 +522,126 @@
       "folder": null,
       "sort": 0,
       "_key": "!actors.items!YOzjVEi8k9MULxcx.pXBpphJUFlNU56Hq"
+    },
+    {
+      "name": "THE KEY OF DESOLATION",
+      "type": "checklist",
+      "_id": "VZtpUlSxij5aUEbh",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 5,
+        "description": "<p>When you turn this Key, mark the first empty box.</p>",
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "[b]The Sandstone Arch[/b]. Unlock the End of Session question: \"Did you receive a Signal from the Other Side?\""
+          },
+          {
+            "selected": false,
+            "text": "[b]The Fathomless Well.[/b] Your Reason modifier is reduced by 1 and your Sensitivity modifier is increased by 1."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Wandering Monolith.[/b] You can now seek out the Big Man. How do you make contact with him? The Big Man can be consulted like any other Side Character. When you do so, roll with Sensitivity. On a 7-9, you gain 1 Clue; he will reveal it in a way that reflects his current disposition. On a 10+, as above, but you gain 2 Clues. On a miss, you must mark the next box on The Key of Desolation."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Chromatic Desert.[/b] You can no longer be perceived by other characters and all memory of you is erased-it's like you never existed. You can continue to conduct investigations, but the Clues you find are only available if you narrate them into an Odyssey tape scene."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Pure-White Signal.[/b] You lose contact with this world altogether. Tell the Keeper to play a white Odyssey tape and then retire this character."
+          }
+        ],
+        "groupName": "KEYS",
+        "groupNameDisplayed": true,
+        "groupPosition": 1
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.361",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.4",
+        "createdTime": 1778141868238,
+        "modifiedTime": 1778141868238,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.VZtpUlSxij5aUEbh",
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.VZtpUlSxij5aUEbh"
+    },
+    {
+      "name": "THE KEY OF THE CHILD",
+      "type": "checklist",
+      "_id": "LFruMWfkXraaZlY5",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 4,
+        "description": "<p>When you turn this Key, mark and narrate any you wish.</p>",
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "A flashback showing your latchkey kid routine whenever you got home from school."
+          },
+          {
+            "selected": false,
+            "text": "A flashback showing how you were an outsider among your school peers."
+          },
+          {
+            "selected": false,
+            "text": "A flashback to the moment when you realized your parents were imperfect."
+          },
+          {
+            "selected": false,
+            "text": "A flashback to when you felt genuine happiness as a child."
+          },
+          {
+            "selected": false,
+            "text": "A flashback to when you experienced childhood trauma."
+          },
+          {
+            "selected": false,
+            "text": "A flashback to the moment when you realized childhood wasn't forever."
+          },
+          {
+            "selected": false,
+            "text": "A flashback to when you first discovered TV Odyssey."
+          }
+        ],
+        "groupName": "KEYS",
+        "groupNameDisplayed": true,
+        "groupPosition": 1
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.361",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.4",
+        "createdTime": 1778141872500,
+        "modifiedTime": 1778141872500,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "exportSource": null,
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.LFruMWfkXraaZlY5",
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!YOzjVEi8k9MULxcx.LFruMWfkXraaZlY5"
     }
   ],
   "effects": [],
@@ -644,11 +652,11 @@
   },
   "flags": {},
   "_stats": {
-    "coreVersion": "14.360",
+    "coreVersion": "14.361",
     "systemId": "mystery-engine-fvtt",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.4",
     "createdTime": 1777556838635,
-    "modifiedTime": 1777614139906,
+    "modifiedTime": 1778141876839,
     "lastModifiedBy": "KS4FZACDn7qVImBP",
     "exportSource": null,
     "compendiumSource": null,

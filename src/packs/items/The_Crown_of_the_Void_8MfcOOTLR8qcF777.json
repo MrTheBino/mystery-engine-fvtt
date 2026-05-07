@@ -29,7 +29,10 @@
         "selected": false,
         "text": "[b]The Void. [/b]Retire your character in a way that shows how they are lost to the Void."
       }
-    ]
+    ],
+    "groupName": "Crowns",
+    "groupPosition": 1,
+    "groupNameDisplayed": true
   },
   "effects": [],
   "sort": 900000,
@@ -39,11 +42,11 @@
   },
   "flags": {},
   "_stats": {
-    "coreVersion": "14.360",
+    "coreVersion": "14.361",
     "systemId": "mystery-engine-fvtt",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.4",
     "createdTime": 1777612974822,
-    "modifiedTime": 1777614204626,
+    "modifiedTime": 1778141759651,
     "lastModifiedBy": "KS4FZACDn7qVImBP",
     "compendiumSource": null,
     "duplicateSource": null,

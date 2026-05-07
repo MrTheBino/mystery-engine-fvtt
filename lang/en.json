@@ -186,7 +186,9 @@
         "NoPagesGM": "No pages yet.",
         "AddFirstPage": "Add First Page",
         "NoPagesPlayer": "No pages in this notebook.",
-        "PageFallback": "Page {number}"
+        "PageFallback": "Page {number}",
+        "LockPage": "Lock page (GM view only)",
+        "UnlockPage": "Unlock page"
       },
       "Threats": {
         "ThreatFallback": "Threat {index}",
@@ -221,7 +223,13 @@
         "AddFirstThreat": "Add First Threat",
         "NoThreatsPlayer": "No threats in this notebook.",
         "OpportunityPlaceholder": "Opportunity",
-        "HideFromPlayers": "Hide from players"
+        "HideFromPlayers": "Hide from players",
+        "LockQuestions": "Lock questions (GM view only)",
+        "UnlockQuestions": "Unlock questions",
+        "LockClues": "Lock clues (GM view only)",
+        "UnlockClues": "Unlock clues",
+        "LockOther": "Lock other (GM view only)",
+        "UnlockOther": "Unlock other"
       }
     },
     "RollDialog": {

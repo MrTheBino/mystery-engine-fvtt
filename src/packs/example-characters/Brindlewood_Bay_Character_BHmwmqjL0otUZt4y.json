@@ -322,120 +322,6 @@
       "_key": "!actors.items!BHmwmqjL0otUZt4y.vy6cSNxQ0HtNvw49"
     },
     {
-      "name": "The Crown of the Queen",
-      "type": "checklist",
-      "_id": "rVJq17Mkyx3kCCN8",
-      "img": "icons/svg/item-bag.svg",
-      "system": {
-        "position": 0,
-        "description": "<p>When you put on this Crown, mark and narrate any you</p><p>wish.</p>",
-        "isContainer": false,
-        "entries": [
-          {
-            "selected": false,
-            "text": "A flashback of your fondest memory of your late partner."
-          },
-          {
-            "selected": false,
-            "text": "A flashback showing how you were an imperfect sister or daughter."
-          },
-          {
-            "selected": false,
-            "text": "A flashback showing how you were an imperfect mother."
-          },
-          {
-            "selected": false,
-            "text": "A flashback of your fondest memory with one of your children."
-          },
-          {
-            "selected": false,
-            "text": "A scene in the present day showing a private side of you very few get to see."
-          },
-          {
-            "selected": false,
-            "text": "A scene in the present day showing a burgeoning romance."
-          },
-          {
-            "selected": false,
-            "text": "A scene in the present day showing how you satisfy your physical desires."
-          }
-        ]
-      },
-      "effects": [],
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.2",
-        "createdTime": 1777613612120,
-        "modifiedTime": 1777613612120,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.rVJq17Mkyx3kCCN8",
-        "duplicateSource": null,
-        "exportSource": null
-      },
-      "ownership": {
-        "default": 0,
-        "KS4FZACDn7qVImBP": 3
-      },
-      "folder": null,
-      "sort": 0,
-      "_key": "!actors.items!BHmwmqjL0otUZt4y.rVJq17Mkyx3kCCN8"
-    },
-    {
-      "name": "The Crown of the Void",
-      "type": "checklist",
-      "_id": "8MfcOOTLR8qcF777",
-      "img": "icons/svg/item-bag.svg",
-      "system": {
-        "position": 0,
-        "description": "<p>When you put on this Crown, mark the first empty box.</p>",
-        "isContainer": false,
-        "entries": [
-          {
-            "selected": false,
-            "text": "[b]A Shadow in the Garden.[/b] Hereafter, during cozy vignettes focused on you or Cozy Move scenes involving you, you must also narrate how dark entities subtly reveal themselves in the scene."
-          },
-          {
-            "selected": false,
-            "text": "[b]The Chariot.[/b] Your Reason modifier is reduced by 1 and your Sensitivity modifier is increased by 1."
-          },
-          {
-            "selected": false,
-            "text": "[b]The Pallid Mask.[/b] Hereafter, during any intimate conver- sation with another character, you must make a casual reference to death, dying, the afterlife, or the End of All Things-no matter the subject at-hand."
-          },
-          {
-            "selected": false,
-            "text": "[b]The Pomegranate Kernel.[/b] You take the Condition: Obsessed with the Void. It can never be cleared."
-          },
-          {
-            "selected": false,
-            "text": "[b]The Void. [/b]Retire your character in a way that shows how they are lost to the Void."
-          }
-        ]
-      },
-      "effects": [],
-      "flags": {},
-      "_stats": {
-        "coreVersion": "14.360",
-        "systemId": "mystery-engine-fvtt",
-        "systemVersion": "0.2.2",
-        "createdTime": 1777613651420,
-        "modifiedTime": 1777613651420,
-        "lastModifiedBy": "KS4FZACDn7qVImBP",
-        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.8MfcOOTLR8qcF777",
-        "duplicateSource": null,
-        "exportSource": null
-      },
-      "ownership": {
-        "default": 0,
-        "KS4FZACDn7qVImBP": 3
-      },
-      "folder": null,
-      "sort": 0,
-      "_key": "!actors.items!BHmwmqjL0otUZt4y.8MfcOOTLR8qcF777"
-    },
-    {
       "name": "The Cozy Move",
       "type": "move",
       "_id": "1R8BD3meDTaKDA7B",
@@ -672,6 +558,126 @@
       "folder": null,
       "sort": 0,
       "_key": "!actors.items!BHmwmqjL0otUZt4y.QCPbCWZnSeucldxt"
+    },
+    {
+      "name": "The Crown of the Void",
+      "type": "checklist",
+      "_id": "8MfcOOTLR8qcF777",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "<p>When you put on this Crown, mark the first empty box.</p>",
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "[b]A Shadow in the Garden.[/b] Hereafter, during cozy vignettes focused on you or Cozy Move scenes involving you, you must also narrate how dark entities subtly reveal themselves in the scene."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Chariot.[/b] Your Reason modifier is reduced by 1 and your Sensitivity modifier is increased by 1."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Pallid Mask.[/b] Hereafter, during any intimate conver- sation with another character, you must make a casual reference to death, dying, the afterlife, or the End of All Things-no matter the subject at-hand."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Pomegranate Kernel.[/b] You take the Condition: Obsessed with the Void. It can never be cleared."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Void. [/b]Retire your character in a way that shows how they are lost to the Void."
+          }
+        ],
+        "groupName": "Crowns",
+        "groupNameDisplayed": true,
+        "groupPosition": 1
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.361",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.4",
+        "createdTime": 1778141781609,
+        "modifiedTime": 1778141781609,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.8MfcOOTLR8qcF777",
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.8MfcOOTLR8qcF777"
+    },
+    {
+      "name": "The Crown of the Queen",
+      "type": "checklist",
+      "_id": "rVJq17Mkyx3kCCN8",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 0,
+        "description": "<p>When you put on this Crown, mark and narrate any you</p><p>wish.</p>",
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "A flashback of your fondest memory of your late partner."
+          },
+          {
+            "selected": false,
+            "text": "A flashback showing how you were an imperfect sister or daughter."
+          },
+          {
+            "selected": false,
+            "text": "A flashback showing how you were an imperfect mother."
+          },
+          {
+            "selected": false,
+            "text": "A flashback of your fondest memory with one of your children."
+          },
+          {
+            "selected": false,
+            "text": "A scene in the present day showing a private side of you very few get to see."
+          },
+          {
+            "selected": false,
+            "text": "A scene in the present day showing a burgeoning romance."
+          },
+          {
+            "selected": false,
+            "text": "A scene in the present day showing how you satisfy your physical desires."
+          }
+        ],
+        "groupName": "Crowns",
+        "groupNameDisplayed": true,
+        "groupPosition": 1
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.361",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.2.4",
+        "createdTime": 1778141782976,
+        "modifiedTime": 1778141782976,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": "Compendium.mystery-engine-fvtt.items.Item.rVJq17Mkyx3kCCN8",
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!BHmwmqjL0otUZt4y.rVJq17Mkyx3kCCN8"
     }
   ],
   "effects": [],
@@ -682,11 +688,11 @@
   },
   "flags": {},
   "_stats": {
-    "coreVersion": "14.360",
+    "coreVersion": "14.361",
     "systemId": "mystery-engine-fvtt",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.4",
     "createdTime": 1777613505750,
-    "modifiedTime": 1777613667999,
+    "modifiedTime": 1778141828420,
     "lastModifiedBy": "KS4FZACDn7qVImBP",
     "compendiumSource": null,
     "duplicateSource": null,

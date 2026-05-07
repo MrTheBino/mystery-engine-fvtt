@@ -82,13 +82,48 @@
       <div class="na-threat-section">
         <div class="na-threat-section-header">
           <span class="na-threat-section-label">{{localize "ME.Notebook.Threats.Questions"}}</span>
-          <button type="button" class="icon-btn"
-            data-action="addThreatQuestion"
-            data-threat-index="{{index}}"
-            title="{{localize 'ME.Notebook.Threats.AddQuestion'}}">
-            <i class="fas fa-plus"></i>
-          </button>
+          <div class="na-section-controls">
+            {{#unless questionsLocked}}
+            <button type="button" class="icon-btn"
+              data-action="addThreatQuestion"
+              data-threat-index="{{index}}"
+              title="{{localize 'ME.Notebook.Threats.AddQuestion'}}">
+              <i class="fas fa-plus"></i>
+            </button>
+            {{/unless}}
+            {{#if questionsLocked}}
+            <button type="button"
+              class="icon-btn active"
+              data-action="toggleThreatQuestionsLocked"
+              data-threat-index="{{index}}"
+              title="{{localize 'ME.Notebook.Threats.UnlockQuestions'}}">
+              <i class="fas fa-lock"></i>
+            </button>
+            {{else}}
+            <button type="button"
+              class="icon-btn"
+              data-action="toggleThreatQuestionsLocked"
+              data-threat-index="{{index}}"
+              title="{{localize 'ME.Notebook.Threats.LockQuestions'}}">
+              <i class="fas fa-lock-open"></i>
+            </button>
+            {{/if}}
+          </div>
         </div>
+        {{#if questionsLocked}}
+        {{#each questions}}
+        {{#unless hidden}}
+        <div class="na-threat-row readonly">
+          <i class="fas {{#if checkbox}}fa-check-square{{else}}fa-square{{/if}} na-read-icon"></i>
+          <div class="na-threat-row-question-fields">
+            <span>{{title}}</span>
+            {{#if opportunity}}<div><em>{{opportunity}}</em></div>{{/if}}
+          </div>
+          {{#if complexity}}<span class="na-complexity-badge">{{complexity}}</span>{{/if}}
+        </div>
+        {{/unless}}
+        {{/each}}
+        {{else}}
         {{#each questions}}
         <div class="na-threat-row">
           <button type="button"
@@ -137,19 +172,51 @@
         {{else}}
         <p class="empty-list">{{localize "ME.Notebook.Threats.NoQuestions"}}</p>
         {{/each}}
+        {{/if}}
       </div>
 
       {{!-- Clues --}}
       <div class="na-threat-section">
         <div class="na-threat-section-header">
           <span class="na-threat-section-label">{{localize "ME.Notebook.Threats.Clues"}}</span>
-          <button type="button" class="icon-btn"
-            data-action="addThreatClue"
-            data-threat-index="{{index}}"
-            title="{{localize 'ME.Notebook.Threats.AddClue'}}">
-            <i class="fas fa-plus"></i>
-          </button>
+          <div class="na-section-controls">
+            {{#unless cluesLocked}}
+            <button type="button" class="icon-btn"
+              data-action="addThreatClue"
+              data-threat-index="{{index}}"
+              title="{{localize 'ME.Notebook.Threats.AddClue'}}">
+              <i class="fas fa-plus"></i>
+            </button>
+            {{/unless}}
+            {{#if cluesLocked}}
+            <button type="button"
+              class="icon-btn active"
+              data-action="toggleThreatCluesLocked"
+              data-threat-index="{{index}}"
+              title="{{localize 'ME.Notebook.Threats.UnlockClues'}}">
+              <i class="fas fa-lock"></i>
+            </button>
+            {{else}}
+            <button type="button"
+              class="icon-btn"
+              data-action="toggleThreatCluesLocked"
+              data-threat-index="{{index}}"
+              title="{{localize 'ME.Notebook.Threats.LockClues'}}">
+              <i class="fas fa-lock-open"></i>
+            </button>
+            {{/if}}
+          </div>
         </div>
+        {{#if cluesLocked}}
+        {{#each clues}}
+        {{#if checkbox}}
+        <div class="na-threat-row readonly">
+          {{#if explained}}<i class="fas fa-lightbulb na-explained-icon" title="{{localize 'ME.Notebook.Threats.Explained'}}"></i>{{/if}}
+          <span>{{text}}</span>
+        </div>
+        {{/if}}
+        {{/each}}
+        {{else}}
         {{#each clues}}
         <div class="na-threat-row">
           <button type="button"
@@ -184,19 +251,52 @@
         {{else}}
         <p class="empty-list">{{localize "ME.Notebook.Threats.NoClues"}}</p>
         {{/each}}
+        {{/if}}
       </div>
 
       {{!-- Other --}}
       <div class="na-threat-section">
         <div class="na-threat-section-header">
           <span class="na-threat-section-label">{{localize "ME.Notebook.Threats.Other"}}</span>
-          <button type="button" class="icon-btn"
-            data-action="addThreatOther"
-            data-threat-index="{{index}}"
-            title="{{localize 'ME.Notebook.Threats.AddItem'}}">
-            <i class="fas fa-plus"></i>
-          </button>
+          <div class="na-section-controls">
+            {{#unless otherLocked}}
+            <button type="button" class="icon-btn"
+              data-action="addThreatOther"
+              data-threat-index="{{index}}"
+              title="{{localize 'ME.Notebook.Threats.AddItem'}}">
+              <i class="fas fa-plus"></i>
+            </button>
+            {{/unless}}
+            {{#if otherLocked}}
+            <button type="button"
+              class="icon-btn active"
+              data-action="toggleThreatOtherLocked"
+              data-threat-index="{{index}}"
+              title="{{localize 'ME.Notebook.Threats.UnlockOther'}}">
+              <i class="fas fa-lock"></i>
+            </button>
+            {{else}}
+            <button type="button"
+              class="icon-btn"
+              data-action="toggleThreatOtherLocked"
+              data-threat-index="{{index}}"
+              title="{{localize 'ME.Notebook.Threats.LockOther'}}">
+              <i class="fas fa-lock-open"></i>
+            </button>
+            {{/if}}
+          </div>
         </div>
+        {{#if otherLocked}}
+        {{#each other}}
+        <div class="na-other-read-entry">
+          <div class="na-other-read-title">{{title}}</div>
+          <div class="na-other-read-details">
+            <i class="fas {{#if checkbox}}fa-check-square{{else}}fa-square{{/if}} na-read-icon"></i>
+            {{#if shortDescription}}<span class="na-other-read-desc">{{shortDescription}}</span>{{/if}}
+          </div>
+        </div>
+        {{/each}}
+        {{else}}
         {{#each other}}
         <div class="na-threat-row na-other-row">
           <button type="button"
@@ -230,6 +330,7 @@
         {{else}}
         <p class="empty-list">{{localize "ME.Notebook.Threats.NoOther"}}</p>
         {{/each}}
+        {{/if}}
       </div>
 
       {{else}}

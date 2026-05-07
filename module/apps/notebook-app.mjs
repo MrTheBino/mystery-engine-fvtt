@@ -163,6 +163,9 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             introduction: t.introduction,
             introductionHTML: await enrich(t.introduction, notebook),
             countdown: [...t.countdown],
+            questionsLocked: t.questionsLocked,
+            cluesLocked: t.cluesLocked,
+            otherLocked: t.otherLocked,
             questions: t.questions.map((q, qi) => ({ index: qi, checkbox: q.checkbox, hidden: q.hidden, title: q.title, opportunity: q.opportunity, complexity: q.complexity })),
             clues: t.clues.map((c, ci) => ({ index: ci, checkbox: c.checkbox, explained: c.explained, text: c.text })),
             other: t.other.map((o, oi) => ({ index: oi, title: o.title, shortDescription: o.shortDescription, checkbox: o.checkbox }))
@@ -174,6 +177,8 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
                 index: pi,
                 title: page.title || game.i18n.format("ME.Notebook.Pages.PageFallback", { number: pi + 1 }),
                 isActive: pi === this._activePageIndex,
+                locked: page.locked,
+                editable: game.user.isGM && !page.locked,
                 notes: await Promise.all(
                     page.notes.map(async (note, ni) => ({
                         pageIndex: pi,
@@ -276,6 +281,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         const actions = {
             addPage:                  NotebookApp.#addPage,
             deletePage:               NotebookApp.#deletePage,
+            togglePageLocked:         NotebookApp.#togglePageLocked,
             addNote:                  NotebookApp.#addNote,
             deleteNote:               NotebookApp.#deleteNote,
             addThreat:                NotebookApp.#addThreat,
@@ -287,6 +293,9 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             deleteThreatQuestion:     NotebookApp.#deleteThreatQuestion,
             toggleThreatQuestion:     NotebookApp.#toggleThreatQuestion,
             toggleThreatQuestionHidden: NotebookApp.#toggleThreatQuestionHidden,
+            toggleThreatQuestionsLocked: NotebookApp.#toggleThreatQuestionsLocked,
+            toggleThreatCluesLocked:     NotebookApp.#toggleThreatCluesLocked,
+            toggleThreatOtherLocked:     NotebookApp.#toggleThreatOtherLocked,
             addThreatClue:            NotebookApp.#addThreatClue,
             deleteThreatClue:         NotebookApp.#deleteThreatClue,
             toggleThreatClue:         NotebookApp.#toggleThreatClue,
@@ -429,6 +438,16 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         this.render();
     }
 
+    static async #togglePageLocked(event, target) {
+        const index = parseInt(target.dataset.pageIndex);
+        const notebook = await this.#getNotebook();
+        if (!notebook) return;
+        const pages = foundry.utils.deepClone(notebook.system.pages);
+        if (!pages[index]) return;
+        pages[index].locked = !pages[index].locked;
+        await notebook.update({ "system.pages": pages });
+    }
+
     static async #addNote(event, target) {
         const pageIndex = parseInt(target.dataset.pageIndex);
         const notebook = await this.#getNotebook();
@@ -518,6 +537,21 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         const ti = parseInt(btn.dataset.threatIndex);
         const qi = parseInt(btn.dataset.questionIndex);
         await this.#mutateThreat(ti, t => { t.questions[qi].hidden = !t.questions[qi].hidden; });
+    }
+
+    static async #toggleThreatQuestionsLocked(event, btn) {
+        const ti = parseInt(btn.dataset.threatIndex);
+        await this.#mutateThreat(ti, t => { t.questionsLocked = !t.questionsLocked; });
+    }
+
+    static async #toggleThreatCluesLocked(event, btn) {
+        const ti = parseInt(btn.dataset.threatIndex);
+        await this.#mutateThreat(ti, t => { t.cluesLocked = !t.cluesLocked; });
+    }
+
+    static async #toggleThreatOtherLocked(event, btn) {
+        const ti = parseInt(btn.dataset.threatIndex);
+        await this.#mutateThreat(ti, t => { t.otherLocked = !t.otherLocked; });
     }
 
     static async #addThreatClue(event, btn) {

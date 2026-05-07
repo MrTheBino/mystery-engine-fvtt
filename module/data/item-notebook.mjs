@@ -18,6 +18,9 @@ export default class NotebookData extends BaseItemData {
             new fields.BooleanField({ initial: false }),
             { initial: [] },
           ),
+          questionsLocked: new fields.BooleanField({ initial: false }), // if the question is locked, just for display purposes for the gm view
+          cluesLocked: new fields.BooleanField({ initial: false }), // if the clue is locked, just for display purposes for the gm view
+          otherLocked: new fields.BooleanField({ initial: false }), // if the other is locked, just for display purposes for the gm view
           questions: new fields.ArrayField(
             new fields.SchemaField({
               checkbox: new fields.BooleanField({ initial: false }), // if the question got answered
@@ -58,6 +61,7 @@ export default class NotebookData extends BaseItemData {
       pages: new fields.ArrayField(
         new fields.SchemaField({
           title: new fields.StringField({ blank: true, initial: "" }),
+          locked: new fields.BooleanField({ initial: false }), // if the page is locked, just for display purposes for the gm view
           notes: new fields.ArrayField(
             new fields.SchemaField({
               title: new fields.StringField({ blank: true, initial: "" }),

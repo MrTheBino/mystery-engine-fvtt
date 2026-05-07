@@ -18,24 +18,42 @@
 
       {{#if ../isGM}}
       <div class="na-page-header">
+        {{#if locked}}
+        <span class="na-page-title-locked">{{title}}</span>
+        <button type="button"
+          class="icon-btn active"
+          data-action="togglePageLocked"
+          data-page-index="{{index}}"
+          title="{{localize 'ME.Notebook.Pages.UnlockPage'}}">
+          <i class="fas fa-lock"></i>
+        </button>
+        {{else}}
         <input type="text"
           name="system.pages.{{index}}.title"
           value="{{title}}"
           class="na-page-title-input"
           placeholder="{{localize 'ME.Notebook.Pages.PageTitlePlaceholder'}}" />
+        <button type="button"
+          class="icon-btn"
+          data-action="togglePageLocked"
+          data-page-index="{{index}}"
+          title="{{localize 'ME.Notebook.Pages.LockPage'}}">
+          <i class="fas fa-lock-open"></i>
+        </button>
         <button type="button" class="icon-btn delete-btn"
           data-action="deletePage"
           data-index="{{index}}"
           title="{{localize 'ME.Notebook.Pages.DeletePage'}}">
           <i class="fas fa-times"></i>
         </button>
+        {{/if}}
       </div>
       {{/if}}
 
       <div class="na-notes-list">
         {{#each notes}}
         <div class="na-note-entry">
-          {{#if ../../isGM}}
+          {{#if ../editable}}
           <div class="na-note-header">
             <input type="text"
               name="system.pages.{{pageIndex}}.notes.{{noteIndex}}.title"
@@ -73,7 +91,7 @@
         {{/each}}
       </div>
 
-      {{#if ../isGM}}
+      {{#if editable}}
       <button type="button" class="na-add-note-btn" data-action="addNote" data-page-index="{{index}}">
         <i class="fas fa-plus"></i> {{localize "ME.Notebook.Pages.AddNote"}}
       </button>

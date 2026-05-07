@@ -1,3 +1,8 @@
+# 14.3.0
+- added grouping to the items, use the same name for a group and the items are getting grouped. You can enable the view of the group name if you want to.
+- lockable entries for the notebook app for the GM, they deserve a good looking interface too
+- styling changes
+
 # 0.2.4
 - victorial style theme, (I suck at theming...)
 - added hidden status for questions in the notebook

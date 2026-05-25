@@ -1,11 +1,12 @@
+// === FILE: scss/_sheet-header.scss ===
 .mystery-engine {
   .sheet-header {
     display: flex;
     align-items: flex-start;
     gap: 0.875rem;
     padding: 0.875rem 1rem;
-    border-bottom: 1px solid var(--me-border);
-    background: var(--me-surface);
+    border-bottom: 2px solid var(--me-border);
+    background: linear-gradient(135deg, var(--me-surface-alt) 0%, var(--me-surface) 60%);
     flex: 0 0 auto;
     box-shadow: var(--me-shadow-sm);
   }
@@ -14,15 +15,15 @@
     width: 56px;
     height: 56px;
     object-fit: cover;
-    border-radius: var(--me-radius);
-    border: 1px solid var(--me-border);
+    border-radius: var(--me-radius-lg);
+    border: 2px solid var(--me-border-mid);
     cursor: pointer;
     flex: 0 0 auto;
     transition: border-color var(--me-transition), box-shadow var(--me-transition);
 
     &:hover {
       border-color: var(--me-accent);
-      box-shadow: 0 0 0 3px var(--me-focus-ring);
+      box-shadow: 0 0 0 4px var(--me-accent-dim);
     }
   }
 
@@ -37,13 +38,13 @@
   .title-input,
   .title {
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: 800;
     margin: 0;
     border: none;
     background: transparent;
     width: 100%;
     color: var(--me-text);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     line-height: 1.3;
   }
 

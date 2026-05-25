@@ -1,3 +1,4 @@
+// === FILE: scss/_common.scss ===
 .mystery-engine {
   // Buttons
   button[type="button"],
@@ -9,7 +10,7 @@
     font-size: 0.78rem;
     font-weight: 600;
     border-radius: var(--me-radius-sm);
-    border: 1px solid var(--me-border);
+    border: 1px solid var(--me-border-mid);
     background: var(--me-surface);
     color: var(--me-text-muted);
     cursor: pointer;
@@ -19,13 +20,14 @@
                 color var(--me-transition), box-shadow var(--me-transition);
 
     &:hover {
-      background: var(--me-surface-alt);
+      background: var(--me-accent-light);
       border-color: var(--me-accent);
       color: var(--me-accent-hover);
+      box-shadow: var(--me-shadow-sm);
     }
 
     &:active {
-      background: var(--me-accent-light);
+      background: rgba(243, 194, 103, 0.22);
     }
   }
 
@@ -47,15 +49,33 @@
       background: var(--me-accent-light);
     }
 
+    &:active {
+      color: var(--me-accent);
+      background: var(--me-accent-light);
+    }
+
     &.delete-btn:hover {
       color: var(--me-error);
-      background: #FEE2E2;
+      background: rgba(229, 78, 78, 0.15);
     }
   }
 
   .sort-controls .icon-btn {
     padding: 0.1rem 0.25rem;
     font-size: 0.65rem;
+  }
+
+  .na-btn-danger {
+    color: var(--me-error);
+    border-color: rgba(229, 78, 78, 0.35);
+    background: rgba(229, 78, 78, 0.07);
+
+    &:hover {
+      background: rgba(229, 78, 78, 0.15);
+      border-color: var(--me-error);
+      color: var(--me-error);
+      box-shadow: var(--me-shadow-sm);
+    }
   }
 
   // Inputs
@@ -87,5 +107,55 @@
     border: 1px dashed var(--me-border);
     border-radius: var(--me-radius-sm);
     background: var(--me-surface);
+  }
+
+  // Gradient divider utilities
+  .section-line {
+    height: 1px;
+    border: none;
+    background: linear-gradient(to right, transparent, var(--me-border-mid) 20%, var(--me-border-mid) 80%, transparent);
+    width: 100%;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .section-line-accent {
+    height: 1px;
+    border: none;
+    background: linear-gradient(to right, transparent, rgba(243, 194, 103, 0.35) 20%, rgba(243, 194, 103, 0.35) 80%, transparent);
+    width: 100%;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  // Section header with gradient underline and left accent
+  .me-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+
+    h2,
+    h3 {
+      margin: 0;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--me-text-muted);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, var(--me-accent) 0%, var(--me-border) 50%, transparent 100%);
+    }
   }
 }

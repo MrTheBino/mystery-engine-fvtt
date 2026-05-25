@@ -1,3 +1,4 @@
+// === FILE: scss/_roll-dialog.scss ===
 .roll-dialog {
   .window-content {
     padding: 0;
@@ -8,6 +9,7 @@
     flex-direction: column;
     gap: 1rem;
     padding: 1.25rem 1.5rem 1.5rem;
+    background: var(--me-bg);
   }
 
   .roll-dialog-ability {
@@ -17,8 +19,10 @@
     gap: 0.6rem;
     padding: 0.6rem 1rem;
     background: var(--me-accent-light);
-    border: 1px solid #FCD34D;
+    border: 1px solid rgba(243, 194, 103, 0.45);
+    border-left: 3px solid var(--me-accent);
     border-radius: var(--me-radius);
+    box-shadow: var(--me-shadow-sm);
   }
 
   .roll-dialog-ability-name {
@@ -45,7 +49,7 @@
     justify-content: center;
     gap: 0.5rem;
     padding: 0.6rem 1rem;
-    border-radius: var(--me-radius-sm);
+    border-radius: var(--me-radius);
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
@@ -55,11 +59,11 @@
 
   .advantage-btn {
     background: var(--me-accent);
-    color: #fff;
+    color: #18162e;
 
     &:hover {
       background: var(--me-accent-hover);
-      box-shadow: var(--me-shadow-sm);
+      box-shadow: var(--me-shadow);
     }
   }
 

@@ -1,3 +1,4 @@
+// === FILE: scss/_items.scss ===
 .mystery-engine {
   // Sections
   .items-section,
@@ -9,12 +10,11 @@
     gap: 0.5rem;
   }
 
-  .checklist-entries{
-    // we hide the bullet for li entries
+  .checklist-entries {
     list-style: none;
-     margin: 0;
-     padding: 0;
-     font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
   }
 
   .checklist-entry {
@@ -48,10 +48,10 @@
   }
 
   .group-name-header {
-    font-size: 1.2rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.09em;
     color: var(--me-text-muted);
     padding-bottom: 0.4rem;
     border-bottom: 1px solid var(--me-border);
@@ -59,36 +59,47 @@
   }
 
   .moves-heading {
-    font-size: 1.2rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.09em;
     color: var(--me-text-muted);
     padding-bottom: 0.4rem;
     border-bottom: 1px solid var(--me-border);
     margin: 0;
   }
 
-  .abilities-section,.labels-section{
-    margin-bottom: 2rem;
+  .abilities-section,
+  .labels-section {
+    margin-bottom: 1.5rem;
   }
 
   .section-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--me-border);
     padding-bottom: 0.35rem;
     margin-bottom: 0.25rem;
+    position: relative;
 
     h2,
     h3 {
       margin: 0;
-      font-size: 1rem;
+      font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       color: var(--me-text-muted);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, var(--me-accent) 0%, var(--me-border) 50%, transparent 100%);
     }
   }
 
@@ -99,11 +110,13 @@
     border-radius: var(--me-radius);
     box-shadow: var(--me-shadow-sm);
     overflow: hidden;
-    transition: box-shadow var(--me-transition), border-color var(--me-transition);
+    transition: box-shadow var(--me-transition), border-color var(--me-transition),
+                transform var(--me-transition);
 
     &:hover {
       box-shadow: var(--me-shadow);
       border-color: var(--me-border-mid);
+      transform: translateY(-1px);
     }
 
     &--inactive {
@@ -119,6 +132,7 @@
     padding: 0.5rem 0.75rem;
     background: var(--me-surface-alt);
     border-bottom: 1px solid var(--me-border);
+    border-left: 3px solid var(--me-accent);
 
     h2 {
       margin: 0;
@@ -244,7 +258,7 @@
 
   .hide-move-btn:hover {
     color: var(--me-error);
-    background: #FEE2E2;
+    background: rgba(229, 78, 78, 0.15);
   }
 
   .hidden-toggle {

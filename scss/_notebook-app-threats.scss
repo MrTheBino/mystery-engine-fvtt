@@ -1,11 +1,24 @@
+// === FILE: scss/_notebook-app-threats.scss ===
 .notebook-app {
+  // Threat sub-panel layout — card-per-section
+  .na-panel[data-na-panel="threats"] .na-sub-panel.active {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.75rem;
+  }
+
+  // GM Header — card treatment
   .na-threat-gm-header {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    background: linear-gradient(135deg, var(--me-surface-alt), var(--me-surface));
-    border-bottom: 1px solid var(--me-border);
+    padding: 0.6rem 0.75rem;
+    background: linear-gradient(135deg, var(--me-accent-dim) 0%, var(--me-surface-alt) 50%, var(--me-surface) 100%);
+    border: 1px solid var(--me-border);
+    border-top: 3px solid var(--me-accent);
+    border-radius: var(--me-radius);
+    box-shadow: var(--me-shadow-sm);
   }
 
   .na-threat-title-input {
@@ -25,9 +38,14 @@
     }
   }
 
+  // Intro row — card treatment
   .na-threat-intro-row {
-    padding: 0.4rem 0.75rem;
-    border-bottom: 1px solid var(--me-border);
+    padding: 0.5rem 0.75rem;
+    background: var(--me-surface);
+    border: 1px solid var(--me-border);
+    border-radius: var(--me-radius);
+    box-shadow: var(--me-shadow-sm);
+    overflow: hidden;
 
     prose-mirror {
       font-size: 0.85rem;
@@ -36,27 +54,73 @@
     }
   }
 
+  // Threat section — card container
   .na-threat-section {
-    padding: 0.6rem 0.75rem;
-    border-bottom: 1px solid var(--me-border);
+    background: var(--me-surface);
+    border: 1px solid var(--me-border);
+    border-radius: var(--me-radius);
+    box-shadow: var(--me-shadow-sm);
+    overflow: hidden;
+    padding: 0;
 
-    &:last-child { border-bottom: none; }
+    // Remove legacy last-child border override — not needed with card model
+    &:last-child {
+      border: 1px solid var(--me-border);
+    }
+
+    > .countdown-track,
+    > .na-empty-inline {
+      padding: 0.55rem 0.75rem;
+    }
+
+    > .na-threat-row {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+
+      &:last-child { padding-bottom: 0.4rem; }
+    }
+
+    > .empty-list {
+      margin: 0.5rem 0.75rem;
+    }
+
+    > *:not(.na-threat-section-header):first-of-type { margin-top: 0.2rem; }
+    > *:last-child { padding-bottom: 0.4rem; }
   }
 
+  // Section header inside card — gradient strip with left accent
   .na-threat-section-header {
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    margin-bottom: 0.45rem;
+    padding: 0.45rem 0.75rem;
+    background: linear-gradient(to right, var(--me-accent-dim) 0%, var(--me-surface-alt) 60%, var(--me-surface-alt) 100%);
+    border-bottom: 1px solid var(--me-border);
+    border-left: 3px solid var(--me-accent);
+    margin-bottom: 0;
   }
 
   .na-threat-section-label {
     flex: 1;
-    font-size: 0.75rem;
+    font-size: 0.69rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
     color: var(--me-text-muted);
+  }
+
+  // Player view: section label used as direct child of section (acts as header)
+  .na-threat-section > .na-threat-section-label {
+    display: block;
+    padding: 0.4rem 0.75rem;
+    background: var(--me-surface-alt);
+    border-bottom: 1px solid var(--me-border);
+    font-size: 0.69rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--me-text-muted);
+    flex: unset;
   }
 
   .na-section-controls {
@@ -78,8 +142,8 @@
   }
 
   .countdown-box {
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border: 2px solid var(--me-border-mid);
     border-radius: var(--me-radius-sm);
     background: var(--me-surface);
@@ -100,12 +164,12 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.2rem 0;
+    padding: 0.25rem 0.75rem;
 
     & + .na-threat-row { border-top: 1px solid var(--me-border); }
 
     &.readonly {
-      padding: 0.25rem 0;
+      padding: 0.3rem 0.75rem;
       gap: 0.5rem;
       font-size: 0.85rem;
     }
@@ -138,7 +202,7 @@
   .na-explained-btn {
     color: var(--me-inactive);
 
-    &.active { color: #F59E0B; }
+    &.active { color: #f3c267; }
   }
 
   // Inline text input
@@ -178,8 +242,12 @@
 
   // Player read view
   .na-threat-read-header {
-    padding: 0.5rem 0.75rem;
-    border-bottom: 1px solid var(--me-border);
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--me-border);
+    border-top: 3px solid var(--me-accent);
+    border-radius: var(--me-radius);
+    background: linear-gradient(135deg, var(--me-accent-dim), var(--me-surface));
+    box-shadow: var(--me-shadow-sm);
   }
 
   .na-threat-read-title {
@@ -189,11 +257,14 @@
   }
 
   .na-threat-intro-text {
-    padding: 0.4rem 0.75rem;
+    padding: 0.5rem 0.75rem;
     font-style: italic;
     color: var(--me-text-muted);
     font-size: 0.85rem;
-    border-bottom: 1px solid var(--me-border);
+    border: 1px solid var(--me-border);
+    border-radius: var(--me-radius);
+    background: var(--me-surface);
+    box-shadow: var(--me-shadow-sm);
     margin: 0;
   }
 
@@ -204,7 +275,7 @@
   }
 
   .na-explained-icon {
-    color: #F59E0B;
+    color: #f3c267;
     font-size: 0.85rem;
     flex-shrink: 0;
   }
@@ -254,7 +325,7 @@
     font-weight: 700;
     color: var(--me-accent-hover);
     background: var(--me-accent-light);
-    border: 1px solid #FCD34D;
+    border: 1px solid rgba(243, 194, 103, 0.45);
     border-radius: 999px;
     padding: 0.05rem 0.5rem;
   }

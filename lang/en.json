@@ -23,15 +23,6 @@
       "Question": "Question Sheet",
       "NotebookScene": "NotebookSceneItem Sheet"
     },
-    "Settings": {
-      "Theme": {
-        "Label": "Theme",
-        "Hint": "Select the visual theme for the system. Changes take effect immediately.",
-        "Standard": "Standard",
-        "Victorian": "Victorian",
-        "90s": "90s"
-      }
-    },
     "Tabs": {
       "Main": "Main",
       "Biography": "Biography",
@@ -197,6 +188,7 @@
         "AddThreatTitle": "Add threat",
         "ThreatNamePlaceholder": "Threat name...",
         "DeleteThreat": "Delete threat",
+        "DeleteThreatConfirm": "Delete this threat and all its content?",
         "Countdown": "Countdown",
         "AddBox": "Add box",
         "RemoveBox": "Remove box",

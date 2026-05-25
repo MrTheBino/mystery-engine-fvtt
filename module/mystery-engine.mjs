@@ -11,7 +11,6 @@ import QuestionSheet from "./sheets/question-sheet.mjs";
 import NotebookSceneSheet from "./sheets/notebook-scene-sheet.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { setupHooks } from "./helpers/hooks.mjs";
-import { registerSettings, applyCurrentTheme } from "./helpers/settings.mjs";
 import { registerHandlebarHelpers } from "./helpers/handlebars.mjs";
 import { NotebookApp } from "./apps/notebook-app.mjs";
 import { setupKeybindings } from "./helpers/keybindings.mjs";
@@ -80,13 +79,9 @@ Hooks.once("init", () => {
 
   preloadHandlebarsTemplates();
   setupHooks();
-  registerSettings();
   registerHandlebarHelpers();
   setupKeybindings();
   globalThis.NotebookApp = NotebookApp;
   
 });
 
-Hooks.once("ready", () => {
-  applyCurrentTheme();
-});

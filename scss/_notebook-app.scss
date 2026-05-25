@@ -1,3 +1,4 @@
+// === FILE: scss/_notebook-app.scss ===
 .notebook-app {
   // Window & form wiring
   .window-content {
@@ -25,9 +26,10 @@
   // Main tab bar
   .na-main-tabs {
     display: flex;
-    padding: 0 1rem;
+    padding: 0 1.25rem;
+    gap: 0.1rem;
     background: var(--me-surface);
-    border-bottom: 1px solid var(--me-border);
+    border-bottom: 2px solid var(--me-border);
     flex: 0 0 auto;
     box-shadow: var(--me-shadow-sm);
   }
@@ -36,25 +38,27 @@
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.7rem 1rem;
+    padding: 0.75rem 1.1rem;
     border: none;
-    border-bottom: 2px solid transparent;
-    border-radius: 0;
+    border-bottom: 3px solid transparent;
+    border-radius: var(--me-radius-sm) var(--me-radius-sm) 0 0;
     background: transparent;
     color: var(--me-text-muted);
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     cursor: pointer;
     letter-spacing: 0.01em;
-    margin-bottom: -1px;
-    transition: color var(--me-transition), border-color var(--me-transition);
+    margin-bottom: -2px;
+    transition: color var(--me-transition), border-color var(--me-transition),
+                background var(--me-transition);
 
     &:hover { color: var(--me-text); }
 
     &.active {
-      color: var(--me-text);
+      color: var(--me-text-heading);
       border-bottom-color: var(--me-accent);
-      font-weight: 600;
+      font-weight: 700;
+      background: var(--me-accent-dim);
     }
 
     i {
@@ -82,7 +86,7 @@
   .na-scroll-area {
     flex: 1;
     overflow-y: auto;
-    padding: 1rem;
+    padding: 1.25rem;
   }
 
   // Sub-tab bar (threats & pages)
@@ -90,9 +94,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.3rem;
-    padding: 0.55rem 1rem;
-    background: var(--me-surface);
+    gap: 0.4rem;
+    padding: 0.6rem 1.25rem;
+    background: var(--me-surface-alt);
     border-bottom: 1px solid var(--me-border);
     flex: 0 0 auto;
   }
@@ -123,7 +127,7 @@
       border-color: var(--me-accent);
       color: var(--me-accent-hover);
       font-weight: 600;
-      box-shadow: 0 0 0 2px var(--me-focus-ring);
+      box-shadow: 0 2px 6px var(--me-focus-ring);
     }
   }
 
@@ -141,7 +145,8 @@
     font-size: 0.72rem;
     margin-left: 0.1rem;
     flex-shrink: 0;
-    transition: background var(--me-transition), border-color var(--me-transition), color var(--me-transition);
+    transition: background var(--me-transition), border-color var(--me-transition),
+                color var(--me-transition);
 
     &:hover {
       background: var(--me-accent-light);
@@ -171,15 +176,17 @@
     background: var(--me-surface);
     border: 1px solid var(--me-border);
     border-radius: var(--me-radius-lg);
-    box-shadow: var(--me-shadow-sm);
+    box-shadow: var(--me-shadow);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: box-shadow var(--me-transition), border-color var(--me-transition);
+    transition: box-shadow var(--me-transition), border-color var(--me-transition),
+                transform var(--me-transition);
 
     &:hover {
-      box-shadow: var(--me-shadow);
+      box-shadow: var(--me-shadow-md);
       border-color: var(--me-border-mid);
+      transform: translateY(-1px);
     }
   }
 
@@ -187,9 +194,10 @@
     display: flex;
     align-items: center;
     gap: 0.65rem;
-    padding: 0.75rem;
-    background: linear-gradient(160deg, var(--me-surface-alt) 0%, var(--me-surface) 100%);
-    border-bottom: 1px solid var(--me-border);
+    padding: 0.85rem;
+    background: linear-gradient(135deg, var(--me-accent-dim) 0%, var(--me-surface-alt) 40%, var(--me-surface) 100%);
+    border-top: 3px solid var(--me-accent);
+    border-bottom: 2px solid var(--me-border);
 
     .delete-btn { margin-left: auto; }
   }
@@ -199,7 +207,7 @@
     height: 44px;
     border-radius: var(--me-radius);
     object-fit: cover;
-    border: 2px solid rgba(255,255,255,0.8);
+    border: 2px solid rgba(239, 230, 216, 0.15);
     outline: 1px solid var(--me-border);
     flex: 0 0 auto;
     box-shadow: var(--me-shadow-sm);
@@ -207,20 +215,29 @@
 
   .na-actor-name {
     margin: 0;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.05rem;
+    font-weight: 800;
     color: var(--me-text-heading);
     line-height: 1.25;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
   }
 
   .na-actor-section {
     padding: 0.55rem 0.75rem;
-    border-bottom: 1px solid var(--me-border);
+    position: relative;
+    border-bottom: none;
 
-    &:last-child { border-bottom: none; }
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+      right: 5%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--me-border-mid) 20%, var(--me-border-mid) 80%, transparent);
+    }
 
-    .items-group{
+    .items-group {
       margin-bottom: 0.5rem;
     }
   }
@@ -245,16 +262,44 @@
     letter-spacing: 0.01em;
   }
 
-  .na-options-section{
-    h3{
+  // Options section
+  .na-options-tab {
+    padding: 0.5rem;
+  }
+
+  .na-options-section {
+    background: var(--me-surface);
+    border: 1px solid var(--me-border);
+    border-radius: var(--me-radius-lg);
+    padding: 1.25rem;
+    box-shadow: var(--me-shadow-sm);
+
+    h3 {
       font-family: inherit;
-      font-size: 1rem;
+      font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.1em;
       color: var(--me-text-muted);
+      margin: 0 0 0.35rem;
+
+      &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        margin-top: 0.35rem;
+        background: linear-gradient(to right, var(--me-accent) 0%, var(--me-border) 50%, transparent 100%);
+      }
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: var(--me-text-muted);
+      margin: 0 0 1rem;
+      line-height: 1.6;
     }
   }
+
   // Active moves within actor card
   .na-actor-moves {
     .moves-heading {
@@ -265,6 +310,18 @@
       letter-spacing: 0.09em;
       color: var(--me-text-muted);
       margin: 0 0 0.45rem;
+      padding-bottom: 0.3rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(to right, var(--me-accent) 0%, var(--me-border) 50%, transparent 100%);
+      }
     }
 
     .item-card {
@@ -294,7 +351,7 @@
     }
   }
 
-  .na-actor-items{
+  .na-actor-items {
     .group-name-header {
       font-family: inherit;
       font-size: 0.68rem;
@@ -303,10 +360,19 @@
       letter-spacing: 0.09em;
       color: var(--me-text-muted);
       margin: 0 0 0.45rem;
-      padding-bottom: 0;
+      padding-bottom: 0.3rem;
       border-bottom: none;
-      padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--me-border);
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(to right, var(--me-accent) 0%, var(--me-border) 50%, transparent 100%);
+      }
     }
 
     .item-card {
@@ -344,7 +410,8 @@
     background: transparent;
     padding: 0.2rem 0.35rem;
     border-radius: var(--me-radius-sm);
-    transition: border-color var(--me-transition), background var(--me-transition), box-shadow var(--me-transition);
+    transition: border-color var(--me-transition), background var(--me-transition),
+                box-shadow var(--me-transition);
 
     &:focus {
       outline: none;
@@ -365,8 +432,9 @@
   .na-note-entry {
     background: var(--me-surface);
     border: 1px solid var(--me-border);
-    border-radius: var(--me-radius);
+    border-radius: var(--me-radius-lg);
     overflow: hidden;
+    box-shadow: var(--me-shadow-sm);
   }
 
   .na-note-header {
@@ -374,20 +442,22 @@
     align-items: center;
     gap: 0.4rem;
     padding: 0.4rem 0.6rem;
-    background: linear-gradient(to right, var(--me-surface-alt), var(--me-surface));
-    border-bottom: 1px solid var(--me-border);
+    background: linear-gradient(to right, var(--me-accent-dim), var(--me-surface-alt) 50%, var(--me-surface));
+    border-bottom: 2px solid var(--me-border);
+    border-left: 3px solid var(--me-accent);
   }
 
   .na-note-title-input {
     flex: 1;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--me-text-heading);
     border: 1px solid transparent;
     background: transparent;
     padding: 0.15rem 0.3rem;
     border-radius: var(--me-radius-sm);
-    transition: border-color var(--me-transition), background var(--me-transition), box-shadow var(--me-transition);
+    transition: border-color var(--me-transition), background var(--me-transition),
+                box-shadow var(--me-transition);
 
     &:focus {
       outline: none;
@@ -395,10 +465,6 @@
       background: var(--me-surface);
       box-shadow: 0 0 0 3px var(--me-focus-ring);
     }
-  }
-
-  .na-note-entry prose-mirror {
-    // reserved for future prose-mirror overrides
   }
 
   .na-note-entry prose-mirror.editing,
@@ -434,7 +500,8 @@
     cursor: pointer;
     font-weight: 600;
     font-size: 0.8rem;
-    transition: background var(--me-transition), border-color var(--me-transition), color var(--me-transition);
+    transition: background var(--me-transition), border-color var(--me-transition),
+                color var(--me-transition);
 
     &:hover {
       background: var(--me-accent-light);
@@ -479,7 +546,8 @@
     cursor: pointer;
     font-weight: 600;
     font-size: 0.82rem;
-    transition: background var(--me-transition), border-color var(--me-transition), color var(--me-transition);
+    transition: background var(--me-transition), border-color var(--me-transition),
+                color var(--me-transition);
 
     &:hover {
       background: var(--me-accent-light);

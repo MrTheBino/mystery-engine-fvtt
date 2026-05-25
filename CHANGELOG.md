@@ -1,3 +1,7 @@
+# 14.3.3
+- removed bad 90 and victorian style
+- added clue numbers and explained numbers in the notebook app
+
 # 14.3.2
 - added option tab in the notebook, not it's possible to remove a notebook item from the a scene's notebook
   

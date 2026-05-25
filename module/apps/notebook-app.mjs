@@ -494,6 +494,12 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
     }
 
     static async #deleteThreat(event, btn) {
+        const confirmed = await foundry.applications.api.DialogV2.confirm({
+            content: game.i18n.localize("ME.Notebook.Threats.DeleteThreatConfirm"),
+            rejectClose: false,
+            modal: true
+        });
+        if (!confirmed) return;
         const ti = parseInt(btn.dataset.threatIndex);
         const notebook = await this.#getNotebook();
         if (!notebook) return;

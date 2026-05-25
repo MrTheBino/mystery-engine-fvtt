@@ -1,7 +1,7 @@
 {
   "id": "mystery-engine-fvtt",
   "title": "MysteryEngine",
-  "version": "14.3.3",
+  "version": "14.3.4",
   "compatibility": {
     "minimum": "13",
     "verified": "14"

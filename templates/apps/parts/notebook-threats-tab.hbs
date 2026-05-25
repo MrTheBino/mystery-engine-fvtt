@@ -4,7 +4,7 @@
   <nav class="na-sub-tabs">
     {{#each threats}}
     <button type="button" class="na-sub-tab-btn{{#if isActive}} active{{/if}}" data-na-subtab="threat-{{index}}">
-      {{#if title}}{{title}}{{else}}{{localize "ME.Notebook.Threats.ThreatFallback" index=index}}{{/if}}
+      {{#if ../isGM}}{{#if hiddenToPlayers}}<i class="fas fa-eye-slash na-hidden-indicator" title="{{localize 'ME.Notebook.Threats.ThreatHiddenFromPlayers'}}"></i> {{/if}}{{/if}}{{#if title}}{{title}}{{else}}{{localize "ME.Notebook.Threats.ThreatFallback" index=index}}{{/if}}
     </button>
     {{/each}}
     {{#if isGM}}
@@ -26,6 +26,12 @@
           value="{{title}}"
           class="na-threat-title-input"
           placeholder="{{localize 'ME.Notebook.Threats.ThreatNamePlaceholder'}}" />
+        <button type="button" class="icon-btn{{#if hiddenToPlayers}} active{{/if}}"
+          data-action="toggleThreatHiddenToPlayers"
+          data-threat-index="{{index}}"
+          title="{{localize 'ME.Notebook.Threats.HideThreatFromPlayers'}}">
+          <i class="fas {{#if hiddenToPlayers}}fa-eye-slash{{else}}fa-eye{{/if}}"></i>
+        </button>
         <button type="button" class="icon-btn delete-btn"
           data-action="deleteThreat"
           data-threat-index="{{index}}"

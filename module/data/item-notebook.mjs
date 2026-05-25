@@ -18,6 +18,7 @@ export default class NotebookData extends BaseItemData {
             new fields.BooleanField({ initial: false }),
             { initial: [] },
           ),
+          hiddenToPlayers: new fields.BooleanField({ initial: false }), // shown to the players or not
           questionsLocked: new fields.BooleanField({ initial: false }), // if the question is locked, just for display purposes for the gm view
           cluesLocked: new fields.BooleanField({ initial: false }), // if the clue is locked, just for display purposes for the gm view
           otherLocked: new fields.BooleanField({ initial: false }), // if the other is locked, just for display purposes for the gm view

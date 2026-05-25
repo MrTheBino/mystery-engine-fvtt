@@ -156,10 +156,11 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         }
 
         // Threats
-        const threats = await Promise.all(notebook.system.threats.map(async (t, ti) => ({
+        const allThreats = await Promise.all(notebook.system.threats.map(async (t, ti) => ({
             index: ti,
             isActive: ti === this._activeThreatIndex,
             title: t.title,
+            hiddenToPlayers: t.hiddenToPlayers,
             introduction: t.introduction,
             introductionHTML: await enrich(t.introduction, notebook),
             countdown: [...t.countdown],
@@ -172,6 +173,9 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             clues: t.clues.map((c, ci) => ({ index: ci, checkbox: c.checkbox, explained: c.explained, text: c.text })),
             other: t.other.map((o, oi) => ({ index: oi, title: o.title, shortDescription: o.shortDescription, checkbox: o.checkbox }))
         })));
+        const threats = game.user.isGM
+            ? allThreats
+            : allThreats.filter(t => !t.hiddenToPlayers).map((t, i) => ({ ...t, isActive: i === this._activeThreatIndex }));
 
         // Pages — each page is a sub-tab; each page contains a list of notes
         const pages = await Promise.all(
@@ -289,6 +293,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             deleteNote:               NotebookApp.#deleteNote,
             addThreat:                NotebookApp.#addThreat,
             deleteThreat:             NotebookApp.#deleteThreat,
+            toggleThreatHiddenToPlayers: NotebookApp.#toggleThreatHiddenToPlayers,
             addThreatCountdown:       NotebookApp.#addThreatCountdown,
             removeThreatCountdown:    NotebookApp.#removeThreatCountdown,
             toggleThreatCountdown:    NotebookApp.#toggleThreatCountdown,
@@ -508,6 +513,11 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         await notebook.update({ "system.threats": threats });
         this._activeThreatIndex = Math.min(this._activeThreatIndex, Math.max(0, threats.length - 1));
         this.render();
+    }
+
+    static async #toggleThreatHiddenToPlayers(event, btn) {
+        const ti = parseInt(btn.dataset.threatIndex);
+        await this.#mutateThreat(ti, t => { t.hiddenToPlayers = !t.hiddenToPlayers; });
     }
 
     static async #addThreatCountdown(event, btn) {

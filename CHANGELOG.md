@@ -1,3 +1,6 @@
+# 14.3.4
+- added quality of life feature for GMs. It's possible now to hide threats in the notebook app for players.
+  
 # 14.3.3
 - removed bad 90 and victorian style
 - added clue numbers and explained numbers in the notebook app

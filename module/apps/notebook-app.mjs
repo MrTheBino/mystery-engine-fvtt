@@ -167,6 +167,8 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             cluesLocked: t.cluesLocked,
             otherLocked: t.otherLocked,
             questions: t.questions.map((q, qi) => ({ index: qi, checkbox: q.checkbox, hidden: q.hidden, title: q.title, opportunity: q.opportunity, complexity: q.complexity })),
+            cluesCount: t.clues.length,
+            cluesExplainedCount: t.clues.filter(c => c.explained).length,
             clues: t.clues.map((c, ci) => ({ index: ci, checkbox: c.checkbox, explained: c.explained, text: c.text })),
             other: t.other.map((o, oi) => ({ index: oi, title: o.title, shortDescription: o.shortDescription, checkbox: o.checkbox }))
         })));

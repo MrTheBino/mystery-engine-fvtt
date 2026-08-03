@@ -12,7 +12,9 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         this.currentSceneDataItem = null;
         this.currentSceneId = game.scenes.active ? game.scenes.active.id : null;
         this.currentSceneName = game.scenes.active ? game.scenes.active.name : null;
-        this.findOrCreateSceneDataItem();
+        // Creating the scene data item is async — refresh once it exists so the first render
+        // does not get stuck on the "no notebook linked" placeholder.
+        this.findOrCreateSceneDataItem().then(() => { if (this.rendered) this.#requestRefresh(); });
         this.#dragDrop = this.#createDragDropHandlers();
 
         this._activeMainTab = 'actors';
@@ -20,25 +22,102 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         this._activePageIndex = 0;
         this._dropBound = false;
 
+        // Every write to the notebook goes through this promise chain. Without it a `change` event
+        // and the click that caused it (blur fires first, then click) would both read the same
+        // pre-change data and the later `update()` would silently drop the other one's edit.
+        this.#writeQueue = Promise.resolve();
+
+        // Set while a re-render was suppressed because a ProseMirror editor is open.
+        this._refreshPending = false;
+
+        this.#registerHooks();
+
+        NotebookApp.instance = this;
+    }
+
+    #writeQueue;
+
+    #registerHooks() {
         // Re-render whenever the linked notebook item is updated externally or by the form listener
-        Hooks.on("updateItem", (item, changes, options, userId) => {
+        Hooks.on("updateItem", (item) => {
+            if (!this.rendered) return;
+
+            // The scene data item points at the notebook — a change there swaps the whole content.
+            if (this.currentSceneDataItem && item.id === this.currentSceneDataItem.id) return this.#requestRefresh();
+
             const uuid = this.currentSceneDataItem?.system?.notebookUuid;
-            if (!uuid || item.uuid !== uuid) return;
-            this.render();
+            if (uuid && item.uuid === uuid) return this.#requestRefresh();
+
+            // Items embedded in a linked actor drive the actor cards (moves, checklists, texts).
+            if (this.#isLinkedActor(item.parent)) this.#requestRefresh();
         });
+
+        for (const hook of ["createItem", "deleteItem"]) {
+            Hooks.on(hook, (item) => {
+                if (!this.rendered) return;
+                if (this.#isLinkedActor(item.parent)) this.#requestRefresh();
+            });
+        }
 
         // Re-render when an actor listed in the notebook is updated, but only if the app is visible
         // TODO: note for me: this is something I have to consider for legend in the mist, much better than sending hooks
-        Hooks.on("updateActor", async (actor, changes, options, userId) => {
+        Hooks.on("updateActor", (actor) => {
             if (!this.rendered) return;
-            const uuid = this.currentSceneDataItem?.system?.notebookUuid;
-            if (!uuid) return;
-            const notebook = await fromUuid(uuid).catch(() => null);
-            if (!notebook) return;
-            if (notebook.system.actors.includes(actor.uuid)) this.render();
+            if (this.#isLinkedActor(actor)) this.#requestRefresh();
         });
 
-        NotebookApp.instance = this;
+        Hooks.on("deleteActor", (actor) => {
+            if (!this.rendered) return;
+            if (this.#isLinkedActor(actor)) this.#requestRefresh();
+        });
+
+        // The notebook always follows the active scene, so pick up scene activation.
+        Hooks.on("updateScene", (scene, changes) => {
+            if (!("active" in changes) || !scene.active) return;
+            this.sceneChangedHook(scene);
+        });
+    }
+
+    /** Is this document an actor that the currently linked notebook lists? */
+    #isLinkedActor(actor) {
+        if (!actor || actor.documentName !== "Actor") return false;
+        const notebook = this.#getNotebookSync();
+        return !!notebook?.system?.actors?.includes(actor.uuid);
+    }
+
+    /**
+     * Re-render, unless a ProseMirror editor is currently open — replacing the part would throw
+     * away everything the user has typed but not saved yet. The render is replayed once the
+     * editor closes (see #scheduleDeferredRefresh).
+     */
+    #requestRefresh() {
+        if (this.#hasOpenEditor()) {
+            this._refreshPending = true;
+            return;
+        }
+        this._refreshPending = false;
+        this.render();
+    }
+
+    #hasOpenEditor() {
+        return !!this.element?.querySelector('prose-mirror .ProseMirror');
+    }
+
+    #scheduleDeferredRefresh() {
+        // Run after the current event finished so the editor had a chance to tear itself down.
+        setTimeout(() => {
+            if (!this.rendered || !this._refreshPending || this.#hasOpenEditor()) return;
+            this._refreshPending = false;
+            this.render();
+        }, 0);
+    }
+
+    /** Append a mutation to the serialized write queue so concurrent edits cannot clobber each other. */
+    #enqueue(task) {
+        this.#writeQueue = this.#writeQueue
+            .catch(() => {})
+            .then(() => task());
+        return this.#writeQueue.catch(err => console.error("mystery-engine | NotebookApp update failed", err));
     }
 
     static DEFAULT_OPTIONS = {
@@ -158,7 +237,6 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         // Threats
         const allThreats = await Promise.all(notebook.system.threats.map(async (t, ti) => ({
             index: ti,
-            isActive: ti === this._activeThreatIndex,
             title: t.title,
             hiddenToPlayers: t.hiddenToPlayers,
             introduction: t.introduction,
@@ -173,11 +251,21 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             clues: t.clues.map((c, ci) => ({ index: ci, checkbox: c.checkbox, explained: c.explained, text: c.text })),
             other: t.other.map((o, oi) => ({ index: oi, title: o.title, shortDescription: o.shortDescription, checkbox: o.checkbox }))
         })));
-        const threats = game.user.isGM
-            ? allThreats
-            : allThreats.filter(t => !t.hiddenToPlayers).map((t, i) => ({ ...t, isActive: i === this._activeThreatIndex }));
+        const visibleThreats = game.user.isGM ? allThreats : allThreats.filter(t => !t.hiddenToPlayers);
+
+        // The active index always refers to the real threat index, never to the position within the
+        // filtered list — otherwise players would end up with no active sub-tab at all.
+        if (!visibleThreats.some(t => t.index === this._activeThreatIndex)) {
+            this._activeThreatIndex = visibleThreats[0]?.index ?? 0;
+        }
+        const threats = visibleThreats.map(t => ({ ...t, isActive: t.index === this._activeThreatIndex }));
 
         // Pages — each page is a sub-tab; each page contains a list of notes
+        // Clamp so a stale index (page deleted by someone else, notebook swapped) still shows a page.
+        this._activePageIndex = Math.min(
+            Math.max(0, this._activePageIndex),
+            Math.max(0, notebook.system.pages.length - 1)
+        );
         const pages = await Promise.all(
             notebook.system.pages.map(async (page, pi) => ({
                 index: pi,
@@ -200,6 +288,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         return {
             ...context,
             isGM: game.user.isGM,
+            scene: { name: this.currentSceneName ?? "" },
             notebook: { name: notebook.name, img: notebook.img },
             activeActors: this._activeMainTab === 'actors',
             activeThreats: this._activeMainTab === 'threats',
@@ -234,10 +323,15 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             this.#bindFormListener();
         }
 
-        // setr the title of the dialog
-        let titleElement = this.element.querySelector(".window-title");
+        // set the title of the dialog — context.notebook is null while no notebook is linked
+        const titleElement = this.element.querySelector(".window-title");
         if (titleElement) {
-            titleElement.textContent = game.i18n.format("ME.Notebook.TitleFormat", { scene_name: context.scene?.name || game.i18n.localize("ME.Notebook.UnnamedNotebook"), notebook: context.notebook.name || game.i18n.localize("ME.Notebook.UntitledNotebook") });
+            titleElement.textContent = context.notebook
+                ? game.i18n.format("ME.Notebook.TitleFormat", {
+                    scene_name: context.scene?.name || "",
+                    notebook: context.notebook.name || game.i18n.localize("ME.Notebook.UnnamedNotebook")
+                })
+                : game.i18n.localize("ME.Notebook.Title");
         }
         this.#bindTabListeners();
         this.#bindActionButtons();
@@ -318,45 +412,38 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         };
         for (const [action, handler] of Object.entries(actions)) {
             this.element.querySelectorAll(`[data-action="${action}"]`).forEach(btn => {
-                btn.addEventListener('click', (event) => handler.call(this, event, btn));
+                // Queued, so a pending field edit (blur fires before click) is written first and the
+                // handler sees fresh data instead of clobbering it.
+                btn.addEventListener('click', (event) => this.#enqueue(() => handler.call(this, event, btn)));
             });
         }
     }
 
-    findOrCreateSceneDataItem() {
-        this.currentSceneDataItem = null;
+    async findOrCreateSceneDataItem() {
+        this.currentSceneDataItem = game.items.find(item =>
+            item.type === "notebook-scene-item" && item.system.sceneUuid === this.currentSceneId
+        ) ?? null;
 
-        game.items.forEach(item => {
-            if (item.type === "notebook-scene-item") {
-                if (item.system.sceneUuid === this.currentSceneId) {
-                    this.currentSceneDataItem = item;
-                    return;
-                }
-            }
-        });
-
-        if (this.currentSceneId && !this.currentSceneDataItem) {
-            if (!game.user.isGM) return;
-
-            Item.create({
+        if (this.currentSceneId && !this.currentSceneDataItem && game.user.isGM) {
+            this.currentSceneDataItem = await Item.create({
                 name: game.i18n.format("ME.Notebook.SceneDataName", { name: this.currentSceneName }),
                 type: "notebook-scene-item",
                 flags: { mistmod: { hidden: true } },
-                data: {}
-            }).then(item => {
-                item.update({ "system.sceneUuid": this.currentSceneId });
-                this.currentSceneDataItem = item;
+                system: { sceneUuid: this.currentSceneId }
             });
         }
+
+        return this.currentSceneDataItem;
     }
 
-    sceneChangedHook(newScene) {
+    async sceneChangedHook(newScene) {
         if (!newScene) return;
         if (this.currentSceneId === newScene.id) return;
 
         this.currentSceneId = newScene.id;
         this.currentSceneName = newScene.name;
-        this.findOrCreateSceneDataItem();
+        await this.findOrCreateSceneDataItem();
+        if (this.rendered) this.#requestRefresh();
     }
 
     _canDragStart(selector) { return false; }
@@ -370,45 +457,64 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
        return fromUuid(uuid).catch(() => null);
     }
 
+    /** Synchronous lookup for hook filters — world items only, which is all a notebook can be. */
+    #getNotebookSync() {
+        const uuid = this.currentSceneDataItem?.system?.notebookUuid;
+        if (!uuid) return null;
+        return fromUuidSync(uuid) ?? null;
+    }
+
     #bindFormListener() {
-        this.element.addEventListener('change', async (event) => {
+        this.element.addEventListener('change', (event) => {
+            // A deferred re-render may be waiting for the editor that just saved itself.
+            this.#scheduleDeferredRefresh();
+
+            const target = event.target;
+            const name = target?.getAttribute?.('name');
+            if (!name || !name.startsWith('system.')) return;
             const form = this.element.querySelector('form');
-            if (!form || !form.contains(event.target)) return;
-            const notebook = await this.#getNotebook();
-            if (!notebook) return;
-            const source = notebook.toObject().system;
-            const val = name => form.querySelector(`[name="${name}"]`)?.value ?? null;
+            if (!form || !form.contains(target)) return;
 
-            const pages = source.pages;
-            for (let pi = 0; pi < pages.length; pi++) {
-                pages[pi].title = val(`system.pages.${pi}.title`) ?? pages[pi].title;
-                for (let ni = 0; ni < pages[pi].notes.length; ni++) {
-                    pages[pi].notes[ni].title = val(`system.pages.${pi}.notes.${ni}.title`) ?? pages[pi].notes[ni].title;
-                    pages[pi].notes[ni].description = val(`system.pages.${pi}.notes.${ni}.description`) ?? pages[pi].notes[ni].description;
-                }
-            }
+            // Read the value synchronously: by the time the queued write runs the element may
+            // already have been replaced by a re-render.
+            const value = target.type === 'number'
+                ? (target.value === "" ? null : parseInt(target.value))
+                : target.value;
 
-            const threats = source.threats;
-            for (let ti = 0; ti < threats.length; ti++) {
-                threats[ti].title = val(`system.threats.${ti}.title`) ?? threats[ti].title;
-                threats[ti].introduction = val(`system.threats.${ti}.introduction`) ?? threats[ti].introduction;
-                for (let qi = 0; qi < threats[ti].questions.length; qi++) {
-                    threats[ti].questions[qi].title = val(`system.threats.${ti}.questions.${qi}.title`) ?? threats[ti].questions[qi].title;
-                    threats[ti].questions[qi].opportunity = val(`system.threats.${ti}.questions.${qi}.opportunity`) ?? threats[ti].questions[qi].opportunity;
-                    const rawC = val(`system.threats.${ti}.questions.${qi}.complexity`);
-                    threats[ti].questions[qi].complexity = rawC !== null && rawC !== "" ? parseInt(rawC) : null;
-                }
-                for (let ci = 0; ci < threats[ti].clues.length; ci++) {
-                    threats[ti].clues[ci].text = val(`system.threats.${ti}.clues.${ci}.text`) ?? threats[ti].clues[ci].text;
-                }
-                for (let oi = 0; oi < threats[ti].other.length; oi++) {
-                    threats[ti].other[oi].title = val(`system.threats.${ti}.other.${oi}.title`) ?? threats[ti].other[oi].title;
-                    threats[ti].other[oi].shortDescription = val(`system.threats.${ti}.other.${oi}.shortDescription`) ?? threats[ti].other[oi].shortDescription;
-                }
-            }
-
-            await notebook.update({ "system.pages": pages, "system.threats": threats });
+            this.#enqueue(() => this.#writeField(name, value));
         });
+
+        // Clicking the ProseMirror toggle closes the editor — flush any suppressed render.
+        this.element.addEventListener('click', (event) => {
+            if (event.target?.closest?.('prose-mirror')) this.#scheduleDeferredRefresh();
+        });
+    }
+
+    /**
+     * Write a single form field back into the notebook. Only the changed field is touched — the
+     * rest of the array is re-read fresh, so fields that are not currently rendered (locked
+     * sections, other users' concurrent edits) survive untouched.
+     */
+    async #writeField(name, value) {
+        const match = /^system\.(pages|threats)\.(.+)$/.exec(name);
+        if (!match) return;
+        const [, collection, rest] = match;
+
+        const notebook = await this.#getNotebook();
+        if (!notebook) return;
+
+        const root = foundry.utils.deepClone(notebook.toObject().system[collection]);
+        const path = rest.split('.');
+        let node = root;
+        for (const key of path.slice(0, -1)) {
+            node = node?.[key];
+            if (node === undefined || node === null) return;
+        }
+        const leaf = path.at(-1);
+        if (node[leaf] === value) return;
+        node[leaf] = value;
+
+        await notebook.update({ [`system.${collection}`]: root });
     }
 
     async #mutateThreat(ti, mutate) {
@@ -427,7 +533,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         pages.push({ title: "", notes: [] });
         await notebook.update({ "system.pages": pages });
         this._activePageIndex = pages.length - 1;
-        this.render();
+        this.#requestRefresh();
     }
 
     static async #deletePage(event, target) {
@@ -444,7 +550,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         pages.splice(index, 1);
         await notebook.update({ "system.pages": pages });
         this._activePageIndex = Math.min(this._activePageIndex, Math.max(0, pages.length - 1));
-        this.render();
+        this.#requestRefresh();
     }
 
     static async #togglePageLocked(event, target) {
@@ -465,7 +571,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         if (!pages[pageIndex]) return;
         pages[pageIndex].notes.push({ title: "", description: "" });
         await notebook.update({ "system.pages": pages });
-        this.render();
+        this.#requestRefresh();
     }
 
     static async #deleteNote(event, target) {
@@ -483,7 +589,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         if (!pages[pageIndex]) return;
         pages[pageIndex].notes.splice(noteIndex, 1);
         await notebook.update({ "system.pages": pages });
-        this.render();
+        this.#requestRefresh();
     }
 
     // ── Threat actions ────────────────────────────────────────────────────────
@@ -495,7 +601,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         threats.push({ title: "", introduction: "", countdown: [], questions: [], clues: [], other: [] });
         await notebook.update({ "system.threats": threats });
         this._activeThreatIndex = threats.length - 1;
-        this.render();
+        this.#requestRefresh();
     }
 
     static async #deleteThreat(event, btn) {
@@ -512,7 +618,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         threats.splice(ti, 1);
         await notebook.update({ "system.threats": threats });
         this._activeThreatIndex = Math.min(this._activeThreatIndex, Math.max(0, threats.length - 1));
-        this.render();
+        this.#requestRefresh();
     }
 
     static async #toggleThreatHiddenToPlayers(event, btn) {
@@ -648,7 +754,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         });
         if (!confirmed) return;
         await this.currentSceneDataItem.update({ "system.notebookUuid": "" });
-        this.render();
+        this.#requestRefresh();
     }
 
     async _onDrop(event) {
@@ -662,7 +768,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             if (!this.currentSceneDataItem) return;
             // we store only one notebook per scene, so we update the existing one instead of creating a new one
             await this.currentSceneDataItem.update({ "system.notebookUuid": data.uuid });
-            this.render();
+            this.#requestRefresh();
             return;
         }
 

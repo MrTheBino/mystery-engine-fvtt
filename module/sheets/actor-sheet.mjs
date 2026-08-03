@@ -2,30 +2,45 @@ const { HandlebarsApplicationMixin } = foundry.applications.api
 const { ActorSheetV2 } = foundry.applications.sheets
 import { RollDialog } from '../apps/roll-dialog.mjs';
 
+/**
+ * Run an action handler through the sheet's write queue.
+ *
+ * Clicking a button blurs whatever input the user was typing in, so the browser fires
+ * `change` (→ form submit) first and `click` second. Both used to read the same pre-change
+ * document, and whichever `update()` landed last silently discarded the other one's edit.
+ * Queueing makes the submit finish before the handler reads the document.
+ */
+function queued(handler) {
+  return function (event, target) {
+    return this._enqueueWrite(() => handler.call(this, event, target));
+  };
+}
+
 export default class MysteryActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = {
     classes: ["mystery-engine", "actor", "mystery-actor"],
     position: { width: 1100, height: 800 },
     actions: {
-      createItem: MysteryActorSheet.#createItem,
+      createItem: queued(MysteryActorSheet.#createItem),
       editItem: MysteryActorSheet.#editItem,
-      deleteItem: MysteryActorSheet.#deleteItem,
-      toggleEntry: MysteryActorSheet.#toggleEntry,
-      toggleCheckbox: MysteryActorSheet.#toggleCheckbox,
-      moveItemUp: MysteryActorSheet.#moveItemUp,
-      moveItemDown: MysteryActorSheet.#moveItemDown,
-      addAbility: MysteryActorSheet.#addAbility,
-      removeAbility: MysteryActorSheet.#removeAbility,
-      addLabel: MysteryActorSheet.#addLabel,
-      removeLabel: MysteryActorSheet.#removeLabel,
-      addCondition: MysteryActorSheet.#addCondition,
-      removeCondition: MysteryActorSheet.#removeCondition,
-      toggleMoveActive: MysteryActorSheet.#toggleMoveActive,
-      toggleMoveHidden: MysteryActorSheet.#toggleMoveHidden,
-      hideMoveItem: MysteryActorSheet.#hideMoveItem,
-      toggleQuestionResolved: MysteryActorSheet.#toggleQuestionResolved,
+      deleteItem: queued(MysteryActorSheet.#deleteItem),
+      toggleEntry: queued(MysteryActorSheet.#toggleEntry),
+      toggleCheckbox: queued(MysteryActorSheet.#toggleCheckbox),
+      moveItemUp: queued(MysteryActorSheet.#moveItemUp),
+      moveItemDown: queued(MysteryActorSheet.#moveItemDown),
+      addAbility: queued(MysteryActorSheet.#addAbility),
+      removeAbility: queued(MysteryActorSheet.#removeAbility),
+      addLabel: queued(MysteryActorSheet.#addLabel),
+      removeLabel: queued(MysteryActorSheet.#removeLabel),
+      addCondition: queued(MysteryActorSheet.#addCondition),
+      removeCondition: queued(MysteryActorSheet.#removeCondition),
+      toggleMoveActive: queued(MysteryActorSheet.#toggleMoveActive),
+      toggleMoveHidden: queued(MysteryActorSheet.#toggleMoveHidden),
+      hideMoveItem: queued(MysteryActorSheet.#hideMoveItem),
+      toggleQuestionResolved: queued(MysteryActorSheet.#toggleQuestionResolved),
       rollAbility: MysteryActorSheet.#rollAbility,
-      toggleXpTrack: MysteryActorSheet.#toggleXpTrack
+      toggleEditMode: queued(MysteryActorSheet.#toggleEditMode),
+      toggleXpTrack: queued(MysteryActorSheet.#toggleXpTrack)
     },
     dragDrop: [{ dragSelector: "[data-item-id]", dropSelector: null }],
     form: {
@@ -74,6 +89,35 @@ export default class MysteryActorSheet extends HandlebarsApplicationMixin(ActorS
       scrollable: [""]
     }
   };
+
+  /** Serialises every write this sheet performs — see the `queued` helper above. */
+  _enqueueWrite(task) {
+    this._writeQueue = (this._writeQueue ?? Promise.resolve())
+      .catch(() => {})
+      .then(() => task());
+    return this._writeQueue.catch(err => console.error("mystery-engine | actor sheet update failed", err));
+  }
+
+  /** Route the submit-on-change write through the queue so it keeps its place in the event order. */
+  _onChangeForm(formConfig, event) {
+    if (formConfig.submitOnChange) {
+      this._enqueueWrite(() => this.submit());
+      return;
+    }
+    return super._onChangeForm(formConfig, event);
+  }
+
+  /** Keep the header menu entry in sync with the mode it will switch to. */
+  _getHeaderControls() {
+    const controls = super._getHeaderControls();
+    const toggle = controls.find(c => c.action === "toggleEditMode");
+    if (toggle) {
+      const editing = this.actor.system.editMode;
+      toggle.icon = editing ? "fa-solid fa-lock-open" : "fa-solid fa-lock";
+      toggle.label = editing ? "ME.Actor.SwitchToGameMode" : "ME.Actor.SwitchToEditMode";
+    }
+    return controls;
+  }
 
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
@@ -180,15 +224,15 @@ export default class MysteryActorSheet extends HandlebarsApplicationMixin(ActorS
             header.insertBefore(button, h1Element);
         }
 
+        // The icon shows the mode you are *in*, the tooltip the mode you switch to.
         if (this.actor.system.editMode) {
             button.classList.add("fa-lock-open");
             button.classList.remove("fa-lock");
-            button.title = game.i18n.localize("ME.Actor.SwitchToEditMode");
+            button.title = game.i18n.localize("ME.Actor.SwitchToGameMode");
         } else {
             button.classList.add("fa-lock");
             button.classList.remove("fa-lock-open");
-            button.title = game.i18n.localize("ME.Actor.SwitchToGameMode");
-
+            button.title = game.i18n.localize("ME.Actor.SwitchToEditMode");
         }
         button.onclick = ev => this._onToggleEditMode(ev);
 
@@ -197,23 +241,36 @@ export default class MysteryActorSheet extends HandlebarsApplicationMixin(ActorS
     }
   }
 
-  async #onEntryTextChange(event) {
+  #onEntryTextChange(event) {
     const input = event.currentTarget;
-    const item = this.actor.items.get(input.dataset.itemId);
+    const itemId = input.dataset.itemId;
     const index = parseInt(input.dataset.index);
-    const entries = foundry.utils.deepClone(item.system.entries);
-    entries[index].text = input.value;
-    await item.update({ "system.entries": entries });
+    // Capture the value now: by the time the queued write runs the input may have been
+    // replaced by a re-render.
+    const value = input.value;
+    return this._enqueueWrite(async () => {
+      const item = this.actor.items.get(itemId);
+      if (!item) return;
+      const entries = foundry.utils.deepClone(item.system.entries);
+      if (!entries[index] || entries[index].text === value) return;
+      entries[index].text = value;
+      await item.update({ "system.entries": entries });
+    });
   }
 
    async _onToggleEditMode(event, target) {
+    return this._enqueueWrite(() => this.actor.update({ "system.editMode": !this.actor.system.editMode }));
+  }
+
+  static async #toggleEditMode(event, target) {
     await this.actor.update({ "system.editMode": !this.actor.system.editMode });
   }
 
   static async #createItem(event, target) {
     const type = target.dataset.type;
-    const sameType = this.actor.items.filter(i => i.type === type);
-    const maxPosition = sameType.reduce((max, i) => Math.max(max, i.system.position ?? 0), -1);
+    // Positions are a single global ordering across all item types — scoping the maximum to
+    // one type made new items collide with existing ones and land in the middle of the list.
+    const maxPosition = this.actor.items.reduce((max, i) => Math.max(max, i.system.position ?? 0), -1);
     const name = game.i18n.format("ME.Item.NewItem", { type: game.i18n.localize(`TYPES.Item.${type}`) });
     await Item.create({ name, type, system: { position: maxPosition + 1 } }, { parent: this.actor });
   }

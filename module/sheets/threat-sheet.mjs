@@ -119,14 +119,15 @@ export default class MysteryThreatSheet extends HandlebarsApplicationMixin(Actor
       header.insertBefore(button, h1Element);
     }
 
+    // The icon shows the mode you are *in*, the tooltip the mode you switch to.
     if (this.actor.system.editMode) {
       button.classList.add("fa-lock-open");
       button.classList.remove("fa-lock");
-      button.title = game.i18n.localize("ME.Actor.SwitchToEditMode");
+      button.title = game.i18n.localize("ME.Actor.SwitchToGameMode");
     } else {
       button.classList.add("fa-lock");
       button.classList.remove("fa-lock-open");
-      button.title = game.i18n.localize("ME.Actor.SwitchToGameMode");
+      button.title = game.i18n.localize("ME.Actor.SwitchToEditMode");
     }
     button.onclick = ev => this._onToggleEditMode(ev);
 

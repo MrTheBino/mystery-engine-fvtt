@@ -1,5 +1,6 @@
 const { HandlebarsApplicationMixin } = foundry.applications.api
 const { ActorSheetV2 } = foundry.applications.sheets
+import { formatMoveHTML } from '../helpers/move-markup.mjs';
 
 export default class MysteryThreatSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = {
@@ -76,7 +77,7 @@ export default class MysteryThreatSheet extends HandlebarsApplicationMixin(Actor
     context.moveItems = await Promise.all(
       items.filter(i => i.type === "move").sort(byPosition).map(async item => {
         const view = await makeView(item);
-        view.moveDescriptionHTML = await enrich(item.system.moveDescription, item);
+        view.moveDescriptionHTML = formatMoveHTML(await enrich(item.system.moveDescription, item));
         return view;
       })
     );

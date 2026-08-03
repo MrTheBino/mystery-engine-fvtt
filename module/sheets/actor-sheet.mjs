@@ -1,6 +1,7 @@
 const { HandlebarsApplicationMixin } = foundry.applications.api
 const { ActorSheetV2 } = foundry.applications.sheets
 import { RollDialog } from '../apps/roll-dialog.mjs';
+import { formatMoveHTML } from '../helpers/move-markup.mjs';
 
 /**
  * Run an action handler through the sheet's write queue.
@@ -140,14 +141,14 @@ export default class MysteryActorSheet extends HandlebarsApplicationMixin(ActorS
     context.moveItems = await Promise.all(
       items.filter(i => i.type === "move" && !i.system.hidden).sort(byPosition).map(async item => {
         const view = await makeView(item);
-        view.moveDescriptionHTML = await enrich(item.system.moveDescription, item);
+        view.moveDescriptionHTML = formatMoveHTML(await enrich(item.system.moveDescription, item));
         return view;
       })
     );
     context.allMoveItems = await Promise.all(
       items.filter(i => i.type === "move").sort(byPosition).map(async item => {
         const view = await makeView(item);
-        view.moveDescriptionHTML = await enrich(item.system.moveDescription, item);
+        view.moveDescriptionHTML = formatMoveHTML(await enrich(item.system.moveDescription, item));
         return view;
       })
     );

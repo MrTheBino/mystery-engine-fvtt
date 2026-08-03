@@ -27,6 +27,18 @@
   --me-error:        #e54e4e;
   --me-inactive:     rgba(239, 230, 216, 0.28);
 
+  // Item types — accent bar of a card tells you what kind of item it is
+  --me-type-move:      #f3c267;
+  --me-type-checklist: #5fb3a1;
+  --me-type-text:      #8f9bd4;
+  --me-type-question:  #c08fd4;
+
+  // Roll outcome tiers
+  --me-roll-crit:    #8fb8ff;
+  --me-roll-hit:     #7bd88f;
+  --me-roll-weak:    #e0c04a;
+  --me-roll-miss:    #e07a7a;
+
   // Shadows — more pronounced on dark backgrounds
   --me-shadow-sm:    0 1px 3px rgba(0,0,0,0.40), 0 1px 2px rgba(0,0,0,0.30);
   --me-shadow:       0 3px 8px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.35);

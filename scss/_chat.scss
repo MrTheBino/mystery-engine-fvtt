@@ -1,0 +1,128 @@
+// === FILE: scss/_chat.scss ===
+// Ability roll cards in the chat log. Only the system's own cards are styled — everything
+// else in the log keeps whatever look Foundry and other modules give it.
+.mystery-engine.me-roll {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  border: 1px solid var(--me-border-mid);
+  border-radius: var(--me-radius);
+  background: var(--me-bg);
+  color: var(--me-text);
+  box-shadow: var(--me-shadow-sm);
+
+  .me-roll-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .me-roll-ability {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--me-text-heading);
+  }
+
+  .me-roll-modifier {
+    padding: 0.05rem 0.4rem;
+    border: 1px solid var(--me-border-mid);
+    border-radius: 999px;
+    background: var(--me-accent-dim);
+    font-size: 0.72rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--me-accent);
+  }
+
+  .me-roll-mode {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--me-text-muted);
+    white-space: nowrap;
+  }
+
+  // The result band is the part read across the table, so it carries the colour.
+  .me-roll-outcome {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.45rem 0.7rem;
+    border-left: 4px solid var(--me-tier);
+    border-radius: 0 var(--me-radius-sm) var(--me-radius-sm) 0;
+    background: var(--me-surface);
+
+    &--crit { --me-tier: var(--me-roll-crit); }
+    &--hit  { --me-tier: var(--me-roll-hit); }
+    &--weak { --me-tier: var(--me-roll-weak); }
+    &--miss { --me-tier: var(--me-roll-miss); }
+  }
+
+  .me-roll-total {
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    color: var(--me-tier);
+  }
+
+  .me-roll-verdict {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .me-roll-verdict-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--me-tier);
+  }
+
+  .me-roll-verdict-range {
+    font-size: 0.68rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--me-text-muted);
+  }
+
+  .me-roll-dice {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .me-die {
+    display: grid;
+    place-items: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 1px solid var(--me-border-mid);
+    border-radius: var(--me-radius-sm);
+    background: var(--me-surface-alt);
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+
+    // The die kh2/kl2 discarded — kept visible so advantage stays legible.
+    &--dropped {
+      opacity: 0.35;
+      text-decoration: line-through;
+    }
+  }
+
+  .me-roll-dice-modifier {
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--me-text-muted);
+  }
+}

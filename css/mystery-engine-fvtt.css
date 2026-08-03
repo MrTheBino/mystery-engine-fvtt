@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .mystery-engine {
   --me-bg: #18162e;
   --me-surface: #201e38;
@@ -15,6 +16,14 @@
   --me-accent-dim: rgba(243, 194, 103, 0.07);
   --me-error: #e54e4e;
   --me-inactive: rgba(239, 230, 216, 0.28);
+  --me-type-move: #f3c267;
+  --me-type-checklist: #5fb3a1;
+  --me-type-text: #8f9bd4;
+  --me-type-question: #c08fd4;
+  --me-roll-crit: #8fb8ff;
+  --me-roll-hit: #7bd88f;
+  --me-roll-weak: #e0c04a;
+  --me-roll-miss: #e07a7a;
   --me-shadow-sm: 0 1px 3px rgba(0,0,0,0.40), 0 1px 2px rgba(0,0,0,0.30);
   --me-shadow: 0 3px 8px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.35);
   --me-shadow-md: 0 6px 16px rgba(0,0,0,0.50), 0 2px 5px rgba(0,0,0,0.40);
@@ -377,11 +386,15 @@ nav.tabs [data-tab] .active {
   min-width: 0;
 }
 .mystery-engine .items-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-  align-items: start;
+  columns: 26rem;
+  column-gap: 0.85rem;
   padding-top: 10px;
+}
+.mystery-engine .items-grid > * {
+  break-inside: avoid;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 0.85rem;
 }
 .mystery-engine .moves-section {
   display: flex;
@@ -459,17 +472,38 @@ nav.tabs [data-tab] .active {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 0.75rem;
+  gap: 0.5rem;
+  padding: 0.55rem 0.75rem;
   background: var(--me-surface-alt);
   border-bottom: 1px solid var(--me-border);
-  border-left: 3px solid var(--me-accent);
+  border-left: 4px solid var(--me-accent);
 }
 .mystery-engine .item-card-header h2 {
   margin: 0;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--me-text-heading);
-  line-height: 1.3;
+  line-height: 1.25;
+}
+.mystery-engine .item-card-move .item-card-header {
+  border-left-color: var(--me-type-move);
+}
+.mystery-engine .item-card-checklist .item-card-header {
+  border-left-color: var(--me-type-checklist);
+}
+.mystery-engine .item-card-text .item-card-header {
+  border-left-color: var(--me-type-text);
+}
+.mystery-engine .question-item-card .item-card-header {
+  border-left-color: var(--me-type-question);
+}
+.mystery-engine .item-card .move-header-controls {
+  opacity: 0.25;
+  transition: opacity var(--me-transition);
+}
+.mystery-engine .item-card:hover .move-header-controls,
+.mystery-engine .item-card:focus-within .move-header-controls {
+  opacity: 1;
 }
 .mystery-engine .item-card-body {
   padding: 0.6rem 0.75rem;
@@ -487,6 +521,91 @@ nav.tabs [data-tab] .active {
 }
 .mystery-engine .item-description p:last-child {
   margin-bottom: 0;
+}
+.mystery-engine .item-description ul {
+  list-style: none;
+  margin: 0.25rem 0;
+  padding-left: 1.15rem;
+}
+.mystery-engine .item-description ul li {
+  position: relative;
+  margin-bottom: 0.18rem;
+}
+.mystery-engine .item-description ul li::before {
+  content: "◆";
+  position: absolute;
+  left: -0.95rem;
+  top: 0.45em;
+  font-size: 0.6em;
+  color: var(--me-accent);
+}
+.mystery-engine .item-card-move .move-description {
+  border-top: 1px solid var(--me-border);
+  padding-top: 0.55rem;
+}
+.mystery-engine .move-trigger {
+  margin: 0 0 0.5rem !important;
+  padding: 0.4rem 0.6rem;
+  border-left: 3px solid var(--me-accent);
+  border-radius: 0 var(--me-radius-sm) var(--me-radius-sm) 0;
+  background: var(--me-accent-dim);
+  font-size: 0.9rem;
+}
+.mystery-engine .roll-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.mystery-engine .roll-result {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+.mystery-engine .roll-badge {
+  flex: 0 0 3.1rem;
+  text-align: center;
+  padding: 0.1rem 0.3rem;
+  border: 1px solid var(--me-border-mid);
+  border-radius: 999px;
+  background: var(--me-surface-alt);
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.mystery-engine .roll-badge--crit {
+  color: var(--me-roll-crit);
+  border-color: rgba(143, 184, 255, 0.45);
+}
+.mystery-engine .roll-badge--hit {
+  color: var(--me-roll-hit);
+  border-color: rgba(123, 216, 143, 0.45);
+}
+.mystery-engine .roll-badge--weak {
+  color: var(--me-roll-weak);
+  border-color: rgba(224, 192, 74, 0.45);
+}
+.mystery-engine .roll-badge--miss {
+  color: var(--me-roll-miss);
+  border-color: rgba(224, 122, 122, 0.45);
+}
+.mystery-engine .item-description h1, .mystery-engine .item-description h2, .mystery-engine .item-description h3, .mystery-engine .item-description h4,
+.mystery-engine .move-description h1,
+.mystery-engine .move-description h2,
+.mystery-engine .move-description h3,
+.mystery-engine .move-description h4 {
+  margin: 0.7rem 0 0.3rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px dashed var(--me-border);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--me-text-muted);
 }
 .mystery-engine .checkboxes-row {
   display: flex;
@@ -1489,6 +1608,9 @@ nav.tabs [data-tab] .active {
   color: var(--me-accent-hover);
 }
 
+.roll-dialog {
+  height: auto;
+}
 .roll-dialog .window-content {
   padding: 0;
 }
@@ -1526,7 +1648,7 @@ nav.tabs [data-tab] .active {
   flex-direction: column;
   gap: 0.6rem;
 }
-.roll-dialog .roll-btn {
+.roll-dialog button.roll-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1539,22 +1661,145 @@ nav.tabs [data-tab] .active {
   transition: background var(--me-transition), box-shadow var(--me-transition);
   border: none;
 }
-.roll-dialog .advantage-btn {
+.roll-dialog button.normal-btn {
   background: var(--me-accent);
   color: #18162e;
 }
-.roll-dialog .advantage-btn:hover {
+.roll-dialog button.normal-btn:hover {
   background: var(--me-accent-hover);
+  color: #18162e;
+  border-color: var(--me-accent-hover);
   box-shadow: var(--me-shadow);
 }
-.roll-dialog .disadvantage-btn {
+.roll-dialog button.advantage-btn,
+.roll-dialog button.disadvantage-btn {
   background: var(--me-surface-alt);
   color: var(--me-text);
   border: 1px solid var(--me-border-mid);
 }
-.roll-dialog .disadvantage-btn:hover {
-  background: var(--me-border);
+.roll-dialog button.advantage-btn:hover,
+.roll-dialog button.disadvantage-btn:hover {
+  background: var(--me-accent-light);
+  border-color: var(--me-accent);
   box-shadow: var(--me-shadow-sm);
+}
+
+.mystery-engine.me-roll {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  border: 1px solid var(--me-border-mid);
+  border-radius: var(--me-radius);
+  background: var(--me-bg);
+  color: var(--me-text);
+  box-shadow: var(--me-shadow-sm);
+}
+.mystery-engine.me-roll .me-roll-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mystery-engine.me-roll .me-roll-ability {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--me-text-heading);
+}
+.mystery-engine.me-roll .me-roll-modifier {
+  padding: 0.05rem 0.4rem;
+  border: 1px solid var(--me-border-mid);
+  border-radius: 999px;
+  background: var(--me-accent-dim);
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--me-accent);
+}
+.mystery-engine.me-roll .me-roll-mode {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--me-text-muted);
+  white-space: nowrap;
+}
+.mystery-engine.me-roll .me-roll-outcome {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.45rem 0.7rem;
+  border-left: 4px solid var(--me-tier);
+  border-radius: 0 var(--me-radius-sm) var(--me-radius-sm) 0;
+  background: var(--me-surface);
+}
+.mystery-engine.me-roll .me-roll-outcome--crit {
+  --me-tier: var(--me-roll-crit);
+}
+.mystery-engine.me-roll .me-roll-outcome--hit {
+  --me-tier: var(--me-roll-hit);
+}
+.mystery-engine.me-roll .me-roll-outcome--weak {
+  --me-tier: var(--me-roll-weak);
+}
+.mystery-engine.me-roll .me-roll-outcome--miss {
+  --me-tier: var(--me-roll-miss);
+}
+.mystery-engine.me-roll .me-roll-total {
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--me-tier);
+}
+.mystery-engine.me-roll .me-roll-verdict {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.mystery-engine.me-roll .me-roll-verdict-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--me-tier);
+}
+.mystery-engine.me-roll .me-roll-verdict-range {
+  font-size: 0.68rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--me-text-muted);
+}
+.mystery-engine.me-roll .me-roll-dice {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.mystery-engine.me-roll .me-die {
+  display: grid;
+  place-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid var(--me-border-mid);
+  border-radius: var(--me-radius-sm);
+  background: var(--me-surface-alt);
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.mystery-engine.me-roll .me-die--dropped {
+  opacity: 0.35;
+  text-decoration: line-through;
+}
+.mystery-engine.me-roll .me-roll-dice-modifier {
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--me-text-muted);
 }
 
 .notebook-app .na-panel[data-na-panel=threats] .na-sub-panel.active {

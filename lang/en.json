@@ -237,8 +237,15 @@
       "Title": "Roll Dialog",
       "Advantage": "Advantage",
       "Disadvantage": "Disadvantage",
+      "RollNormal": "Roll",
       "RollAdvantage": "Roll with Advantage",
       "RollDisadvantage": "Roll with Disadvantage"
+    },
+    "Roll": {
+      "StrongHit": "Strong Hit",
+      "WeakHit": "Weak Hit",
+      "Miss": "Miss",
+      "Dropped": "Dropped die"
     }
   }
 }

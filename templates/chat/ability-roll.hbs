@@ -1,0 +1,29 @@
+{{!-- Carries `mystery-engine` because a chat message renders outside any sheet and would
+      otherwise have none of the system's palette variables in scope. --}}
+<div class="mystery-engine me-roll">
+  <header class="me-roll-header">
+    <span class="me-roll-ability">{{abilityName}}</span>
+    {{#if modifier}}<span class="me-roll-modifier">{{modifier}}</span>{{/if}}
+    {{#if modeLabel}}
+    <span class="me-roll-mode me-roll-mode--{{mode}}">
+      <i class="fas {{modeIcon}}"></i> {{modeLabel}}
+    </span>
+    {{/if}}
+  </header>
+
+  <div class="me-roll-outcome me-roll-outcome--{{tier}}">
+    <span class="me-roll-total">{{total}}</span>
+    <span class="me-roll-verdict">
+      <span class="me-roll-verdict-label">{{tierLabel}}</span>
+      <span class="me-roll-verdict-range">{{tierRange}}</span>
+    </span>
+  </div>
+
+  <div class="me-roll-dice">
+    {{#each dice as |die|}}
+    <span class="me-die{{#unless die.active}} me-die--dropped{{/unless}}"
+      {{#unless die.active}}title="{{localize 'ME.Roll.Dropped'}}"{{/unless}}>{{die.result}}</span>
+    {{/each}}
+    {{#if modifier}}<span class="me-roll-dice-modifier">{{modifier}}</span>{{/if}}
+  </div>
+</div>

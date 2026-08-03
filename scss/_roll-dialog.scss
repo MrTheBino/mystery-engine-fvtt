@@ -1,5 +1,9 @@
 // === FILE: scss/_roll-dialog.scss ===
 .roll-dialog {
+  // `.mystery-engine` stretches sheets to full height; a dialog has to shrink to its buttons
+  // instead, otherwise it leaves a tall empty box below them.
+  height: auto;
+
   .window-content {
     padding: 0;
   }
@@ -43,7 +47,9 @@
     gap: 0.6rem;
   }
 
-  .roll-btn {
+  // Matched as `button.…` throughout: the generic `.mystery-engine button[type="button"]`
+  // rule in _common.scss is more specific than a lone class and would win otherwise.
+  button.roll-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,23 +63,28 @@
     border: none;
   }
 
-  .advantage-btn {
+  // The plain roll is the common case, so it is the only filled button.
+  button.normal-btn {
     background: var(--me-accent);
     color: #18162e;
 
     &:hover {
       background: var(--me-accent-hover);
+      color: #18162e;
+      border-color: var(--me-accent-hover);
       box-shadow: var(--me-shadow);
     }
   }
 
-  .disadvantage-btn {
+  button.advantage-btn,
+  button.disadvantage-btn {
     background: var(--me-surface-alt);
     color: var(--me-text);
     border: 1px solid var(--me-border-mid);
 
     &:hover {
-      background: var(--me-border);
+      background: var(--me-accent-light);
+      border-color: var(--me-accent);
       box-shadow: var(--me-shadow-sm);
     }
   }

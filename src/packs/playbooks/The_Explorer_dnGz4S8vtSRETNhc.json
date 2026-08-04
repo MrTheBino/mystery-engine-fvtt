@@ -1,0 +1,582 @@
+{
+  "name": "The Explorer",
+  "type": "mystery-actor",
+  "_id": "dnGz4S8vtSRETNhc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "editMode": false,
+    "biography": "<p>You were born into a world of fantastic wealth and privilege. You could have spent your days cosseted by luxury, with nothing more pressing than deciding what to wear to that evening’s dinner party. But you chose a different life; you chose to serve your queen. You leveraged your wealth and connections to explore the world, to chart unknown territory. And now you have a mountain range named after you—a fitting honor, considering you tower over other Britons. Your strength, your intellect, your cunning—none can match it. None except… the Mastermind. The Mastermind, who plots ceaselessly against Her Majesty, whose mind and resources dwarf your own. You have conquered every trial the gods have placed before you, but the Mastermind is something altogether different. And your new work, your work with Hargrave House, is connected to them in some way. You spend your days and nights exploring the true heart of darkness—the monsters that stalk the streets of London—but none are so monstrous as your opponent, the one who sits on the other side of the chessboard. Will Great Britain still be standing when the grand game is over?</p>",
+    "notes": "",
+    "labels": [
+      {
+        "name": "Title",
+        "value": ""
+      },
+      {
+        "name": "Look",
+        "value": ""
+      },
+      {
+        "name": "Vice",
+        "value": ""
+      }
+    ],
+    "conditions": [],
+    "abilities": [
+      {
+        "name": "Vitality",
+        "value": 1
+      },
+      {
+        "name": "Composure",
+        "value": 1
+      },
+      {
+        "name": "Reason",
+        "value": 1
+      },
+      {
+        "name": "Presence",
+        "value": 0
+      },
+      {
+        "name": "Sensitivity",
+        "value": -1
+      }
+    ],
+    "xpTrack": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "prototypeToken": {
+    "name": "The Explorer",
+    "displayName": 0,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "disposition": 1,
+    "flags": {}
+  },
+  "items": [
+    {
+      "name": "The Grand Game",
+      "type": "move",
+      "_id": "etNN1mRI95sgyEeh",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 0,
+        "description": "<p>The Mastermind is your arch-nemesis, and you can see more clearly than most how they are manipulating events from behind the scenes. As such, you can always use a single Mastermind Clue for Answer a Question, in addition to any regular Clues uncovered for that Threat; the Mastermind Clue is not spent when you do this, but the context surrounding it may be changed at the Keeper’s discretion.</p><p>Despite the fact they are your greatest enemy, you fundamentally need the Mastermind—your life may have little meaning without the Grand Game. For you, the Vulnerable Move works in the normal way except you cannot clear a Condition. However, if you <strong>have an intimate moment with the Mastermind while you are engaged in your Vice</strong>, clear an appropriate Condition, and the Mastermind can ask you any question they wish; you must answer truthfully and completely.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": true,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!dnGz4S8vtSRETNhc.etNN1mRI95sgyEeh"
+    },
+    {
+      "name": "The Royal Explorers Club",
+      "type": "move",
+      "_id": "9M0oxBWVHDlNRidc",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 1,
+        "description": "<p>You are a member of The Royal Explorers Club (the R.E.C.), a private dinner club for people who, like you, have led expeditionary forces into parts unknown, or who are members of the upper class with an interest in the geographical sciences. Your status within the club allows you to call in favors with its membership in order to help Hargrave House. That status grows as you do battle with the forces of evil in London and regale the R.E.C. with your tales.</p><p>You begin the game with access to two checkboxes on this move. Mark a checkbox in order to call on the help of any one member listed here.</p><p>Additionally, you can call upon the R.E.C. to help with Layer Four of the Mastermind Conspiracy. When you <strong>mark a box to call upon the help of an R.E.C. member during the Layer Four events</strong>, the Keeper will give you a distinct mechanical benefit associated with that help, depending on the circumstances (such as, but not limited to: lowering the Complexity of any Questions, increasing the number of Clues uncovered during investigations, awarding automatic Clues, giving advantage on certain die rolls, and so forth). This benefit is in place of the normal effects of calling upon that member of the R.E.C.</p><h4>Members of the Royal Explorer’s Club</h4><ul><li><strong>General Herod Farsblet-Mogg</strong> — <em>Fortify Hargrave House.</em> General Farsblet-Mogg still has many connections in the army, and can help fortify Hargrave House in a pinch. Pick a Threat: the General provides enough security—including any necessary specialists—to keep them, and any Dangers associated with them, out of Hargrave House.</li><li><strong>Lady Winnifred Wheatley-Grainworth</strong> — <em>Direct Scotland Yard.</em> Lady Winnifred’s family owns 4 Whitehall Palace, the headquarters of Scotland Yard, and so she can exercise some influence on their operations. Pick a Threat. Scotland Yard will not interfere with Hargrave House’s investigation of that Threat in any way, nor will they follow-up on any criminal activity Hargrave House engages in in order to resolve the Threat.</li><li><strong>Sir Stewart Trebbling-Welles</strong> — <em>Throw a party.</em> Sir Stewart is a former explorer, but now spends most of his time chasing young men and throwing lavish parties. With his help, you throw an extravagant party at a Location of your choice. Name any Side Characters you wish; they will be in attendance. The Mastermind will also show up at some point.</li><li><strong>Rear Admiral Alfred Bingly-Greene</strong> — <em>Armory.</em> The Rear Admiral is a former member of Hargrave House and has an unmatched collection of specialized weapons he collected from his time there; he is happy to give you access to them from time to time. During the Dusk Phase, each Hunter adds a specialized weapon to their Personal Quarters—pick from the list below or write your own. The weapon must be removed from Personal Quarters once it is marked. <em>Silver bullets, cold iron sword, wooden stake launcher, holy water “bombs,” sword cane, just a fuckton of dynamite, razor rosary, caltrops, trick umbrella, vicious dogs, elephant gun, runic gauntlets, exploding pocket watch, balisong, poisoned spectacles, acid pen, metal claws, saltpeter gun, hex bag, flash powder</em></li><li><strong>Sir Antony Rees-Woode</strong> — <em>The occult and paranormal.</em> Sir Antony is London’s foremost scholar on the occult and paranormal. The Keeper reveals two relevant Clues when he advises on such matters.</li><li><strong>Lady Cressida Bachelor-Howes</strong> — <em>Antiquities and the ancient world.</em> Lady Cressida is a former explorer and current chair of the Antiquities Department at the University of London. She can advise on matters related to antiquities and the ancient world; the Keeper reveals two relevant Clues.</li><li><strong>Gareth Kellogg</strong> — <em>Hansom cab.</em> Gareth is not a member of the R.E.C. as such, but rather a hansom cab driver the club has on permanent retainer. When engaged, he will spend an entire night whisking the Hunters to and fro, picking them up and dropping them off as needed. At the end of a Night Phase, you can mark The Royal Explorers Club and declare you are enlisting Gareth’s help. If you do so, immediately play another Night Phase. The extra Night Phase can be a London Night Phase or a Hargrave House Night Phase—your choice.</li></ul>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": true,
+        "hidden": false,
+        "checkboxes": [
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": "unlocked by Advancement"
+          },
+          {
+            "checked": false,
+            "description": "unlocked by Advancement"
+          },
+          {
+            "checked": false,
+            "description": "unlocked by Advancement"
+          },
+          {
+            "checked": false,
+            "description": "unlocked by Advancement"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!dnGz4S8vtSRETNhc.9M0oxBWVHDlNRidc"
+    },
+    {
+      "name": "Dawn Questions",
+      "type": "checklist",
+      "_id": "R2dA9r0zlPFJu4wc",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 2,
+        "description": "<p><em>The first three are always marked. Mark two more.</em></p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": true,
+            "text": "Did the Hunters answer a Question?"
+          },
+          {
+            "selected": true,
+            "text": "Did the Hunters resolve a Threat?"
+          },
+          {
+            "selected": true,
+            "text": "Did you experience an Echo in the Night?"
+          },
+          {
+            "selected": false,
+            "text": "Did you use your loyalty to Her Majesty to justify your brutal actions?"
+          },
+          {
+            "selected": false,
+            "text": "Did you engage in a secret sexual rendezvous with a commoner?"
+          },
+          {
+            "selected": false,
+            "text": "Did you leverage your social status to gain the upper hand?"
+          },
+          {
+            "selected": false,
+            "text": "Did you deliver a chilling, dead-eyed monologue about the horrors of the world?"
+          },
+          {
+            "selected": false,
+            "text": "Did you have a face-to-face encounter with the Mastermind?"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!dnGz4S8vtSRETNhc.R2dA9r0zlPFJu4wc"
+    },
+    {
+      "name": "Advancements",
+      "type": "checklist",
+      "_id": "kSmieR62xuuwzRa6",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 3,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)"
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)"
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)"
+          },
+          {
+            "selected": false,
+            "text": "Unlock two checkboxes on The Royal Explorers Club."
+          },
+          {
+            "selected": false,
+            "text": "Unlock two checkboxes on The Royal Explorers Club."
+          },
+          {
+            "selected": false,
+            "text": "Write a custom move for your character."
+          },
+          {
+            "selected": false,
+            "text": "Unmark all checkboxes on The Royal Explorers Club."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!dnGz4S8vtSRETNhc.kSmieR62xuuwzRa6"
+    },
+    {
+      "name": "Personal Quarters",
+      "type": "checklist",
+      "_id": "3ggiDPBNtePukfDT",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 4,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": true,
+        "entries": [
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 4000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!dnGz4S8vtSRETNhc.3ggiDPBNtePukfDT"
+    },
+    {
+      "name": "The Mask of the Past",
+      "type": "checklist",
+      "_id": "yA91JfjYum18QJMN",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 5,
+        "description": "<p><em>The Explorer’s Mask of the Past tells the story of a young man, called the Boy, whose village was occupied for a time by the Explorer and their expeditionary forces. Mark the first unmarked box.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": true,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the time when the Explorer first arrived at your village. Was it a joyous moment? Was there something ominous about it?"
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback that shows your friendship with the Explorer. What kind of relationship was it? Parent and child? Teacher and pupil? Master and servant?"
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to when your village suffered an atrocity at the hands of the Explorer. How did you help inflict this atrocity?"
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback showing how you faced a reckoning for the crimes you helped the Explorer commit against your village."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the recent past showing how the village still suffers the consequences of the Explorer’s occupation."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback showing your arrival in London."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the time when you first met the Mastermind."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 5000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!dnGz4S8vtSRETNhc.yA91JfjYum18QJMN"
+    },
+    {
+      "name": "The Mask of the Future",
+      "type": "checklist",
+      "_id": "286kmq1V3PA3pIZ5",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 6,
+        "description": "<p><em>Mark any box you wish.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": false,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "[b]The Gilded Door:[/b] Take the following Condition: Most-Beloved. Tell the other Hunters they can no longer choose The Gilded Door on their own playbook (this does not count as being marked for them). You can never clear Most-Beloved."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Moss-Covered Gate:[/b] You receive a significant inheritance from a recently deceased relative. Who were they? What is your favorite memory of them? Unmark two checkboxes on The Royal Explorers Club."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Darkened Threshold:[/b] Narrate a scene in which you inflict violence on someone and the authorities look the other way."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Cosmic Passage:[/b] Increase your Sensitivity by 1 (max 3) and reduce your Reason by 2."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Blood-Soaked Portal:[/b] The Keeper narrates a scene in which the Boy physically destroys you; you stay alive long enough for the Mastermind to gloat over their victory."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 6000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!dnGz4S8vtSRETNhc.286kmq1V3PA3pIZ5"
+    },
+    {
+      "name": "Names, Look & Vice",
+      "type": "text",
+      "_id": "xyQddoDAI5htglik",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "position": 7,
+        "description": "<p><strong>Title</strong> — <em>circle one or make up your own.</em><br>Lord, Lady, Sir, Dame</p><p><strong>First name</strong> — <em>circle one or make up your own.</em><br>Angelica, Chanterelle, Candice, Philippa, Pandora, Florence, Fiona, Elsbeth, Nicolette, Gennifer, Malcolm, Mason, Alberticus, Georgie, Bully, Evander, Ian, Thomas, Simon, Percival</p><p><strong>Surname (first part)</strong> — <em>circle one or make up your own.</em><br>Campbell-, Tengle-, Twombly-, Franter-, Pernenbury-, Horex-, Wilton-, Benbrook-, Sneeg-, Lapin-</p><p><strong>Surname (second part)</strong> — <em>circle one or make up your own.</em><br>Reynolds, Davies, Carter, Quartermain, Evans, Robinson, Thompson, White, Edwards, Hughes</p><p><strong>Look (circle three)</strong> — <em>circle one or make up your own.</em><br>Salt & pepper hair, chocolate brown silk hat, gray Müller cut-down top hat, steely eyes, monocle, well-lined face, prominent facial scar, periwinkle Kingsman, olive green shawl, fox boa, Donegal tweed waistcoat, pale grey three-piece suit, dark blue frock coat, purple silk brocade dress, emerald gown with plunging neckline, gold pocket watch, signet ring, amethyst and pearl bracelet, Hessian boots, black leather lace-up shoes, violet satin shoes</p><p><strong>Vice</strong> — <em>circle one or make up your own.</em><br>Gin, humiliation, heroin, casinos, boxing</p>",
+        "groupName": "Character Creation",
+        "groupNameDisplayed": true,
+        "groupPosition": 3,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 7000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!dnGz4S8vtSRETNhc.xyQddoDAI5htglik"
+    }
+  ],
+  "effects": [],
+  "folder": "sNOCvHxF7E9t1aaU",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "14.3.5",
+    "createdTime": 1785801600000,
+    "modifiedTime": 1785801600000,
+    "lastModifiedBy": null,
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "_key": "!actors!dnGz4S8vtSRETNhc"
+}

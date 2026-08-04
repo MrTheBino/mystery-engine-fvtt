@@ -260,6 +260,20 @@
 .mystery-engine .ability-pip:active {
   background: rgba(243, 194, 103, 0.35);
 }
+.mystery-engine button.manual-roll-btn {
+  align-self: center;
+  flex: 0 0 auto;
+  margin: 0 1rem 0 0.5rem;
+  padding: 0.25rem 0.45rem;
+  background: var(--me-surface-alt);
+  color: var(--me-accent);
+  border: 1px solid var(--me-border-mid);
+}
+.mystery-engine button.manual-roll-btn:hover {
+  background: var(--me-accent-light);
+  border-color: var(--me-accent);
+  color: var(--me-accent-hover);
+}
 .mystery-engine .ability-name {
   font-weight: 600;
   color: var(--me-accent-hover);
@@ -563,11 +577,15 @@ nav.tabs [data-tab] .active {
   display: flex;
   align-items: baseline;
   gap: 0.55rem;
+  margin: 0;
   font-size: 0.85rem;
   line-height: 1.45;
 }
+.mystery-engine .roll-result p {
+  margin: 0;
+}
 .mystery-engine .roll-badge {
-  flex: 0 0 3.1rem;
+  flex: 0 0 3.4rem;
   text-align: center;
   padding: 0.1rem 0.3rem;
   border: 1px solid var(--me-border-mid);
@@ -592,6 +610,14 @@ nav.tabs [data-tab] .active {
 .mystery-engine .roll-badge--miss {
   color: var(--me-roll-miss);
   border-color: rgba(224, 122, 122, 0.45);
+}
+.mystery-engine .roll-badge--neutral {
+  color: var(--me-text-muted);
+}
+.mystery-engine .entry-text .roll-badge {
+  display: inline-block;
+  flex: none;
+  margin-right: 0.3rem;
 }
 .mystery-engine .item-description h1, .mystery-engine .item-description h2, .mystery-engine .item-description h3, .mystery-engine .item-description h4,
 .mystery-engine .move-description h1,
@@ -1579,6 +1605,29 @@ nav.tabs [data-tab] .active {
   font-style: italic;
   font-size: 0.9rem;
 }
+.notebook-app .na-empty-state p {
+  margin: 0;
+}
+.notebook-app .na-empty-state .na-empty-hint {
+  max-width: 30rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--me-text-muted);
+}
+.notebook-app .na-empty-state button.na-create-notebook {
+  margin-top: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-style: normal;
+  background: var(--me-accent);
+  color: #18162e;
+  border: none;
+}
+.notebook-app .na-empty-state button.na-create-notebook:hover {
+  background: var(--me-accent-hover);
+  color: #18162e;
+  box-shadow: var(--me-shadow);
+}
 .notebook-app .na-pages-empty-gm {
   display: flex;
   flex-direction: column;
@@ -1642,6 +1691,22 @@ nav.tabs [data-tab] .active {
   font-weight: 700;
   font-size: 1rem;
   color: var(--me-accent);
+}
+.roll-dialog input.roll-dialog-modifier-input {
+  width: 4rem;
+  padding: 0.15rem 0.35rem;
+  border: 1px solid var(--me-border-mid);
+  border-radius: var(--me-radius-sm);
+  background: var(--me-surface);
+  color: var(--me-accent);
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+}
+.roll-dialog input.roll-dialog-modifier-input:focus {
+  outline: none;
+  border-color: var(--me-focus);
+  box-shadow: 0 0 0 2px var(--me-focus-ring);
 }
 .roll-dialog .roll-dialog-buttons {
   display: flex;

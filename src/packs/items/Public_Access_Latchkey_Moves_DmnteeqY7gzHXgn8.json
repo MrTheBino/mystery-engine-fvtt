@@ -1,0 +1,23 @@
+{
+  "type": "Item",
+  "folder": "gjeQm4IXgc6chhJ3",
+  "name": "Public Access Latchkey Moves",
+  "color": "#3f6fa8",
+  "sorting": "a",
+  "_id": "DmnteeqY7gzHXgn8",
+  "description": "",
+  "sort": 100000,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "14.3.5",
+    "createdTime": 1785801600000,
+    "modifiedTime": 1785801600000,
+    "lastModifiedBy": null,
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!folders!DmnteeqY7gzHXgn8"
+}

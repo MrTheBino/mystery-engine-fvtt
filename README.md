@@ -2,7 +2,7 @@
 
 ![Foundry v14](https://img.shields.io/badge/foundry-v14-green) [![Github All Releases](https://img.shields.io/github/downloads/MrTheBino/mystery-engine-fvtt/total.svg)]()
 
-This is a **unofficial** system implementation for Carved From Brindlewood Bay.
+This is a **unofficial** system implementation for Carved From Brindlewood Bay games.
 
 Check out [The Gauntlet](https://www.gauntlet-rpg.com/) for their great TTRPG games!
 
@@ -36,6 +36,7 @@ Available pre-built sheets:
 
 - Public Access
 - Brindlewood Bay
+- The Between
   
 ## Supported games are
 
@@ -54,12 +55,27 @@ The checklist item supports bbCode styling
  * [s] strikethough[/s]
  * [br] line break[/br]
  * [list] list item 1 [br] list item 2 [br] list item 3 [/list]
+ * [ON 10+] roll outcome badge
 
-## Roadmap
+### Roll outcomes
 
-- provide a victorian style for the user interface
-- improved css styling
-- finding all bugs ;)
+`[ON …]` marks a roll outcome and renders it as a coloured badge. It works in checklist entries
+as well as in the description and move description of a move, where each tagged line becomes a
+badge row.
+
+    [ON 12+] you also find a Clue; the Keeper will describe it.
+    [ON 10+] the magic works without further cost: choose your effect.
+    [ON 7-9] the magic works imperfectly: choose your effect and a complication.
+    [ON 6-]  the Keeper reacts.
+    [ON hit] you find a Clue. The Keeper will tell you what it is.
+    [ON miss] you glimpse a terrible fate awaiting one of your fellow Hunters.
+
+Number ranges are shown as written, `hit` and `miss` are localised via `ME.Roll.HitShort` and
+`ME.Roll.MissShort` — so a translation only has to translate the surrounding text, never the tag
+itself. Any other token still gets a badge, just without a colour.
+
+For backwards compatibility the English wording `On a 10+, …` is recognised as well, but new and
+translated content should use the tag.
   
 ## Manifest-URL for manual installation of the system
 

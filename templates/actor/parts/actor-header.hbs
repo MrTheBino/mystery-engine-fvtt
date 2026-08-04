@@ -64,6 +64,10 @@
         </div>
         {{/if}}
     </div>
+    <button type="button" class="manual-roll-btn" data-action="rollManual"
+      title="{{localize 'ME.RollDialog.ManualRollTitle'}}" aria-label="{{localize 'ME.RollDialog.ManualRollTitle'}}">
+      <i class="fas fa-dice-d6"></i>
+    </button>
     <div class="xp-track">
       <span class="xp-track-label">{{localize "ME.Actor.XpTrack"}}</span>
       {{#each xpTrack as |checked index|}}

@@ -1,0 +1,746 @@
+{
+  "name": "The Undeniable",
+  "type": "mystery-actor",
+  "_id": "GvfHj9Ki6R5araya",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "editMode": false,
+    "biography": "<p>You have always been the most beautiful person in the room. Your looks have opened doors for you for as long as you can remember—all the money and material things anyone could want, laid at your feet. Artists have found inspiration in the brightness of your eyes, the delicate curve of your cheekbones, the plump softness of your lips.</p><p>One such artistic work, a masterwork, rises above them all, for it captures the essence of you–it is, quite simply, more you than you. Lately, people sacrifice everything to be near you, to please you, and, if they’re lucky, to touch you. But what to do when you get bored with being one of the gods?</p>",
+    "notes": "",
+    "labels": [
+      {
+        "name": "Look",
+        "value": ""
+      },
+      {
+        "name": "Vice",
+        "value": ""
+      }
+    ],
+    "conditions": [],
+    "abilities": [
+      {
+        "name": "Vitality",
+        "value": 1
+      },
+      {
+        "name": "Composure",
+        "value": 0
+      },
+      {
+        "name": "Reason",
+        "value": -1
+      },
+      {
+        "name": "Presence",
+        "value": 2
+      },
+      {
+        "name": "Sensitivity",
+        "value": 0
+      }
+    ],
+    "xpTrack": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "prototypeToken": {
+    "name": "The Undeniable",
+    "displayName": 0,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "disposition": 1,
+    "flags": {}
+  },
+  "items": [
+    {
+      "name": "The Reflection",
+      "type": "move",
+      "_id": "UdfG9Hh3AdX3y7bf",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 0,
+        "description": "<p>Somewhere in London, hidden from the world, is a masterwork created in your image or otherwise inspired by your beauty. It is guarded by a cult dedicated to your worship. What is it?</p><ul><li>A portrait painting. How do your worshippers demonstrate they are unworthy to look upon it?</li><li>A statue carved in your likeness. How do your worshippers punish those foolish enough to touch it?</li><li>A piece of music inspired by you. How do your worshippers ensure this music is always being played somewhere?</li><li>A cathedral that is used for traditional religious services, but is secretly a temple dedicated to you. In what subtle ways have your worshippers altered the traditional religious iconography to be about you instead?</li><li>Something else:</li></ul><p>The masterwork will gradually degrade so you can remain young and beautiful, and will bear the scars that your evil acts would otherwise leave on your soul. Whenever you <strong>scar your Reflection, either as the result of a move or because the Keeper said to</strong>, mark a box below and describe how the masterwork has changed for the worse.</p><p>When <strong>all the boxes are marked</strong>, you must frame an intimate scene with a fellow Hunter where you reveal the masterwork to them and explain some of the terrible things you have done that are reflected in it. Then, if you wish, throw yourself at their feet and beg them for redemption. They can grant it by taking you into a passionate embrace, then and there. If they do so, describe how you embrace a life of humility and grace, then retire this character.</p><p>If the other Hunter does not grant redemption, or if you choose not to ask for it, ask the Keeper to narrate a scene in which we see you become a servant of the Mastermind, then retire this character.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": true,
+        "hidden": false,
+        "checkboxes": [
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GvfHj9Ki6R5araya.UdfG9Hh3AdX3y7bf"
+    },
+    {
+      "name": "Unquenchable Thirst",
+      "type": "move",
+      "_id": "Va8ggfRbs1VO2dLI",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 1,
+        "description": "<p>Your physical beauty is not only unparalleled, it is aggressively eternal. During the Dusk Phase, clear all Conditions related to your physical appearance. When you do so, scar your Reflection. When you <strong>perform an action that leverages your physical appearance</strong>, associated rolls are taken with advantage.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GvfHj9Ki6R5araya.Va8ggfRbs1VO2dLI"
+    },
+    {
+      "name": "Giveth",
+      "type": "move",
+      "_id": "DMgDSBsW1efbXYlZ",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 2,
+        "description": "<p>At any time, you can declare that a Side Character is secretly one of your worshippers. Describe how the Side Character subtly or not-so-subtly debases themselves before you in the scene, then scar your Reflection. Whenever you <strong>make a gift of something from your Personal Quarters to a worshipper</strong>, they will do exactly as you say, no questions asked, up to and including destroying themselves. If you demand information from them, it may come in the form of a Clue, at the Keeper’s discretion.</p><p>If another Hunter debases themselves at your feet, they may take the following Condition: Worshipper. If they do so, they mark XP and you scar your Reflection. So long as they have the Condition, the following is added to their Dawn Question list (it is always marked): “Did you continue to perfect your worship of the Undeniable?” You get to answer for them. If you say “Yes,” you mark XP instead of them, then give them something from your Personal Quarters, which goes on their sheet unmarked.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GvfHj9Ki6R5araya.DMgDSBsW1efbXYlZ"
+    },
+    {
+      "name": "Taketh Away",
+      "type": "move",
+      "_id": "8JK2JsVU6Y87UfiO",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 3,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "<p>When you <strong>destroy a Side Character—physically, spiritually, or socially</strong>—describe how it makes you feel, scar your Reflection, and roll with Vitality.</p><ul><li>[ON 10+] choose two.</li><li>[ON 7-9] choose one.</li><li>If the Side Character is a worshipper, there is no need to roll; choose three.</li></ul><ul><li>Clear any Conditions you wish, including Most-Beloved.</li><li>Your next roll is taken with advantage.</li><li>You may take something from your victim and add it to your Personal Quarters.</li><li>There are no long-term consequences for your actions.</li></ul>",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GvfHj9Ki6R5araya.8JK2JsVU6Y87UfiO"
+    },
+    {
+      "name": "The Collection",
+      "type": "move",
+      "_id": "hL3bfnuR9A6dcFYw",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 4,
+        "description": "<p>You have access to a collection of rare, one-of-a-kind objects. When you take this move, circle an item and add it to your Personal Quarters. If you ever use one of these items during a sensual encounter with another Hunter, erase it from your Personal Quarters and add it to theirs, unmarked. You can circle another item and add it to your Personal Quarters at any time by scarring your Reflection.</p><p><em>An apple from the Garden, Lot’s wife, Judith’s knife, Cleopatra’s veil, Patroclus’s spear, Caligula’s saddle, Julius Caesar’s blood-stained toga, Joan of Arc’s ashes, the Holy Grail, the Virgin Queen’s neck ruff, Catherine the Great’s hand fan, Marie Antoinette’s stockings, Casanova’s perfume, Barbara Villier’s corset, Madame de Pompadour’s wig, Louis XIV’s shoes, John Wilkes Booth’s death shroud</em></p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 4000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GvfHj9Ki6R5araya.hL3bfnuR9A6dcFYw"
+    },
+    {
+      "name": "The Menagerie",
+      "type": "move",
+      "_id": "vepY6kkenOmiFsG1",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 5,
+        "description": "<p>You have a private room in Hargrave House, down a little-used corridor, accessible only with a jeweled, brass key tied to a velvet cord. When you take this move, add the Jeweled Key to your Personal Quarters and tell the Keeper to put the Menagerie in play.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 5000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GvfHj9Ki6R5araya.vepY6kkenOmiFsG1"
+    },
+    {
+      "name": "Dawn Questions",
+      "type": "checklist",
+      "_id": "QeeGP6jYVgeshYd1",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 6,
+        "description": "<p><em>The first three are always marked. Mark two more.</em></p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": true,
+            "text": "Did the Hunters answer a Question?"
+          },
+          {
+            "selected": true,
+            "text": "Did the Hunters resolve a Threat?"
+          },
+          {
+            "selected": true,
+            "text": "Did you experience an Echo in the Night?"
+          },
+          {
+            "selected": false,
+            "text": "Did you express a clear preference for the beautiful over the mundane?"
+          },
+          {
+            "selected": false,
+            "text": "Did you secretly show a vulnerable side to someone?"
+          },
+          {
+            "selected": false,
+            "text": "Did you create an ornate, over-the-top erotic experience for someone else’s pleasure?"
+          },
+          {
+            "selected": false,
+            "text": "Did you appear in London society wearing risque or avant-garde fashion?"
+          },
+          {
+            "selected": false,
+            "text": "Did you let someone touch you and then make them pay a price for doing so?"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 6000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GvfHj9Ki6R5araya.QeeGP6jYVgeshYd1"
+    },
+    {
+      "name": "Advancements",
+      "type": "checklist",
+      "_id": "RIgopNnCBzKTqSte",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 7,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional move from your playbook."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional move from your playbook."
+          },
+          {
+            "selected": false,
+            "text": "Write a custom move for your character."
+          },
+          {
+            "selected": false,
+            "text": "Unmark everything in your Personal Quarters."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 7000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GvfHj9Ki6R5araya.RIgopNnCBzKTqSte"
+    },
+    {
+      "name": "Personal Quarters",
+      "type": "checklist",
+      "_id": "iyvUtWp1ocXPRnZq",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 8,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": true,
+        "entries": [
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 8000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GvfHj9Ki6R5araya.iyvUtWp1ocXPRnZq"
+    },
+    {
+      "name": "The Mask of the Past",
+      "type": "checklist",
+      "_id": "meQbERvtQzpG6sD7",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 9,
+        "description": "<p><em>Mark the first unmarked box.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": true,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Narrate a flashback to your childhood that shows how, even then, people were willing to suffer in order to make you happy."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to your young adulthood that shows the first time you met the artist who fell in love with you."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback that shows when you cruelly discarded the artist."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to a scene when the artist destroyed themselves because of your rejection. How did the masterwork change in order to reflect your cold indifference?"
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to when you first met the person you fell madly in love with."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback that shows why you started to become jealous of the person you fell madly in love with. How did the masterwork change to reflect this simmering resentment?"
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to when you finally destroyed the person you fell madly in love with. How did the masterwork change to reflect your wrath?"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GvfHj9Ki6R5araya.meQbERvtQzpG6sD7"
+    },
+    {
+      "name": "The Mask of the Future",
+      "type": "checklist",
+      "_id": "oNud0gdz4G1NMT2G",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 10,
+        "description": "<p><em>If no boxes are marked, you can retire to safety or obscurity instead of putting on this mask; tell the other Hunters what the future holds for you. Otherwise, mark any box you wish.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": false,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "[b]The Gilded Door:[/b] Take the following Condition: Most-Beloved. Increase your Presence by 1. Tell the other Hunters they can no longer choose The Gilded Door on their own playbook (this does not count as being marked for them). Most-Beloved can only be cleared via Taketh Away."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Moss-Covered Gate:[/b] Narrate a scene in which you express private regret for the harm you have caused."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Darkened Threshold:[/b] Once per session, when you [b]gaze upon the masterwork in an attempt to uncover something hidden in the world[/b], roll with Sensitivity.[list][ON 10+] the masterwork reveals a Clue or a Mastermind Clue, your choice.[br][ON 7-9] as above, but you also scar your Reflection.[/list]"
+          },
+          {
+            "selected": false,
+            "text": "[b]The Cosmic Passage:[/b] Narrate a scene during which people treat you like you’re nothing special."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Blood-Soaked Portal:[/b] Narrate a scene in which you are physically destroyed. This character is now retired."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GvfHj9Ki6R5araya.oNud0gdz4G1NMT2G"
+    },
+    {
+      "name": "Names, Look & Vice",
+      "type": "text",
+      "_id": "ykqIlWpGdowbV73s",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "position": 11,
+        "description": "<p><strong>First name</strong> — <em>circle one or make up your own.</em><br>Kemuel, Francis, Ishaq, Baston, Lucas, André, Parsifal, Benedek, Riccalbano, Dauntay, Bennu, Shai, Cara, Kathegras, Alina, Eva, Cecilie, Adelheid, Dimitra, Neethi</p><p><strong>Surname</strong> — <em>circle one or make up your own.</em><br>Robel, Lepince, al-Shirazi, Bonhomme, Richter, Andrássy, Giacone, Shibukawa, Saihan, Leuva, Latimer, Tagaris, Kemp, Harington, Gray, Quinn, Falcone</p><p><strong>Look (circle three)</strong> — <em>circle one or make up your own.</em><br>Meticulous coiffure, golden olive branch crown, flawless skin, pearl-studded head cage, blue-gray eyes, long dressing gown with Hellenic patterns, topaz kimono, dress with gold rope embroidery, peacock blue sari, ostrich feather cape, plum velvet smoking jacket, gold and maroon sherwani, black mesh shirt, Turkish style pants, perfectly-tailored corduroy trousers, tight-fitting jodhpurs, sheer gloves, understated jewelry, ruby-encrusted riding crop, fine silk hosiery, velvet loafers, ermine-lined slippers, tall boots</p><p><strong>Vice</strong> — <em>circle one or make up your own.</em><br>Cocaine, floggings, extravagant spending, memento mori photographs, comforting the dying</p>",
+        "groupName": "Character Creation",
+        "groupNameDisplayed": true,
+        "groupPosition": 3,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 11000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GvfHj9Ki6R5araya.ykqIlWpGdowbV73s"
+    }
+  ],
+  "effects": [],
+  "folder": "sNOCvHxF7E9t1aaU",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "14.3.5",
+    "createdTime": 1785801600000,
+    "modifiedTime": 1785801600000,
+    "lastModifiedBy": null,
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "_key": "!actors!GvfHj9Ki6R5araya"
+}

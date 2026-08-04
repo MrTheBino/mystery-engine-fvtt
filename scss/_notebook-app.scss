@@ -523,6 +523,33 @@
     color: var(--me-inactive);
     font-style: italic;
     font-size: 0.9rem;
+
+    p { margin: 0; }
+
+    .na-empty-hint {
+      max-width: 30rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--me-text-muted);
+    }
+
+    // Matched as `button.…` — the generic `.mystery-engine button[type="button"]` rule is
+    // more specific than a lone class and would win otherwise.
+    button.na-create-notebook {
+      margin-top: 0.25rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      font-style: normal;
+      background: var(--me-accent);
+      color: #18162e;
+      border: none;
+
+      &:hover {
+        background: var(--me-accent-hover);
+        color: #18162e;
+        box-shadow: var(--me-shadow);
+      }
+    }
   }
 
   .na-pages-empty-gm {

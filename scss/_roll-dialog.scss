@@ -41,6 +41,25 @@
     color: var(--me-accent);
   }
 
+  // Manual roll: the modifier is typed instead of read from an ability.
+  input.roll-dialog-modifier-input {
+    width: 4rem;
+    padding: 0.15rem 0.35rem;
+    border: 1px solid var(--me-border-mid);
+    border-radius: var(--me-radius-sm);
+    background: var(--me-surface);
+    color: var(--me-accent);
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+
+    &:focus {
+      outline: none;
+      border-color: var(--me-focus);
+      box-shadow: 0 0 0 2px var(--me-focus-ring);
+    }
+  }
+
   .roll-dialog-buttons {
     display: flex;
     flex-direction: column;

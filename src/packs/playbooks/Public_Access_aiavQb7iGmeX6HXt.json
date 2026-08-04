@@ -1,0 +1,23 @@
+{
+  "type": "Actor",
+  "folder": null,
+  "name": "Public Access",
+  "color": "#3f6fa8",
+  "sorting": "a",
+  "_id": "aiavQb7iGmeX6HXt",
+  "description": "",
+  "sort": 100000,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "14.3.5",
+    "createdTime": 1785801600000,
+    "modifiedTime": 1785801600000,
+    "lastModifiedBy": null,
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!folders!aiavQb7iGmeX6HXt"
+}

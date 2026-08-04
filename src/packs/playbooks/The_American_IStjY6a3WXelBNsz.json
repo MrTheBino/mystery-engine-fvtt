@@ -1,0 +1,722 @@
+{
+  "name": "The American",
+  "type": "mystery-actor",
+  "_id": "IStjY6a3WXelBNsz",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "editMode": false,
+    "biography": "<p>You grew up in a big city on the Eastern Seaboard of the United States, the scion of a prominent family, but you detested that life–the formality, the pretension, the venomous hypocrisy–and so you went West. You had adventures, got good with a gun, even joined a traveling show for a time… but then came the curse, and everything changed. You did your best to control it, and some nights were definitely worse than others, but eventually it got to be too much. Even your days were affected by the changes within you; your behavior became reckless and unpredictable. And then you had to run, far away. In the end, it was London calling: a thick, throbbing mass of humanity within which to lose yourself—the whole world and all its lovely pleasures right within your grasp. But the curse has found you, like it always does. Hopefully these new folks, these Hunters you’ve thrown in with, can help you–help you for good, permanent-like—when the time comes.</p>",
+    "notes": "",
+    "labels": [
+      {
+        "name": "Real Name",
+        "value": ""
+      },
+      {
+        "name": "Look",
+        "value": ""
+      },
+      {
+        "name": "Vice",
+        "value": ""
+      }
+    ],
+    "conditions": [],
+    "abilities": [
+      {
+        "name": "Vitality",
+        "value": 1
+      },
+      {
+        "name": "Composure",
+        "value": 0
+      },
+      {
+        "name": "Reason",
+        "value": 0
+      },
+      {
+        "name": "Presence",
+        "value": 1
+      },
+      {
+        "name": "Sensitivity",
+        "value": 0
+      }
+    ],
+    "xpTrack": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "prototypeToken": {
+    "name": "The American",
+    "displayName": 0,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "disposition": 1,
+    "flags": {}
+  },
+  "items": [
+    {
+      "name": "The Quickening",
+      "type": "move",
+      "_id": "Kr39oAysTwtXvbOA",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 0,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "<p>You live with a curse that causes you to become savage—even feral—to the point where your body physically changes. At the start of the Dusk Phase, roll with Composure or Sensitivity, your choice.</p><ul><li>[ON 10+] your body is stronger and faster, and you manage to keep the quickening in check. You roll with advantage when taking actions that use Vitality until the next Dawn Phase.</li><li>[ON 7-9] you manage to keep the quickening in check, but just barely; take the following Condition: Drained. If you’re already Drained, put on a Mask.</li><li>[ON miss] you’re going to lose control: either retire this character and tell the Keeper to put The Cursed in play, or reveal your curse to another Hunter and ask for their help controlling you tonight. If they agree, neither of you can take any action that would trigger a move during the upcoming Night Phase, though you should narrate scenes showing how the cursed character is being controlled throughout the night. During the Dawn Phase, you each mark 1 XP. Additionally, they get to define something interesting about your transformation; that information is a Clue that can be used for The Cursed. This option can only be chosen once.</li><li>[ON 12+] you can control your transformation. If you wish, change into the feral beast. What do you turn into? While in this state, your Vitality and Sensitivity are each increased by 1 (max 4) and your Reason is reduced by 2. Additionally, your heightened sense of hearing and smell will help you uncover an additional Clue no other Hunter would be able to detect. During the Dawn Phase, tell the Keeper what the Clue is; it cannot conclusively answer a Question by itself. Finally, the other Hunters get to define something interesting about your transformation; that information is a Clue that can be used for The Cursed. You return to normal at the start of the Dawn Phase.</li></ul>",
+        "active": true,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!IStjY6a3WXelBNsz.Kr39oAysTwtXvbOA"
+    },
+    {
+      "name": "The Awakened Soul",
+      "type": "move",
+      "_id": "QitSj7ieHRintx4x",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 1,
+        "description": "<p>You are sensitive to the desires and behaviors of animals. When you encounter an animal, you may ask the Keeper, “What does this animal want me to do?” The Keeper will answer truthfully and completely. When you <strong>act on the answer or pursue a course of action in which an intuitive understanding of an animal’s behavior would be helpful</strong>, any associated rolls are taken with advantage.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!IStjY6a3WXelBNsz.QitSj7ieHRintx4x"
+    },
+    {
+      "name": "Fastest Gun in the West",
+      "type": "move",
+      "_id": "GY1BzVFxdvxAQeVl",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 2,
+        "description": "<p>When you take this move, add the 1851 Colt Navy Revolver to your Personal Quarters. This item is never marked when using it to take advantage on a die roll. After a roll, you can choose to mark it in order to re-roll one die of your choice.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!IStjY6a3WXelBNsz.GY1BzVFxdvxAQeVl"
+    },
+    {
+      "name": "As Cruel as the Harlot's Curse",
+      "type": "move",
+      "_id": "2L2IYa2nocom58JT",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 3,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "<p>When you <strong>indulge your Vice—with no other Hunters present—in the dark and seedy underbelly of London in order to deaden your senses</strong>, roll with Vitality.</p><ul><li>[ON hit] clear a Condition and choose one from the list below.</li><li>[ON 10+] choose two.</li><li>[ON 12+] you take a memento; ask another Hunter what it is and then put it in your Personal Quarters.</li></ul><ul><li>You don’t draw any unwanted attention.</li><li>You befriend a Side Character.</li><li>You gain some mastery over your curse; on your next Quickening roll, increase the success tier by one step.</li><li>You stumble on a Clue. Tell the Keeper what it is. The Clue cannot conclusively answer a Question by itself.</li></ul>",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!IStjY6a3WXelBNsz.2L2IYa2nocom58JT"
+    },
+    {
+      "name": "Tall Tales",
+      "type": "move",
+      "_id": "74Xdun7zVmAGW6ef",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 4,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "<p>When you <strong>tell a story from back home that is wildly unbelievable in order to charm someone</strong>, roll with Presence.</p><ul><li>[ON hit] they fall for your charm and do as you wish OR reveal a Clue, your choice.</li><li>[ON 10+] they won’t ask for anything in return.</li><li>[ON 12+] they also give you a keepsake to remember them by; ask another Hunter what it is and then write it down in your Personal Quarters.</li></ul>",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 4000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!IStjY6a3WXelBNsz.74Xdun7zVmAGW6ef"
+    },
+    {
+      "name": "Disguise Kit",
+      "type": "move",
+      "_id": "mZxdAaZ4xVaRgxXE",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 5,
+        "description": "<p>You have a trunk full of costumes, wigs, makeup, props, and other supplies to help you look like someone you are not. When you rifle through the trunk, add a costume to your Personal Quarters. You can do this up to five times.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": [
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 5000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!IStjY6a3WXelBNsz.mZxdAaZ4xVaRgxXE"
+    },
+    {
+      "name": "Dawn Questions",
+      "type": "checklist",
+      "_id": "XVkQ0ZUhWc172U3n",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 6,
+        "description": "<p><em>The first three are always marked. Mark two more.</em></p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": true,
+            "text": "Did the Hunters answer a Question?"
+          },
+          {
+            "selected": true,
+            "text": "Did the Hunters resolve a Threat?"
+          },
+          {
+            "selected": true,
+            "text": "Did you experience an Echo in the Night?"
+          },
+          {
+            "selected": false,
+            "text": "Did you stick out in London society for all the wrong reasons?"
+          },
+          {
+            "selected": false,
+            "text": "Did you use violence to solve a problem?"
+          },
+          {
+            "selected": false,
+            "text": "Did you encourage a fellow Hunter to let loose for a change?"
+          },
+          {
+            "selected": false,
+            "text": "Did you have a raw, passionate sexual encounter during which your feral nature manifested?"
+          },
+          {
+            "selected": false,
+            "text": "Did you share a treasured memory from the States during an intimate moment with another character?"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 6000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!IStjY6a3WXelBNsz.XVkQ0ZUhWc172U3n"
+    },
+    {
+      "name": "Advancements",
+      "type": "checklist",
+      "_id": "sc5zFbSiWssIilC8",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 7,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional move from your playbook."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional move from your playbook."
+          },
+          {
+            "selected": false,
+            "text": "Write a custom move for your character."
+          },
+          {
+            "selected": false,
+            "text": "Unmark everything in your Personal Quarters."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 7000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!IStjY6a3WXelBNsz.sc5zFbSiWssIilC8"
+    },
+    {
+      "name": "Personal Quarters",
+      "type": "checklist",
+      "_id": "HUxSYifnL6ltvD2L",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 8,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": true,
+        "entries": [
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 8000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!IStjY6a3WXelBNsz.HUxSYifnL6ltvD2L"
+    },
+    {
+      "name": "The Mask of the Past",
+      "type": "checklist",
+      "_id": "oZelQb99HDJJY3bq",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 9,
+        "description": "<p><em>Mark the first unmarked box.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": true,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Narrate a flashback to your childhood that shows the high level of privilege you were born into."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to your youth showing what an arrogant, willful brat you were."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to your young adulthood that shows the incident that made you start to resent, even despise, your parents."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the time after you finally went West that shows you happy and free."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the incident that caused you to receive the quickening curse."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the time when the quickening curse caused you to hurt someone you care about."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback showing the incident that caused you to go on the run."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!IStjY6a3WXelBNsz.oZelQb99HDJJY3bq"
+    },
+    {
+      "name": "The Mask of the Future",
+      "type": "checklist",
+      "_id": "HE0BmMSxdextMO7V",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 10,
+        "description": "<p><em>If no boxes are marked, you can retire to safety or obscurity instead of putting on this mask; tell the other Hunters what the future holds for you. Otherwise, mark any box you wish.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": false,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "[b]The Gilded Door:[/b] Take the following Condition: Most-Beloved. Tell the other Hunters they can no longer choose The Gilded Door on their own playbook (this does not count as being marked for them). You can never clear Most-Beloved."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Moss-Covered Gate:[/b] Narrate a scene in which you receive a letter from one of your parents urging you to return home. What does the letter say? Then tell the Keeper to put The Pinkerton in play."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Darkened Threshold:[/b] Narrate a scene in which you hurt an innocent because of your curse."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Cosmic Passage:[/b] Increase your Sensitivity by 1 (max 3) and reduce your Reason by 2."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Blood-Soaked Portal:[/b] Narrate a scene in which you are physically destroyed. This character is now retired."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!IStjY6a3WXelBNsz.HE0BmMSxdextMO7V"
+    },
+    {
+      "name": "Names, Look & Vice",
+      "type": "text",
+      "_id": "sYbg4voT1fDCU8xW",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "position": 11,
+        "description": "<p><strong>Prefix / nickname</strong> — <em>circle one or make up your own.</em><br>Wild, Calamity, Buffalo, The Beast, Razor, Smoke, Night Rider, Sureshot, Painkiller, Hard Case, Knife, Dust Devil, Snake Eyes, The Angel, Dynamite, Lone Rider, Whiplash, Gravedigger, Tex, Six-Gun, Doc</p><p><strong>First name</strong> — <em>circle one or make up your own.</em><br>Jake, Jim, Mike, Ross, Roy, Zeke, Travis, Tom, Hank, Frank, Sam, Annie, Elsie, Constance, Laura, Mary, Rose, Sue, Margaret, Sally, Maureen</p><p><strong>Surname</strong> — <em>circle one or make up your own.</em><br>Anderson, Banton, Ferguson, Fletcher, McBain, Porter, Slade, Larabee, Hu, Kaufmann, O’Neil, Candelora, Navarro, Nelson, Stevens, Carson, Baker</p><p><strong>Real first name (after you mark the Mask of the Past)</strong> — <em>circle one or make up your own.</em><br>Chance, Morton, Newton, Maximilian, Augustus, Julius, Gloriana, Mildred, Beatrice, Evangeline, Samantha</p><p><strong>Look (circle three)</strong> — <em>circle one or make up your own.</em><br>Extravagant coat with fringe on the arms, ten-gallon hat with feathers and rattlesnake tail, bolo tie with turquoise inlay, frayed duster in black, hair in pigtails, shoulder-length hair with beads woven in, mutton chops, pencil mustache, handlebar mustache, cheeks that are always smudged, healthy tan, rangey muscles, sharp cheekbones, split lower lip, calfskin gloves, pocket square of purple silk, jewelry with skull and devil motifs, leather bandolier died saffron yellow, jeweled cigarrillo case, crocodile boots with lapis detail, ostrich boots with gold embroidery, calfskin boots that have seen better days</p><p><strong>Vice</strong> — <em>circle one or make up your own.</em><br>Coffin varnish, Faro, prostitutes, opium, shooting things</p>",
+        "groupName": "Character Creation",
+        "groupNameDisplayed": true,
+        "groupPosition": 3,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 11000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!IStjY6a3WXelBNsz.sYbg4voT1fDCU8xW"
+    }
+  ],
+  "effects": [],
+  "folder": "sNOCvHxF7E9t1aaU",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "14.3.5",
+    "createdTime": 1785801600000,
+    "modifiedTime": 1785801600000,
+    "lastModifiedBy": null,
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "_key": "!actors!IStjY6a3WXelBNsz"
+}

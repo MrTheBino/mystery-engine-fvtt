@@ -170,13 +170,22 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
     async _prepareContext(options) {
         const context = await super._prepareContext(options);
 
+        // The empty state offers to create a notebook, which only a GM with a scene can do.
+        const emptyContext = {
+            ...context,
+            notebook: null,
+            isGM: game.user.isGM,
+            canCreateNotebook: game.user.isGM && !!this.currentSceneDataItem,
+            sceneName: this.currentSceneName
+        };
+
         if (!this.currentSceneDataItem?.system?.notebookUuid) {
-            return { ...context, notebook: null };
+            return emptyContext;
         }
 
         const notebook = await fromUuid(this.currentSceneDataItem.system.notebookUuid).catch(() => null);
         if (!notebook) {
-            return { ...context, notebook: null };
+            return emptyContext;
         }
 
         const enrich = (html, relativeTo) =>
@@ -409,6 +418,7 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
             removeActor:              NotebookApp.#removeActor,
             rollAbility:              NotebookApp.#rollAbility,
             removeNotebook:           NotebookApp.#removeNotebook,
+            createNotebook:           NotebookApp.#createNotebook,
         };
         for (const [action, handler] of Object.entries(actions)) {
             this.element.querySelectorAll(`[data-action="${action}"]`).forEach(btn => {
@@ -744,6 +754,22 @@ export class NotebookApp extends HandlebarsApplicationMixin(ApplicationV2) {
         if (!notebook) return;
         const actors = notebook.toObject().system.actors.filter(u => u !== uuid);
         await notebook.update({ "system.actors": actors });
+    }
+
+    /** Creates a notebook item for the current scene and links it, straight from the empty state. */
+    static async #createNotebook(event, btn) {
+        if (!game.user.isGM || !this.currentSceneDataItem) return;
+        // Guard against a double click while the first creation is still in flight.
+        if (this.currentSceneDataItem.system.notebookUuid) return this.#requestRefresh();
+
+        const notebook = await Item.create({
+            name: game.i18n.format("ME.Notebook.NewNotebookName", { name: this.currentSceneName ?? "" }).trim(),
+            type: "notebook"
+        });
+        if (!notebook) return;
+
+        await this.currentSceneDataItem.update({ "system.notebookUuid": notebook.uuid });
+        this.#requestRefresh();
     }
 
     static async #removeNotebook(event, btn) {

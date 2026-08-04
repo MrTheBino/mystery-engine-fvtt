@@ -9,7 +9,7 @@
     "description": "",
     "active": true,
     "hidden": false,
-    "moveDescription": "<p>When you <em>search for a clue, conduct research, or otherwise gather information</em>, describe how you’re doing so and roll with an appropriate ability.</p><p><strong>On a hit</strong>, you find a Clue. The Keeper will tell you what it is. </p><p><strong>On a 7–9,</strong> there’s a complication—either with the Clue itself, or a complication you encounter while searching. The Keeper will tell you what the complication is. </p><p><strong>On a 12+</strong>, you also find a Void Clue OR you learn something about the Dark Conspiracy in Brindlewood Bay (Keeper’s choice).</p>",
+    "moveDescription": "<p>When you <em>search for a clue, conduct research, or otherwise gather information</em>, describe how you’re doing so and roll with an appropriate ability.</p><p>[ON hit] you find a Clue. The Keeper will tell you what it is. </p><p>[ON 7-9] </strong> there’s a complication—either with the Clue itself, or a complication you encounter while searching. The Keeper will tell you what the complication is. </p><p>[ON 12+] you also find a Void Clue OR you learn something about the Dark Conspiracy in Brindlewood Bay (Keeper’s choice).</p>",
     "checkboxes": []
   },
   "effects": [],

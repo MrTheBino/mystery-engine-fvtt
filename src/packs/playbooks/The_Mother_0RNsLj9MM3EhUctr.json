@@ -1,0 +1,750 @@
+{
+  "name": "The Mother",
+  "type": "mystery-actor",
+  "_id": "0RNsLj9MM3EhUctr",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "editMode": false,
+    "biography": "<p>Few understand the mysteries of human anatomy like you do. You are one of the most brilliant medical minds in London and could take your place as a lecturer at any number of esteemed academies. But you have different ideas, different plans; you are no longer interested in merely preserving life, but creating it! And so you’ll do what you must to survive—tending to the prostitutes dying of consumption, assisting Scotland Yard with grisly, forensic inquiry, and creeping about in the dark with these new people, these Hunters with whom you share a home—but always you are focused on the new life growing in your secret womb, your child, the one you hope will capture even the faintest reflection of the person you loved and lost.</p>",
+    "notes": "",
+    "labels": [
+      {
+        "name": "Look",
+        "value": ""
+      },
+      {
+        "name": "Vice",
+        "value": ""
+      }
+    ],
+    "conditions": [],
+    "abilities": [
+      {
+        "name": "Vitality",
+        "value": 0
+      },
+      {
+        "name": "Composure",
+        "value": 1
+      },
+      {
+        "name": "Reason",
+        "value": 1
+      },
+      {
+        "name": "Presence",
+        "value": 0
+      },
+      {
+        "name": "Sensitivity",
+        "value": 0
+      }
+    ],
+    "xpTrack": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "prototypeToken": {
+    "name": "The Mother",
+    "displayName": 0,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "disposition": 1,
+    "flags": {}
+  },
+  "items": [
+    {
+      "name": "The Child",
+      "type": "move",
+      "_id": "LXpFActxBx4XhTjL",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 0,
+        "description": "<p>You have a secret laboratory in Hargrave House where you are building a person from body parts you acquire in the city. When the time is right, you will use principles of chemistry and alchemy to give your creation life. When you acquire a body part for the Child, check it off from the list below and narrate a brief, pleasant memory of the person you lost that is triggered by holding the part in your hands.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "<p>When you acquire all the necessary parts or are instructed to do so by the Mask of the Future, you attempt to bring the Child to life and roll with Reason. If you have acquired all the parts, you can disregard the result of the roll and pick whichever outcome you like.</p><ul><li>[ON 10+] the Child is alive, and they love you very much. You may add the following to your Dawn questions (it is always selected): “Did you teach the Child a lesson about what it means to be human?”</li><li>[ON 7-9] the Child is alive, but it is a disappointment or a horror. Retire this character to obscurity; The Orphan (Hunter) is now available.</li><li>[ON miss] the Child is alive and consumed by anger and fear. Tell the Keeper to put The Orphan (Threat) in play.</li></ul>",
+        "active": true,
+        "hidden": false,
+        "checkboxes": [
+          {
+            "checked": false,
+            "description": "Head"
+          },
+          {
+            "checked": false,
+            "description": "Hair"
+          },
+          {
+            "checked": false,
+            "description": "Eyes"
+          },
+          {
+            "checked": false,
+            "description": "Blood"
+          },
+          {
+            "checked": false,
+            "description": "Heart"
+          },
+          {
+            "checked": false,
+            "description": "Arms"
+          },
+          {
+            "checked": false,
+            "description": "Guts"
+          },
+          {
+            "checked": false,
+            "description": "Lungs"
+          },
+          {
+            "checked": false,
+            "description": "Torso"
+          },
+          {
+            "checked": false,
+            "description": "Legs"
+          },
+          {
+            "checked": false,
+            "description": "Hands"
+          },
+          {
+            "checked": false,
+            "description": "Sex Organs"
+          },
+          {
+            "checked": false,
+            "description": "Feet"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0RNsLj9MM3EhUctr.LXpFActxBx4XhTjL"
+    },
+    {
+      "name": "Night Work",
+      "type": "move",
+      "_id": "aIdtYRo68p8iI6Ih",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 1,
+        "description": "<p>During a Hargrave House Night Phase, you spend the evening doing house calls, helping Scotland Yard examine corpses dragged from the river, and, of course, working on the Child. Choose three from the list below during the Dawn Phase that follows:</p><ul><li>You find a Clue; the Keeper will describe it.</li><li>You find a Clue that can be used for a future Threat; tell the Keeper what the Clue is.</li><li>You acquire a body part for the Child (can be chosen more than once).</li><li>You find a keepsake; ask another Hunter what it is and then add it to your Personal Quarters.</li></ul>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0RNsLj9MM3EhUctr.aIdtYRo68p8iI6Ih"
+    },
+    {
+      "name": "Field Medicine",
+      "type": "move",
+      "_id": "cjpR0ce4a9qKn13i",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 2,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "<p>When you <strong>treat someone’s physical injuries</strong>, roll with Composure.</p><ul><li>[ON hit] a fellow Hunter suffers no die roll penalties from a physical Condition (however, the Condition is not cleared). A Side Character is stabilized or their life is saved.</li><li>[ON 10+] if appropriate (or with the consent of their player in the case of treating a Hunter), you also manage to get a body part for the Child.</li></ul>",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0RNsLj9MM3EhUctr.cjpR0ce4a9qKn13i"
+    },
+    {
+      "name": "Beneath the Skin",
+      "type": "move",
+      "_id": "iqwoNwOtehSs4WRe",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 3,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "<p>When you <strong>examine a corpse</strong>, you may ask the Keeper two of the following:</p><ul><li>How did this person die? The Keeper will answer with a Clue.</li><li>What would an untrained eye overlook here? The Keeper will answer with a Clue.</li><li>Can I take a body part for the Child without anyone noticing? If the Keeper says yes, acquire a body part for the Child. If the Keeper says no, you can still attempt to take the body part, possibly triggering other moves.</li></ul>",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0RNsLj9MM3EhUctr.iqwoNwOtehSs4WRe"
+    },
+    {
+      "name": "The Resurrectionists",
+      "type": "move",
+      "_id": "TGgtZJhGJ41Bwk1Z",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 4,
+        "description": "<p>A gang of graverobbers led by a man called Harley White (dingy workman’s clothes, cracked teeth, smells of gravedirt) is loyal to you. Each Dusk Phase, pick two:</p><ul><li>The graverobbers will dig up corpses that night; during the Dawn Phase, acquire a body part for the Child.</li><li>The graverobbers will search for other valuables that night; during the Dawn Phase, ask another Hunter what they found and add it to your Personal Quarters.</li><li>A graverobber, either Harley or another (name them), will accompany you during the upcoming Night Phase. Take the following Condition: <strong>Ghoulish</strong>. Any rolls associated with actions the graverobber is helping you with are taken at advantage.</li><li>You’ll face no blowback or complications from any criminal activities the graverobbers get up to that night.</li></ul>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 4000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0RNsLj9MM3EhUctr.TGgtZJhGJ41Bwk1Z"
+    },
+    {
+      "name": "Infirmary",
+      "type": "move",
+      "_id": "dZrQ7dQLnOGqVGpX",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 5,
+        "description": "<p>Tell the Keeper to put the Infirmary into play. Add Medical Texts to your Personal Quarters; this item is never marked.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 5000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0RNsLj9MM3EhUctr.dZrQ7dQLnOGqVGpX"
+    },
+    {
+      "name": "Dawn Questions",
+      "type": "checklist",
+      "_id": "ArzvXqTuBcQTb6Bx",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 6,
+        "description": "<p><em>The first three are always marked. Mark two more.</em></p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": true,
+            "text": "Did the Hunters answer a Question?"
+          },
+          {
+            "selected": true,
+            "text": "Did the Hunters resolve a Threat?"
+          },
+          {
+            "selected": true,
+            "text": "Did you experience an Echo in the Night?"
+          },
+          {
+            "selected": false,
+            "text": "Did you dismiss the possibility of a supernatural explanation despite everything you’ve experienced?"
+          },
+          {
+            "selected": false,
+            "text": "Did you secretly engage in romantic or emotional behavior at odds with your aloof, logical exterior?"
+          },
+          {
+            "selected": false,
+            "text": "Did you put your hands in a pile of guts and love every moment of it?"
+          },
+          {
+            "selected": false,
+            "text": "Did you show physical affection toward the Child while someone else was looking?"
+          },
+          {
+            "selected": false,
+            "text": "Did you have a conversation with the Child while no one was looking?"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 6000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0RNsLj9MM3EhUctr.ArzvXqTuBcQTb6Bx"
+    },
+    {
+      "name": "Advancements",
+      "type": "checklist",
+      "_id": "qkiLhYrIRfLVokIY",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 7,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional move from your playbook."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional move from your playbook."
+          },
+          {
+            "selected": false,
+            "text": "Write a custom move for your character."
+          },
+          {
+            "selected": false,
+            "text": "Unmark everything in your Personal Quarters."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 7000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0RNsLj9MM3EhUctr.qkiLhYrIRfLVokIY"
+    },
+    {
+      "name": "Personal Quarters",
+      "type": "checklist",
+      "_id": "lN4WxWL04rNtVACk",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 8,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": true,
+        "entries": [
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 8000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0RNsLj9MM3EhUctr.lN4WxWL04rNtVACk"
+    },
+    {
+      "name": "The Mask of the Past",
+      "type": "checklist",
+      "_id": "xfvUYAOMS9RwDPcx",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 9,
+        "description": "<p><em>Mark the first unmarked box.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": true,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "You lost someone very important to you. Who were they? Name them."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the first time you experienced love for the person you lost."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the happiest day you shared with the person you lost."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the time you had a terrible fight with the person you lost."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the time when you first realized you and the person you lost weren’t going to be together forever."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the time when the person you lost was slipping away from you."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the time when you finally said goodbye to the person you lost."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0RNsLj9MM3EhUctr.xfvUYAOMS9RwDPcx"
+    },
+    {
+      "name": "The Mask of the Future",
+      "type": "checklist",
+      "_id": "nrGws7aHmmwS6Jrg",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 10,
+        "description": "<p><em>If no boxes are marked, you can retire to safety or obscurity instead of putting on this mask; tell the other Hunters what the future holds for you. Otherwise, mark any box you wish.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": false,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "[b]The Gilded Door:[/b] Take the following Condition: Most-Beloved. Tell the other Hunters they can no longer choose The Gilded Door on their own playbook (this does not count as being marked for them). You can never clear Most-Beloved."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Moss-Covered Gate:[/b] You must attempt to bring the Child to life."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Darkened Threshold:[/b] Narrate a scene in which you destroy a professional rival."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Cosmic Passage:[/b] Increase your Sensitivity by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Blood-Soaked Portal:[/b] Narrate a scene in which you are physically destroyed. This character is now retired."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0RNsLj9MM3EhUctr.nrGws7aHmmwS6Jrg"
+    },
+    {
+      "name": "Names, Look & Vice",
+      "type": "text",
+      "_id": "Q6ZE6IlVK0WZdDeb",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "position": 11,
+        "description": "<p><strong>First name</strong> — <em>circle one or make up your own.</em><br>John, Thomas, William, Richard, Robert, Samuel, Michael, Geoffrey, Jaques, Vishwanath, Malick, Victor, Mary, Susanna, Elinor, Alice, Dorothy, Grace, Hiba, Shaoming, Ravathi, Paloma</p><p><strong>Surname</strong> — <em>circle one or make up your own.</em><br>Stockmore, Branford, Beckland, Fenworth, Swindrake, Somerrich, Norhurst, Clayridge, Wickton, Safby, al-Kabir, Waldschmidt, Ghoshal, Carrión, Blakeman, Johansen, Weiss</p><p><strong>Look (circle three)</strong> — <em>circle one or make up your own.</em><br>Bowler hat, second-hand silk hat, close-cropped hair, sunken eyes, piercing eyes, rimless eyeglasses with tortoise shell detail, spectacles with yellow-smoked lenses, hollowed-out cheeks, pale skin, five o’clock shadow, unkempt beard, tartan dress, Indian “cone” pattern dress, white shirt and fawn trousers, vermillion waistcoat, Navy blue frock coat, buckskin trousers, clean and unadorned hands, calfskin gloves, leather Wellingtons, worn work boots</p><p><strong>Vice</strong> — <em>circle one or make up your own.</em><br>Cigarettes, coffee, Turkish baths, cleansing tonics, voyeurism.</p>",
+        "groupName": "Character Creation",
+        "groupNameDisplayed": true,
+        "groupPosition": 3,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 11000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0RNsLj9MM3EhUctr.Q6ZE6IlVK0WZdDeb"
+    }
+  ],
+  "effects": [],
+  "folder": "sNOCvHxF7E9t1aaU",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "14.3.5",
+    "createdTime": 1785801600000,
+    "modifiedTime": 1785801600000,
+    "lastModifiedBy": null,
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "_key": "!actors!0RNsLj9MM3EhUctr"
+}

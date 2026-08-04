@@ -1,0 +1,717 @@
+{
+  "name": "The Orphan",
+  "type": "mystery-actor",
+  "_id": "pzJIzv6k4lPT5rTa",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "editMode": false,
+    "biography": "<p><em>Note: This playbook can only be selected as a result of The Child move on The Mother playbook.</em></p><p>You were not. And then, quite suddenly, you were. The only thing you remember of your creator is their face, twisted in anguish and disappointment. They abandoned their work with Hargrave House, and left you here, orphaned… but not alone. The others—the Hunters—they found you. They helped you remember how to speak, and were kind to you in their way. They let you stay in the laboratory, and made it comfortable for you; they gave you things from the outside world to help you better understand it. Like them, you are a creature of the shadows, and you always will be. But unlike them, you understand there can be no shadows without light.</p>",
+    "notes": "",
+    "labels": [
+      {
+        "name": "Look",
+        "value": ""
+      },
+      {
+        "name": "Vice",
+        "value": ""
+      }
+    ],
+    "conditions": [
+      "A Disappointment and a Horror"
+    ],
+    "abilities": [
+      {
+        "name": "Vitality",
+        "value": 2
+      },
+      {
+        "name": "Composure",
+        "value": 0
+      },
+      {
+        "name": "Reason",
+        "value": 0
+      },
+      {
+        "name": "Presence",
+        "value": 0
+      },
+      {
+        "name": "Sensitivity",
+        "value": 0
+      }
+    ],
+    "xpTrack": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "prototypeToken": {
+    "name": "The Orphan",
+    "displayName": 0,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "disposition": 1,
+    "flags": {}
+  },
+  "items": [
+    {
+      "name": "The Family",
+      "type": "move",
+      "_id": "pWDv8hvXrBeQZghK",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 0,
+        "description": "<p>You help Hargrave House in order to earn your keep, but the people who live there can never be your family since they are even more broken than you. There is another group of people in London you watch from afar in the hopes they will someday notice and accept you. Who are they?</p><ul><li>A theater troupe</li><li>A gang of rat catchers</li><li>An actual family</li><li>(someone else)</li></ul><p>The group you hope to join is suffering from a problem. What is it?</p><ul><li>They are on the verge of financial ruin</li><li>A member of the group is deathly ill</li><li>The group is being threatened by someone</li><li>(something else)</li></ul><p>You will secretly help the group solve this problem and then, when the time is right, present yourself to them. From now on, when you would collect a Reward from resolving a Threat, instead mark a circle below and describe how something from the recently resolved Threat can be used to help the group with their problem.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "<p>When <strong>all three circles are marked</strong>, roll with Presence; this roll is always made at disadvantage.</p><ul><li>[ON 10+] they are thankful for your help and welcome you as one of their own. Narrate a short epilogue showing your life with your new family. This character is now retired.</li><li>[ON 7-9] they shun you and call you unkind names. Unmark a circle from this move.</li><li>[ON miss] they are horrified, and turn on you. Mark The Blood-Soaked Portal.</li></ul>",
+        "active": true,
+        "hidden": false,
+        "checkboxes": [
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!pzJIzv6k4lPT5rTa.pWDv8hvXrBeQZghK"
+    },
+    {
+      "name": "Caliban's Fury",
+      "type": "move",
+      "_id": "hXbWR2k0SIcKFaFn",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 1,
+        "description": "<p>You are as strong as ten men, and even stronger when you’re angry. Take advantage on any die rolls associated with actions involving raw strength. Add 1 to the roll if you have any negative emotional Conditions (A Disappointment and a Horror does not count).</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!pzJIzv6k4lPT5rTa.hXbWR2k0SIcKFaFn"
+    },
+    {
+      "name": "Day Work",
+      "type": "move",
+      "_id": "MIxlRcpiYEcVffi1",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 2,
+        "description": "<p>When not engaged in the hunt with the residents of Hargrave House, you spend your days performing small acts of kindness from the shadows. During the Dawn Phase, you can say you’re going to do Day Work, in which case you take no action during the Day Phase. Instead, as a player, describe something pleasant or hopeful in the other Hunters’ scenes. Then choose three from the list below during the Dusk Phase that follows:</p><ul><li>You find a Clue; the Keeper will describe it.</li><li>You find a Clue that can be used for a future Threat; tell the Keeper what it is.</li><li>You make a friend; name them and describe them. They are a Side Character.</li><li>You find a treasure; ask another Hunter what it is. If you keep it, add it to your Personal Quarters. If you give it to another Hunter, they add it to their Personal Quarters and you mark XP.</li></ul>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!pzJIzv6k4lPT5rTa.MIxlRcpiYEcVffi1"
+    },
+    {
+      "name": "The Titan's Ember",
+      "type": "move",
+      "_id": "1ejMVOcLEGyToj8Y",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 3,
+        "description": "<p>You can produce fire equal to that of a torch from your hands. You can also control existing fires within eyesight by doubling their intensity or reducing their size by half. You can snuff a candle or lantern from twenty paces.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!pzJIzv6k4lPT5rTa.1ejMVOcLEGyToj8Y"
+    },
+    {
+      "name": "Quicksilver Voice",
+      "type": "move",
+      "_id": "OF8CCaz8UVyHcEei",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 4,
+        "description": "<p>You are a gifted conversationalist and deeply sympathetic to those who hear you speak—but only if they can’t see you. Take advantage on any die rolls associated with actions involving speech or persuasion so long as you are doing so from the shadows or are otherwise physically obscured.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 4000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!pzJIzv6k4lPT5rTa.OF8CCaz8UVyHcEei"
+    },
+    {
+      "name": "The Burning Aperture",
+      "type": "move",
+      "_id": "g7ZkHABAGStQZqsd",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 5,
+        "description": "<p>You are a physical manifestation of creative energy, a literal portal between idea and execution. So long as you are present in the scene, when a fellow Hunter would mark the Mask of the Future, they can mark this move instead and describe how your energy pushes them to success. When all three boxes are marked, mark XP.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": [
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          },
+          {
+            "checked": false,
+            "description": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 5000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!pzJIzv6k4lPT5rTa.g7ZkHABAGStQZqsd"
+    },
+    {
+      "name": "Dawn Questions",
+      "type": "checklist",
+      "_id": "IiA8NO4JcFJbRUrD",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 6,
+        "description": "<p><em>The first three are always marked. Mark two more.</em></p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": true,
+            "text": "Did the Hunters answer a Question?"
+          },
+          {
+            "selected": true,
+            "text": "Did the Hunters resolve a Threat?"
+          },
+          {
+            "selected": true,
+            "text": "Did you experience an Echo in the Night?"
+          },
+          {
+            "selected": false,
+            "text": "Did you watch someone from the shadows, your heart filled with longing?"
+          },
+          {
+            "selected": false,
+            "text": "Did you use brute strength to get your way?"
+          },
+          {
+            "selected": false,
+            "text": "Did you deliver an embittered monologue about being abandoned by your creator?"
+          },
+          {
+            "selected": false,
+            "text": "Were you extra gentle with someone or something because you know how strong you are?"
+          },
+          {
+            "selected": false,
+            "text": "Did you openly walk among people during the day?"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 6000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!pzJIzv6k4lPT5rTa.IiA8NO4JcFJbRUrD"
+    },
+    {
+      "name": "Advancements",
+      "type": "checklist",
+      "_id": "CltAtHPO4NbkiWzQ",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 7,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional move from your playbook."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional move from your playbook."
+          },
+          {
+            "selected": false,
+            "text": "Write a custom move for your character."
+          },
+          {
+            "selected": false,
+            "text": "Unmark everything in your Personal Quarters."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 7000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!pzJIzv6k4lPT5rTa.CltAtHPO4NbkiWzQ"
+    },
+    {
+      "name": "Personal Quarters",
+      "type": "checklist",
+      "_id": "2RIOkSMaImntwjjR",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 8,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": true,
+        "entries": [
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 8000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!pzJIzv6k4lPT5rTa.2RIOkSMaImntwjjR"
+    },
+    {
+      "name": "The Mask of the Past",
+      "type": "checklist",
+      "_id": "s9u5jsvOJjHdT5HQ",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 9,
+        "description": "<p><em>You don’t have a true past. Instead, the spirits attached to the body parts you are constructed from stir up memories that are not yours. You can live with these memories or learn to quiet them.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": true,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Narrate a flashback to someone’s childhood in which they are showered with love. Then, if you wish, describe how you quiet this part of you."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to someone’s wedding day. Then, if you wish, describe how you quiet this part of you."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to when someone’s first child was born. Then, if you wish, describe how you quiet this part of you."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the time someone lost their mother. Then, if you wish, describe how you quiet this part of you."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the first time someone journeyed across the sea. Then, if you wish, describe how you quiet this part of you."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the time someone lost all hope. Then, if you wish, describe how you quiet this part of you."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the moment someone was brutally murdered. Then, if you wish, describe how you quiet this part of you."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!pzJIzv6k4lPT5rTa.s9u5jsvOJjHdT5HQ"
+    },
+    {
+      "name": "The Mask of the Future",
+      "type": "checklist",
+      "_id": "CKaqF6WAqC9UkERO",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 10,
+        "description": "<p><em>If no boxes are marked, you can retire to safety or obscurity instead of putting on this mask; tell the other Hunters what the future holds for you. Otherwise, mark any box you wish.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": false,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "[b]The Darkened Threshold:[/b] Narrate a scene in which you engage in self-destructive behavior because of the way society treats you."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Cosmic Passage:[/b] Increase your Sensitivity by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Blood-Soaked Portal:[/b] Narrate a scene in which you are physically destroyed. This character is now retired."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!pzJIzv6k4lPT5rTa.CKaqF6WAqC9UkERO"
+    },
+    {
+      "name": "Names, Look & Vice",
+      "type": "text",
+      "_id": "KcuL4Bm6jV3gL4rc",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "position": 11,
+        "description": "<p><strong>Name</strong> — <em>circle one or make up your own.</em><br>Adam, Josef, Emmet, Rhodes, Clay, Boris, Manu, Adapa, Epimetheus, Ask, Eve, Eliza, Embla, Pandora, Lilith, Mashyana, Elsa, Mary, Susana, Galatea</p><p><strong>Look (circle three)</strong> — <em>circle one or make up your own.</em><br>Moth-eaten top hat, bilgewater black hair, prominent facial scar, empty eye socket, blackened teeth, exposed jawbone, misshapen head, distended tattoos, prominent stitches holding you together, black duster, twisted spine, taxidermied (pick one: owl/crow/weasel/something else), oversized and undersized limbs, mutton fists, weeping pustules, trousers covered in patches, black dress with petticoat, striped stockings, shackles, muddy boots</p><p><strong>Vice</strong> — <em>circle one or make up your own.</em><br>Poetry, tea & biscuits, helping animals, high places, breaking things</p>",
+        "groupName": "Character Creation",
+        "groupNameDisplayed": true,
+        "groupPosition": 3,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 11000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!pzJIzv6k4lPT5rTa.KcuL4Bm6jV3gL4rc"
+    }
+  ],
+  "effects": [],
+  "folder": "sNOCvHxF7E9t1aaU",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "14.3.5",
+    "createdTime": 1785801600000,
+    "modifiedTime": 1785801600000,
+    "lastModifiedBy": null,
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "_key": "!actors!pzJIzv6k4lPT5rTa"
+}

@@ -1,6 +1,6 @@
 {
-  "TYPES":{
-    "Actor":{
+  "TYPES": {
+    "Actor": {
       "mystery-actor": "Mystery Actor",
       "mystery-threat": "Mystery Threat"
     },
@@ -156,6 +156,9 @@
       "UnnamedNotebook": "Unnamed Notebook",
       "SceneDataName": "Scene Data: {name}",
       "NoNotebook": "No notebook is linked to this scene.",
+      "CreateNotebook": "Create notebook for this scene",
+      "CreateNotebookHint": "Create one now, or drag an existing notebook item into this window.",
+      "NewNotebookName": "Notebook: {name}",
       "NoActors": "No actors linked to this notebook.",
       "ActiveMoves": "Active Moves",
       "Actors": {
@@ -239,13 +242,18 @@
       "Disadvantage": "Disadvantage",
       "RollNormal": "Roll",
       "RollAdvantage": "Roll with Advantage",
-      "RollDisadvantage": "Roll with Disadvantage"
+      "RollDisadvantage": "Roll with Disadvantage",
+      "ManualRoll": "Manual Roll",
+      "ManualRollTitle": "Manual roll with a modifier",
+      "Modifier": "Modifier"
     },
     "Roll": {
       "StrongHit": "Strong Hit",
       "WeakHit": "Weak Hit",
       "Miss": "Miss",
-      "Dropped": "Dropped die"
+      "Dropped": "Dropped die",
+      "HitShort": "hit",
+      "MissShort": "miss"
     }
   }
 }

@@ -155,6 +155,23 @@
     }
   }
 
+  // Sits next to the abilities and opens a roll with a freely typed modifier.
+  button.manual-roll-btn {
+    align-self: center;
+    flex: 0 0 auto;
+    margin: 0 1rem 0 0.5rem; // keep it clear of the XP track that follows
+    padding: 0.25rem 0.45rem;
+    background: var(--me-surface-alt);
+    color: var(--me-accent);
+    border: 1px solid var(--me-border-mid);
+
+    &:hover {
+      background: var(--me-accent-light);
+      border-color: var(--me-accent);
+      color: var(--me-accent-hover);
+    }
+  }
+
   .ability-name {
     font-weight: 600;
     color: var(--me-accent-hover);

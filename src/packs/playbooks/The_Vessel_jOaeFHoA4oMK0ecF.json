@@ -1,0 +1,697 @@
+{
+  "name": "The Vessel",
+  "type": "mystery-actor",
+  "_id": "jOaeFHoA4oMK0ecF",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "editMode": false,
+    "biography": "<p>For as long as you can remember, dark entities have been near. They lurk just inside your peripheral vision, just at the mirror’s edge. When you close your eyes, you can actually feel them: their cold breath, their oily touch… an occasional feverish embrace. They want to be inside you; they want to rub against your guts and deposit their power. Others are drawn to you as well: those who would use you to master these dark things in order to serve their own agenda. Some of these interlopers, these usurpers, can be of use, such as the Hunters with whom you share a home. Others, like the coven, are best avoided. In either case, you are no one’s object, tool, or weapon; you are no mere bystander. Your fate is yours to shape.</p>",
+    "notes": "",
+    "labels": [
+      {
+        "name": "Look",
+        "value": ""
+      },
+      {
+        "name": "Vice",
+        "value": ""
+      }
+    ],
+    "conditions": [],
+    "abilities": [
+      {
+        "name": "Vitality",
+        "value": -1
+      },
+      {
+        "name": "Composure",
+        "value": 0
+      },
+      {
+        "name": "Reason",
+        "value": 1
+      },
+      {
+        "name": "Presence",
+        "value": 1
+      },
+      {
+        "name": "Sensitivity",
+        "value": 1
+      }
+    ],
+    "xpTrack": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "prototypeToken": {
+    "name": "The Vessel",
+    "displayName": 0,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "disposition": 1,
+    "flags": {}
+  },
+  "items": [
+    {
+      "name": "Rites of Salt and Smoke",
+      "type": "move",
+      "_id": "HZbg2ZvXnkwfttl3",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 0,
+        "description": "<p>You are skilled at contacting dark entities in order to perform magical rituals. Choose what kinds of offerings these entities require:</p><ul><li>Blood sacrifice</li><li>Perversion of Christian rituals</li><li>Self-harm</li><li>(write your own)</li></ul>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "<p>When you <strong>give offerings to the dark entities that are always lingering in your peripheral vision</strong>, roll with Sensitivity.</p><ul><li>[ON 10+] the magic works without further cost: choose your effect.</li><li>[ON 7-9] the magic works imperfectly: choose your effect and a complication.</li><li>[ON 12+] you can unmark The Cosmic Passage if it is marked. If you do so, increase your Reason by 2 but leave your Sensitivity the same. Ignore this result if your Sensitivity is 3.</li></ul><h4>Effects</h4><ul><li>Do one thing that is beyond human limitations.</li><li>Bar a place or portal to a specific person or creature.</li><li>Trap a specific person or creature.</li><li>Banish a spirit or curse from the person, object, or place it inhabits.</li><li>Communicate with someone or something that you do not share a language with.</li><li>Observe another place or time.</li></ul><h4>Complications</h4><ul><li>The effect is less than you wanted.</li><li>The effect is short-lived.</li><li>You take a Condition; the Keeper will tell you what.</li><li>The magic draws immediate, unwanted attention.</li><li>The magic has a problematic side effect.</li></ul>",
+        "active": true,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!jOaeFHoA4oMK0ecF.HZbg2ZvXnkwfttl3"
+    },
+    {
+      "name": "A Thinning of the Veil",
+      "type": "move",
+      "_id": "iANd4Bea51RQaoi8",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 1,
+        "description": "<p>When you take this move, choose your divination tools and add them to your Personal Quarters:</p><ul><li>Tarot cards</li><li>Star charts</li><li>Rune stones</li><li>(write your own)</li></ul>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "<p>When you <strong>consult your divination tools to glimpse the future</strong>, roll with Sensitivity.</p><ul><li>[ON hit] you may ask “What is about to happen?” The Keeper will answer truthfully but not necessarily completely.</li><li>[ON 10+] you may also ask “Why is this about to happen?”</li><li>[ON 12+] you also find a Clue; the Keeper will describe it.</li><li>[ON miss] you instead glimpse a terrible fate awaiting one of your fellow Hunters. Hold 1. Just before they roll for a move, you may spend the hold to say, “The [cards/stars/runes/x] have shown me this is how you’re going to die.” They then choose to back down or go through with it. If they go through with it, they mark a box on their XP track, but the miss result on their move is replaced with, “Your character is immediately retired from the game. The Vessel will describe it.”</li></ul>",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!jOaeFHoA4oMK0ecF.iANd4Bea51RQaoi8"
+    },
+    {
+      "name": "A Beacon in the Dark",
+      "type": "move",
+      "_id": "18tG1i7LPkgDzRoN",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 2,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "<p>When you <strong>walk the streets of London at night, your consciousness spreading across the city like a vast spider web</strong>, roll with Sensitivity.</p><ul><li>[ON hit] you are immediately confronted by a Threat or a personified Danger related to the Threat. You may ask them two questions from the list below. They will not answer directly, but rather in the form of a Clue.</li><li>[ON 10+] the Threat or Danger departs as soon as the questions are answered.</li></ul><ul><li>Where is your lair?</li><li>How can I get you to ___?</li><li>What do you intend to do?</li><li>What do you want from ___?</li><li>What frightens you?</li></ul>",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!jOaeFHoA4oMK0ecF.18tG1i7LPkgDzRoN"
+    },
+    {
+      "name": "Witch’s Cupboard",
+      "type": "move",
+      "_id": "lyc9R6dIccsHWVlS",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 3,
+        "description": "<p>You have a cupboard in Hargrave House containing supplies needed for rituals and remedies. When you take this move, circle three (or write your own) and add them to your Personal Quarters. The cupboard can then be used five additional times, by you or another Hunter. When a Hunter <strong>searches the cupboard for something to help them with a ritual</strong>, they can circle one (or make up their own) and add it to their Personal Quarters.</p><p><em>Candles, altar cloth, frankincense, pendulum, herbs, athamé, essential oils, feathers, salt, florid water, holy water, unholy water, quartz crystals, crystal ball, gravedirt, feathers, charcoal sticks, lavender ash, broom, statues of saints, statue of The Green Man, rosary beads, Christian symbols, chime</em></p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!jOaeFHoA4oMK0ecF.lyc9R6dIccsHWVlS"
+    },
+    {
+      "name": "Ritual Chamber",
+      "type": "move",
+      "_id": "MWSOmukqr1cc64Wh",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 4,
+        "description": "<p>You have prepared one of the rooms in Hargrave House to be a place for performing powerful magic. Increase your Reason by 1 (max 3) and tell the Keeper to put the Ritual Chamber in play.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 4000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!jOaeFHoA4oMK0ecF.MWSOmukqr1cc64Wh"
+    },
+    {
+      "name": "Familiar",
+      "type": "move",
+      "_id": "2o6EcPOccNfgV45f",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 5,
+        "description": "<p>You have a small animal companion through which you can work some of your magic. When you take this move, choose your companion, name it, and add it to your Personal Quarters; it can never be marked so long as the die roll you are taking advantage on is associated with magic related to the familiar’s listed affinity.</p><ul><li>Toad (harming others)</li><li>Crow (seeing distant places)</li><li>Cat (drawing things to you)</li><li>Snake (uncovering forbidden knowledge)</li><li>Owl (rituals worked at night)</li></ul>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 5000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!jOaeFHoA4oMK0ecF.2o6EcPOccNfgV45f"
+    },
+    {
+      "name": "Dawn Questions",
+      "type": "checklist",
+      "_id": "sJT6UkL7IAsJWAqC",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 6,
+        "description": "<p><em>The first three are always marked. Mark two more.</em></p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": true,
+            "text": "Did the Hunters answer a Question?"
+          },
+          {
+            "selected": true,
+            "text": "Did the Hunters resolve a Threat?"
+          },
+          {
+            "selected": true,
+            "text": "Did you experience an Echo in the Night?"
+          },
+          {
+            "selected": false,
+            "text": "Did you have a face-to-face encounter with a dark entity?"
+          },
+          {
+            "selected": false,
+            "text": "Did you counsel someone using your supernatural affinities as the basis for that advice?"
+          },
+          {
+            "selected": false,
+            "text": "Did you perform a ritual?"
+          },
+          {
+            "selected": false,
+            "text": "Did you make love to a human in order to forget the darkness?"
+          },
+          {
+            "selected": false,
+            "text": "Did you make love to a dark entity because you wanted to?"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 6000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!jOaeFHoA4oMK0ecF.sJT6UkL7IAsJWAqC"
+    },
+    {
+      "name": "Advancements",
+      "type": "checklist",
+      "_id": "uRbafBIocojfoqZz",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 7,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional move from your playbook."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional move from your playbook."
+          },
+          {
+            "selected": false,
+            "text": "Write a custom move for your character."
+          },
+          {
+            "selected": false,
+            "text": "Unmark everything in your Personal Quarters."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 7000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!jOaeFHoA4oMK0ecF.uRbafBIocojfoqZz"
+    },
+    {
+      "name": "Personal Quarters",
+      "type": "checklist",
+      "_id": "pc2iRNRpqGCsbYT1",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 8,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": true,
+        "entries": [
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 8000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!jOaeFHoA4oMK0ecF.pc2iRNRpqGCsbYT1"
+    },
+    {
+      "name": "The Mask of the Past",
+      "type": "checklist",
+      "_id": "fzgpD7EPnxEJKe3e",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 9,
+        "description": "<p><em>Mark the first unmarked box.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": true,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the time when you were in your mother’s womb that shows, even then, dark entities were interested in you."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to your childhood that shows the first time you encountered a dark entity."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to your young adulthood that shows your first sexual encounter with a dark entity."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to your young adulthood that shows a time when you used your supernatural affinities for selfish purposes."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to your young adulthood that shows when you first met the leader of the coven. Name them."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to your young adulthood that shows part of your initiation into the coven. Name the coven."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to an event that influenced you to leave the coven for good."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!jOaeFHoA4oMK0ecF.fzgpD7EPnxEJKe3e"
+    },
+    {
+      "name": "The Mask of the Future",
+      "type": "checklist",
+      "_id": "MQoqdV40DUfpyTAq",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 10,
+        "description": "<p><em>If no boxes are marked, you can retire to safety or obscurity instead of putting on this mask; tell the other Hunters what the future holds for you. Otherwise, mark any box you wish.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": false,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "[b]The Gilded Door:[/b] Take the following Condition: Most-Beloved. Tell the other Hunters they can no longer choose The Gilded Door on their own playbook (this does not count as being marked for them). You can never clear Most-Beloved."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Moss-Covered Gate:[/b] Tell the Keeper to put The Coven in play. The Keeper should immediately frame a scene showing that the Coven has arrived in London."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Darkened Threshold:[/b] Narrate a scene in which, possessed by a dark entity, you harm an innocent."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Cosmic Passage:[/b] Increase your Sensitivity by 1 (max 3) and reduce your Reason by 2."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Blood-Soaked Portal:[/b] Narrate a scene in which you are physically destroyed. This character is now retired."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!jOaeFHoA4oMK0ecF.MQoqdV40DUfpyTAq"
+    },
+    {
+      "name": "Names, Look & Vice",
+      "type": "text",
+      "_id": "YMArZZdJCwb84mx5",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "position": 11,
+        "description": "<p><strong>First name</strong> — <em>circle one or make up your own.</em><br>Helena, Ardent, Hence, Colizabel, Robeth, Isabert, Lepinna, Regess, Priyanka, Roberta, Caul, Bragen, Clance, Mortio, Orlence, Micham, Lancell, Dai, Liam, Dederich</p><p><strong>Surname</strong> — <em>circle one or make up your own.</em><br>Talifford, Thop, Arcpenney, Aufford, Henbury, Caesbury, Sand, al-Najjar, Dolorfino, Sabine, Unruh, Lekas, Bellacqua, Inoue, Rao, Davies, Jaggard</p><p><strong>Look (circle three)</strong> — <em>circle one or make up your own.</em><br>Silk hat with purple ribbons, a dark green veil with tiny onyx woven in, asymmetrical haircut, silver hairpins, red-stained lips, mismatched eyes, jeweled eye patch, black velvet coat with blood-red trim, choker with an amber jewel, upside down Christian cross necklace, lace shirt with stiffened collar, corset-trained, tailored men’s suit in burgundy and black, deep purple dress with petticoat, black lace gloves, raven feather cuffs, onyx and amethyst jewelry, bracelet with zodiac charms, parasol with delicate spider web motif, tall-heeled boots with vermillion laces, short boots with plum velvet trim</p><p><strong>Vice</strong> — <em>circle one or make up your own.</em><br>Absinthe, morphine, sex with dark entities, Sunday morning mass, examining your own blood</p>",
+        "groupName": "Character Creation",
+        "groupNameDisplayed": true,
+        "groupPosition": 3,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 11000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!jOaeFHoA4oMK0ecF.YMArZZdJCwb84mx5"
+    }
+  ],
+  "effects": [],
+  "folder": "sNOCvHxF7E9t1aaU",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "14.3.5",
+    "createdTime": 1785801600000,
+    "modifiedTime": 1785801600000,
+    "lastModifiedBy": null,
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "_key": "!actors!jOaeFHoA4oMK0ecF"
+}

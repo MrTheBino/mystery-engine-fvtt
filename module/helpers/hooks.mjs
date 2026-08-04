@@ -1,24 +1,33 @@
 import { NotebookApp } from "../apps/notebook-app.mjs";
 
 export function setupHooks() {
+    // The notebook sits in the control bar as its own entry, directly below Journal Notes
+    // (which is order 8, the last core control) instead of hiding inside its tool palette.
     Hooks.on("getSceneControlButtons", (controls) => {
-    let sidebarControls = {
-      notebook_app: {
+      controls.notebook_app = {
         name: "notebook_app",
+        order: 9,
         title: "Notebook",
         icon: "fas fa-scroll",
         visible: true,
-        onChange: () => NotebookApp.getInstance().render(true, { focus: true }),
-        button: true,
-      }
-    };
+        // No tools: this control is a plain button, see the renderSceneControls hook below.
+        tools: {}
+      };
+    });
 
-    controls.notes.tools = foundry.utils.mergeObject(
-      controls.notes.tools,
-      sidebarControls
-    );
-
-  });
+    // A top-level control would normally become the *active* layer on click, latch itself
+    // pressed and ignore a second click. The notebook only opens a window, so the click is
+    // intercepted before Foundry's delegated handler switches layers.
+    Hooks.on("renderSceneControls", (_app, html) => {
+      const button = html.querySelector('button[data-control="notebook_app"]');
+      if (!button || button.dataset.notebookBound) return;
+      button.dataset.notebookBound = "true";
+      button.addEventListener("click", event => {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        NotebookApp.getInstance().render(true, { focus: true });
+      });
+    });
 
     // remove the notebook-scene-item from the item directory and creation dialog, since it's only used as a container for scene-specific data and shouldn't be created manually by users
     Hooks.on("renderItemDirectory", (_app, html) => {

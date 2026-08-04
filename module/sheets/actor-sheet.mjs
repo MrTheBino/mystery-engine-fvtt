@@ -40,6 +40,7 @@ export default class MysteryActorSheet extends HandlebarsApplicationMixin(ActorS
       hideMoveItem: queued(MysteryActorSheet.#hideMoveItem),
       toggleQuestionResolved: queued(MysteryActorSheet.#toggleQuestionResolved),
       rollAbility: MysteryActorSheet.#rollAbility,
+      rollManual: MysteryActorSheet.#rollManual,
       toggleEditMode: queued(MysteryActorSheet.#toggleEditMode),
       toggleXpTrack: queued(MysteryActorSheet.#toggleXpTrack)
     },
@@ -429,5 +430,10 @@ export default class MysteryActorSheet extends HandlebarsApplicationMixin(ActorS
     const abilityName = target.dataset.abilityName ?? "";
     const abilityValue = parseInt(target.dataset.abilityValue ?? "0");
     new RollDialog({ abilityName, abilityValue, actor: this.actor }).render(true);
+  }
+
+  /** A roll that belongs to no ability — the player types the modifier themselves. */
+  static async #rollManual(event, target) {
+    new RollDialog({ manual: true, actor: this.actor }).render(true);
   }
 }

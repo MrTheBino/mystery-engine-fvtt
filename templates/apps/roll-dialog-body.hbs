@@ -1,7 +1,12 @@
 <div class="roll-dialog-body">
   <div class="roll-dialog-ability">
     <span class="roll-dialog-ability-name">{{abilityName}}</span>
+    {{#if manual}}
+    <input type="number" class="roll-dialog-modifier-input" value="{{abilityValue}}" step="1"
+      aria-label="{{localize 'ME.RollDialog.Modifier'}}" />
+    {{else}}
     <span class="roll-dialog-ability-modifier">{{abilityModifier}}</span>
+    {{/if}}
   </div>
   <div class="roll-dialog-buttons">
     <button type="button" class="roll-btn normal-btn" data-roll="normal">

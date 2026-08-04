@@ -9,7 +9,7 @@
     "description": "",
     "active": true,
     "hidden": false,
-    "moveDescription": "<p>Answer a Question When the Latchkeys have an open, freewheeling discussion about the answer to a Question once they have gathered a number of Clues equal to at least half the Question’s Complexity—and reach a consensus—roll plus the number of Clues incorporated into the answer or otherwise explained away, minus the question’s Complexity.</p><p><strong>On a 10+</strong>, the answer is correct and an Opportunity can be pursued. </p><p><strong>On a 7-9</strong>, as above, but the Keeper will add an unwelcome complication to the answer and/or pursuing the Opportunity will be more dangerous. </p><p><strong>On a miss</strong>, the answer is incorrect and the Keeper reacts. </p><p><strong>On a 12+</strong>, the Big Man will appear while the Latchkeys are pursuing the Opportunity.</p>",
+    "moveDescription": "<p>Answer a Question When the Latchkeys have an open, freewheeling discussion about the answer to a Question once they have gathered a number of Clues equal to at least half the Question’s Complexity—and reach a consensus—roll plus the number of Clues incorporated into the answer or otherwise explained away, minus the question’s Complexity.</p><p>[ON 10+] the answer is correct and an Opportunity can be pursued. </p><p>[ON 7-9] as above, but the Keeper will add an unwelcome complication to the answer and/or pursuing the Opportunity will be more dangerous. </p><p>[ON miss] the answer is incorrect and the Keeper reacts. </p><p>[ON 12+] the Big Man will appear while the Latchkeys are pursuing the Opportunity.</p>",
     "checkboxes": []
   },
   "effects": [],

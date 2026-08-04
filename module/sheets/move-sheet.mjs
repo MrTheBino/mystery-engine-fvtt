@@ -1,5 +1,6 @@
 const { HandlebarsApplicationMixin } = foundry.applications.api
 const { ItemSheetV2 } = foundry.applications.sheets
+import { formatMoveHTML } from '../helpers/move-markup.mjs';
 
 export default class MoveSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
   static DEFAULT_OPTIONS = {
@@ -33,9 +34,13 @@ export default class MoveSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       this.item.system.description,
       { relativeTo: this.item, rollData: this.item.getRollData() }
     );
-    context.moveDescriptionHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
-      this.item.system.moveDescription,
-      { relativeTo: this.item, rollData: this.item.getRollData() }
+    // Same treatment as on the actor sheet, so `[ON 10+]` shows as a badge here too and not
+    // as raw text. The ProseMirror editor still gets the untouched source to edit.
+    context.moveDescriptionHTML = formatMoveHTML(
+      await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+        this.item.system.moveDescription,
+        { relativeTo: this.item, rollData: this.item.getRollData() }
+      )
     );
     return context;
   }

@@ -32,6 +32,12 @@
   <div class="na-empty-state">
     <i class="fas fa-book-open fa-2x"></i>
     <p>{{localize "ME.Notebook.NoNotebook"}}</p>
+    {{#if canCreateNotebook}}
+    <p class="na-empty-hint">{{localize "ME.Notebook.CreateNotebookHint"}}</p>
+    <button type="button" class="na-create-notebook" data-action="createNotebook">
+      <i class="fas fa-plus"></i> {{localize "ME.Notebook.CreateNotebook"}}
+    </button>
+    {{/if}}
   </div>
 
 {{/if}}

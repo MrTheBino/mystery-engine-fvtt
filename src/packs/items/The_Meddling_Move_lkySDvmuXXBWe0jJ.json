@@ -9,7 +9,7 @@
     "description": "",
     "active": true,
     "hidden": false,
-    "moveDescription": "<p>When you search for a clue, conduct research, or otherwise gather information, describe how you’re doing so and roll with an appropriate ability.</p><p><strong>On a hit</strong>, you find a Clue. The Keeper will tell you what it is. </p><p><strong>On a 7–9</strong>, there’s a complication—either with the Clue itself, or a complication you encounter while searching. The Keeper will tell you what the complication is. </p><p><strong>On a 12+</strong>, you also find an Odyssey Tape OR you learn some unusual history about Degoya County (Keeper’s choice).</p><p></p>",
+    "moveDescription": "<p>When you search for a clue, conduct research, or otherwise gather information, describe how you’re doing so and roll with an appropriate ability.</p><p>[ON hit] you find a Clue. The Keeper will tell you what it is. </p><p>[ON 7-9] there’s a complication—either with the Clue itself, or a complication you encounter while searching. The Keeper will tell you what the complication is. </p><p>[ON 12+] you also find an Odyssey Tape OR you learn some unusual history about Degoya County (Keeper’s choice).</p><p></p>",
     "checkboxes": []
   },
   "effects": [],

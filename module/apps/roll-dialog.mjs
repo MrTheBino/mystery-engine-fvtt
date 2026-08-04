@@ -4,7 +4,9 @@ export class RollDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
     constructor(data = {}, options = {}) {
         super(options);
-        this.abilityName = data.abilityName ?? "";
+        // In manual mode no ability is involved: the modifier is typed into the dialog.
+        this.manual = data.manual ?? false;
+        this.abilityName = data.abilityName ?? (this.manual ? game.i18n.localize("ME.RollDialog.ManualRoll") : "");
         this.abilityValue = data.abilityValue ?? 0;
         this.actor = data.actor ?? null;
     }
@@ -35,7 +37,9 @@ export class RollDialog extends HandlebarsApplicationMixin(ApplicationV2) {
         const sign = this.abilityValue >= 0 ? '+' : '';
         return {
             ...context,
+            manual: this.manual,
             abilityName: this.abilityName,
+            abilityValue: this.abilityValue,
             abilityModifier: `${sign}${this.abilityValue}`
         };
     }
@@ -56,6 +60,18 @@ export class RollDialog extends HandlebarsApplicationMixin(ApplicationV2) {
             this.element.querySelector(`[data-roll="${mode}"]`)
                 ?.addEventListener('click', () => this.#roll(mode));
         }
+
+        const input = this.element.querySelector('.roll-dialog-modifier-input');
+        if (!input) return;
+        input.addEventListener('change', () => { this.abilityValue = this.#readModifier(input); });
+        input.focus();
+        input.select();
+    }
+
+    /** Reads the typed modifier, tolerating an empty field or a leading plus. */
+    #readModifier(input) {
+        const value = parseInt(input.value, 10);
+        return Number.isNaN(value) ? 0 : value;
     }
 
     /**
@@ -70,6 +86,11 @@ export class RollDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     ];
 
     async #roll(mode) {
+        // Read the field directly rather than trusting the change event: clicking a button
+        // blurs the input, and the ordering of blur and click is not worth depending on.
+        const input = this.element.querySelector('.roll-dialog-modifier-input');
+        if (input) this.abilityValue = this.#readModifier(input);
+
         const roll = await new Roll(`${RollDialog.MODES[mode].formula} + ${this.abilityValue}`).roll();
 
         // Custom content replaces Foundry's default dice block — ChatMessage leaves `content`

@@ -6,13 +6,13 @@
     "description": "",
     "active": true,
     "hidden": false,
-    "moveDescription": "<p>You are active on the online forums for <em>The Ghost Bro Mystery Show</em>, a TV program about a group of young men and women, the Ghost Bros, who investigate haunted places in North America. When you post a question about a Deep Lake mystery on the forums, roll with Presence. </p><ul><li><p>On a 10+, a commenter has a good answer or a Clue (Keeper’s choice), and they’ll share it freely. </p></li><li><p>On a 7-9, as above, but they want you to do something for them before they’ll share it.</p></li></ul>",
+    "moveDescription": "<p>You are active on the online forums for <em>The Ghost Bro Mystery Show</em>, a TV program about a group of young men and women, the Ghost Bros, who investigate haunted places in North America. When you post a question about a Deep Lake mystery on the forums, roll with Presence. </p><ul><li><p>[ON 10+] a commenter has a good answer or a Clue (Keeper’s choice), and they’ll share it freely. </p></li><li><p>[ON 7-9] as above, but they want you to do something for them before they’ll share it.</p></li></ul>",
     "checkboxes": []
   },
   "_id": "eRdtBS3XiHt9qgE1",
   "img": "icons/svg/item-bag.svg",
   "effects": [],
-  "folder": "gjeQm4IXgc6chhJ3",
+  "folder": "DmnteeqY7gzHXgn8",
   "flags": {},
   "_stats": {
     "coreVersion": "14.360",

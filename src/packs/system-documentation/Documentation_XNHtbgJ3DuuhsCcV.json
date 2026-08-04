@@ -6,7 +6,7 @@
       "sort": 100000,
       "name": "Notebook",
       "type": "text",
-      "_id": "vzI7lDD02z0t7Afw",
+      "_id": "w6sk1A5LV9Gt3Oku",
       "system": {},
       "title": {
         "show": true,
@@ -15,7 +15,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>There must be an active scene to use the notebook app.</p><ul><li><p>Create notebook item</p></li><li><p>You don't need to edit the notebook item directly. Use the notebook app.</p></li><li><p>You can find it on the left side under \"Journal Notes\". Then have a look at the second row at the bottom. There you find the notebook icon.</p></li><li><p>Drag'N'Drop a notebook item on the notebook app</p></li><li><p>Drag'N'Drop actors directly on this notebook app</p></li></ul><p>The notebook stores it's data scene based. So, if you switch the scene, it could display another notebook item if the other scene got already configured.</p><p>Play a little bit around with the notebook app. It's easy and intuitive.</p><p></p><p>There is also a keybinding to open the notebook: CTL+J</p><p></p><p>If you want to place a macro in your macro bar, create a macro of type script with  the following code:</p><pre><code>NotebookApp.getInstance().render(true, { focus: true })</code></pre>"
+        "content": "<p>There must be an active scene to use the notebook app.</p>\n<ul>\n<li><p>Open it with the notebook icon in the left control bar, directly below \"Journal Notes\". The keybinding CTRL+J works as well.</p></li>\n<li><p>If the scene has no notebook yet, the app shows a button that creates one and links it to the scene.</p></li>\n<li><p>To use an existing notebook instead, drag'n'drop the notebook item onto the app.</p></li>\n<li><p>You don't need to edit the notebook item directly. Use the notebook app.</p></li>\n<li><p>Drag'n'drop actors directly onto the notebook app to add them.</p></li>\n</ul>\n<p>The notebook stores its data scene based. So, if you switch the scene, it could display another notebook item if the other scene got already configured.</p>\n<p>Play a little bit around with the notebook app. It's easy and intuitive.</p>\n<p>If you want to place a macro in your macro bar, create a macro of type script with the following code:</p>\n<pre><code>NotebookApp.getInstance().render(true, { focus: true })</code></pre>"
       },
       "video": {
         "controls": true,
@@ -33,13 +33,91 @@
         "systemId": "mystery-engine-fvtt",
         "systemVersion": "0.1.0",
         "createdTime": 1777534652274,
-        "modifiedTime": 1777547145697,
+        "modifiedTime": 1785801600000,
         "lastModifiedBy": "KS4FZACDn7qVImBP",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
-      "_key": "!journal.pages!XNHtbgJ3DuuhsCcV.vzI7lDD02z0t7Afw"
+      "_key": "!journal.pages!XNHtbgJ3DuuhsCcV.w6sk1A5LV9Gt3Oku"
+    },
+    {
+      "sort": 200000,
+      "name": "Text Styling",
+      "type": "text",
+      "_id": "eCohevgaSsSSJ67T",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Two different kinds of markup are used, depending on the field.</p>\n<h2>Checklist entries</h2>\n<p>Entries of a checklist item are plain text and support bbCode:</p>\n<ul>\n<li><p><code>[b]bold[/b]</code></p></li>\n<li><p><code>[i]italic[/i]</code></p></li>\n<li><p><code>[u]underline[/u]</code></p></li>\n<li><p><code>[s]strikethrough[/s]</code></p></li>\n<li><p><code>[br]</code> line break</p></li>\n<li><p><code>[list]item 1[br]item 2[br]item 3[/list]</code></p></li>\n</ul>\n<h2>Descriptions</h2>\n<p>The description and the move description of an item are rich text fields. Use the editor — HTML tags belong here, bbCode does not.</p>\n<h2>Roll outcomes</h2>\n<p>Mark a roll outcome with <code>[ON …]</code> at the start of a line. It is rendered as a coloured badge in front of the text, and it works in checklist entries as well as in the description and move description of a move.</p>\n<ul>\n<li><p><code>[ON 12+] you also find a Clue; the Keeper will describe it.</code></p></li>\n<li><p><code>[ON 10+] the magic works without further cost: choose your effect.</code></p></li>\n<li><p><code>[ON 7-9] the magic works imperfectly: choose your effect and a complication.</code></p></li>\n<li><p><code>[ON 6-] the Keeper reacts.</code></p></li>\n<li><p><code>[ON hit] you find a Clue. The Keeper will tell you what it is.</code></p></li>\n<li><p><code>[ON miss] you glimpse a terrible fate awaiting one of your fellow Hunters.</code></p></li>\n</ul>\n<p>Number ranges are shown exactly as written. <code>hit</code> and <code>miss</code> are translated through the language file, so a translation never has to touch the tag itself — only the text around it. Any other token still gets a badge, just without a colour, which makes a typo visible instead of silently dropping the marker.</p>\n<p>For older content the English wording <em>\"On a 10+, …\"</em> is still recognised, but new and translated text should use the tag.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.1.0",
+        "createdTime": 1777534652274,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!journal.pages!XNHtbgJ3DuuhsCcV.eCohevgaSsSSJ67T"
+    },
+    {
+      "sort": 300000,
+      "name": "Playbooks",
+      "type": "text",
+      "_id": "eXemqoMjTKcKxk0b",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>The <strong>Playbooks</strong> compendium holds ready-made character sheets, sorted into one folder per game:</p>\n<ul>\n<li><p><strong>The Between</strong> — The American, The Explorer, The Factotum, The Mother, The Orphan, The Undeniable, The Vessel</p></li>\n<li><p><strong>Public Access</strong> — Latchkey</p></li>\n<li><p><strong>Brindlewood Bay</strong> — Murder Maven</p></li>\n</ul>\n<p>Drag a playbook into the actors directory and the whole sheet comes with it: moves, checklists, abilities and the XP track of that game.</p>\n<h2>Choosing moves</h2>\n<p>Every move of a playbook is on the sheet from the start. The move you begin with is active, the optional ones are greyed out. Tick the checkbox in the header of a move card to activate the one you picked — and untick it again if you change your mind. Nothing is hidden, so you never have to switch to edit mode for this.</p>\n<h2>More moves</h2>\n<p>The <strong>Items</strong> compendium carries the move collections that are chosen from rather than shipped with a playbook, for example \"Public Access Latchkey Moves\" and the Maven Moves of Brindlewood Bay. Drag one onto a character sheet to add it.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "ownership": {
+        "default": -1,
+        "KS4FZACDn7qVImBP": 3
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.360",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "0.1.0",
+        "createdTime": 1777534652274,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": "KS4FZACDn7qVImBP",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!journal.pages!XNHtbgJ3DuuhsCcV.eXemqoMjTKcKxk0b"
     }
   ],
   "folder": null,

@@ -63,6 +63,18 @@
       "flags": {}
     },
     {
+      "name": "playbooks",
+      "label": "Playbooks",
+      "path": "packs/playbooks",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "mystery-engine-fvtt",
+      "flags": {}
+    },
+    {
       "name": "items",
       "label": "Items",
       "path": "packs/items",

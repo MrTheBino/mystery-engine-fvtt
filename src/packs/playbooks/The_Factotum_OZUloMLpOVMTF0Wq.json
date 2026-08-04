@@ -1,0 +1,702 @@
+{
+  "name": "The Factotum",
+  "type": "mystery-actor",
+  "_id": "OZUloMLpOVMTF0Wq",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "editMode": false,
+    "biography": "<p>You had a life before you entered the service of your Employer, but the details of that life are unimportant. All that matters now is the person you serve, and Hargrave House, where you will grow ancient and die—if you’re lucky. More likely your Employer’s colleagues, these Hunters, will be the end of you, overturning things that should remain hidden and goading-on terrors that dwell in dark places. You’ll do your best to help them, of course, to keep them alive, because without them, what are you, really?</p>",
+    "notes": "",
+    "labels": [
+      {
+        "name": "Look",
+        "value": ""
+      },
+      {
+        "name": "Vice",
+        "value": ""
+      }
+    ],
+    "conditions": [],
+    "abilities": [
+      {
+        "name": "Vitality",
+        "value": 0
+      },
+      {
+        "name": "Composure",
+        "value": 1
+      },
+      {
+        "name": "Reason",
+        "value": 1
+      },
+      {
+        "name": "Presence",
+        "value": 0
+      },
+      {
+        "name": "Sensitivity",
+        "value": 0
+      }
+    ],
+    "xpTrack": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "prototypeToken": {
+    "name": "The Factotum",
+    "displayName": 0,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "disposition": 1,
+    "flags": {}
+  },
+  "items": [
+    {
+      "name": "The Employer",
+      "type": "move",
+      "_id": "VlpJBK0L3ossiuH6",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 0,
+        "description": "<p>You are a long-time servant of one of the other Hunters. Decide which Hunter it is and discuss it with their player. That character is now your Employer. The following rules apply:</p><ul><li>You and your Employer can trigger the Vulnerable Move twice per phase, but only if at least one of those times is with each other—and no one else.</li><li>Rolls associated with any action done in direct defense of your Employer are taken with advantage.</li><li>Whenever your Employer is retired from play, you are also retired from play and become a Side Character attached to Hargrave House.</li></ul>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": true,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!OZUloMLpOVMTF0Wq.VlpJBK0L3ossiuH6"
+    },
+    {
+      "name": "My Person Friday",
+      "type": "move",
+      "_id": "iQ6RbyrKunp0VAmv",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 1,
+        "description": "<p>Once per session, you can appear in any scene, at any time, ready for action. If there is an object or tool that would be helpful in the scene, you have it on-hand; add it to your Personal Quarters.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!OZUloMLpOVMTF0Wq.iQ6RbyrKunp0VAmv"
+    },
+    {
+      "name": "Memory is the Servant",
+      "type": "move",
+      "_id": "26PQQJOceXbuO2BJ",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 2,
+        "description": "<p>During the Dawn Phase immediately following a London Night Phase, you may tell the Keeper you are claiming a memento, which can be any object from a scene in the recently-concluded phase you would have reasonably been able to acquire. If you keep the memento, add it to your Personal Quarters. If you give the memento to another Hunter, mark XP and tell them to add it to their Personal Quarters.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!OZUloMLpOVMTF0Wq.26PQQJOceXbuO2BJ"
+    },
+    {
+      "name": "The Ghost of Hargrave House",
+      "type": "move",
+      "_id": "DtHmSwII5Mk87yEN",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 3,
+        "description": "<p>During the Dusk Phase, you can remove a marked item from another Hunter’s Personal Quarters and add it to your own, unmarked. When you return the item to its original owner in the middle of a scene you are sharing with them, describe how it is slightly altered. They add the item back to their Personal Quarters, unmarked.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!OZUloMLpOVMTF0Wq.DtHmSwII5Mk87yEN"
+    },
+    {
+      "name": "Day Work",
+      "type": "move",
+      "_id": "hvRpo5lcTyoxRCa3",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 4,
+        "description": "<p>You spend most days caring for Hargrave House—tidying-up, managing accounts, answering callers. Each Dusk Phase, choose one:</p><ul><li>You learn something interesting about an active Threat. Ask the Keeper any question you like; they will answer truthfully and completely, or in the form of a Clue, their choice.</li><li>You find something of use in the house. Say what it is and give it to another Hunter. They add it to their Personal Quarters.</li></ul>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 4000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!OZUloMLpOVMTF0Wq.hvRpo5lcTyoxRCa3"
+    },
+    {
+      "name": "Many Faces, Many Masters",
+      "type": "move",
+      "_id": "x09mgpv8uU4i3VuG",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "position": 5,
+        "description": "<p>You can no longer be retired from play because of The Employer. Additionally, whenever you wish, you can unmark The Moss-Covered Gate if it is marked. You can do this once.</p><p>Thereafter, The Blood-Soaked Portal is replaced with the following:</p><p><strong>The Fog-Shrouded Bridge:</strong> Narrate a scene showing how you leave your Employer for dead, or otherwise abandon them at a critical moment. Then, you disappear; retire this character to safety or obscurity.</p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "moveDescription": "",
+        "active": false,
+        "hidden": false,
+        "checkboxes": [
+          {
+            "checked": false,
+            "description": "The Fog-Shrouded Bridge"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 5000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!OZUloMLpOVMTF0Wq.x09mgpv8uU4i3VuG"
+    },
+    {
+      "name": "Dawn Questions",
+      "type": "checklist",
+      "_id": "0srUKM9mCkkx8WUG",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 6,
+        "description": "<p><em>The first three are always marked. Mark two more.</em></p>",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": true,
+            "text": "Did the Hunters answer a Question?"
+          },
+          {
+            "selected": true,
+            "text": "Did the Hunters resolve a Threat?"
+          },
+          {
+            "selected": true,
+            "text": "Did you experience an Echo in the Night?"
+          },
+          {
+            "selected": false,
+            "text": "Did you ensure your Employer got credit for your triumphs?"
+          },
+          {
+            "selected": false,
+            "text": "Did you demonstrate obsequious behavior toward your Employer in front of others?"
+          },
+          {
+            "selected": false,
+            "text": "Did you subtly express sexual desire for your Employer in the way you dressed them or served them?"
+          },
+          {
+            "selected": false,
+            "text": "Did you engage in a petty reprisal of someone who angered your Employer?"
+          },
+          {
+            "selected": false,
+            "text": "Did you have a scene showing your secret, private life in London?"
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 6000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!OZUloMLpOVMTF0Wq.0srUKM9mCkkx8WUG"
+    },
+    {
+      "name": "Advancements",
+      "type": "checklist",
+      "_id": "kPZzkzjc5OYj7zPX",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 7,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Increase an ability modifier by 1 (max 3)."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional move from your playbook."
+          },
+          {
+            "selected": false,
+            "text": "Choose an additional move from your playbook."
+          },
+          {
+            "selected": false,
+            "text": "Write a custom move for your character."
+          },
+          {
+            "selected": false,
+            "text": "Unmark everything in your Personal Quarters."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 7000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!OZUloMLpOVMTF0Wq.kPZzkzjc5OYj7zPX"
+    },
+    {
+      "name": "Personal Quarters",
+      "type": "checklist",
+      "_id": "lahpMztbCzKQOPbr",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 8,
+        "description": "",
+        "groupName": "",
+        "groupNameDisplayed": false,
+        "groupPosition": 0,
+        "isContainer": true,
+        "entries": [
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          },
+          {
+            "selected": false,
+            "text": ""
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 8000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!OZUloMLpOVMTF0Wq.lahpMztbCzKQOPbr"
+    },
+    {
+      "name": "The Mask of the Past",
+      "type": "checklist",
+      "_id": "O9tpDk5FG00AGdtJ",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 9,
+        "description": "<p><em>Mark the first unmarked box.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": true,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "Narrate a flashback to your young adulthood, before you were a servant, that shows your most significant professional triumph."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to your young adulthood, before you were a servant, that shows what a charmed life you lived."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the event that eventually forced you into servitude."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to when you were more of a family member to your Employer than someone of their own flesh and blood."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to when your Employer behaved in a way that was utterly indifferent to your dignity."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback that shows how you had to engage in emotional labor in order to please or soothe your Employer."
+          },
+          {
+            "selected": false,
+            "text": "Narrate a flashback to the first time you saved your Employer’s life."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!OZUloMLpOVMTF0Wq.O9tpDk5FG00AGdtJ"
+    },
+    {
+      "name": "The Mask of the Future",
+      "type": "checklist",
+      "_id": "eiEj9JcLi9BiqvBz",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "position": 10,
+        "description": "<p><em>If no boxes are marked, you can retire to safety or obscurity instead of putting on this mask; tell the other Hunters what the future holds for you. Otherwise, mark any box you wish.</em></p>",
+        "groupName": "Masks",
+        "groupNameDisplayed": false,
+        "groupPosition": 2,
+        "isContainer": false,
+        "entries": [
+          {
+            "selected": false,
+            "text": "[b]The Gilded Door:[/b] Tell your Employer to take the following Condition: Most-Beloved. Tell the other Hunters they can no longer choose The Gilded Door on their own playbook (this does not count as being marked for them). Your Employer can never clear Most-Beloved."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Moss-Covered Gate:[/b] Unmark the first two boxes on the Mask of the Past."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Darkened Threshold:[/b] Narrate a scene in which you commit a terrible act of violence in order to help your Employer or punish one of their enemies."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Cosmic Passage:[/b] Increase your Sensitivity by 1 (max 3) and reduce your Reason by 2."
+          },
+          {
+            "selected": false,
+            "text": "[b]The Blood-Soaked Portal:[/b] Narrate a scene in which you are physically destroyed. This character is now retired."
+          }
+        ]
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!OZUloMLpOVMTF0Wq.eiEj9JcLi9BiqvBz"
+    },
+    {
+      "name": "Names, Look & Vice",
+      "type": "text",
+      "_id": "FSBupBUBMBgyxmnJ",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "position": 11,
+        "description": "<p><strong>Surname</strong> — <em>circle one or make up your own.</em><br>Churchworth, Crosby, Waldon, Moore, Langfisk, Burnwright, Moseley, Wainson, Willoughby, Grantson, Reeves, Thomas, Williams, Hornby, Pike, Salk, Taylor, Wilson, Hughes, Green</p><p><strong>Look (circle three)</strong> — <em>circle one or make up your own.</em><br>Black “billycock” hat, straw bonnet with Navy blue ribbon, neatly parted hair, pewter hair clip in the shape of a butterfly, neatly-trimmed mustache, brass brooch in the shape of a labrador retriever, cameo necklace, moss-colored tweed waistcoat, maroon Kingsman, red toile scarf, simple wool scarf, blue Indian “cone” pattern shawl, black jacket and pinstripe trousers, black dress with magpie detail, a single piece of gold jewelry, black umbrella, walking stick with duck head handle, hip flask with “Rear Admiral Boots” cat decoration, black leather Wellington boots, dark maroon boots</p><p><strong>Vice</strong> — <em>circle one or make up your own.</em><br>Comedies, history books, fine cigars, brandy, betting shops</p>",
+        "groupName": "Character Creation",
+        "groupNameDisplayed": true,
+        "groupPosition": 3,
+        "checkboxes": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 11000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.365",
+        "systemId": "mystery-engine-fvtt",
+        "systemVersion": "14.3.5",
+        "createdTime": 1785801600000,
+        "modifiedTime": 1785801600000,
+        "lastModifiedBy": null,
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!OZUloMLpOVMTF0Wq.FSBupBUBMBgyxmnJ"
+    }
+  ],
+  "effects": [],
+  "folder": "sNOCvHxF7E9t1aaU",
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.365",
+    "systemId": "mystery-engine-fvtt",
+    "systemVersion": "14.3.5",
+    "createdTime": 1785801600000,
+    "modifiedTime": 1785801600000,
+    "lastModifiedBy": null,
+    "exportSource": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "sort": 0,
+  "_key": "!actors!OZUloMLpOVMTF0Wq"
+}

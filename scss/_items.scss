@@ -237,12 +237,16 @@
     display: flex;
     align-items: baseline;
     gap: 0.55rem;
+    margin: 0; // outcomes authored as paragraphs keep their own spacing off
     font-size: 0.85rem;
     line-height: 1.45;
+
+    // Some items wrap the outcome text in a paragraph inside the list item.
+    p { margin: 0; }
   }
 
   .roll-badge {
-    flex: 0 0 3.1rem;
+    flex: 0 0 3.4rem;
     text-align: center;
     padding: 0.1rem 0.3rem;
     border: 1px solid var(--me-border-mid);
@@ -256,6 +260,15 @@
     &--hit  { color: var(--me-roll-hit);  border-color: rgba(123, 216, 143, 0.45); }
     &--weak { color: var(--me-roll-weak); border-color: rgba(224, 192, 74, 0.45); }
     &--miss { color: var(--me-roll-miss); border-color: rgba(224, 122, 122, 0.45); }
+    // A tag whose token is neither a range nor hit/miss still gets a badge, just no colour.
+    &--neutral { color: var(--me-text-muted); }
+  }
+
+  // Inline variant: a checklist entry is a single line, so the badge sits in the text flow.
+  .entry-text .roll-badge {
+    display: inline-block;
+    flex: none;
+    margin-right: 0.3rem;
   }
 
   // Headings inside enriched item text (EFFECTS, COMPLICATIONS, ...) must not compete

@@ -14,6 +14,7 @@ import { setupHooks } from "./helpers/hooks.mjs";
 import { registerHandlebarHelpers } from "./helpers/handlebars.mjs";
 import { NotebookApp } from "./apps/notebook-app.mjs";
 import { setupKeybindings } from "./helpers/keybindings.mjs";
+import { registerGmTour, registerGmTourSettings, maybeAutoStartGmTour } from "./helpers/gm-tour.mjs";
 
 Hooks.once("init", () => {
   CONFIG.Actor.documentClass = MysteryActor;
@@ -81,7 +82,19 @@ Hooks.once("init", () => {
   setupHooks();
   registerHandlebarHelpers();
   setupKeybindings();
+  registerGmTourSettings();
   globalThis.NotebookApp = NotebookApp;
-  
+
+});
+
+/* -------------------------------------------- */
+/*  Ready Hook                                  */
+/* -------------------------------------------- */
+
+Hooks.once("ready", async () => {
+  // Guided tour: registered so it shows in Tour Management, and started once for a Keeper
+  // who has not seen it yet.
+  registerGmTour();
+  await maybeAutoStartGmTour();
 });
 

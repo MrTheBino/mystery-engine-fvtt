@@ -1,3 +1,9 @@
+# 14.3.6
+- foundry release
+
+# 14.3.6
+- fixed various bugs and added playbooks for the between, public access and brindlewood bay
+
 # 14.3.4
 - added quality of life feature for GMs. It's possible now to hide threats in the notebook app for players.
   

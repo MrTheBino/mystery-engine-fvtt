@@ -1,7 +1,7 @@
 {
   "id": "mystery-engine-fvtt",
   "title": "MysteryEngine",
-  "version": "14.3.6",
+  "version": "14.3.7",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -23,6 +23,10 @@
   "flags": {},
   "manifest": "https://github.com/MrTheBino/mystery-engine-fvtt/releases/latest/download/system.json",
   "download": "https://github.com/MrTheBino/mystery-engine-fvtt/releases/latest/download/system.zip",
+  "bugs": "https://github.com/MrTheBino/mystery-engine-fvtt/issues",
+  "changelog": "https://github.com/MrTheBino/mystery-engine-fvtt/CHANGELOG.md",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
   "documentTypes": {
     "Actor": {
       "mystery-actor": {},

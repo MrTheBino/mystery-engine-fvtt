@@ -2,7 +2,7 @@
 
 ![Foundry v14](https://img.shields.io/badge/foundry-v14-green) [![Github All Releases](https://img.shields.io/github/downloads/MrTheBino/mystery-engine-fvtt/total.svg)]()
 
-This is a **unofficial** system implementation for Carved From Brindlewood Bay games.
+This is an **unofficial** system implementation for Carved From Brindlewood Bay games.
 
 Check out [The Gauntlet](https://www.gauntlet-rpg.com/) for their great TTRPG games!
 

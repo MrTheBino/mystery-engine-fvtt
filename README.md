@@ -13,9 +13,6 @@ enter your attributes etc, you build a character sheet in this system.
 It's easy and nearly the same amount of work in another system. You build a 
 Public Access or The Between sheet in minutes.
 
-The system provides an example character for reference and a compendium with a
-small documentation.
-
 The notebook app is for handling a session or campaign. You see an overview
 of the characters, the threats and notes/page handling. Your players
 can use the notebook too, but they are not able to alter it and they see
@@ -24,13 +21,11 @@ only stuff they should see like clues for threats etc.
 ## Features
  - Notebook for the GM to handle a campaign / session
  - Character & Threats sheets
- - different CSS styles like standard, 90ies, victorian etc.
   
 
 ## PreBuild Character Sheets
 
-We got the permission from The Gauntlet to publish pre-build character sheets with the system. The system ships with no threats / mysteries etc, only the character options
-are available as compendium entries.
+We got the permission from The Gauntlet to publish pre-build character sheets with the system. The system ships with no threats / mysteries etc, only the character options are available as compendium entries.
 
 Available pre-built sheets:
 
